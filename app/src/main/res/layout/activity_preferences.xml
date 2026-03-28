@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F7F8">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="32dp"
+            android:paddingBottom="24dp"
+            android:clipToPadding="false"
+            android:clipChildren="false">
+
+            <!-- Title bar -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <ImageButton
+                    android:id="@+id/btnBack"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical|start"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_back_arrow" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/txt_profile_setup_1"
+                    android:textColor="#101D33"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <!-- Progress section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/txt_step_3_of_4"
+                android:textColor="#101D33"
+                android:textStyle="bold"
+                android:textSize="14sp" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_marginTop="8dp"
+                android:max="4"
+                android:progress="3"
+                android:progressDrawable="@drawable/bg_progress_bar" />
+
+            <!-- Subtitle 1 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/txt_what_kind_of_help_do_you_usual"
+                android:textColor="#101D33"
+                android:textSize="22sp"
+                android:letterSpacing="-0.02"
+                android:textStyle="bold" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/cgNeeds"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:singleSelection="false"
+                app:chipSpacingVertical="8dp"
+                app:chipSpacingHorizontal="8dp">
+                
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="@string/txt_moving_help"
+                    android:elevation="2dp"
+                    app:chipBackgroundColor="@color/chip_bg"
+                    android:textColor="@color/chip_text"
+                    app:chipStrokeColor="@color/chip_stroke"
+                    app:chipStrokeWidth="1dp"
+                    app:chipIcon="@drawable/ic_solid_truck"
+                    app:chipIconTint="@color/chip_text"
+                    app:chipStartPadding="8dp"
+                    app:iconStartPadding="8dp"
+                    app:checkedIconVisible="false"
+                    app:ensureMinTouchTargetSize="true" />
+                
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="@string/txt_plumbing"
+                    android:elevation="2dp"
+                    app:chipBackgroundColor="@color/chip_bg"
+                    android:textColor="@color/chip_text"
+                    app:chipStrokeColor="@color/chip_stroke"
+                    app:chipStrokeWidth="1dp"
+                    app:chipIcon="@drawable/ic_solid_wrench"
+                    app:chipIconTint="@color/chip_text"
+                    app:chipStartPadding="8dp"
+                    app:iconStartPadding="8dp"
+                    app:checkedIconVisible="false"
+                    app:ensureMinTouchTargetSize="true" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="@string/txt_electrical"
+                    android:elevation="2dp"
+                    app:chipBackgroundColor="@color/chip_bg"
+                    android:textColor="@color/chip_text"
+                    app:chipStrokeColor="@color/chip_stroke"
+                    app:chipStrokeWidth="1dp"
+                    app:chipIcon="@drawable/ic_solid_plug"
+                    app:chipIconTint="@color/chip_text"
+                    app:chipStartPadding="8dp"
+                    app:iconStartPadding="8dp"
+                    app:checkedIconVisible="false"
+                    app:ensureMinTouchTargetSize="true" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="@string/txt_cleaning"
+                    android:elevation="2dp"
+                    app:chipBackgroundColor="@color/chip_bg"
+                    android:textColor="@color/chip_text"
+                    app:chipStrokeColor="@color/chip_stroke"
+                    app:chipStrokeWidth="1dp"
+                    app:chipIcon="@drawable/ic_solid_broom"
+                    app:chipIconTint="@color/chip_text"
+                    app:chipStartPadding="8dp"
+                    app:iconStartPadding="8dp"
+                    app:checkedIconVisible="false"
+                    app:ensureMinTouchTargetSize="true" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="@string/txt_cooking"
+                    android:elevation="2dp"
+                    app:chipBackgroundColor="@color/chip_bg"
+                    android:textColor="@color/chip_text"
+                    app:chipStrokeColor="@color/chip_stroke"
+                    app:chipStrokeWidth="1dp"
+                    app:chipIcon="@drawable/ic_solid_oven"
+                    app:chipIconTint="@color/chip_text"
+                    app:chipStartPadding="8dp"
+                    app:iconStartPadding="8dp"
+                    app:checkedIconVisible="false"
+                    app:ensureMinTouchTargetSize="true" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="@string/txt_gardening"
+                    android:elevation="2dp"
+                    app:chipBackgroundColor="@color/chip_bg"
+                    android:textColor="@color/chip_text"
+                    app:chipStrokeColor="@color/chip_stroke"
+                    app:chipStrokeWidth="1dp"
+                    app:chipIcon="@drawable/ic_solid_plant"
+                    app:chipIconTint="@color/chip_text"
+                    app:chipStartPadding="8dp"
+                    app:iconStartPadding="8dp"
+                    app:checkedIconVisible="false"
+                    app:ensureMinTouchTargetSize="true" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="@string/txt_pet_sitting"
+                    android:elevation="2dp"
+                    app:chipBackgroundColor="@color/chip_bg"
+                    android:textColor="@color/chip_text"
+                    app:chipStrokeColor="@color/chip_stroke"
+                    app:chipStrokeWidth="1dp"
+                    app:chipIcon="@drawable/ic_solid_paw"
+                    app:chipIconTint="@color/chip_text"
+                    app:chipStartPadding="8dp"
+                    app:iconStartPadding="8dp"
+                    app:checkedIconVisible="false"
+                    app:ensureMinTouchTargetSize="true" />
+            </com.google.android.material.chip.ChipGroup>
+
+            <!-- Subtitle 2 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:text="@string/txt_what_tasks_can_you_offer"
+                android:textColor="#101D33"
+                android:textSize="22sp"
+                android:letterSpacing="-0.02"
+                android:textStyle="bold" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/cgOffers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:singleSelection="false"
+                app:chipSpacingVertical="8dp"
+                app:chipSpacingHorizontal="8dp">
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="@string/txt_moving_help_1"
+                    android:elevation="2dp"
+                    app:chipBackgroundColor="@color/chip_bg"
+                    android:textColor="@color/chip_text"
+                    app:chipStrokeColor="@color/chip_stroke"
+                    app:chipStrokeWidth="1dp"
+                    app:chipIcon="@drawable/ic_solid_truck"
+                    app:chipIconTint="@color/chip_text"
+                    app:chipStartPadding="8dp"
+                    app:iconStartPadding="8dp"
+                    app:checkedIconVisible="false"
+                    app:ensureMinTouchTargetSize="true" />
+                
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="@string/txt_plumbing_1"
+                    android:elevation="2dp"
+                    app:chipBackgroundColor="@color/chip_bg"
+                    android:textColor="@color/chip_text"
+                    app:chipStrokeColor="@color/chip_stroke"
+                    app:chipStrokeWidth="1dp"
+                    app:chipIcon="@drawable/ic_solid_wrench"
+                    app:chipIconTint="@color/chip_text"
+                    app:chipStartPadding="8dp"
+                    app:iconStartPadding="8dp"
+                    app:checkedIconVisible="false"
+                    app:ensureMinTouchTargetSize="true" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="@string/txt_electrical_1"
+                    android:elevation="2dp"
+                    app:chipBackgroundColor="@color/chip_bg"
+                    android:textColor="@color/chip_text"
+                    app:chipStrokeColor="@color/chip_stroke"
+                    app:chipStrokeWidth="1dp"
+                    app:chipIcon="@drawable/ic_solid_plug"
+                    app:chipIconTint="@color/chip_text"
+                    app:chipStartPadding="8dp"
+                    app:iconStartPadding="8dp"
+                    app:checkedIconVisible="false"
+                    app:ensureMinTouchTargetSize="true" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="@string/txt_cleaning_1"
+                    android:elevation="2dp"
+                    app:chipBackgroundColor="@color/chip_bg"
+                    android:textColor="@color/chip_text"
+                    app:chipStrokeColor="@color/chip_stroke"
+                    app:chipStrokeWidth="1dp"
+                    app:chipIcon="@drawable/ic_solid_broom"
+                    app:chipIconTint="@color/chip_text"
+                    app:chipStartPadding="8dp"
+                    app:iconStartPadding="8dp"
+                    app:checkedIconVisible="false"
+                    app:ensureMinTouchTargetSize="true" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="@string/txt_cooking_1"
+                    android:elevation="2dp"
+                    app:chipBackgroundColor="@color/chip_bg"
+                    android:textColor="@color/chip_text"
+                    app:chipStrokeColor="@color/chip_stroke"
+                    app:chipStrokeWidth="1dp"
+                    app:chipIcon="@drawable/ic_solid_oven"
+                    app:chipIconTint="@color/chip_text"
+                    app:chipStartPadding="8dp"
+                    app:iconStartPadding="8dp"
+                    app:checkedIconVisible="false"
+                    app:ensureMinTouchTargetSize="true" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="@string/txt_it_support"
+                    android:elevation="2dp"
+                    app:chipBackgroundColor="@color/chip_bg"
+                    android:textColor="@color/chip_text"
+                    app:chipStrokeColor="@color/chip_stroke"
+                    app:chipStrokeWidth="1dp"
+                    app:chipIcon="@drawable/ic_solid_laptop"
+                    app:chipIconTint="@color/chip_text"
+                    app:chipStartPadding="8dp"
+                    app:iconStartPadding="8dp"
+                    app:checkedIconVisible="false"
+                    app:ensureMinTouchTargetSize="true" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="@string/txt_car_wash"
+                    android:elevation="2dp"
+                    app:chipBackgroundColor="@color/chip_bg"
+                    android:textColor="@color/chip_text"
+                    app:chipStrokeColor="@color/chip_stroke"
+                    app:chipStrokeWidth="1dp"
+                    app:chipIcon="@drawable/ic_solid_car"
+                    app:chipIconTint="@color/chip_text"
+                    app:chipStartPadding="8dp"
+                    app:iconStartPadding="8dp"
+                    app:checkedIconVisible="false"
+                    app:ensureMinTouchTargetSize="true" />
+            </com.google.android.material.chip.ChipGroup>
+
+            <!-- Bottom Margin Filler -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:minHeight="48dp"/>
+
+            <!-- Action Button -->
+            <LinearLayout
+                android:id="@+id/bottomBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnEnter"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="@string/txt_enter_1"
+                    android:textColor="#FFFFFF"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:elevation="6dp"
+                    app:backgroundTint="#1D5EF3"
+                    app:cornerRadius="24dp"
+                    app:icon="@drawable/ic_forward_arrow"
+                    app:iconSize="14dp"
+                    app:iconGravity="textEnd"
+                    app:iconTint="#FFFFFF" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

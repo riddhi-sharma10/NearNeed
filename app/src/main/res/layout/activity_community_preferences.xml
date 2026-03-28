@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="32dp"
+            android:paddingBottom="24dp"
+            android:clipToPadding="false"
+            android:clipChildren="false">
+
+            <!-- Title bar -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <ImageButton
+                    android:id="@+id/btnBack"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical|start"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_back_arrow" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/txt_profile_setup"
+                    android:textColor="#101D33"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <!-- Progress section -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/txt_community_preferences"
+                    android:textColor="#101D33"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/txt_step_4_of_4"
+                    android:textColor="#101D33"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_marginTop="8dp"
+                android:max="4"
+                android:progress="4"
+                android:progressTint="#F43F5E" />
+
+            <!-- Subtitle 1 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/txt_emergency_notifications"
+                android:textColor="#101D33"
+                android:textSize="18sp"
+                android:letterSpacing="-0.02"
+                android:textStyle="bold" />
+
+            <!-- Row 1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="24dp">
+                
+                <ImageView
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/bg_circle_pink"
+                    android:src="@drawable/ic_solid_bell"
+                    android:padding="12dp"
+                    app:tint="#F43F5E" />
+                
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txt_notify_me_about_nearby_emergen"
+                        android:textColor="#101D33"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txt_real_time_alerts_for_local_cri"
+                        android:textColor="#64748B"
+                        android:textSize="12sp"
+                        android:layout_marginTop="2dp" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    app:thumbTint="#FFFFFF"
+                    app:trackTint="@color/sel_switch_track" />
+            </LinearLayout>
+
+            <!-- Row 2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="32dp">
+                
+                <ImageView
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/bg_circle_pink"
+                    android:src="@drawable/ic_solid_sms"
+                    android:padding="12dp"
+                    app:tint="#F43F5E" />
+                
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txt_notify_me_via_sms"
+                        android:textColor="#101D33"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txt_reliable_delivery_even_when_of"
+                        android:textColor="#64748B"
+                        android:textSize="12sp"
+                        android:layout_marginTop="2dp" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    app:thumbTint="#FFFFFF"
+                    app:trackTint="@color/sel_switch_track" />
+            </LinearLayout>
+
+            <!-- Notification Radius -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_notification_radius"
+                android:textColor="#101D33"
+                android:textSize="18sp"
+                android:letterSpacing="-0.02"
+                android:textStyle="bold" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/cgRadius"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="32dp"
+                app:singleSelection="true"
+                app:selectionRequired="true"
+                app:chipSpacingHorizontal="8dp">
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:checked="true"
+                    android:text="@string/txt_500m"
+                    app:chipBackgroundColor="@color/sel_radius_bg"
+                    android:textColor="@color/sel_radius_text"
+                    app:chipStrokeWidth="0dp"
+                    app:checkedIconVisible="false"
+                    app:ensureMinTouchTargetSize="true" />
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="@string/txt_1km"
+                    app:chipBackgroundColor="@color/sel_radius_bg"
+                    android:textColor="@color/sel_radius_text"
+                    app:chipStrokeWidth="0dp"
+                    app:checkedIconVisible="false"
+                    app:ensureMinTouchTargetSize="true" />
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="@string/txt_2km"
+                    app:chipBackgroundColor="@color/sel_radius_bg"
+                    android:textColor="@color/sel_radius_text"
+                    app:chipStrokeWidth="0dp"
+                    app:checkedIconVisible="false"
+                    app:ensureMinTouchTargetSize="true" />
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="@string/txt_5km"
+                    app:chipBackgroundColor="@color/sel_radius_bg"
+                    android:textColor="@color/sel_radius_text"
+                    app:chipStrokeWidth="0dp"
+                    app:checkedIconVisible="false"
+                    app:ensureMinTouchTargetSize="true" />
+            </com.google.android.material.chip.ChipGroup>
+
+            <!-- Skills/resources -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_skills_resources_you_can_offer"
+                android:textColor="#101D33"
+                android:textSize="18sp"
+                android:letterSpacing="-0.02"
+                android:textStyle="bold" />
+                
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/txt_let_neighbors_know_how_you_can"
+                android:textColor="#64748B"
+                android:textSize="13sp" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/cgEmergencySkills"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:singleSelection="false"
+                app:chipSpacingVertical="8dp"
+                app:chipSpacingHorizontal="8dp"
+                android:clipToPadding="false"
+                android:clipChildren="false">
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="@string/txt_car"
+                    app:chipBackgroundColor="@color/sel_skill_bg"
+                    android:textColor="@color/sel_skill_text"
+                    app:chipStrokeColor="@color/sel_skill_stroke"
+                    app:chipStrokeWidth="1dp"
+                    app:chipIcon="@drawable/ic_solid_car"
+                    app:chipIconTint="@color/sel_skill_icon"
+                    app:chipStartPadding="8dp"
+                    app:iconStartPadding="8dp"
+                    app:checkedIconVisible="true"
+                    app:checkedIconTint="#FFFFFF"
+                    app:ensureMinTouchTargetSize="true" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="@string/txt_medical"
+                    app:chipBackgroundColor="@color/sel_skill_bg"
+                    android:textColor="@color/sel_skill_text"
+                    app:chipStrokeColor="@color/sel_skill_stroke"
+                    app:chipStrokeWidth="1dp"
+                    app:chipIcon="@drawable/ic_solid_medical"
+                    app:chipIconTint="@color/sel_skill_icon"
+                    app:chipStartPadding="8dp"
+                    app:iconStartPadding="8dp"
+                    app:checkedIconVisible="true"
+                    app:checkedIconTint="#FFFFFF"
+                    app:ensureMinTouchTargetSize="true" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="@string/txt_tools"
+                    app:chipBackgroundColor="@color/sel_skill_bg"
+                    android:textColor="@color/sel_skill_text"
+                    app:chipStrokeColor="@color/sel_skill_stroke"
+                    app:chipStrokeWidth="1dp"
+                    app:chipIcon="@drawable/ic_solid_wrench"
+                    app:chipIconTint="@color/sel_skill_icon"
+                    app:chipStartPadding="8dp"
+                    app:iconStartPadding="8dp"
+                    app:checkedIconVisible="true"
+                    app:checkedIconTint="#FFFFFF"
+                    app:ensureMinTouchTargetSize="true" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:checked="true"
+                    android:text="@string/txt_first_aid"
+                    android:elevation="6dp"
+                    android:outlineAmbientShadowColor="#F43F5E"
+                    android:outlineSpotShadowColor="#F43F5E"
+                    app:chipBackgroundColor="@color/sel_skill_bg"
+                    android:textColor="@color/sel_skill_text"
+                    app:chipStrokeColor="@color/sel_skill_stroke"
+                    app:chipStrokeWidth="1dp"
+                    app:chipIcon="@drawable/ic_solid_firstaid"
+                    app:chipIconTint="@color/sel_skill_icon"
+                    app:chipStartPadding="8dp"
+                    app:iconStartPadding="8dp"
+                    app:checkedIconVisible="true"
+                    app:checkedIconTint="#FFFFFF"
+                    app:ensureMinTouchTargetSize="true" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="@string/txt_supplies"
+                    app:chipBackgroundColor="@color/sel_skill_bg"
+                    android:textColor="@color/sel_skill_text"
+                    app:chipStrokeColor="@color/sel_skill_stroke"
+                    app:chipStrokeWidth="1dp"
+                    app:chipIcon="@drawable/ic_solid_supplies"
+                    app:chipIconTint="@color/sel_skill_icon"
+                    app:chipStartPadding="8dp"
+                    app:iconStartPadding="8dp"
+                    app:checkedIconVisible="true"
+                    app:checkedIconTint="#FFFFFF"
+                    app:ensureMinTouchTargetSize="true" />
+
+                <!-- Add Other (Custom Dashed View) -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_add_other"
+                    android:textColor="#64748B"
+                    android:textSize="14sp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/bg_dashed_chip" />
+            </com.google.android.material.chip.ChipGroup>
+
+            <!-- Bottom Margin Filler -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:minHeight="48dp"/>
+
+            <!-- Action Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEnter"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="@string/txt_enter"
+                android:textColor="#FFFFFF"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:elevation="6dp"
+                android:outlineAmbientShadowColor="#F43F5E"
+                android:outlineSpotShadowColor="#F43F5E"
+                app:backgroundTint="#F43F5E"
+                app:cornerRadius="24dp"
+                app:icon="@drawable/ic_forward_arrow"
+                app:iconSize="14dp"
+                app:iconGravity="textEnd"
+                app:iconTint="#FFFFFF" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

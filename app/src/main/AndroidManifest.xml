@@ -20,6 +20,44 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".ProfileInfoActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ProfileSetupActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".PreferencesActivity"
+            android:exported="false" />
+            
+        <activity
+            android:name=".CommunityPreferencesActivity"
+            android:exported="false" />
+            
+        <activity
+            android:name=".IdVerificationActivity"
+            android:exported="false" />
+            
+        <activity
+            android:name=".ProfileSuccessActivity"
+            android:theme="@style/Theme.NearNeed.Transparent"
+            android:exported="false" />
+            
+        <activity
+            android:name=".IdVerifiedActivity"
+            android:theme="@style/Theme.NearNeed.Transparent"
+            android:exported="false" />
+            
+        <activity
+            android:name=".OtpEnterActivity"
+            android:exported="false" />
+            
+        <activity
+            android:name=".OtpVerifyActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
