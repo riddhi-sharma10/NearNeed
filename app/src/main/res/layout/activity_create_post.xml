@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Future Google Maps API Container -->
+    <FrameLayout
+        android:id="@+id/map_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <!-- Temporary Image Placeholder for Map -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/bg_map_vector"
+            android:scaleType="centerCrop"
+            android:importantForAccessibility="no" />
+            
+    </FrameLayout>
+
+    <!-- Translucent Overlay to Dim the Background -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#800F172A" />
+
+    <!-- Top Activity Title or Toolbar (matches mockup 'Create Post - Mode S...') -->
+
+    <!-- The actual Bottom Sheet layout injected -->
+    <!-- The layout_gravity="bottom" pushes the white card to the bottom but above the navbar using outline rules! -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="72dp"
+        android:background="@drawable/bg_bottom_sheet_modal"
+        android:orientation="vertical"
+        android:paddingBottom="32dp"
+        android:clipToPadding="false">
+        
+            <!-- Drag Handle -->
+            <View
+                android:layout_width="40dp"
+                android:layout_height="4dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/bg_drag_handle" />
+        
+            <!-- Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="What are you posting?"
+                android:textSize="18sp"
+                android:textColor="#0F172A"
+                android:textStyle="bold"
+                android:layout_marginBottom="32dp" />
+        
+            <!-- Card 1: Gig Post -->
+            <RelativeLayout
+                android:id="@+id/cardGigPost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/bg_card_base"
+                android:elevation="2dp"
+                android:outlineSpotShadowColor="#E2E8F0"
+                android:clickable="true"
+                android:focusable="true">
+        
+                <View
+                    android:id="@+id/bg_accent_gig"
+                    android:layout_width="4dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/gig_inner"
+                    android:layout_alignBottom="@+id/gig_inner"
+                    android:background="@drawable/bg_left_border_blue" />
+        
+                <RelativeLayout
+                    android:id="@+id/gig_inner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:layout_marginStart="4dp">
+        
+                    <FrameLayout
+                        android:id="@+id/iconGig"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/bg_circle_light_blue"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true">
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_briefcase_blue"
+                            android:importantForAccessibility="no" />
+                    </FrameLayout>
+        
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/iconGig"
+                        android:layout_marginStart="16dp"
+                        android:orientation="vertical">
+        
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gig Post"
+                            android:textColor="#0F172A"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+        
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="You need something done and will pay for it."
+                            android:textColor="#64748B"
+                            android:textSize="13sp" />
+        
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="36dp"
+                            android:layout_gravity="end"
+                            android:layout_marginTop="16dp"
+                            android:text="Continue →"
+                            android:textColor="#FFFFFF"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:paddingStart="20dp"
+                            android:paddingEnd="20dp"
+                            android:background="@drawable/bg_btn_solid_blue" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        
+            <!-- Card 2: Community Post -->
+            <RelativeLayout
+                android:id="@+id/cardCommunityPost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="32dp"
+                android:background="@drawable/bg_card_base"
+                android:elevation="2dp"
+                android:outlineSpotShadowColor="#E2E8F0"
+                android:clickable="true"
+                android:focusable="true">
+        
+                <View
+                    android:id="@+id/bg_accent_community"
+                    android:layout_width="4dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/comm_inner"
+                    android:layout_alignBottom="@+id/comm_inner"
+                    android:background="@drawable/bg_left_border_red" />
+        
+                <RelativeLayout
+                    android:id="@+id/comm_inner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:layout_marginStart="4dp">
+        
+                    <FrameLayout
+                        android:id="@+id/iconCommunity"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/bg_circle_pink"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true">
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_heart_red"
+                            android:importantForAccessibility="no" />
+                    </FrameLayout>
+        
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/iconCommunity"
+                        android:layout_marginStart="16dp"
+                        android:orientation="vertical">
+        
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Community Post"
+                            android:textColor="#0F172A"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+        
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="You need free help from your neighbours."
+                            android:textColor="#64748B"
+                            android:textSize="13sp" />
+        
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="36dp"
+                            android:layout_gravity="end"
+                            android:layout_marginTop="16dp"
+                            android:text="Continue →"
+                            android:textColor="#FFFFFF"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:paddingStart="20dp"
+                            android:paddingEnd="20dp"
+                            android:background="@drawable/bg_btn_solid_red" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        
+            <!-- Info text -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Choose the mode. You can post either\ntype at any time."
+                    android:gravity="center"
+                    android:textColor="#94A3B8"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="24dp" />
+            </LinearLayout>
+    </LinearLayout>
+
+    <!-- Bottom App Navigation System -->
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:fabAlignmentMode="center"
+        app:fabCradleMargin="8dp"
+        app:fabCradleRoundedCornerRadius="16dp"
+        app:hideOnScroll="false"
+        app:backgroundTint="#EBFFFFFF">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            style="@style/Widget.MaterialComponents.BottomNavigationView"
+            android:id="@+id/bottomNavView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:menu="@menu/bottom_nav_menu"
+            app:itemIconTint="@color/sel_bottom_nav_color"
+            app:itemTextColor="@color/sel_bottom_nav_color"
+            app:itemRippleColor="#E0F2FE"
+            app:labelVisibilityMode="labeled" />
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAdd"
+        android:importantForAccessibility="no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:backgroundTint="#2563EB"
+        app:tint="#FFFFFF"
+        app:srcCompat="@drawable/ic_plus_white"
+        app:cornerRadius="28dp"
+        app:layout_anchor="@id/bottomAppBar"
+        android:layout_marginBottom="16dp"
+        android:outlineAmbientShadowColor="#2563EB"
+        android:outlineSpotShadowColor="#2563EB"
+        android:elevation="8dp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

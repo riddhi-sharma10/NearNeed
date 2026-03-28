@@ -8,21 +8,26 @@ import android.widget.FrameLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.chip.ChipGroup;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MainActivity extends AppCompatActivity {
 
-    private FrameLayout cardGig1, cardCommunity1, cardGig2;
-    private ChipGroup cgFilters;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
-        cardGig1 = findViewById(R.id.cardGig1);
-        cardCommunity1 = findViewById(R.id.cardCommunity1);
-        cardGig2 = findViewById(R.id.cardGig2);
-        cgFilters = findViewById(R.id.cgFilters);
+        FrameLayout cardGig1 = findViewById(R.id.cardGig1);
+        FrameLayout cardCommunity1 = findViewById(R.id.cardCommunity1);
+        FrameLayout cardGig2 = findViewById(R.id.cardGig2);
+        ChipGroup cgFilters = findViewById(R.id.cgFilters);
+        FloatingActionButton fabAdd = findViewById(R.id.fabAdd);
+
+        fabAdd.setOnClickListener(v -> {
+            startActivity(new Intent(MainActivity.this, CreatePostActivity.class));
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+        });
 
         cgFilters.setOnCheckedStateChangeListener((group, checkedIds) -> {
             if (checkedIds.isEmpty()) return;
