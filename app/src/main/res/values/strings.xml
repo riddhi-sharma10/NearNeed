@@ -116,4 +116,24 @@
     <string name="txt_code_sent">Code sent!</string>
     <string name="txt_please_enter_your_name">Please enter your name.</string>
     <string name="txt_detecting_gps_location">Detecting GPS location...</string>
+    <string name="txt_all">All</string>
+    <string name="txt_gigs">Gigs</string>
+    <string name="txt_near_by">Near By</string>
+    <string name="txt_plumbing_repair">Plumbing Repair</string>
+    <string name="txt_price_400">₹400</string>
+    <string name="txt_view_gig">View Gig</string>
+    <string name="txt_urgent">URGENT</string>
+    <string name="txt_garden_cleanup">Garden Clean-up</string>
+    <string name="txt_community_project">Community Project</string>
+    <string name="txt_7_10_volunteers">7/10 Volunteers</string>
+    <string name="txt_70_percent">70%</string>
+    <string name="txt_volunteer">Volunteer</string>
+    <string name="txt_groceries_delivery">Groceries Delivery</string>
+    <string name="txt_price_100">₹100</string>
+    <string name="txt_home">Home</string>
+    <string name="txt_map">Map</string>
+    <string name="txt_messages">Messages</string>
+    <string name="txt_empty"></string>
+    <string name="txt_community">Community</string>
+    <string name="txt_verified">Verified</string>
 </resources>

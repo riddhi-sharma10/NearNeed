@@ -194,11 +194,7 @@
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:backgroundTint="#1D5EF3"
-                app:cornerRadius="12dp"
-                app:icon="@drawable/ic_forward_arrow"
-                app:iconSize="14dp"
-                app:iconGravity="textEnd"
-                app:iconTint="#FFFFFF" />
+                app:cornerRadius="12dp" />
 
             <LinearLayout
                 android:layout_width="wrap_content"

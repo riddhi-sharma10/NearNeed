@@ -114,11 +114,7 @@
             android:textSize="16sp"
             android:textStyle="bold"
             app:backgroundTint="#1D5EF3"
-            app:cornerRadius="24dp"
-            app:icon="@drawable/ic_forward_arrow"
-            app:iconSize="14dp"
-            app:iconGravity="textEnd"
-            app:iconTint="#FFFFFF" />
+            app:cornerRadius="24dp" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,251 +2,152 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F6F7F8">
+    android:background="#FFFFFF"
+    tools:ignore="HardcodedText,ContentDescription,SpUsage">
 
-    <androidx.core.widget.NestedScrollView
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
-
+        android:fillViewport="true">
+        
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingStart="24dp"
-            android:paddingEnd="24dp"
-            android:paddingTop="32dp"
-            android:paddingBottom="24dp"
+            android:padding="24dp"
             android:gravity="center_horizontal">
 
-            <!-- Title bar -->
-            <FrameLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp">
+                <ImageButton android:id="@+id/btnBack" android:layout_width="40dp" android:layout_height="40dp" android:layout_centerVertical="true" android:background="?attr/selectableItemBackgroundBorderless" android:src="@drawable/ic_back_arrow" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:text="ID Verification" android:textColor="#101D33" android:textSize="16sp" android:textStyle="bold" />
+            </RelativeLayout>
 
-                <ImageButton
-                    android:id="@+id/btnBack"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center_vertical|start"
-                    android:background="?attr/selectableItemBackgroundBorderless"
-                    android:src="@drawable/ic_back_arrow" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/txt_id_verification"
-                    android:textColor="#101D33"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-            </FrameLayout>
-
-            <!-- Shield Icon -->
             <ImageView
-                android:layout_width="64dp"
-                android:layout_height="64dp"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
                 android:layout_marginTop="48dp"
-                android:background="@drawable/bg_circle_light_blue"
-                android:src="@drawable/ic_shield_check"
-                android:padding="16dp" />
+                android:src="@drawable/ic_verified_badge" 
+                app:tint="#1D5EF3"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:text="@string/txt_verify_your_identity"
+                android:layout_marginTop="16dp"
+                android:text="Verify your identity"
                 android:textColor="#101D33"
-                android:textSize="24sp"
-                android:letterSpacing="-0.02"
-                android:textStyle="bold" />
+                android:textSize="28sp"
+                android:fontFamily="sans-serif-black"
+                android:letterSpacing="-0.02" />
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="@string/txt_nearneed_requires_id_verificat"
+                android:text="NearNeed requires ID verification before you can post or apply for gigs."
                 android:textColor="#64748B"
-                android:lineSpacingExtra="2dp"
+                android:textSize="16sp"
                 android:gravity="center"
-                android:textSize="14sp" />
+                android:paddingHorizontal="16dp"/>
 
-            <!-- Alert Box -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="@drawable/bg_info_alert"
-                android:layout_marginTop="24dp"
-                android:padding="16dp">
-
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/ic_info_circle" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginStart="12dp">
-                    
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/txt_accepted_ids"
-                        android:textColor="#101D33"
-                        android:textSize="11sp"
-                        android:textStyle="bold"
-                        android:letterSpacing="0.05" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="@string/txt_aadhaar_pan_driving_licence_st"
-                        android:textColor="#475569"
-                        android:textSize="13sp"
-                        android:lineSpacingExtra="2dp"/>
+                android:layout_marginTop="32dp"
+                android:background="@drawable/bg_verified_blue_shield"
+                android:padding="16dp"
+                android:orientation="horizontal">
+                
+                <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_verified_badge" android:layout_gravity="center_vertical" />
+                
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ACCEPTED IDS" android:textColor="#1D5EF3" android:textSize="12sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Aadhaar, PAN, Driving Licenses (Voter ID and Passport)" android:textColor="#101D33" android:textSize="13sp" android:fontFamily="sans-serif-medium" />
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- Front ID -->
+            <!-- Front Side Upload -->
             <LinearLayout
+                android:id="@+id/cardUploadFront"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:background="@drawable/bg_id_upload_dashed"
+                android:layout_height="96dp"
                 android:layout_marginTop="24dp"
-                android:padding="24dp"
-                android:clickable="true"
-                android:focusable="true">
-
-                <ImageView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:background="@drawable/bg_circle_grey_icon"
-                    android:src="@drawable/ic_id_camera"
-                    android:padding="12dp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:text="@string/txt_front_of_id"
-                    android:textColor="#101D33"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
-                    android:text="@string/txt_clear_photo_showing_your_detai"
-                    android:textColor="#94A3B8"
-                    android:textSize="11sp" />
+                android:background="@drawable/bg_dashed_border"
+                android:elevation="4dp"
+                android:outlineAmbientShadowColor="#08000000"
+                android:outlineSpotShadowColor="#08000000"
+                android:gravity="center"
+                android:orientation="vertical">
+                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_edit_icon" app:tint="#94A3B8" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Front of ID" android:textColor="#101D33" android:textSize="14sp" android:textStyle="bold" android:layout_marginTop="4dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Clear picture, no light reflections." android:textColor="#94A3B8" android:textSize="12sp" />
             </LinearLayout>
 
-            <!-- Back ID -->
+            <!-- Back Side Upload -->
+            <LinearLayout
+                android:id="@+id/cardUploadBack"
+                android:layout_width="match_parent"
+                android:layout_height="96dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_dashed_border"
+                android:elevation="4dp"
+                android:outlineAmbientShadowColor="#08000000"
+                android:outlineSpotShadowColor="#08000000"
+                android:gravity="center"
+                android:orientation="vertical">
+                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_edit_icon" app:tint="#94A3B8" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Back of ID" android:textColor="#101D33" android:textSize="14sp" android:textStyle="bold" android:layout_marginTop="4dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Clear picture, horizontally held." android:textColor="#94A3B8" android:textSize="12sp" />
+            </LinearLayout>
+            
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:background="@drawable/bg_id_upload_dashed"
-                android:layout_marginTop="16dp"
-                android:padding="24dp"
-                android:clickable="true"
-                android:focusable="true">
-
-                <ImageView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:background="@drawable/bg_circle_grey_icon"
-                    android:src="@drawable/ic_id_camera"
-                    android:padding="12dp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:text="@string/txt_back_of_id"
-                    android:textColor="#101D33"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
-                    android:text="@string/txt_if_applicable_not_needed_for_p"
-                    android:textColor="#94A3B8"
-                    android:textSize="11sp" />
-            </LinearLayout>
-
-            <!-- Lock Info -->
-            <LinearLayout
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:layout_marginTop="24dp"
-                android:layout_marginBottom="16dp">
-                
-                <ImageView
-                    android:layout_width="12dp"
-                    android:layout_height="12dp"
-                    android:src="@drawable/ic_lock_small" />
-                
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="6dp"
-                    android:text="@string/txt_your_id_is_stored_securely_and"
-                    android:textColor="#64748B"
-                    android:textSize="11sp" />
+                android:layout_marginTop="16dp"
+                android:gravity="center_vertical">
+                <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_checkbox_unselected" app:tint="#94A3B8" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:text="I confirm the info on my ID is clear and readable." android:textColor="#64748B" android:textSize="12sp" />
             </LinearLayout>
 
-            <!-- Action Buttons -->
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="24dp" />
+
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnSubmit"
                 android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:text="@string/txt_submit_for_verification"
+                android:layout_height="64dp"
+                android:text="Submit for Verification"
                 android:textColor="#FFFFFF"
                 android:textAllCaps="false"
                 android:textSize="16sp"
-                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"
                 app:backgroundTint="#93C5FD"
-                app:cornerRadius="24dp"
-                app:icon="@drawable/ic_forward_arrow"
-                app:iconSize="14dp"
-                app:iconGravity="textEnd"
-                app:iconTint="#FFFFFF" />
-
+                app:cornerRadius="16dp"
+                android:elevation="0dp" />
+                
             <TextView
                 android:id="@+id/btnSkip"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:text="@string/txt_skip_for_now"
-                android:textColor="#475569"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:text="Skip for now"
+                android:textColor="#1D5EF3"
                 android:textSize="14sp"
                 android:textStyle="bold"
-                android:layout_marginTop="8dp"
-                android:gravity="center"
-                android:paddingStart="24dp"
-                android:paddingEnd="24dp"
-                android:background="?attr/selectableItemBackground"
                 android:clickable="true"
                 android:focusable="true"/>
 
         </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
-
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
