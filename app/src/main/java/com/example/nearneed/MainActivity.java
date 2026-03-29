@@ -56,6 +56,23 @@ public class MainActivity extends AppCompatActivity {
             });
         }
 
+        // ── Navigation (Bottom Nav) ──────────────────────────────────────────
+        com.google.android.material.bottomnavigation.BottomNavigationView nav = findViewById(R.id.bottomNavView);
+        nav.setSelectedItemId(R.id.nav_home);
+        nav.setOnItemSelectedListener(item -> {
+            int itemId = item.getItemId();
+            if (itemId == R.id.nav_map) {
+                startActivity(new Intent(MainActivity.this, DiscoveryMapActivity.class));
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                return true;
+            } else if (itemId == R.id.nav_profile) {
+                startActivity(new Intent(MainActivity.this, SettingsActivity.class));
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                return true;
+            }
+            return true;
+        });
+
         fabAdd.setOnClickListener(v -> {
             startActivity(new Intent(MainActivity.this, CreatePostActivity.class));
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);

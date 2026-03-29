@@ -17,6 +17,14 @@
             android:name=".MainActivity"
             android:exported="false" />
 
+        <activity
+            android:name=".DiscoveryMapActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".GigDetailActivity"
+            android:exported="false" />
+
         
         <activity
             android:name=".LoadingActivity"

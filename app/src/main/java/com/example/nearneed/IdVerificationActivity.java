@@ -12,6 +12,9 @@ import com.google.android.material.button.MaterialButton;
 
 public class IdVerificationActivity extends AppCompatActivity {
 
+    private static final int REQUEST_PICK_FRONT = 1001;
+    private static final int REQUEST_PICK_BACK  = 1002;
+
     private ImageButton btnBack;
     private MaterialButton btnSubmit;
     private TextView btnSkip;
@@ -40,17 +43,8 @@ public class IdVerificationActivity extends AppCompatActivity {
     private void setupListeners() {
         btnBack.setOnClickListener(v -> onBackPressed());
 
-        cardUploadFront.setOnClickListener(v -> {
-            frontUploaded = true;
-            markCardUploaded(cardUploadFront, "Front Uploaded");
-            checkReadyToSubmit();
-        });
-
-        cardUploadBack.setOnClickListener(v -> {
-            backUploaded = true;
-            markCardUploaded(cardUploadBack, "Back Uploaded");
-            checkReadyToSubmit();
-        });
+        cardUploadFront.setOnClickListener(v -> openImagePicker(REQUEST_PICK_FRONT));
+        cardUploadBack.setOnClickListener(v  -> openImagePicker(REQUEST_PICK_BACK));
 
         btnSubmit.setOnClickListener(v -> {
             Intent intent = new Intent(this, IdVerifiedActivity.class);
@@ -63,18 +57,42 @@ public class IdVerificationActivity extends AppCompatActivity {
         });
     }
 
-    private void markCardUploaded(android.view.View card, String message) {
-        card.setBackgroundResource(R.drawable.bg_verified_blue_shield); // Solid light blue
-        // Find icon and text to change color
+    private void openImagePicker(int requestCode) {
+        Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+        intent.setType("image/*");
+        startActivityForResult(Intent.createChooser(intent, "Select ID Image"), requestCode);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == RESULT_OK && data != null && data.getData() != null) {
+            if (requestCode == REQUEST_PICK_FRONT) {
+                frontUploaded = true;
+                setCardUploadedState(cardUploadFront, "Front side uploaded");
+            } else if (requestCode == REQUEST_PICK_BACK) {
+                backUploaded = true;
+                setCardUploadedState(cardUploadBack, "Back side uploaded");
+            }
+            checkReadyToSubmit();
+        }
+    }
+
+    private void setCardUploadedState(android.view.View card, String message) {
+        // Change background to blue field
+        card.setBackgroundResource(R.drawable.bg_id_uploaded);
+        
+        // Find icon and text to change color to deeper blue
         if (card instanceof android.view.ViewGroup) {
             android.view.ViewGroup group = (android.view.ViewGroup) card;
             for (int i = 0; i < group.getChildCount(); i++) {
                 android.view.View child = group.getChildAt(i);
                 if (child instanceof android.widget.ImageView) {
-                    ((android.widget.ImageView) child).setColorFilter(0xFF1D5EF3); // Blue icon
+                    ((android.widget.ImageView) child).setColorFilter(0xFF4F46E5); // Indigo/Blue icon
+                    ((android.widget.ImageView) child).setImageResource(R.drawable.ic_check_circle_green); // Show checkmark
                 }
                 if (child instanceof android.widget.TextView) {
-                    ((android.widget.TextView) child).setTextColor(0xFF1D5EF3); // Blue text
+                    ((android.widget.TextView) child).setTextColor(0xFF4F46E5); // Deep blue text
                 }
             }
         }
