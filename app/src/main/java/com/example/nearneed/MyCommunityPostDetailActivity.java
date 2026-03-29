@@ -22,8 +22,9 @@ public class MyCommunityPostDetailActivity extends AppCompatActivity {
         MaterialButton btnUpdateStatus = findViewById(R.id.btnUpdateStatus);
 
         btnViewVolunteers.setOnClickListener(v -> {
-            Toast.makeText(this, "Volunteers Page (Coming Soon)", Toast.LENGTH_SHORT).show();
-            // TODO: Navigate to Volunteers Page when created
+            android.content.Intent intent = new android.content.Intent(MyCommunityPostDetailActivity.this, VolunteerManagementActivity.class);
+            startActivity(intent);
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
         });
 
         btnViewResponses.setOnClickListener(v -> {
