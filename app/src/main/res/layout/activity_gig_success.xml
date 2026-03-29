@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="#FCFBFF"
     tools:ignore="HardcodedText,ContentDescription,SpUsage">
 
     <LinearLayout
@@ -24,29 +24,19 @@
                 android:id="@+id/btnClose"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
-                android:background="?attr/selectableItemBackgroundBorderless"
+                android:background="@drawable/bg_circle_grey_solid"
                 android:src="@drawable/ic_close_grey" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="Post Status"
-                android:textColor="#101D33"
-                android:textSize="16sp"
-                android:textStyle="bold" />
         </RelativeLayout>
 
-        <!-- Center content grows to fill space -->
+        <!-- Flexbox Wrapper: Centers ALL internal content vertically -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:gravity="center"
-            android:paddingBottom="24dp">
+            android:gravity="center">
 
             <!-- Success icon -->
             <FrameLayout
@@ -55,12 +45,18 @@
                 android:background="@drawable/bg_circle_light_blue"
                 android:layout_gravity="center_horizontal">
 
-                <ImageView
-                    android:layout_width="52dp"
-                    android:layout_height="52dp"
+                <FrameLayout
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/ic_check_circle_green"
-                    android:importantForAccessibility="no" />
+                    android:background="@drawable/bg_btn_solid_blue">
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_check_solid_white"
+                        android:importantForAccessibility="no" />
+                </FrameLayout>
             </FrameLayout>
 
             <!-- Headline -->
@@ -68,75 +64,66 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
-                android:text="Your post is live."
+                android:text="Your Gig is live."
                 android:textColor="#101D33"
-                android:textSize="28sp"
-                android:fontFamily="sans-serif-black"
-                android:letterSpacing="-0.03"
+                android:textSize="22sp"
+                android:textStyle="bold"
                 android:gravity="center"
                 android:layout_gravity="center_horizontal" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="People within 2km have been notified."
+                android:layout_marginTop="12dp"
+                android:text="People within your radius have been notified."
                 android:textColor="#64748B"
-                android:textSize="15sp"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal" />
+                
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Broadcasted to 42 neighbours."
+                android:textColor="#1D5EF3"
+                android:textSize="14sp"
+                android:textStyle="bold"
                 android:gravity="center"
                 android:layout_gravity="center_horizontal" />
 
-            <!-- Map snapshot card -->
-            <FrameLayout
+            <!-- Space instead of redirect -->
+            <View android:layout_width="match_parent" android:layout_height="40dp" />
+
+            <!-- Bottom CTAs (Now centered with the rest of the flow) -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBackToFeed"
                 android:layout_width="match_parent"
-                android:layout_height="160dp"
-                android:layout_marginTop="32dp"
-                android:background="@drawable/bg_card_base"
-                android:elevation="6dp"
-                android:outlineAmbientShadowColor="#0F000000"
-                android:outlineSpotShadowColor="#1A000000">
+                android:layout_height="64dp"
+                android:layout_marginTop="40dp"
+                android:text="Back to Feed"
+                android:textColor="#FFFFFF"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                app:backgroundTint="#1D5EF3"
+                app:cornerRadius="16dp"
+                android:elevation="0dp" />
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="220dp"
-                    android:importantForAccessibility="no"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/bg_map_vector" />
-            </FrameLayout>
+            <TextView
+                android:id="@+id/btnViewMyPost"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginTop="12dp"
+                android:text="View My Gig"
+                android:textColor="#1D5EF3"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true" />
 
-            <!-- Auto redirect hint -->
         </LinearLayout>
-
-        <!-- Bottom CTAs -->
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnBackToFeed"
-            android:layout_width="match_parent"
-            android:layout_height="64dp"
-            android:text="Back to Feed"
-            android:textColor="#FFFFFF"
-            android:textAllCaps="false"
-            android:textSize="18sp"
-            android:fontFamily="sans-serif-medium"
-            app:backgroundTint="#1D5EF3"
-            app:cornerRadius="16dp"
-            android:elevation="0dp" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnViewMyPost"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_marginTop="12dp"
-            android:text="View My Post"
-            android:textColor="#1D5EF3"
-            android:textAllCaps="false"
-            android:textSize="16sp"
-            android:fontFamily="sans-serif-medium"
-            app:backgroundTint="@android:color/transparent"
-            app:strokeColor="#E2E8F0"
-            app:strokeWidth="1dp"
-            app:cornerRadius="16dp"
-            android:elevation="0dp" />
-
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

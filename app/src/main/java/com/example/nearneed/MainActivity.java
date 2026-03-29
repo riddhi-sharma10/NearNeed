@@ -25,6 +25,12 @@ public class MainActivity extends AppCompatActivity {
         FrameLayout cardGig2 = findViewById(R.id.cardGig2);
         ChipGroup cgFilters = findViewById(R.id.cgFilters);
         FloatingActionButton fabAdd = findViewById(R.id.fabAdd);
+        View ivProfile = findViewById(R.id.ivProfile);
+
+        ivProfile.setOnClickListener(v -> {
+            startActivity(new Intent(MainActivity.this, SettingsActivity.class));
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+        });
 
         View btnVolC1 = findViewById(R.id.btnVolC1);
         if (btnVolC1 != null) {
