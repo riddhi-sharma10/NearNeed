@@ -29,7 +29,11 @@ public class CommunityVolunteerStep2Activity extends AppCompatActivity {
         
         MaterialButton btnSendResponse = findViewById(R.id.btnSendResponse);
         if (btnSendResponse != null) {
-            btnSendResponse.setOnClickListener(v -> finish());
+            btnSendResponse.setOnClickListener(v -> {
+                android.content.Intent intent = new android.content.Intent(CommunityVolunteerStep2Activity.this, ResponseSentActivity.class);
+                startActivity(intent);
+                finish();
+            });
         }
     }
 }
