@@ -25,7 +25,8 @@ public class CreatePostActivity extends AppCompatActivity {
         });
         
         findViewById(R.id.cardCommunityPost).setOnClickListener(v -> {
-            android.widget.Toast.makeText(this, "Community posts coming soon!", android.widget.Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(this, CreateCommunityPostActivity.class));
+            overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out);
         });
     }
 }

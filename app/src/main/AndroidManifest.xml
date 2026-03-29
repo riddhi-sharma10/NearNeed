@@ -70,6 +70,10 @@
             android:exported="false" />
 
         <activity
+            android:name=".CreateCommunityPostActivity"
+            android:exported="false" />
+
+        <activity
             android:name=".CreateGigActivity"
             android:exported="false" />
 
