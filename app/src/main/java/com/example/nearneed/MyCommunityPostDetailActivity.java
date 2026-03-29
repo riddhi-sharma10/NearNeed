@@ -28,13 +28,15 @@ public class MyCommunityPostDetailActivity extends AppCompatActivity {
         });
 
         btnViewResponses.setOnClickListener(v -> {
-            Toast.makeText(this, "Responses Page (Coming Soon)", Toast.LENGTH_SHORT).show();
-            // TODO: Navigate to Responses Page when created
+            android.content.Intent intent = new android.content.Intent(MyCommunityPostDetailActivity.this, VolunteerResponsesActivity.class);
+            startActivity(intent);
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
         });
 
         btnUpdateStatus.setOnClickListener(v -> {
-            Toast.makeText(this, "Status Change Page (Coming Soon)", Toast.LENGTH_SHORT).show();
-            // TODO: Open status bottom sheet / screen when created
+            android.content.Intent intent = new android.content.Intent(MyCommunityPostDetailActivity.this, PostStatusActivity.class);
+            startActivity(intent);
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
         });
     }
 }
