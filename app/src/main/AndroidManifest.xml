@@ -149,6 +149,16 @@
             android:exported="false"
             android:screenOrientation="portrait" />
 
+        <activity android:name=".UserProfileActivity" android:exported="false" />
+        <activity android:name=".EditProfileActivity" android:exported="false" />
+        <activity android:name=".SavedTasksActivity" android:exported="false" />
+        <activity android:name=".MyPostsActivity" android:exported="false" />
+        <activity android:name=".HelpSupportActivity" android:exported="false" />
+        <activity android:name=".SettingsActivity" android:exported="false" />
+        <activity android:name=".ReviewsActivity" android:exported="false" />
+        <activity android:name=".RecentActivityActivity" android:exported="false" />
+        <activity android:name=".MessagesActivity" android:exported="false" android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>

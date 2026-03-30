@@ -7,6 +7,7 @@ import android.widget.FrameLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.chip.ChipGroup;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -56,22 +57,31 @@ public class MainActivity extends AppCompatActivity {
             });
         }
 
-        // ── Navigation (Bottom Nav) ──────────────────────────────────────────
-        com.google.android.material.bottomnavigation.BottomNavigationView nav = findViewById(R.id.bottomNavView);
-        nav.setSelectedItemId(R.id.nav_home);
-        nav.setOnItemSelectedListener(item -> {
-            int itemId = item.getItemId();
-            if (itemId == R.id.nav_map) {
-                startActivity(new Intent(MainActivity.this, DiscoveryMapActivity.class));
-                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+        // ── Bottom Navigation ────────────────────────────────────────────────
+        BottomNavigationView bottomNav = findViewById(R.id.bottomNavView);
+        if (bottomNav != null) {
+            bottomNav.setSelectedItemId(R.id.nav_home);
+            bottomNav.setOnItemSelectedListener(item -> {
+                int itemId = item.getItemId();
+                if (itemId == R.id.nav_home) {
+                    return true; // already here
+                } else if (itemId == R.id.nav_map) {
+                    startActivity(new Intent(MainActivity.this, DiscoveryMapActivity.class));
+                    overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                    return true;
+                } else if (itemId == R.id.nav_messages) {
+                    startActivity(new Intent(MainActivity.this, MessagesActivity.class));
+                    overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                    finish();
+                    return true;
+                } else if (itemId == R.id.nav_profile) {
+                    startActivity(new Intent(MainActivity.this, UserProfileActivity.class));
+                    overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                    return true;
+                }
                 return true;
-            } else if (itemId == R.id.nav_profile) {
-                startActivity(new Intent(MainActivity.this, SettingsActivity.class));
-                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-                return true;
-            }
-            return true;
-        });
+            });
+        }
 
         fabAdd.setOnClickListener(v -> {
             startActivity(new Intent(MainActivity.this, CreatePostActivity.class));

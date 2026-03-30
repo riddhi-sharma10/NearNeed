@@ -20,7 +20,7 @@ public class GigDetailActivity extends AppCompatActivity {
     }
 
     private void showApplySheet() {
-        BottomSheetDialog dialog = new BottomSheetDialog(this, R.style.BottomSheetDialogTheme);
+        BottomSheetDialog dialog = new BottomSheetDialog(this);
         View sheetView = getLayoutInflater().inflate(R.layout.dialog_apply_gig, null);
         dialog.setContentView(sheetView);
 
