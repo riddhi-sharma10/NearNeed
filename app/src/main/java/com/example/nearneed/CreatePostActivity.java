@@ -28,5 +28,11 @@ public class CreatePostActivity extends AppCompatActivity {
             startActivity(new Intent(this, CreateCommunityPostActivity.class));
             overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out);
         });
+
+        // Skip for now
+        findViewById(R.id.tvSkipForNow).setOnClickListener(v -> {
+            startActivity(new Intent(this, JobsActivity.class));
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+        });
     }
 }
