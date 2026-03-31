@@ -57,6 +57,32 @@ public class MainActivity extends AppCompatActivity {
             });
         }
 
+        View btnApplyGig1 = findViewById(R.id.btnApplyGig1);
+        if (btnApplyGig1 != null) {
+            btnApplyGig1.setOnClickListener(v -> {
+                Intent intent = new Intent(MainActivity.this, GigDetailActivity.class);
+                intent.putExtra(GigDetailActivity.EXTRA_TITLE, getString(R.string.txt_plumbing_repair));
+                intent.putExtra(GigDetailActivity.EXTRA_PRICE, getString(R.string.txt_price_400));
+                intent.putExtra(GigDetailActivity.EXTRA_DESC, "Bathroom pipe burst, need experienced plumber ASAP.");
+                intent.putExtra(GigDetailActivity.EXTRA_DISTANCE, "0.3 km  ·  2 min ago");
+                startActivity(intent);
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+            });
+        }
+
+        View btnApplyGig2 = findViewById(R.id.btnApplyGig2);
+        if (btnApplyGig2 != null) {
+            btnApplyGig2.setOnClickListener(v -> {
+                Intent intent = new Intent(MainActivity.this, GigDetailActivity.class);
+                intent.putExtra(GigDetailActivity.EXTRA_TITLE, getString(R.string.txt_groceries_delivery));
+                intent.putExtra(GigDetailActivity.EXTRA_PRICE, getString(R.string.txt_price_100));
+                intent.putExtra(GigDetailActivity.EXTRA_DESC, "Need someone to pick up groceries from D-Mart, Sector 14.");
+                intent.putExtra(GigDetailActivity.EXTRA_DISTANCE, "0.7 km  ·  8 min ago");
+                startActivity(intent);
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+            });
+        }
+
         // ── Bottom Navigation ────────────────────────────────────────────────
         BottomNavigationView bottomNav = findViewById(R.id.bottomNavView);
         if (bottomNav != null) {
