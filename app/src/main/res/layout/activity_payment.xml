@@ -23,7 +23,7 @@
         android:layout_height="match_parent"
         android:layout_marginTop="50dp"
         android:background="@drawable/bg_bottom_sheet_top_rounded"
-        android:paddingBottom="140dp"
+        android:paddingBottom="24dp"
         android:clipToPadding="false"
         android:scrollbars="none">
 
@@ -114,7 +114,7 @@
                     <LinearLayout android:id="@+id/upiContent" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="32dp">
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ENTER UPI ID" android:textColor="#94A3B8" android:textSize="12sp" android:letterSpacing="0.05" android:textStyle="bold" android:layout_marginBottom="12dp"/>
                         <RelativeLayout android:layout_width="match_parent" android:layout_height="60dp" android:background="@drawable/bg_input_field" android:backgroundTint="#FFFFFF">
-                            <EditText android:id="@+id/etUpiId" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_toStartOf="@+id/btnVerify" android:background="@android:color/transparent" android:paddingHorizontal="20dp" android:hint="example@upi" android:hintTextColor="#CBD5E1" android:textColor="#101D33" android:textSize="16sp"/>
+                            <EditText android:id="@+id/etUpiId" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_toStartOf="@+id/btnVerify" android:background="@android:color/transparent" android:paddingHorizontal="20dp" android:hint="example@upi" android:textColorHint="#CBD5E1" android:textColor="#101D33" android:textSize="16sp"/>
                             <TextView android:id="@+id/btnVerify" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_alignParentEnd="true" android:paddingHorizontal="24dp" android:gravity="center" android:text="VERIFY" android:textColor="#1D5EF3" android:textSize="14sp" android:textStyle="bold" />
                         </RelativeLayout>
                         <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_gravity="center" android:layout_marginTop="24dp">
@@ -174,44 +174,43 @@
                     </RelativeLayout>
                 </LinearLayout>
             </LinearLayout>
+
+            <!-- Bottom Container now at end of scrolling -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@android:color/transparent"
+                android:paddingHorizontal="24dp"
+                android:paddingTop="28dp"
+                android:paddingBottom="56dp">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnConfirmPayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp"
+                    android:text="Confirm &amp; Notify Helper "
+                    android:textAllCaps="false"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    app:cornerRadius="36dp"
+                    app:backgroundTint="#1D5EF3"
+                    app:icon="@drawable/ic_forward_arrow"
+                    app:iconGravity="textEnd"
+                    app:iconPadding="12dp"
+                    android:elevation="4dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:gravity="center"
+                    android:text="By proceeding, you agree to our payment terms. The helper will be notified immediately of your choice."
+                    android:textColor="#94A3B8"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="7dp"/>
+            </LinearLayout>
+
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
-
-    <!-- Bottom Container stays at bottom correctly -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:orientation="vertical"
-        android:background="#FFFFFF"
-        android:paddingHorizontal="24dp"
-        android:paddingTop="28dp"
-        android:paddingBottom="56dp"
-        android:elevation="16dp">
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnConfirmPayment"
-            android:layout_width="match_parent"
-            android:layout_height="72dp"
-            android:text="Confirm &amp; Notify Helper "
-            android:textAllCaps="false"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="#FFFFFF"
-            app:cornerRadius="36dp"
-            app:backgroundTint="#1D5EF3"
-            app:icon="@drawable/ic_forward_arrow"
-            app:iconGravity="textEnd"
-            app:iconPadding="12dp"
-            android:elevation="4dp"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
-            android:gravity="center"
-            android:text="By proceeding, you agree to our payment terms. The helper will be notified immediately of your choice."
-            android:textColor="#94A3B8"
-            android:textSize="14sp"
-            android:lineSpacingExtra="7dp"/>
-    </LinearLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
