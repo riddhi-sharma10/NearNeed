@@ -25,7 +25,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#800F172A" />
+        android:background="@color/overlay_header" />
 
     <!-- Top Activity Title or Toolbar (matches mockup 'Create Post - Mode S...') -->
 
@@ -57,7 +57,7 @@
                 android:layout_gravity="center_horizontal"
                 android:text="What are you posting?"
                 android:textSize="18sp"
-                android:textColor="#0F172A"
+                android:textColor="@color/text_header"
                 android:textStyle="bold"
                 android:layout_marginBottom="32dp" />
         
@@ -71,7 +71,7 @@
                 android:layout_marginBottom="16dp"
                 android:background="@drawable/bg_card_base"
                 android:elevation="2dp"
-                android:outlineSpotShadowColor="#E2E8F0"
+                android:outlineSpotShadowColor="@color/border_standard"
                 android:clickable="true"
                 android:focusable="true">
         
@@ -116,7 +116,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Gig Post"
-                            android:textColor="#0F172A"
+                            android:textColor="@color/text_header"
                             android:textSize="16sp"
                             android:textStyle="bold" />
         
@@ -125,7 +125,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
                             android:text="You need something done and will pay for it."
-                            android:textColor="#64748B"
+                            android:textColor="@color/text_subheadline"
                             android:textSize="13sp" />
         
                         <TextView
@@ -134,7 +134,7 @@
                             android:layout_gravity="end"
                             android:layout_marginTop="16dp"
                             android:text="Continue →"
-                            android:textColor="#FFFFFF"
+                            android:textColor="@color/white"
                             android:textSize="13sp"
                             android:textStyle="bold"
                             android:gravity="center"
@@ -155,7 +155,7 @@
                 android:layout_marginBottom="32dp"
                 android:background="@drawable/bg_card_base"
                 android:elevation="2dp"
-                android:outlineSpotShadowColor="#E2E8F0"
+                android:outlineSpotShadowColor="@color/border_standard"
                 android:clickable="true"
                 android:focusable="true">
         
@@ -200,7 +200,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Community Post"
-                            android:textColor="#0F172A"
+                            android:textColor="@color/text_header"
                             android:textSize="16sp"
                             android:textStyle="bold" />
         
@@ -209,7 +209,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
                             android:text="You need free help from your neighbours."
-                            android:textColor="#64748B"
+                            android:textColor="@color/text_subheadline"
                             android:textSize="13sp" />
         
                         <TextView
@@ -218,7 +218,7 @@
                             android:layout_gravity="end"
                             android:layout_marginTop="16dp"
                             android:text="Continue →"
-                            android:textColor="#FFFFFF"
+                            android:textColor="@color/white"
                             android:textSize="13sp"
                             android:textStyle="bold"
                             android:gravity="center"
@@ -236,7 +236,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:text="Skip for now"
-                android:textColor="#0F172A"
+                android:textColor="@color/text_header"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 android:padding="8dp"
@@ -257,7 +257,7 @@
                     android:layout_height="wrap_content"
                     android:text="Choose the mode. You can post either\ntype at any time."
                     android:gravity="center"
-                    android:textColor="#94A3B8"
+                    android:textColor="@color/text_muted"
                     android:textSize="12sp"
                     android:layout_marginBottom="24dp" />
             </LinearLayout>
@@ -273,7 +273,7 @@
         app:fabCradleMargin="8dp"
         app:fabCradleRoundedCornerRadius="16dp"
         app:hideOnScroll="false"
-        app:backgroundTint="#EBFFFFFF">
+        app:backgroundTint="@color/white">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             style="@style/Widget.MaterialComponents.BottomNavigationView"
@@ -284,7 +284,7 @@
             app:menu="@menu/bottom_nav_menu"
             app:itemIconTint="@color/sel_bottom_nav_color"
             app:itemTextColor="@color/sel_bottom_nav_color"
-            app:itemRippleColor="#E0F2FE"
+            app:itemRippleColor="@color/brand_info_light"
             app:labelVisibilityMode="labeled" />
     </com.google.android.material.bottomappbar.BottomAppBar>
 
@@ -293,14 +293,21 @@
         android:importantForAccessibility="no"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:backgroundTint="#2563EB"
-        app:tint="#FFFFFF"
+        app:backgroundTint="@color/brand_primary"
+        app:tint="@color/white"
         app:srcCompat="@drawable/ic_plus_white"
         app:cornerRadius="28dp"
         app:layout_anchor="@id/bottomAppBar"
         android:layout_marginBottom="16dp"
-        android:outlineAmbientShadowColor="#2563EB"
-        android:outlineSpotShadowColor="#2563EB"
+        android:outlineAmbientShadowColor="@color/brand_primary"
+        android:outlineSpotShadowColor="@color/brand_primary"
         android:elevation="8dp" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+
+
+
+

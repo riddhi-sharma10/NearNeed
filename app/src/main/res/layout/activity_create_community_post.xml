@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FCFAFA"
+    android:background="@color/surface_background_clean"
     tools:ignore="HardcodedText,ContentDescription,SpUsage">
 
     <ScrollView
@@ -38,7 +38,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:text="Create Community Post"
-                    android:textColor="#101D33"
+                    android:textColor="@color/text_header"
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </RelativeLayout>
@@ -49,7 +49,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:text="Step 1 of 2"
-                android:textColor="#F43F5E"
+                android:textColor="@color/brand_error_solid"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -66,14 +66,14 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Progress"
-                    android:textColor="#F43F5E"
+                    android:textColor="@color/brand_error_solid"
                     android:textSize="14sp"
                     android:textStyle="bold" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="50%"
-                    android:textColor="#F43F5E"
+                    android:textColor="@color/brand_error_solid"
                     android:textSize="14sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -93,7 +93,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:text="WHAT DO YOU NEED?"
-                android:textColor="#64748B"
+                android:textColor="@color/text_subheadline"
                 android:textSize="10sp"
                 android:textStyle="bold"
                 android:letterSpacing="0.05" />
@@ -105,11 +105,11 @@
                 android:layout_marginTop="8dp"
                 android:background="@drawable/bg_district_pill_input_white_stroke"
                 android:elevation="6dp"
-                android:outlineAmbientShadowColor="#0F000000"
-                android:outlineSpotShadowColor="#1A000000"
+                android:outlineAmbientShadowColor="@color/shadow_ambient"
+                android:outlineSpotShadowColor="@color/shadow_spot"
                 android:hint="Enter your request title"
-                android:textColorHint="#94A3B8"
-                android:textColor="#101D33"
+                android:textColorHint="@color/text_muted"
+                android:textColor="@color/text_header"
                 android:textSize="16sp"
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp"
@@ -122,7 +122,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:text="TELL YOUR NEIGHBOURS MORE"
-                android:textColor="#64748B"
+                android:textColor="@color/text_subheadline"
                 android:textSize="10sp"
                 android:textStyle="bold"
                 android:letterSpacing="0.05" />
@@ -134,11 +134,11 @@
                 android:layout_marginTop="8dp"
                 android:background="@drawable/bg_district_pill_input_white_stroke"
                 android:elevation="6dp"
-                android:outlineAmbientShadowColor="#0F000000"
-                android:outlineSpotShadowColor="#1A000000"
+                android:outlineAmbientShadowColor="@color/shadow_ambient"
+                android:outlineSpotShadowColor="@color/shadow_spot"
                 android:hint="Provide more details about your request"
-                android:textColorHint="#94A3B8"
-                android:textColor="#101D33"
+                android:textColorHint="@color/text_muted"
+                android:textColor="@color/text_header"
                 android:textSize="16sp"
                 android:padding="20dp"
                 android:gravity="top|start"
@@ -151,7 +151,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:text="URGENCY"
-                android:textColor="#64748B"
+                android:textColor="@color/text_subheadline"
                 android:textSize="10sp"
                 android:textStyle="bold"
                 android:letterSpacing="0.05" />
@@ -184,7 +184,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Normal"
-                        android:textColor="#101D33"
+                        android:textColor="@color/text_header"
                         android:textSize="14sp"
                         android:textStyle="bold"
                         android:layout_marginTop="8dp" />
@@ -193,7 +193,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="48h expiry"
-                        android:textColor="#94A3B8"
+                        android:textColor="@color/text_muted"
                         android:textSize="10sp"
                         android:layout_marginTop="2dp" />
                 </LinearLayout>
@@ -220,7 +220,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Urgent"
-                        android:textColor="#92400E"
+                        android:textColor="@color/brand_warning_text"
                         android:textSize="14sp"
                         android:textStyle="bold"
                         android:layout_marginTop="8dp" />
@@ -229,7 +229,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="6h expiry"
-                        android:textColor="#B45309"
+                        android:textColor="@color/brand_warning_text_alt"
                         android:textSize="10sp"
                         android:layout_marginTop="2dp" />
                 </LinearLayout>
@@ -255,7 +255,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Emergency"
-                        android:textColor="#101D33"
+                        android:textColor="@color/text_header"
                         android:textSize="14sp"
                         android:textStyle="bold"
                         android:layout_marginTop="8dp" />
@@ -264,7 +264,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="2h expiry"
-                        android:textColor="#94A3B8"
+                        android:textColor="@color/text_muted"
                         android:textSize="10sp"
                         android:layout_marginTop="2dp" />
                 </LinearLayout>
@@ -291,7 +291,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Emergency will send SMS to all neighbours in your radius, even on silent."
-                    android:textColor="#BE123C"
+                    android:textColor="@color/brand_error_text"
                     android:textSize="12sp"
                     android:lineSpacingMultiplier="1.2" />
             </LinearLayout>
@@ -302,7 +302,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:text="CATEGORY"
-                android:textColor="#64748B"
+                android:textColor="@color/text_subheadline"
                 android:textSize="10sp"
                 android:textStyle="bold"
                 android:letterSpacing="0.05" />
@@ -392,8 +392,8 @@
                 android:layout_marginTop="24dp"
                 android:background="@drawable/bg_district_pill_input_white_stroke"
                 android:elevation="6dp"
-                android:outlineAmbientShadowColor="#0F000000"
-                android:outlineSpotShadowColor="#1A000000"
+                android:outlineAmbientShadowColor="@color/shadow_ambient"
+                android:outlineSpotShadowColor="@color/shadow_spot"
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp"
                 android:paddingTop="16dp"
@@ -411,7 +411,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="VOLUNTEERS"
-                        android:textColor="#64748B"
+                        android:textColor="@color/text_subheadline"
                         android:textSize="10sp"
                         android:textStyle="bold"
                         android:letterSpacing="0.05" />
@@ -428,7 +428,7 @@
                             android:layout_width="32dp"
                             android:layout_height="32dp"
                             android:text="−"
-                            android:textColor="#F43F5E"
+                            android:textColor="@color/brand_error_solid"
                             android:textSize="20sp"
                             android:gravity="center"
                             android:background="@drawable/bg_alert_red"
@@ -440,7 +440,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="1"
-                            android:textColor="#101D33"
+                            android:textColor="@color/text_header"
                             android:textSize="18sp"
                             android:textStyle="bold"
                             android:layout_marginStart="16dp"
@@ -451,7 +451,7 @@
                             android:layout_width="32dp"
                             android:layout_height="32dp"
                             android:text="+"
-                            android:textColor="#F43F5E"
+                            android:textColor="@color/brand_error_solid"
                             android:textSize="20sp"
                             android:gravity="center"
                             android:background="@drawable/bg_alert_red"
@@ -472,7 +472,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="SET MAXIMUM"
-                        android:textColor="#94A3B8"
+                        android:textColor="@color/text_muted"
                         android:textSize="8sp"
                         android:textStyle="bold"
                         android:letterSpacing="0.05"
@@ -483,8 +483,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:checked="true"
-                        app:thumbTint="#F43F5E"
-                        app:trackTint="#FDA4AF" />
+                        app:thumbTint="@color/brand_error_solid"
+                        app:trackTint="@color/brand_error_track" />
                 </LinearLayout>
 
             </RelativeLayout>
@@ -518,7 +518,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="EXPIRES IN 6 HOURS"
-                        android:textColor="#92400E"
+                        android:textColor="@color/brand_warning_text"
                         android:textSize="12sp"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -529,7 +529,7 @@
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:text="Change"
-                    android:textColor="#B45309"
+                    android:textColor="@color/brand_warning_text_alt"
                     android:textSize="11sp"
                     android:textStyle="bold" />
             </RelativeLayout>
@@ -546,13 +546,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="64dp"
                 android:text="Continue"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white"
                 android:textAllCaps="false"
                 android:textSize="18sp"
                 app:icon="@drawable/ic_forward_arrow"
                 app:iconGravity="textEnd"
-                app:iconTint="#FFFFFF"
-                app:backgroundTint="#F43F5E"
+                app:iconTint="@color/white"
+                app:backgroundTint="@color/brand_error_solid"
                 app:cornerRadius="16dp"
                 android:elevation="0dp"
                 android:layout_marginBottom="24dp" />
@@ -561,3 +561,10 @@
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+

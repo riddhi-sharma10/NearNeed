@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/apk/res/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F7F9FC"
+    android:background="@color/surface_background"
     android:fillViewport="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -19,7 +19,7 @@
             android:layout_marginStart="24dp"
             android:layout_marginTop="24dp"
             android:src="@drawable/ic_close_grey"
-            app:tint="#1D263B"
+            app:tint="@color/text_body_dark"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -28,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Payment Status"
-            android:textColor="#1D263B"
+            android:textColor="@color/text_body_dark"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/iv_close"
@@ -71,7 +71,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:text="Payment confirmed."
-                android:textColor="#1D263B"
+                android:textColor="@color/text_body_dark"
                 android:textSize="22sp"
                 android:textStyle="bold" />
 
@@ -80,7 +80,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="₹250 sent to Rahul S."
-                android:textColor="#7B8497"
+                android:textColor="@color/text_body_light"
                 android:textSize="16sp" />
 
             <TextView
@@ -89,7 +89,7 @@
                 android:layout_marginTop="32dp"
                 android:letterSpacing="0.1"
                 android:text="TRANSACTION ID TXN9823410"
-                android:textColor="#A1A7B9"
+                android:textColor="@color/text_hint"
                 android:textSize="12sp"
                 android:textStyle="bold" />
 
@@ -109,13 +109,13 @@
                     android:layout_height="16dp"
                     android:layout_marginEnd="8dp"
                     android:src="@drawable/ic_save_receipt"
-                    app:tint="#1D263B" />
+                    app:tint="@color/text_body_dark" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Save receipt"
-                    android:textColor="#1D263B"
+                    android:textColor="@color/text_body_dark"
                     android:textSize="14sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -141,7 +141,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginBottom="24dp"
-                android:background="#EAECF0" />
+                android:background="@color/border_light" />
 
             <!-- Status Row -->
             <LinearLayout
@@ -155,7 +155,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Status"
-                    android:textColor="#7B8497"
+                    android:textColor="@color/text_body_light"
                     android:textSize="14sp" />
 
                 <!-- Green dot + text -->
@@ -175,7 +175,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Successful"
-                        android:textColor="#12B76A"
+                        android:textColor="@color/brand_success_solid"
                         android:textSize="14sp"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -193,14 +193,14 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Recipient"
-                    android:textColor="#7B8497"
+                    android:textColor="@color/text_body_light"
                     android:textSize="14sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Rahul S."
-                    android:textColor="#1D263B"
+                    android:textColor="@color/text_body_dark"
                     android:textSize="14sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -214,7 +214,7 @@
                 android:background="@drawable/bg_btn_solid_blue"
                 android:text="Rate Rahul S. →"
                 android:textAllCaps="false"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -225,7 +225,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="I'll rate later"
-                android:textColor="#475467"
+                android:textColor="@color/text_subheadline"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -233,3 +233,10 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
+
+
+
+
+
+
+

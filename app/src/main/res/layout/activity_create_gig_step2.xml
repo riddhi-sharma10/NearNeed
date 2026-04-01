@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@color/white"
     tools:ignore="HardcodedText,ContentDescription,SpUsage">
 
     <ScrollView
@@ -38,7 +38,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:text="New Gig Post"
-                    android:textColor="#101D33"
+                    android:textColor="@color/text_header"
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </RelativeLayout>
@@ -56,14 +56,14 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Step 2 of 2"
-                    android:textColor="#101D33"
+                    android:textColor="@color/text_header"
                     android:textSize="14sp"
                     android:fontFamily="sans-serif-medium" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="100%"
-                    android:textColor="#1D5EF3"
+                    android:textColor="@color/brand_primary"
                     android:textSize="12sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -82,7 +82,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:text="Almost done."
-                android:textColor="#101D33"
+                android:textColor="@color/text_header"
                 android:textSize="32sp"
                 android:fontFamily="sans-serif-black"
                 android:letterSpacing="-0.03" />
@@ -92,7 +92,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="Add a photo, voice note, and your pick-up location."
-                android:textColor="#64748B"
+                android:textColor="@color/text_subheadline"
                 android:textSize="16sp" />
 
             <!-- ── ADD PHOTOS ── -->
@@ -101,7 +101,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:text="ADD PHOTOS"
-                android:textColor="#94A3B8"
+                android:textColor="@color/text_muted"
                 android:textSize="11sp"
                 android:letterSpacing="0.1"
                 android:fontFamily="sans-serif-medium" />
@@ -141,7 +141,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="ADD"
-                            android:textColor="#1D5EF3"
+                            android:textColor="@color/brand_primary"
                             android:textSize="11sp"
                             android:textStyle="bold"
                             android:layout_marginTop="4dp" />
@@ -187,7 +187,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
                 android:text="VOICE NOTE"
-                android:textColor="#94A3B8"
+                android:textColor="@color/text_muted"
                 android:textSize="11sp"
                 android:letterSpacing="0.1"
                 android:fontFamily="sans-serif-medium" />
@@ -231,7 +231,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Record details"
-                        android:textColor="#101D33"
+                        android:textColor="@color/text_header"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
@@ -241,7 +241,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
                         android:text="Record a 20-second voice note"
-                        android:textColor="#94A3B8"
+                        android:textColor="@color/text_muted"
                         android:textSize="12sp" />
                 </LinearLayout>
 
@@ -260,7 +260,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Start"
-                        android:textColor="#1D5EF3"
+                        android:textColor="@color/brand_primary"
                         android:textSize="13sp"
                         android:textStyle="bold"
                         android:padding="8dp"
@@ -280,7 +280,7 @@
                             android:layout_width="32dp"
                             android:layout_height="32dp"
                             android:src="@drawable/ic_check_circle_green"
-                            app:tint="#1D5EF3"
+                            app:tint="@color/brand_primary"
                             android:padding="4dp"
                             android:layout_marginEnd="8dp"
                             android:clickable="true"
@@ -291,7 +291,7 @@
                             android:layout_width="32dp"
                             android:layout_height="32dp"
                             android:src="@drawable/ic_close_grey"
-                            app:tint="#F43F5E"
+                            app:tint="@color/brand_error_solid"
                             android:padding="4dp"
                             android:clickable="true"
                             android:focusable="true" />
@@ -305,7 +305,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
                 android:text="LOCATION"
-                android:textColor="#94A3B8"
+                android:textColor="@color/text_muted"
                 android:textSize="11sp"
                 android:letterSpacing="0.1"
                 android:fontFamily="sans-serif-medium" />
@@ -345,11 +345,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="BML Munjal University"
-                        android:textColor="#101D33"
+                        android:textColor="@color/text_header"
                         android:textSize="14sp"
                         android:textStyle="bold"
                         app:drawableStartCompat="@drawable/ic_loc_pin_small"
-                        app:drawableTint="#F43F5E"
+                        app:drawableTint="@color/brand_error_solid"
                         android:drawablePadding="6dp"
                         android:gravity="center_vertical" />
 
@@ -359,7 +359,7 @@
                         android:layout_marginTop="2dp"
                         android:layout_marginStart="20dp"
                         android:text="Kazhean, Haryana"
-                        android:textColor="#94A3B8"
+                        android:textColor="@color/text_muted"
                         android:textSize="12sp" />
 
                     <TextView
@@ -368,7 +368,7 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginStart="20dp"
                         android:text="Tap to adjust ✎"
-                        android:textColor="#1D5EF3"
+                        android:textColor="@color/brand_primary"
                         android:textSize="12sp"
                         android:fontFamily="sans-serif-medium" />
                 </LinearLayout>
@@ -380,7 +380,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
                 android:text="WHEN DO YOU NEED THIS?"
-                android:textColor="#94A3B8"
+                android:textColor="@color/text_muted"
                 android:textSize="11sp"
                 android:letterSpacing="0.1"
                 android:fontFamily="sans-serif-medium" />
@@ -396,7 +396,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:text="Today"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/white"
                     android:textSize="14sp"
                     android:gravity="center"
                     android:paddingStart="20dp"
@@ -411,7 +411,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:text="This week"
-                    android:textColor="#64748B"
+                    android:textColor="@color/text_subheadline"
                     android:textSize="14sp"
                     android:gravity="center"
                     android:paddingStart="20dp"
@@ -426,7 +426,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:text="Flexible"
-                    android:textColor="#64748B"
+                    android:textColor="@color/text_subheadline"
                     android:textSize="14sp"
                     android:gravity="center"
                     android:paddingStart="20dp"
@@ -448,11 +448,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="64dp"
                 android:text="Post Gig"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white"
                 android:textAllCaps="false"
                 android:textSize="18sp"
                 android:fontFamily="sans-serif-medium"
-                app:backgroundTint="#1D5EF3"
+                app:backgroundTint="@color/brand_primary"
                 app:cornerRadius="16dp"
                 android:elevation="0dp" />
 
@@ -460,3 +460,10 @@
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+

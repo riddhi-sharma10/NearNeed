@@ -4,7 +4,7 @@
     android:id="@+id/overlaySheet"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#80000000"
+    android:background="@color/overlay_dark_light"
     android:clickable="true"
     android:focusable="true">
 
@@ -35,7 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Offer to Help"
-            android:textColor="#0F172A"
+            android:textColor="@color/text_header"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:text="Emergency food delivery for senior"
-            android:textColor="#64748B"
+            android:textColor="@color/text_subheadline"
             android:textSize="14sp" />
 
         <!-- Spot Availability Card -->
@@ -65,7 +65,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Spot Availability"
-                    android:textColor="#0F172A"
+                    android:textColor="@color/text_header"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
@@ -74,7 +74,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:text="You are applying for Spot 3 of 4."
-                    android:textColor="#475569"
+                    android:textColor="@color/text_subheadline"
                     android:textSize="14sp" />
             </LinearLayout>
 
@@ -86,7 +86,7 @@
                 android:padding="8dp"
                 android:background="@drawable/bg_circle_solid_white"
                 android:src="@drawable/ic_check_solid_white" 
-                app:tint="#F43F5E" />
+                app:tint="@color/brand_error_solid" />
         </RelativeLayout>
 
         <!-- Introduction -->
@@ -95,7 +95,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:text="Introduction"
-            android:textColor="#0F172A"
+            android:textColor="@color/text_header"
             android:textSize="14sp"
             android:textStyle="bold" />
 
@@ -106,7 +106,7 @@
             android:background="@drawable/bg_input_field"
             android:gravity="top|start"
             android:hint="Introduce yourself and explain why you're a good fit..."
-            android:textColorHint="#94A3B8"
+            android:textColorHint="@color/text_muted"
             android:padding="16dp"
             android:textSize="14sp" />
 
@@ -125,11 +125,11 @@
                 android:background="@drawable/bg_card_outline"
                 android:gravity="center"
                 android:text="Call"
-                android:textColor="#0F172A"
+                android:textColor="@color/text_header"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 app:drawableStartCompat="@drawable/ic_phone_outline"
-                app:drawableTint="#64748B"
+                app:drawableTint="@color/text_subheadline"
                 android:drawablePadding="8dp" />
 
             <TextView
@@ -140,11 +140,11 @@
                 android:background="@drawable/bg_card_outline"
                 android:gravity="center"
                 android:text="SMS"
-                android:textColor="#0F172A"
+                android:textColor="@color/text_header"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 app:drawableStartCompat="@drawable/ic_solid_sms"
-                app:drawableTint="#64748B"
+                app:drawableTint="@color/text_subheadline"
                 android:drawablePadding="8dp" />
         </LinearLayout>
 
@@ -154,13 +154,13 @@
             android:layout_height="56dp"
             android:layout_marginTop="24dp"
             android:text="Send Response"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/white"
             android:textAllCaps="false"
             android:textSize="16sp"
             app:icon="@drawable/ic_forward_arrow"
             app:iconGravity="textEnd"
-            app:iconTint="#FFFFFF"
-            app:backgroundTint="#F43F5E"
+            app:iconTint="@color/white"
+            app:backgroundTint="@color/brand_error_solid"
             app:cornerRadius="12dp"
             android:elevation="0dp" />
 
@@ -170,7 +170,14 @@
             android:layout_marginTop="16dp"
             android:gravity="center"
             android:text="By responding, you agree to our Community Guidelines and acknowledge that your profile details will be shared with the organizer."
-            android:textColor="#94A3B8"
+            android:textColor="@color/text_muted"
             android:textSize="11sp" />
     </LinearLayout>
 </FrameLayout>
+
+
+
+
+
+
+

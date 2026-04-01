@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#FAFAFA">
+    android:background="@color/surface_background">
 
     <!-- Top Header Spacer -->
     <View
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="#FFFFFF" />
+        android:background="@color/white" />
 
     <!-- Top Header -->
     <RelativeLayout
@@ -20,7 +20,7 @@
         android:layout_height="56dp"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
-        android:background="#FFFFFF"
+        android:background="@color/white"
         android:elevation="2dp">
         
         <ImageButton
@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="Reviews"
-            android:textColor="#101D33"
+            android:textColor="@color/text_header"
             android:textSize="18sp"
             android:textStyle="bold" />
     </RelativeLayout>
@@ -60,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_card_base"
                 android:elevation="6dp"
-                android:outlineSpotShadowColor="#E0F2FE"
+                android:outlineSpotShadowColor="@color/brand_info_light"
                 android:orientation="vertical"
                 android:padding="24dp"
                 android:layout_marginBottom="32dp">
@@ -80,7 +80,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="4.8"
-                            android:textColor="#1D5EF3"
+                            android:textColor="@color/brand_primary"
                             android:textSize="48sp"
                             android:fontFamily="sans-serif-black" />
                         
@@ -92,7 +92,7 @@
                             <ImageView android:layout_width="14dp" android:layout_height="14dp" android:src="@drawable/ic_star_yellow" android:layout_marginStart="2dp"/>
                             <ImageView android:layout_width="14dp" android:layout_height="14dp" android:src="@drawable/ic_star_yellow" android:layout_marginStart="2dp"/>
                             <ImageView android:layout_width="14dp" android:layout_height="14dp" android:src="@drawable/ic_star_yellow" android:layout_marginStart="2dp"/>
-                            <ImageView android:layout_width="14dp" android:layout_height="14dp" android:src="@drawable/ic_star_yellow" app:tint="#CBD5E1" android:layout_marginStart="2dp"/>
+                            <ImageView android:layout_width="14dp" android:layout_height="14dp" android:src="@drawable/ic_star_yellow" app:tint="@color/pagers_indicator_inactive" android:layout_marginStart="2dp"/>
                         </LinearLayout>
 
                         <TextView
@@ -100,7 +100,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
                             android:text="15 reviews"
-                            android:textColor="#64748B"
+                            android:textColor="@color/text_subheadline"
                             android:textSize="12sp" />
                     </LinearLayout>
 
@@ -109,7 +109,7 @@
                         android:layout_height="60dp"
                         android:layout_marginStart="24dp"
                         android:layout_marginEnd="24dp"
-                        android:background="#F1F5F9" />
+                        android:background="@color/divider_soft" />
 
                     <!-- Rating Distribution -->
                     <LinearLayout
@@ -124,7 +124,7 @@
                             android:orientation="horizontal"
                             android:gravity="center_vertical"
                             android:layout_marginBottom="4dp">
-                            <TextView android:layout_width="10dp" android:layout_height="wrap_content" android:text="5" android:textSize="10sp" android:textColor="#94A3B8"/>
+                            <TextView android:layout_width="10dp" android:layout_height="wrap_content" android:text="5" android:textSize="10sp" android:textColor="@color/text_muted"/>
                             <ProgressBar
                                 style="?android:attr/progressBarStyleHorizontal"
                                 android:layout_width="0dp"
@@ -133,8 +133,8 @@
                                 android:layout_marginStart="8dp"
                                 android:max="100"
                                 android:progress="85"
-                                android:progressTint="#1D5EF3"
-                                android:progressBackgroundTint="#F1F5F9"/>
+                                android:progressTint="@color/brand_primary"
+                                android:progressBackgroundTint="@color/divider_soft"/>
                         </LinearLayout>
                         <!-- 4 Stars -->
                         <LinearLayout
@@ -143,7 +143,7 @@
                             android:orientation="horizontal"
                             android:gravity="center_vertical"
                             android:layout_marginBottom="4dp">
-                            <TextView android:layout_width="10dp" android:layout_height="wrap_content" android:text="4" android:textSize="10sp" android:textColor="#94A3B8"/>
+                            <TextView android:layout_width="10dp" android:layout_height="wrap_content" android:text="4" android:textSize="10sp" android:textColor="@color/text_muted"/>
                             <ProgressBar
                                 style="?android:attr/progressBarStyleHorizontal"
                                 android:layout_width="0dp"
@@ -152,8 +152,8 @@
                                 android:layout_marginStart="8dp"
                                 android:max="100"
                                 android:progress="12"
-                                android:progressTint="#1D5EF3"
-                                android:progressBackgroundTint="#F1F5F9"/>
+                                android:progressTint="@color/brand_primary"
+                                android:progressBackgroundTint="@color/divider_soft"/>
                         </LinearLayout>
                         <!-- 3 Stars -->
                         <LinearLayout
@@ -162,7 +162,7 @@
                             android:orientation="horizontal"
                             android:gravity="center_vertical"
                             android:layout_marginBottom="4dp">
-                            <TextView android:layout_width="10dp" android:layout_height="wrap_content" android:text="3" android:textSize="10sp" android:textColor="#94A3B8"/>
+                            <TextView android:layout_width="10dp" android:layout_height="wrap_content" android:text="3" android:textSize="10sp" android:textColor="@color/text_muted"/>
                             <ProgressBar
                                 style="?android:attr/progressBarStyleHorizontal"
                                 android:layout_width="0dp"
@@ -171,18 +171,18 @@
                                 android:layout_marginStart="8dp"
                                 android:max="100"
                                 android:progress="3"
-                                android:progressTint="#1D5EF3"
-                                android:progressBackgroundTint="#F1F5F9"/>
+                                android:progressTint="@color/brand_primary"
+                                android:progressBackgroundTint="@color/divider_soft"/>
                         </LinearLayout>
                         <!-- 2 Stars -->
                         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="4dp">
-                            <TextView android:layout_width="10dp" android:layout_height="wrap_content" android:text="2" android:textSize="10sp" android:textColor="#94A3B8"/>
-                            <ProgressBar style="?android:attr/progressBarStyleHorizontal" android:layout_width="0dp" android:layout_height="4dp" android:layout_weight="1" android:layout_marginStart="8dp" android:max="100" android:progress="0" android:progressTint="#1D5EF3" android:progressBackgroundTint="#F1F5F9"/>
+                            <TextView android:layout_width="10dp" android:layout_height="wrap_content" android:text="2" android:textSize="10sp" android:textColor="@color/text_muted"/>
+                            <ProgressBar style="?android:attr/progressBarStyleHorizontal" android:layout_width="0dp" android:layout_height="4dp" android:layout_weight="1" android:layout_marginStart="8dp" android:max="100" android:progress="0" android:progressTint="@color/brand_primary" android:progressBackgroundTint="@color/divider_soft"/>
                         </LinearLayout>
                         <!-- 1 Stars -->
                         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
-                            <TextView android:layout_width="10dp" android:layout_height="wrap_content" android:text="1" android:textSize="10sp" android:textColor="#94A3B8"/>
-                            <ProgressBar style="?android:attr/progressBarStyleHorizontal" android:layout_width="0dp" android:layout_height="4dp" android:layout_weight="1" android:layout_marginStart="8dp" android:max="100" android:progress="0" android:progressTint="#1D5EF3" android:progressBackgroundTint="#F1F5F9"/>
+                            <TextView android:layout_width="10dp" android:layout_height="wrap_content" android:text="1" android:textSize="10sp" android:textColor="@color/text_muted"/>
+                            <ProgressBar style="?android:attr/progressBarStyleHorizontal" android:layout_width="0dp" android:layout_height="4dp" android:layout_weight="1" android:layout_marginStart="8dp" android:max="100" android:progress="0" android:progressTint="@color/brand_primary" android:progressBackgroundTint="@color/divider_soft"/>
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
@@ -192,7 +192,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Recent Reviews"
-                android:textColor="#101D33"
+                android:textColor="@color/text_header"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="16dp"/>
@@ -204,7 +204,7 @@
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/bg_card_base"
                 android:elevation="2dp"
-                android:outlineSpotShadowColor="#E2E8F0">
+                android:outlineSpotShadowColor="@color/border_standard">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -227,8 +227,8 @@
                             android:layout_toEndOf="@id/r1_avatar"
                             android:layout_centerVertical="true"
                             android:layout_marginStart="14dp">
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Priya Sharma" android:textColor="#0F172A" android:textSize="15sp" android:textStyle="bold" />
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2 days ago • Plumbing Service" android:textColor="#94A3B8" android:textSize="11sp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Priya Sharma" android:textColor="@color/text_header" android:textSize="15sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2 days ago • Plumbing Service" android:textColor="@color/text_muted" android:textSize="11sp" />
                         </LinearLayout>
                         <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:orientation="horizontal">
                             <ImageView android:layout_width="12dp" android:layout_height="12dp" android:src="@drawable/ic_star_yellow" />
@@ -243,7 +243,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:text="Abhinav was incredibly helpful coming over to fix the plumbing leak so quickly! Very polite and professional."
-                        android:textColor="#334155"
+                        android:textColor="@color/text_secondary_dark"
                         android:textSize="13sp"
                         android:lineSpacingExtra="5dp" />
                 </LinearLayout>
@@ -267,15 +267,15 @@
                         <ImageView android:layout_width="44dp" android:layout_height="44dp" android:src="@drawable/bg_image_placeholder" android:background="@drawable/bg_circle_solid_white"/>
                         <LinearLayout
                             android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="58dp" android:layout_centerVertical="true">
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rohan Gupta" android:textColor="#0F172A" android:textSize="15sp" android:textStyle="bold" />
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1 week ago • Garden Cleanup" android:textColor="#94A3B8" android:textSize="11sp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rohan Gupta" android:textColor="@color/text_header" android:textSize="15sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1 week ago • Garden Cleanup" android:textColor="@color/text_muted" android:textSize="11sp" />
                         </LinearLayout>
                         <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:orientation="horizontal">
                             <ImageView android:layout_width="12dp" android:layout_height="12dp" android:src="@drawable/ic_star_yellow" />
                             <ImageView android:layout_width="12dp" android:layout_height="12dp" android:src="@drawable/ic_star_yellow" android:layout_marginStart="2dp"/>
                             <ImageView android:layout_width="12dp" android:layout_height="12dp" android:src="@drawable/ic_star_yellow" android:layout_marginStart="2dp"/>
                             <ImageView android:layout_width="12dp" android:layout_height="12dp" android:src="@drawable/ic_star_yellow" android:layout_marginStart="2dp"/>
-                            <ImageView android:layout_width="12dp" android:layout_height="12dp" android:src="@drawable/ic_star_yellow" app:tint="#CBD5E1" android:layout_marginStart="2dp"/>
+                            <ImageView android:layout_width="12dp" android:layout_height="12dp" android:src="@drawable/ic_star_yellow" app:tint="@color/pagers_indicator_inactive" android:layout_marginStart="2dp"/>
                         </LinearLayout>
                     </RelativeLayout>
                     <TextView
@@ -283,7 +283,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:text="A bit late due to traffic, but did a great job cleaning up the community park with the rest of the team. Highly recommended for volunteer work."
-                        android:textColor="#334155" android:textSize="13sp" android:lineSpacingExtra="5dp" />
+                        android:textColor="@color/text_secondary_dark" android:textSize="13sp" android:lineSpacingExtra="5dp" />
                 </LinearLayout>
             </FrameLayout>
 
@@ -303,8 +303,8 @@
                         android:layout_width="match_parent" android:layout_height="wrap_content">
                         <ImageView android:layout_width="44dp" android:layout_height="44dp" android:src="@drawable/bg_image_placeholder" android:background="@drawable/bg_circle_solid_white"/>
                         <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="58dp" android:layout_centerVertical="true">
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sonia Menon" android:textColor="#0F172A" android:textSize="15sp" android:textStyle="bold" />
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3 weeks ago • Grocery Run" android:textColor="#94A3B8" android:textSize="11sp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sonia Menon" android:textColor="@color/text_header" android:textSize="15sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3 weeks ago • Grocery Run" android:textColor="@color/text_muted" android:textSize="11sp" />
                         </LinearLayout>
                         <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:orientation="horizontal">
                             <ImageView android:layout_width="12dp" android:layout_height="12dp" android:src="@drawable/ic_star_yellow" />
@@ -317,7 +317,7 @@
                     <TextView
                         android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp"
                         android:text="Delivered the groceries exactly as requested and even helped bring them up the stairs. Absolute lifesaver for my elderly mother."
-                        android:textColor="#334155" android:textSize="13sp" android:lineSpacingExtra="5dp" />
+                        android:textColor="@color/text_secondary_dark" android:textSize="13sp" android:lineSpacingExtra="5dp" />
                 </LinearLayout>
             </FrameLayout>
 
@@ -337,8 +337,8 @@
                         android:layout_width="match_parent" android:layout_height="wrap_content">
                         <ImageView android:layout_width="44dp" android:layout_height="44dp" android:src="@drawable/bg_image_placeholder" android:background="@drawable/bg_circle_solid_white"/>
                         <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="58dp" android:layout_centerVertical="true">
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Amit Verma" android:textColor="#0F172A" android:textSize="15sp" android:textStyle="bold" />
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1 month ago • Furniture Assembly" android:textColor="#94A3B8" android:textSize="11sp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Amit Verma" android:textColor="@color/text_header" android:textSize="15sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1 month ago • Furniture Assembly" android:textColor="@color/text_muted" android:textSize="11sp" />
                         </LinearLayout>
                         <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:orientation="horizontal">
                             <ImageView android:layout_width="12dp" android:layout_height="12dp" android:src="@drawable/ic_star_yellow" />
@@ -351,7 +351,7 @@
                     <TextView
                         android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp"
                         android:text="Helped me assemble a complex IKEA bookshelf in less than an hour. Very skillful and brought his own tools!"
-                        android:textColor="#334155" android:textSize="13sp" android:lineSpacingExtra="5dp" />
+                        android:textColor="@color/text_secondary_dark" android:textSize="13sp" android:lineSpacingExtra="5dp" />
                 </LinearLayout>
             </FrameLayout>
 
@@ -360,16 +360,23 @@
                 android:layout_height="56dp"
                 android:layout_marginBottom="24dp"
                 android:text="Write a Review"
-                android:textColor="#1D5EF3"
+                android:textColor="@color/brand_primary"
                 android:textAllCaps="false"
                 android:textSize="16sp"
                 android:fontFamily="sans-serif-medium"
-                app:backgroundTint="#E0F2FE"
+                app:backgroundTint="@color/brand_info_light"
                 app:cornerRadius="12dp"
                 android:elevation="0dp"
-                app:strokeColor="#1D5EF3"
+                app:strokeColor="@color/brand_primary"
                 app:strokeWidth="1dp" />
 
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
+
+
+
+
+
+
+

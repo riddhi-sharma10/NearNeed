@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FAFAFA"
+    android:background="@color/surface_background"
     tools:ignore="HardcodedText,ContentDescription">
 
     <!-- Scrollable Content -->
@@ -36,14 +36,14 @@
                     android:layout_height="24dp"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:src="@drawable/ic_back_arrow"
-                    app:tint="#F43F5E" />
+                    app:tint="@color/brand_error_solid" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:text="Back to Post"
-                    android:textColor="#F43F5E"
+                    android:textColor="@color/brand_error_solid"
                     android:textSize="14sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -56,7 +56,7 @@
                 android:layout_marginEnd="24dp"
                 android:layout_marginTop="8dp"
                 android:text="Is this complete?"
-                android:textColor="#0F172A"
+                android:textColor="@color/text_header"
                 android:textSize="28sp"
                 android:textStyle="bold" />
 
@@ -69,8 +69,8 @@
                 android:layout_marginTop="16dp"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="0dp"
-                app:cardBackgroundColor="#FFFFFF"
-                app:strokeColor="#FFE4E6"
+                app:cardBackgroundColor="@color/white"
+                app:strokeColor="@color/brand_error_bg"
                 app:strokeWidth="1dp">
 
                 <LinearLayout
@@ -83,7 +83,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="ACTIVE REQUEST"
-                        android:textColor="#F43F5E"
+                        android:textColor="@color/brand_error_solid"
                         android:textSize="10sp"
                         android:textStyle="bold"
                         android:letterSpacing="0.05" />
@@ -93,7 +93,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="6dp"
                         android:text="Grocery Delivery for Elderly Neighbor"
-                        android:textColor="#0F172A"
+                        android:textColor="@color/text_header"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
@@ -102,7 +102,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:text="Posted by Sarah Jenkins"
-                        android:textColor="#64748B"
+                        android:textColor="@color/text_subheadline"
                         android:textSize="12sp" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
@@ -122,8 +122,8 @@
                     android:layout_marginTop="32dp"
                     app:cardCornerRadius="12dp"
                     app:cardElevation="2dp"
-                    app:cardBackgroundColor="#FFFFFF"
-                    app:strokeColor="#F1F5F9"
+                    app:cardBackgroundColor="@color/white"
+                    app:strokeColor="@color/divider_soft"
                     app:strokeWidth="1dp">
 
                     <LinearLayout
@@ -140,7 +140,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Did Sarah help you?"
-                            android:textColor="#0F172A"
+                            android:textColor="@color/text_header"
                             android:textSize="20sp"
                             android:textStyle="bold"
                             android:textAlignment="center" />
@@ -150,7 +150,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
                             android:text="Confirming completion will notify the community and award contribution points."
-                            android:textColor="#64748B"
+                            android:textColor="@color/text_subheadline"
                             android:textSize="14sp"
                             android:textAlignment="center"
                             android:lineSpacingExtra="4dp" />
@@ -161,11 +161,11 @@
                             android:layout_height="50dp"
                             android:layout_marginTop="24dp"
                             android:text="Yes, they helped"
-                            android:textColor="#FFFFFF"
+                            android:textColor="@color/white"
                             android:textAllCaps="false"
                             android:textSize="14sp"
                             android:textStyle="bold"
-                            app:backgroundTint="#F43F5E"
+                            app:backgroundTint="@color/brand_error_solid"
                             app:cornerRadius="8dp"
                             android:elevation="0dp" />
 
@@ -175,12 +175,12 @@
                             android:layout_height="50dp"
                             android:layout_marginTop="12dp"
                             android:text="Not yet"
-                            android:textColor="#475569"
+                            android:textColor="@color/text_subheadline"
                             android:textAllCaps="false"
                             android:textSize="14sp"
                             android:textStyle="bold"
-                            app:backgroundTint="#FFFFFF"
-                            app:strokeColor="#E2E8F0"
+                            app:backgroundTint="@color/white"
+                            app:strokeColor="@color/border_standard"
                             app:strokeWidth="1dp"
                             app:cornerRadius="8dp"
                             android:elevation="0dp" />
@@ -200,7 +200,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/bg_circle_solid_red"
-                        android:backgroundTint="#CBD5E1"
+                        android:backgroundTint="@color/pagers_indicator_inactive"
                         android:src="@drawable/bg_image_placeholder" />
                 </RelativeLayout>
             </RelativeLayout>
@@ -226,7 +226,7 @@
                         android:layout_marginEnd="16dp"
                         android:layout_centerVertical="true"
                         android:text="Which volunteers have completed?"
-                        android:textColor="#0F172A"
+                        android:textColor="@color/text_header"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
@@ -238,7 +238,7 @@
                         android:layout_centerVertical="true"
                         android:background="@drawable/bg_pill_pink_transparent"
                         android:text="3 SLOTS\nTOTAL"
-                        android:textColor="#F43F5E"
+                        android:textColor="@color/brand_error_solid"
                         android:textSize="9sp"
                         android:textStyle="bold"
                         android:textAlignment="center"
@@ -255,8 +255,8 @@
                     android:layout_marginTop="16dp"
                     app:cardCornerRadius="12dp"
                     app:cardElevation="0dp"
-                    app:cardBackgroundColor="#FFFFFF"
-                    app:strokeColor="#F1F5F9"
+                    app:cardBackgroundColor="@color/white"
+                    app:strokeColor="@color/divider_soft"
                     app:strokeWidth="1dp">
                     
                     <LinearLayout
@@ -272,7 +272,7 @@
                             android:layout_width="48dp"
                             android:layout_height="48dp"
                             android:background="@drawable/bg_circle_solid_red"
-                            android:backgroundTint="#E0E7FF"
+                            android:backgroundTint="@color/brand_info_bg"
                             android:src="@drawable/bg_image_placeholder" />
 
                         <LinearLayout
@@ -286,7 +286,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Michael Chen"
-                                android:textColor="#0F172A"
+                                android:textColor="@color/text_header"
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
 
@@ -295,7 +295,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="2dp"
                                 android:text="Volunteered 2 days ago"
-                                android:textColor="#64748B"
+                                android:textColor="@color/text_subheadline"
                                 android:textSize="12sp" />
                         </LinearLayout>
 
@@ -315,8 +315,8 @@
                     android:layout_marginTop="12dp"
                     app:cardCornerRadius="12dp"
                     app:cardElevation="0dp"
-                    app:cardBackgroundColor="#FFFFFF"
-                    app:strokeColor="#F1F5F9"
+                    app:cardBackgroundColor="@color/white"
+                    app:strokeColor="@color/divider_soft"
                     app:strokeWidth="1dp">
                     
                     <LinearLayout
@@ -332,7 +332,7 @@
                             android:layout_width="48dp"
                             android:layout_height="48dp"
                             android:background="@drawable/bg_circle_solid_red"
-                            android:backgroundTint="#FEF08A"
+                            android:backgroundTint="@color/brand_warning_bg_alt"
                             android:src="@drawable/bg_image_placeholder" />
 
                         <LinearLayout
@@ -346,7 +346,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Elena Rodriguez"
-                                android:textColor="#0F172A"
+                                android:textColor="@color/text_header"
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
 
@@ -355,7 +355,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="2dp"
                                 android:text="Volunteered yesterday"
-                                android:textColor="#64748B"
+                                android:textColor="@color/text_subheadline"
                                 android:textSize="12sp" />
                         </LinearLayout>
 
@@ -365,7 +365,7 @@
                             android:layout_width="24dp"
                             android:layout_height="24dp"
                             android:background="@drawable/bg_circle_solid_red"
-                            android:backgroundTint="#F43F5E"
+                            android:backgroundTint="@color/brand_error_solid"
                             android:padding="4dp"
                             android:src="@drawable/ic_check_solid_white" />
                     </LinearLayout>
@@ -378,8 +378,8 @@
                     android:layout_marginTop="12dp"
                     app:cardCornerRadius="12dp"
                     app:cardElevation="0dp"
-                    app:cardBackgroundColor="#FFFFFF"
-                    app:strokeColor="#F1F5F9"
+                    app:cardBackgroundColor="@color/white"
+                    app:strokeColor="@color/divider_soft"
                     app:strokeWidth="1dp">
                     
                     <LinearLayout
@@ -395,7 +395,7 @@
                             android:layout_width="48dp"
                             android:layout_height="48dp"
                             android:background="@drawable/bg_circle_solid_red"
-                            android:backgroundTint="#FFEDD5"
+                            android:backgroundTint="@color/brand_warning_bg_alt"
                             android:src="@drawable/bg_image_placeholder" />
 
                         <LinearLayout
@@ -409,7 +409,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="David Wilson"
-                                android:textColor="#0F172A"
+                                android:textColor="@color/text_header"
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
 
@@ -418,7 +418,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="2dp"
                                 android:text="Volunteered 4 hours ago"
-                                android:textColor="#64748B"
+                                android:textColor="@color/text_subheadline"
                                 android:textSize="12sp" />
                         </LinearLayout>
 
@@ -443,18 +443,18 @@
                 android:paddingEnd="24dp"
                 android:paddingTop="32dp"
                 android:paddingBottom="24dp"
-                android:background="#FAFAFA">
+                android:background="@color/surface_background">
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnFinalUpdateStatus"
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
                     android:text="Update Status"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/white"
                     android:textAllCaps="false"
                     android:textSize="16sp"
                     android:textStyle="bold"
-                    app:backgroundTint="#0F172A"
+                    app:backgroundTint="@color/text_header"
                     app:cornerRadius="12dp"
                     android:elevation="0dp" />
 
@@ -463,7 +463,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:text="Completed posts are archived after 24 hours."
-                    android:textColor="#94A3B8"
+                    android:textColor="@color/text_muted"
                     android:textSize="11sp"
                     android:textAlignment="center" />
             </LinearLayout>
@@ -472,3 +472,10 @@
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+

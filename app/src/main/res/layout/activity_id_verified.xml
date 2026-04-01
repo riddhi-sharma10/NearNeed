@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#99000000">
+    android:background="@color/overlay_dark_medium">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -27,7 +27,7 @@
             android:layout_width="64dp"
             android:layout_height="64dp"
             android:src="@drawable/ic_verified_badge" 
-            app:tint="#10B981"
+            app:tint="@color/brand_success_vibrant"
             android:padding="12dp" />
 
         <TextView
@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:text="@string/txt_identity_verified"
-            android:textColor="#101D33"
+            android:textColor="@color/text_header"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@string/txt_your_neighbour_profile_now_sho"
-            android:textColor="#64748B"
+            android:textColor="@color/text_subheadline"
             android:gravity="center"
             android:textSize="14sp"
             android:lineSpacingExtra="4dp" />
@@ -82,7 +82,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/txt_abhinav_oberoi"
-                        android:textColor="#101D33"
+                        android:textColor="@color/text_header"
                         android:textSize="15sp"
                         android:textStyle="bold" />
                         
@@ -98,7 +98,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
                     android:text="@string/txt_verified_neighbour_downtown"
-                    android:textColor="#64748B"
+                    android:textColor="@color/text_subheadline"
                     android:textSize="12sp" />
             </LinearLayout>
         </LinearLayout>
@@ -109,12 +109,19 @@
             android:layout_height="56dp"
             android:layout_marginTop="32dp"
             android:text="@string/txt_go_to_dashboard"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/white"
             android:textAllCaps="false"
             android:textSize="16sp"
             android:textStyle="bold"
-            app:backgroundTint="#1D5EF3"
+            app:backgroundTint="@color/brand_primary"
             app:cornerRadius="24dp" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+

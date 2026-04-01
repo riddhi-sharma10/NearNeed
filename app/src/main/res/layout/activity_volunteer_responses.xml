@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FCFCFC"
+    android:background="@color/surface_background"
     tools:ignore="HardcodedText,ContentDescription">
 
     <ScrollView
@@ -39,7 +39,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:text="Responses"
-                    android:textColor="#101D33"
+                    android:textColor="@color/text_header"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -50,7 +50,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginEnd="8dp"
                     android:text="···"
-                    android:textColor="#101D33"
+                    android:textColor="@color/text_header"
                     android:textSize="28sp"
                     android:textStyle="bold" />
             </RelativeLayout>
@@ -74,10 +74,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="URGENT"
-                        android:textColor="#D97706"
+                        android:textColor="@color/brand_warning_solid"
                         android:textSize="10sp"
                         android:textStyle="bold"
-                        android:backgroundTint="#FEF3C7"
+                        android:backgroundTint="@color/brand_warning_bg"
                         android:background="@drawable/bg_pill_pink_transparent"
                         android:paddingStart="8dp"
                         android:paddingEnd="8dp"
@@ -89,7 +89,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
                         android:text="5 people responded"
-                        android:textColor="#64748B"
+                        android:textColor="@color/text_subheadline"
                         android:textSize="12sp" />
                 </LinearLayout>
 
@@ -98,7 +98,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
                     android:text="Emergency: Oxygen Cylinder Needed"
-                    android:textColor="#0F172A"
+                    android:textColor="@color/text_header"
                     android:textSize="22sp"
                     android:textStyle="bold"
                     android:lineSpacingExtra="4dp" />
@@ -113,8 +113,8 @@
                 android:layout_marginTop="24dp"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="2dp"
-                app:cardBackgroundColor="#FFFFFF"
-                app:strokeColor="#FFE4E6"
+                app:cardBackgroundColor="@color/white"
+                app:strokeColor="@color/brand_error_bg"
                 app:strokeWidth="1dp">
 
                 <RelativeLayout
@@ -133,7 +133,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Slot progress"
-                            android:textColor="#0F172A"
+                            android:textColor="@color/text_header"
                             android:textSize="14sp"
                             android:textStyle="bold" />
 
@@ -142,7 +142,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="2dp"
                             android:text="2 of 3 volunteers joined"
-                            android:textColor="#64748B"
+                            android:textColor="@color/text_subheadline"
                             android:textSize="12sp" />
                     </LinearLayout>
 
@@ -159,7 +159,7 @@
                             android:layout_width="36dp"
                             android:layout_height="36dp"
                             android:background="@drawable/bg_circle_solid_red"
-                            android:backgroundTint="#A7F3D0"
+                            android:backgroundTint="@color/brand_success_bg"
                             android:src="@drawable/bg_image_placeholder" />
 
                         <!-- Avatar 2 -->
@@ -169,7 +169,7 @@
                             android:layout_height="36dp"
                             android:layout_marginStart="24dp"
                             android:background="@drawable/bg_circle_solid_red"
-                            android:backgroundTint="#FDE047"
+                            android:backgroundTint="@color/brand_warning_accent"
                             android:src="@drawable/bg_image_placeholder" />
 
                         <!-- Avatar 3 (+1) -->
@@ -178,14 +178,14 @@
                             android:layout_height="36dp"
                             android:layout_marginStart="48dp"
                             android:background="@drawable/bg_dashed_circle_grey"
-                            android:backgroundTint="#F1F5F9"
+                            android:backgroundTint="@color/divider_soft"
                             android:elevation="1dp">
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:text="+"
-                                android:textColor="#94A3B8"
+                                android:textColor="@color/text_muted"
                                 android:textSize="16sp" />
                         </FrameLayout>
                     </RelativeLayout>
@@ -197,14 +197,14 @@
                         android:layout_marginTop="56dp"
                         android:orientation="horizontal"
                         android:background="@drawable/bg_circle_grey_solid"
-                        android:backgroundTint="#FCE7F3"
+                        android:backgroundTint="@color/brand_error_bg_alt"
                         android:clipToOutline="true">
 
                         <View
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="0.66"
-                            android:background="#F43F5E" />
+                            android:background="@color/brand_error_solid" />
 
                         <View
                             android:layout_width="0dp"
@@ -230,8 +230,8 @@
                     android:layout_height="wrap_content"
                     app:cardCornerRadius="12dp"
                     app:cardElevation="0dp"
-                    app:cardBackgroundColor="#FFFFFF"
-                    app:strokeColor="#FFE4E6"
+                    app:cardBackgroundColor="@color/white"
+                    app:strokeColor="@color/brand_error_bg"
                     app:strokeWidth="1dp">
 
                     <LinearLayout
@@ -250,7 +250,7 @@
                                 android:layout_width="48dp"
                                 android:layout_height="48dp"
                                 android:background="@drawable/bg_circle_solid_red"
-                                android:backgroundTint="#FDE047"
+                                android:backgroundTint="@color/brand_warning_accent"
                                 android:src="@drawable/bg_image_placeholder" />
 
                             <LinearLayout
@@ -269,7 +269,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="Anjali M."
-                                        android:textColor="#0F172A"
+                                        android:textColor="@color/text_header"
                                         android:textSize="16sp"
                                         android:textStyle="bold" />
                                     <ImageView
@@ -283,7 +283,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="★ 5.0 score"
-                                    android:textColor="#D97706"
+                                    android:textColor="@color/brand_warning_solid"
                                     android:textSize="12sp"
                                     android:textStyle="bold" />
                             </LinearLayout>
@@ -294,7 +294,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:text="&quot;I have a spare cylinder. I can drop it off in 10 minutes. Please call me.&quot;"
-                            android:textColor="#475569"
+                            android:textColor="@color/text_subheadline"
                             android:textSize="14sp"
                             android:lineSpacingExtra="4dp" />
 
@@ -312,11 +312,11 @@
                                 android:layout_height="50dp"
                                 android:layout_marginEnd="8dp"
                                 android:text="Accept"
-                                android:textColor="#FFFFFF"
+                                android:textColor="@color/white"
                                 android:textAllCaps="false"
                                 android:textSize="14sp"
                                 android:textStyle="bold"
-                                app:backgroundTint="#F43F5E"
+                                app:backgroundTint="@color/brand_error_solid"
                                 app:cornerRadius="8dp"
                                 android:elevation="0dp" />
 
@@ -327,12 +327,12 @@
                                 android:layout_height="50dp"
                                 android:layout_marginStart="8dp"
                                 android:text="Message"
-                                android:textColor="#F43F5E"
+                                android:textColor="@color/brand_error_solid"
                                 android:textAllCaps="false"
                                 android:textSize="14sp"
                                 android:textStyle="bold"
-                                app:backgroundTint="#FFFFFF"
-                                app:strokeColor="#FFE4E6"
+                                app:backgroundTint="@color/white"
+                                app:strokeColor="@color/brand_error_bg"
                                 app:strokeWidth="1dp"
                                 app:cornerRadius="8dp"
                                 android:elevation="0dp" />
@@ -347,8 +347,8 @@
                     android:layout_marginTop="16dp"
                     app:cardCornerRadius="12dp"
                     app:cardElevation="0dp"
-                    app:cardBackgroundColor="#FFFFFF"
-                    app:strokeColor="#FFE4E6"
+                    app:cardBackgroundColor="@color/white"
+                    app:strokeColor="@color/brand_error_bg"
                     app:strokeWidth="1dp">
 
                     <LinearLayout
@@ -367,7 +367,7 @@
                                 android:layout_width="48dp"
                                 android:layout_height="48dp"
                                 android:background="@drawable/bg_circle_solid_red"
-                                android:backgroundTint="#CBD5E1"
+                                android:backgroundTint="@color/pagers_indicator_inactive"
                                 android:src="@drawable/bg_image_placeholder" />
 
                             <LinearLayout
@@ -381,7 +381,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Rahul S."
-                                    android:textColor="#0F172A"
+                                    android:textColor="@color/text_header"
                                     android:textSize="16sp"
                                     android:textStyle="bold" />
 
@@ -389,7 +389,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="★ 4.8 score"
-                                    android:textColor="#D97706"
+                                    android:textColor="@color/brand_warning_solid"
                                     android:textSize="12sp"
                                     android:textStyle="bold" />
                             </LinearLayout>
@@ -400,7 +400,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:text="&quot;I am near the City Hospital, can pick one up and deliver if needed.&quot;"
-                            android:textColor="#475569"
+                            android:textColor="@color/text_subheadline"
                             android:textSize="14sp"
                             android:lineSpacingExtra="4dp" />
 
@@ -418,11 +418,11 @@
                                 android:layout_height="50dp"
                                 android:layout_marginEnd="8dp"
                                 android:text="Accept"
-                                android:textColor="#FFFFFF"
+                                android:textColor="@color/white"
                                 android:textAllCaps="false"
                                 android:textSize="14sp"
                                 android:textStyle="bold"
-                                app:backgroundTint="#F43F5E"
+                                app:backgroundTint="@color/brand_error_solid"
                                 app:cornerRadius="8dp"
                                 android:elevation="0dp" />
 
@@ -433,12 +433,12 @@
                                 android:layout_height="50dp"
                                 android:layout_marginStart="8dp"
                                 android:text="Message"
-                                android:textColor="#F43F5E"
+                                android:textColor="@color/brand_error_solid"
                                 android:textAllCaps="false"
                                 android:textSize="14sp"
                                 android:textStyle="bold"
-                                app:backgroundTint="#FFFFFF"
-                                app:strokeColor="#FFE4E6"
+                                app:backgroundTint="@color/white"
+                                app:strokeColor="@color/brand_error_bg"
                                 app:strokeWidth="1dp"
                                 app:cornerRadius="8dp"
                                 android:elevation="0dp" />
@@ -453,8 +453,8 @@
                     android:layout_marginTop="16dp"
                     app:cardCornerRadius="12dp"
                     app:cardElevation="0dp"
-                    app:cardBackgroundColor="#FFFFFF"
-                    app:strokeColor="#FFE4E6"
+                    app:cardBackgroundColor="@color/white"
+                    app:strokeColor="@color/brand_error_bg"
                     app:strokeWidth="1dp">
 
                     <LinearLayout
@@ -473,7 +473,7 @@
                                 android:layout_width="48dp"
                                 android:layout_height="48dp"
                                 android:background="@drawable/bg_circle_solid_red"
-                                android:backgroundTint="#FECDD3"
+                                android:backgroundTint="@color/brand_error_bg"
                                 android:src="@drawable/bg_image_placeholder" />
 
                             <LinearLayout
@@ -492,7 +492,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="Sarah K."
-                                        android:textColor="#0F172A"
+                                        android:textColor="@color/text_header"
                                         android:textSize="16sp"
                                         android:textStyle="bold" />
                                     <ImageView
@@ -506,7 +506,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="★ 4.9 score"
-                                    android:textColor="#D97706"
+                                    android:textColor="@color/brand_warning_solid"
                                     android:textSize="12sp"
                                     android:textStyle="bold" />
                             </LinearLayout>
@@ -517,7 +517,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:text="&quot;Checking with local suppliers now. Will update in 5 minutes.&quot;"
-                            android:textColor="#475569"
+                            android:textColor="@color/text_subheadline"
                             android:textSize="14sp"
                             android:lineSpacingExtra="4dp" />
 
@@ -535,11 +535,11 @@
                                 android:layout_height="50dp"
                                 android:layout_marginEnd="8dp"
                                 android:text="Accept"
-                                android:textColor="#FFFFFF"
+                                android:textColor="@color/white"
                                 android:textAllCaps="false"
                                 android:textSize="14sp"
                                 android:textStyle="bold"
-                                app:backgroundTint="#F43F5E"
+                                app:backgroundTint="@color/brand_error_solid"
                                 app:cornerRadius="8dp"
                                 android:elevation="0dp" />
 
@@ -550,12 +550,12 @@
                                 android:layout_height="50dp"
                                 android:layout_marginStart="8dp"
                                 android:text="Message"
-                                android:textColor="#F43F5E"
+                                android:textColor="@color/brand_error_solid"
                                 android:textAllCaps="false"
                                 android:textSize="14sp"
                                 android:textStyle="bold"
-                                app:backgroundTint="#FFFFFF"
-                                app:strokeColor="#FFE4E6"
+                                app:backgroundTint="@color/white"
+                                app:strokeColor="@color/brand_error_bg"
                                 app:strokeWidth="1dp"
                                 app:cornerRadius="8dp"
                                 android:elevation="0dp" />
@@ -570,3 +570,10 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+

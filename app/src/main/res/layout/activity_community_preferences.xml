@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@color/white"
     tools:ignore="HardcodedText,ContentDescription,SpUsage">
 
     <ScrollView
@@ -24,16 +24,16 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp">
                 <ImageButton android:id="@+id/btnBack" android:layout_width="40dp" android:layout_height="40dp" android:layout_centerVertical="true" android:background="?attr/selectableItemBackgroundBorderless" android:src="@drawable/ic_back_arrow" />
-                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:text="Profile Setup" android:textColor="#101D33" android:textSize="16sp" android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:text="Profile Setup" android:textColor="@color/text_header" android:textSize="16sp" android:textStyle="bold" />
             </RelativeLayout>
 
             <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="32dp" android:orientation="horizontal" android:weightSum="1" android:gravity="center_vertical">
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Community Preferences" android:textColor="#101D33" android:textSize="14sp" android:fontFamily="sans-serif-medium" />
-                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Step 4/4" android:textColor="#94A3B8" android:textSize="12sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Community Preferences" android:textColor="@color/text_header" android:textSize="14sp" android:fontFamily="sans-serif-medium" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Step 4/4" android:textColor="@color/text_muted" android:textSize="12sp" />
             </LinearLayout>
             <ProgressBar style="?android:attr/progressBarStyleHorizontal" android:layout_width="match_parent" android:layout_height="6dp" android:layout_marginTop="8dp" android:progress="100" android:max="100" android:progressDrawable="@drawable/bg_progress_bar_red_flat" />
 
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32dp" android:text="Emergency Notifications" android:textColor="#101D33" android:textSize="18sp" android:fontFamily="sans-serif-black" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32dp" android:text="Emergency Notifications" android:textColor="@color/text_header" android:textSize="18sp" android:fontFamily="sans-serif-black" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -43,13 +43,13 @@
                 android:gravity="center_vertical">
                 <FrameLayout android:layout_width="40dp" android:layout_height="40dp" android:background="@drawable/bg_district_pill_input_white_stroke"
                 android:elevation="6dp"
-                android:outlineAmbientShadowColor="#0F000000"
-                android:outlineSpotShadowColor="#1A000000">
-                    <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_solid_bell" app:tint="#F43F5E" android:layout_gravity="center" />
+                android:outlineAmbientShadowColor="@color/shadow_ambient"
+                android:outlineSpotShadowColor="@color/shadow_spot">
+                    <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_solid_bell" app:tint="@color/brand_error_solid" android:layout_gravity="center" />
                 </FrameLayout>
                 <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Notify me about nearby emergencies" android:textColor="#101D33" android:textSize="14sp" android:textStyle="bold" />
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Push notification when someone needs help" android:textColor="#64748B" android:textSize="12sp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Notify me about nearby emergencies" android:textColor="@color/text_header" android:textSize="14sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Push notification when someone needs help" android:textColor="@color/text_subheadline" android:textSize="12sp" />
                 </LinearLayout>
                 <androidx.appcompat.widget.SwitchCompat android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" app:thumbTint="@color/sel_switch_thumb" app:trackTint="@color/sel_switch_track" />
             </LinearLayout>
@@ -62,18 +62,18 @@
                 android:gravity="center_vertical">
                 <FrameLayout android:layout_width="40dp" android:layout_height="40dp" android:background="@drawable/bg_district_pill_input_white_stroke"
                 android:elevation="6dp"
-                android:outlineAmbientShadowColor="#0F000000"
-                android:outlineSpotShadowColor="#1A000000">
-                    <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_solid_sms" app:tint="#F43F5E" android:layout_gravity="center" />
+                android:outlineAmbientShadowColor="@color/shadow_ambient"
+                android:outlineSpotShadowColor="@color/shadow_spot">
+                    <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_solid_sms" app:tint="@color/brand_error_solid" android:layout_gravity="center" />
                 </FrameLayout>
                 <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Notify me via SMS" android:textColor="#101D33" android:textSize="14sp" android:textStyle="bold" />
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SMS notification to +91 99XXXXX99" android:textColor="#64748B" android:textSize="12sp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Notify me via SMS" android:textColor="@color/text_header" android:textSize="14sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SMS notification to +91 99XXXXX99" android:textColor="@color/text_subheadline" android:textSize="12sp" />
                 </LinearLayout>
                 <androidx.appcompat.widget.SwitchCompat android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" app:thumbTint="@color/sel_switch_thumb" app:trackTint="@color/sel_switch_track" />
             </LinearLayout>
 
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32dp" android:text="Notification Radius" android:textColor="#101D33" android:textSize="18sp" android:fontFamily="sans-serif-black" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32dp" android:text="Notification Radius" android:textColor="@color/text_header" android:textSize="18sp" android:fontFamily="sans-serif-black" />
 
             <com.google.android.material.chip.ChipGroup
                 android:layout_width="match_parent"
@@ -86,8 +86,8 @@
                 <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:layout_height="48dp" android:text="5km" style="@style/Widget.MaterialComponents.Chip.Choice" app:chipBackgroundColor="@color/sel_chip_bg_red" app:chipStrokeColor="@color/sel_chip_stroke_red" app:chipStrokeWidth="1dp" android:textColor="@color/sel_chip_text_red" />
             </com.google.android.material.chip.ChipGroup>
 
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32dp" android:text="Skills/resources you can offer?" android:textColor="#101D33" android:textSize="18sp" android:fontFamily="sans-serif-black" />
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Letting neighbors know how you can help in an emergency." android:textColor="#64748B" android:textSize="13sp" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32dp" android:text="Skills/resources you can offer?" android:textColor="@color/text_header" android:textSize="18sp" android:fontFamily="sans-serif-black" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Letting neighbors know how you can help in an emergency." android:textColor="@color/text_subheadline" android:textSize="13sp" />
 
             <com.google.android.material.chip.ChipGroup
                 android:layout_width="match_parent"
@@ -116,14 +116,20 @@
                 android:layout_height="64dp"
                 android:layout_marginBottom="24dp"
                 android:text="Enter"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white"
                 android:textAllCaps="false"
                 android:textSize="18sp"
                 android:fontFamily="sans-serif-medium"
-                app:backgroundTint="#F43F5E"
+                app:backgroundTint="@color/brand_error_solid"
                 app:cornerRadius="16dp"
                 android:elevation="0dp" />
 
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+

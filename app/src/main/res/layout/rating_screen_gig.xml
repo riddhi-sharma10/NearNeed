@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/apk/res/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F7F9FC"
+    android:background="@color/surface_background"
     android:fillViewport="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -18,7 +18,7 @@
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:src="@drawable/ic_back_arrow"
-            app:tint="#1D263B"
+            app:tint="@color/text_body_dark"
             app:layout_constraintBottom_toBottomOf="@+id/tv_title"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -28,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Rate your experience"
-            android:textColor="#1D263B"
+            android:textColor="@color/text_body_dark"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -41,7 +41,7 @@
             android:layout_width="96dp"
             android:layout_height="96dp"
             android:layout_marginTop="56dp"
-            app:cardBackgroundColor="#FFFFFF"
+            app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="48dp"
             app:cardElevation="0dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -52,7 +52,7 @@
                 android:layout_width="88dp"
                 android:layout_height="88dp"
                 android:layout_gravity="center"
-                app:cardBackgroundColor="#F0F2F5"
+                app:cardBackgroundColor="@color/surface_background"
                 app:cardCornerRadius="44dp"
                 app:cardElevation="0dp">
 
@@ -81,7 +81,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:text="Rahul S."
-            android:textColor="#1D263B"
+            android:textColor="@color/text_body_dark"
             android:textSize="22sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -94,7 +94,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:text="How was it with Rahul S. ?"
-            android:textColor="#7B8497"
+            android:textColor="@color/text_body_light"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -150,7 +150,7 @@
             android:layout_marginTop="48dp"
             android:letterSpacing="0.05"
             android:text="WHAT STOOD OUT?"
-            android:textColor="#7B8497"
+            android:textColor="@color/text_body_light"
             android:textSize="12sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -177,7 +177,7 @@
                 android:paddingHorizontal="16dp"
                 android:paddingVertical="8dp"
                 android:text="Reliable"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white"
                 android:textSize="13sp"
                 android:textStyle="bold" />
 
@@ -188,7 +188,7 @@
                 android:paddingHorizontal="16dp"
                 android:paddingVertical="8dp"
                 android:text="Excellent work"
-                android:textColor="#1D5EF3"
+                android:textColor="@color/brand_primary"
                 android:textSize="13sp"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -212,7 +212,7 @@
                 android:paddingHorizontal="16dp"
                 android:paddingVertical="8dp"
                 android:text="Would hire again"
-                android:textColor="#1D5EF3"
+                android:textColor="@color/brand_primary"
                 android:textSize="13sp"
                 android:textStyle="bold" />
 
@@ -223,7 +223,7 @@
                 android:paddingHorizontal="16dp"
                 android:paddingVertical="8dp"
                 android:text="Arrived on time"
-                android:textColor="#1D5EF3"
+                android:textColor="@color/brand_primary"
                 android:textSize="13sp"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -238,8 +238,8 @@
             android:gravity="top|start"
             android:hint="Leave a comment (optional)"
             android:padding="16dp"
-            android:textColor="#1D263B"
-            android:textColorHint="#A1A7B9"
+            android:textColor="@color/text_body_dark"
+            android:textColorHint="@color/text_hint"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -255,7 +255,7 @@
             android:background="@drawable/bg_btn_solid_blue"
             android:text="Submit Rating"
             android:textAllCaps="false"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/white"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -266,3 +266,10 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
+
+
+
+
+
+
+

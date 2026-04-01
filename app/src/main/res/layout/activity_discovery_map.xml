@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F8FAFC">
+    android:background="@color/surface_background">
 
     <!-- 1. IMMERSIVE MAP BACKGROUND -->
     <FrameLayout
@@ -19,7 +19,7 @@
             android:src="@drawable/bg_map_vector"
             android:scaleType="centerCrop"
             android:alpha="0.4"
-            android:tint="#F1F5F9" />
+            android:tint="@color/divider_soft" />
 
         <!-- 2. IMMERSIVE PINS -->
         <!-- Gig Pin (Avatar + Price) -->
@@ -49,7 +49,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
                 android:text="₹300"
-                android:textColor="#1D5EF3"
+                android:textColor="@color/brand_primary"
                 android:textSize="12sp"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -72,7 +72,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="🍎 Food"
-                android:textColor="#F43F5E"
+                android:textColor="@color/brand_error_solid"
                 android:textSize="12sp"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -95,7 +95,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="⚒️ Tools"
-                android:textColor="#F43F5E"
+                android:textColor="@color/brand_error_solid"
                 android:textSize="12sp"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -123,7 +123,7 @@
                 android:paddingHorizontal="8dp"
                 android:paddingVertical="1dp"
                 android:text="YOU"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white"
                 android:textSize="8sp"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -163,14 +163,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Koramangala - 2 km"
-                    android:textColor="#101D33"
+                    android:textColor="@color/text_header"
                     android:textSize="14sp"
                     android:textStyle="bold" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="● LIVE LOCATION"
-                    android:textColor="#22C55E"
+                    android:textColor="@color/brand_success_vibrant_alt"
                     android:textSize="8sp"
                     android:textStyle="bold"
                     android:letterSpacing="0.05" />
@@ -180,7 +180,7 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:src="@drawable/ic_search_grey"
-                app:tint="#94A3B8" />
+                app:tint="@color/text_muted" />
         </LinearLayout>
     </LinearLayout>
 
@@ -198,7 +198,7 @@
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:src="@drawable/ic_plus_white"
-            app:tint="#101D33"
+            app:tint="@color/text_header"
             android:background="@drawable/bg_circle_white_card"
             android:padding="12dp"
             android:elevation="6dp"/>
@@ -208,7 +208,7 @@
             android:layout_height="44dp"
             android:layout_marginTop="8dp"
             android:src="@drawable/ic_layers"
-            app:tint="#101D33"
+            app:tint="@color/text_header"
             android:background="@drawable/bg_circle_white_card"
             android:padding="12dp"
             android:elevation="6dp"/>
@@ -218,7 +218,7 @@
             android:layout_height="44dp"
             android:layout_marginTop="8dp"
             android:src="@drawable/ic_loc_pin_small"
-            app:tint="#101D33"
+            app:tint="@color/text_header"
             android:background="@drawable/bg_circle_white_card"
             android:padding="12dp"
             android:elevation="6dp"/>
@@ -231,9 +231,9 @@
         android:layout_gravity="bottom|end"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="160dp"
-        app:backgroundTint="#1D5EF3"
+        app:backgroundTint="@color/brand_primary"
         app:srcCompat="@drawable/ic_plus_white"
-        app:tint="#FFFFFF"
+        app:tint="@color/white"
         app:elevation="8dp"
         app:fabSize="normal" />
 
@@ -264,7 +264,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="18 active opportunities ●"
-                android:textColor="#101D33"
+                android:textColor="@color/text_header"
                 android:textSize="16sp"
                 android:fontFamily="sans-serif-black" />
             <TextView
@@ -272,7 +272,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:text="See list"
-                android:textColor="#1D5EF3"
+                android:textColor="@color/brand_primary"
                 android:textSize="13sp"
                 android:textStyle="bold" />
         </RelativeLayout>
@@ -297,7 +297,7 @@
                     android:paddingHorizontal="20dp"
                     android:gravity="center"
                     android:text="Gigs"
-                    android:textColor="#64748B"
+                    android:textColor="@color/text_subheadline"
                     android:textSize="13sp"
                     android:fontFamily="sans-serif-medium" />
 
@@ -310,7 +310,7 @@
                     android:paddingHorizontal="20dp"
                     android:gravity="center"
                     android:text="All"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/white"
                     android:textSize="13sp"
                     android:textStyle="bold" />
 
@@ -323,7 +323,7 @@
                     android:paddingHorizontal="20dp"
                     android:gravity="center"
                     android:text="Community"
-                    android:textColor="#64748B"
+                    android:textColor="@color/text_subheadline"
                     android:textSize="13sp"
                     android:fontFamily="sans-serif-medium" />
 
@@ -339,7 +339,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="!"
-                        android:textColor="#FFFFFF"
+                        android:textColor="@color/white"
                         android:textSize="20sp"
                         android:textStyle="bold" />
                 </FrameLayout>
@@ -387,7 +387,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Rahul S. • VERIFIED"
-                        android:textColor="#101D33"
+                        android:textColor="@color/text_header"
                         android:textSize="14sp"
                         android:textStyle="bold"
                         android:letterSpacing="0.02" />
@@ -395,7 +395,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="4.8★ • Neighbour Score • 0.8 km"
-                        android:textColor="#64748B"
+                        android:textColor="@color/text_subheadline"
                         android:textSize="11sp" />
                 </LinearLayout>
                 <ImageView
@@ -413,11 +413,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:background="@drawable/bg_chip_selected"
-                android:backgroundTint="#EFF6FF"
+                android:backgroundTint="@color/brand_primary_light"
                 android:paddingHorizontal="12dp"
                 android:paddingVertical="4dp"
                 android:text="Plumbing"
-                android:textColor="#1D5EF3"
+                android:textColor="@color/brand_primary"
                 android:textSize="11sp"
                 android:textStyle="bold" />
 
@@ -426,7 +426,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="Plumbing Repair"
-                android:textColor="#101D33"
+                android:textColor="@color/text_header"
                 android:textSize="20sp"
                 android:fontFamily="sans-serif-black" />
 
@@ -440,14 +440,14 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:text="₹300"
-                    android:textColor="#1D5EF3"
+                    android:textColor="@color/brand_primary"
                     android:textSize="22sp"
                     android:textStyle="bold" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1 / 2 slots filled"
-                    android:textColor="#64748B"
+                    android:textColor="@color/text_subheadline"
                     android:textSize="12sp" />
                 <ProgressBar
                     style="?android:attr/progressBarStyleHorizontal"
@@ -471,9 +471,9 @@
                     android:layout_weight="1"
                     android:layout_height="56dp"
                     android:text="View Full Post →"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/white"
                     android:textAllCaps="false"
-                    app:backgroundTint="#1D5EF3"
+                    app:backgroundTint="@color/brand_primary"
                     app:cornerRadius="16dp" />
 
                 <ImageButton
@@ -481,7 +481,7 @@
                     android:layout_height="56dp"
                     android:layout_marginStart="12dp"
                     android:src="@drawable/ic_mic_blue"
-                    app:tint="#64748B"
+                    app:tint="@color/text_subheadline"
                     android:background="@drawable/bg_card_outline" />
             </LinearLayout>
         </LinearLayout>
@@ -496,7 +496,7 @@
         app:fabAlignmentMode="center"
         app:fabCradleMargin="8dp"
         app:fabCradleRoundedCornerRadius="16dp"
-        app:backgroundTint="#EBFFFFFF">
+        app:backgroundTint="@color/white">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNavView"
@@ -513,7 +513,7 @@
         android:id="@+id/fabAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:backgroundTint="#2563EB"
+        app:backgroundTint="@color/brand_primary"
         app:srcCompat="@drawable/ic_plus_white"
         app:cornerRadius="28dp"
         app:layout_anchor="@id/bottomAppBar"
@@ -521,3 +521,10 @@
         android:elevation="8dp" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+
+
+
+

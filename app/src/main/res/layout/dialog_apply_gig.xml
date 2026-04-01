@@ -19,13 +19,13 @@
             android:layout_height="4dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="24dp"
-            android:background="#E2E8F0" />
+            android:background="@color/border_standard" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Apply for this Gig"
-            android:textColor="#101D33"
+            android:textColor="@color/text_header"
             android:textSize="22sp"
             android:fontFamily="sans-serif-black" />
 
@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:text="Fix leaky kitchen tap"
-            android:textColor="#64748B"
+            android:textColor="@color/text_subheadline"
             android:textSize="12sp" />
 
         <!-- Info Banner -->
@@ -43,7 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:background="@drawable/bg_card_outline"
-            android:backgroundTint="#EFF6FF"
+            android:backgroundTint="@color/brand_primary_light"
             android:padding="16dp"
             android:gravity="center_vertical"
             android:elevation="0dp">
@@ -51,13 +51,13 @@
                 android:layout_width="16dp"
                 android:layout_height="16dp"
                 android:src="@drawable/ic_info_circle"
-                app:tint="#1D5EF3" />
+                app:tint="@color/brand_primary" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
                 android:text="You are applying for Spot 2 of 2."
-                android:textColor="#1D5EF3"
+                android:textColor="@color/brand_primary"
                 android:textSize="12sp"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -67,7 +67,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:text="Intro"
-            android:textColor="#101D33"
+            android:textColor="@color/text_header"
             android:textSize="13sp"
             android:textStyle="bold" />
 
@@ -76,11 +76,11 @@
             android:layout_height="100dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/bg_card_outline"
-            android:backgroundTint="#F8FAFC"
+            android:backgroundTint="@color/surface_background"
             android:gravity="top"
             android:hint="Introduce yourself and explain why you're a good fit..."
             android:padding="16dp"
-            android:textColor="#101D33"
+            android:textColor="@color/text_header"
             android:textSize="14sp"
             android:inputType="textMultiLine" />
 
@@ -89,7 +89,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:text="Price Negotiation"
-            android:textColor="#101D33"
+            android:textColor="@color/text_header"
             android:textSize="13sp"
             android:textStyle="bold" />
 
@@ -97,10 +97,10 @@
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_marginTop="12dp"
-            app:cardBackgroundColor="#FFFFFF"
+            app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="16dp"
             app:cardElevation="2dp"
-            app:strokeColor="#1D5EF3"
+            app:strokeColor="@color/brand_primary"
             app:strokeWidth="@dimen/stroke_width_thick">
 
             <LinearLayout
@@ -114,21 +114,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checked="true"
-                android:buttonTint="#1D5EF3"/>
+                android:buttonTint="@color/brand_primary"/>
             <TextView
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:text="Propose a different rate"
-                android:textColor="#101D33"
+                android:textColor="@color/text_header"
                 android:textSize="14sp"
                 android:textStyle="bold" />
             <ImageView
                 android:layout_width="16dp"
                 android:layout_height="16dp"
                 android:src="@drawable/ic_check_circle_green"
-                app:tint="#1D5EF3" />
+                app:tint="@color/brand_primary" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
@@ -148,7 +148,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:text="Accept posted price (₹300)"
-                android:textColor="#64748B"
+                android:textColor="@color/text_subheadline"
                 android:textSize="14sp" />
         </LinearLayout>
 
@@ -157,7 +157,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:text="Payment Preference"
-            android:textColor="#101D33"
+            android:textColor="@color/text_header"
             android:textSize="13sp"
             android:textStyle="bold" />
 
@@ -173,7 +173,7 @@
                 android:background="@drawable/bg_card_outline"
                 android:gravity="center"
                 android:text="UPI"
-                android:textColor="#64748B"
+                android:textColor="@color/text_subheadline"
                 android:textSize="12sp" />
             <TextView
                 android:layout_width="0dp"
@@ -183,7 +183,7 @@
                 android:background="@drawable/bg_card_outline"
                 android:gravity="center"
                 android:text="Cash"
-                android:textColor="#64748B"
+                android:textColor="@color/text_subheadline"
                 android:textSize="12sp" />
             <TextView
                 android:layout_width="0dp"
@@ -191,10 +191,10 @@
                 android:layout_height="40dp"
                 android:layout_marginStart="8dp"
                 android:background="@drawable/bg_chip_selected"
-                android:backgroundTint="#EFF6FF"
+                android:backgroundTint="@color/brand_primary_light"
                 android:gravity="center"
                 android:text="Either"
-                android:textColor="#1D5EF3"
+                android:textColor="@color/brand_primary"
                 android:textSize="12sp"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -211,7 +211,7 @@
                 android:background="@drawable/bg_card_outline"
                 android:gravity="center"
                 android:text="📞 Call"
-                android:textColor="#101D33"
+                android:textColor="@color/text_header"
                 android:textSize="14sp" />
             <TextView
                 android:layout_width="0dp"
@@ -221,7 +221,7 @@
                 android:background="@drawable/bg_card_outline"
                 android:gravity="center"
                 android:text="✉ SMS"
-                android:textColor="#101D33"
+                android:textColor="@color/text_header"
                 android:textSize="14sp" />
         </LinearLayout>
 
@@ -234,7 +234,7 @@
             android:textAllCaps="false"
             android:textStyle="bold"
             app:cornerRadius="16dp"
-            app:backgroundTint="#2563EB" />
+            app:backgroundTint="@color/brand_primary" />
 
         <TextView
             android:layout_width="match_parent"
@@ -243,8 +243,15 @@
             android:layout_marginBottom="16dp"
             android:gravity="center"
             android:text="By applying, you agree to our Terms of Service. Payment processing may vary based on negotiation."
-            android:textColor="#94A3B8"
+            android:textColor="@color/text_muted"
             android:textSize="9sp"
             android:lineSpacingExtra="2dp" />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+
+

@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@color/white"
     tools:ignore="HardcodedText,ContentDescription,SpUsage">
 
     <ScrollView
@@ -38,7 +38,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:text="New Gig Post"
-                    android:textColor="#101D33"
+                    android:textColor="@color/text_header"
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </RelativeLayout>
@@ -57,14 +57,14 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Gig details"
-                    android:textColor="#101D33"
+                    android:textColor="@color/text_header"
                     android:textSize="14sp"
                     android:fontFamily="sans-serif-medium" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Step 1 of 2"
-                    android:textColor="#94A3B8"
+                    android:textColor="@color/text_muted"
                     android:textSize="12sp" />
             </LinearLayout>
             <ProgressBar
@@ -82,7 +82,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:text="What do you need?"
-                android:textColor="#101D33"
+                android:textColor="@color/text_header"
                 android:textSize="32sp"
                 android:fontFamily="sans-serif-black"
                 android:letterSpacing="-0.03" />
@@ -92,7 +92,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="Tell us the task and we'll match you with nearby people."
-                android:textColor="#64748B"
+                android:textColor="@color/text_subheadline"
                 android:textSize="16sp" />
 
             <!-- ── TASK TITLE ── -->
@@ -101,7 +101,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:text="Task title"
-                android:textColor="#0F172A"
+                android:textColor="@color/text_header"
                 android:textSize="14sp" />
 
             <EditText
@@ -111,11 +111,11 @@
                 android:layout_marginTop="8dp"
                 android:background="@drawable/bg_district_pill_input_white_stroke"
                 android:elevation="6dp"
-                android:outlineAmbientShadowColor="#0F000000"
-                android:outlineSpotShadowColor="#1A000000"
+                android:outlineAmbientShadowColor="@color/shadow_ambient"
+                android:outlineSpotShadowColor="@color/shadow_spot"
                 android:hint="e.g. Help moving furniture"
-                android:textColorHint="#94A3B8"
-                android:textColor="#101D33"
+                android:textColorHint="@color/text_muted"
+                android:textColor="@color/text_header"
                 android:textSize="16sp"
                 android:fontFamily="sans-serif-medium"
                 android:paddingStart="20dp"
@@ -129,7 +129,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:text="Describe the task"
-                android:textColor="#0F172A"
+                android:textColor="@color/text_header"
                 android:textSize="14sp" />
 
             <EditText
@@ -139,11 +139,11 @@
                 android:layout_marginTop="8dp"
                 android:background="@drawable/bg_district_pill_input_white_stroke"
                 android:elevation="6dp"
-                android:outlineAmbientShadowColor="#0F000000"
-                android:outlineSpotShadowColor="#1A000000"
+                android:outlineAmbientShadowColor="@color/shadow_ambient"
+                android:outlineSpotShadowColor="@color/shadow_spot"
                 android:hint="Provide more details — tools needed, urgency, etc."
-                android:textColorHint="#94A3B8"
-                android:textColor="#101D33"
+                android:textColorHint="@color/text_muted"
+                android:textColor="@color/text_header"
                 android:textSize="16sp"
                 android:fontFamily="sans-serif-medium"
                 android:padding="20dp"
@@ -157,7 +157,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:text="Budget (₹)"
-                android:textColor="#0F172A"
+                android:textColor="@color/text_header"
                 android:textSize="14sp" />
 
             <RelativeLayout
@@ -166,16 +166,16 @@
                 android:layout_marginTop="8dp"
                 android:background="@drawable/bg_district_pill_input_white_stroke"
                 android:elevation="6dp"
-                android:outlineAmbientShadowColor="#0F000000"
-                android:outlineSpotShadowColor="#1A000000">
+                android:outlineAmbientShadowColor="@color/shadow_ambient"
+                android:outlineSpotShadowColor="@color/shadow_spot">
 
                 <EditText
                     android:id="@+id/etPrice"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:hint="Set your budget"
-                    android:textColorHint="#94A3B8"
-                    android:textColor="#101D33"
+                    android:textColorHint="@color/text_muted"
+                    android:textColor="@color/text_header"
                     android:textSize="16sp"
                     android:fontFamily="sans-serif-medium"
                     android:paddingStart="20dp"
@@ -192,7 +192,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginEnd="18dp"
                     android:src="@drawable/ic_loc_pin_small"
-                    app:tint="#CBD5E1"
+                    app:tint="@color/pagers_indicator_inactive"
                     android:importantForAccessibility="no" />
             </RelativeLayout>
 
@@ -203,8 +203,8 @@
                 android:layout_marginTop="12dp"
                 android:background="@drawable/bg_district_pill_input_white_stroke"
                 android:elevation="6dp"
-                android:outlineAmbientShadowColor="#0F000000"
-                android:outlineSpotShadowColor="#1A000000"
+                android:outlineAmbientShadowColor="@color/shadow_ambient"
+                android:outlineSpotShadowColor="@color/shadow_spot"
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp"
                 android:paddingTop="16dp"
@@ -223,7 +223,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Allow Negotiation"
-                        android:textColor="#101D33"
+                        android:textColor="@color/text_header"
                         android:textSize="15sp"
                         android:textStyle="bold"
                         android:fontFamily="sans-serif-medium" />
@@ -233,7 +233,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
                         android:text="Price can be higher/lower"
-                        android:textColor="#94A3B8"
+                        android:textColor="@color/text_muted"
                         android:textSize="13sp" />
                 </LinearLayout>
 
@@ -256,8 +256,8 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/bg_district_pill_input_white_stroke"
                 android:elevation="6dp"
-                android:outlineAmbientShadowColor="#0F000000"
-                android:outlineSpotShadowColor="#1A000000"
+                android:outlineAmbientShadowColor="@color/shadow_ambient"
+                android:outlineSpotShadowColor="@color/shadow_spot"
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp"
                 android:paddingTop="14dp"
@@ -270,7 +270,7 @@
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true"
                     android:text="Max counter offer"
-                    android:textColor="#64748B"
+                    android:textColor="@color/text_subheadline"
                     android:textSize="14sp" />
 
                 <LinearLayout
@@ -287,7 +287,7 @@
                         android:layout_width="32dp"
                         android:layout_height="32dp"
                         android:text="−"
-                        android:textColor="#64748B"
+                        android:textColor="@color/text_subheadline"
                         android:textSize="20sp"
                         android:gravity="center"
                         android:background="@drawable/bg_card_outline"
@@ -299,7 +299,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="500"
-                        android:textColor="#101D33"
+                        android:textColor="@color/text_header"
                         android:textSize="16sp"
                         android:fontFamily="sans-serif-medium"
                         android:layout_marginStart="16dp"
@@ -310,7 +310,7 @@
                         android:layout_width="32dp"
                         android:layout_height="32dp"
                         android:text="+"
-                        android:textColor="#FFFFFF"
+                        android:textColor="@color/white"
                         android:textSize="20sp"
                         android:gravity="center"
                         android:background="@drawable/bg_counter_btn"
@@ -324,10 +324,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="Inspired by iHire: Suggest a fair price and negotiate with local pros in real-time."
-                android:textColor="#64748B"
+                android:textColor="@color/text_subheadline"
                 android:textSize="13sp"
                 app:drawableStartCompat="@drawable/ic_loc_pin_small"
-                app:drawableTint="#1D5EF3"
+                app:drawableTint="@color/brand_primary"
                 android:drawablePadding="8dp"
                 android:gravity="center_vertical" />
 
@@ -336,7 +336,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:text="DURATION"
-                android:textColor="#94A3B8"
+                android:textColor="@color/text_muted"
                 android:textSize="11sp"
                 android:textStyle="bold"
                 android:letterSpacing="0.05" />
@@ -399,7 +399,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:text="CATEGORY"
-                android:textColor="#94A3B8"
+                android:textColor="@color/text_muted"
                 android:textSize="10sp"
                 android:textStyle="bold"
                 android:letterSpacing="0.05" />
@@ -484,7 +484,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:text="HOW MANY PEOPLE?"
-                android:textColor="#94A3B8"
+                android:textColor="@color/text_muted"
                 android:textSize="10sp"
                 android:textStyle="bold"
                 android:letterSpacing="0.05" />
@@ -495,8 +495,8 @@
                 android:layout_marginTop="12dp"
                 android:background="@drawable/bg_district_pill_input_white_stroke"
                 android:elevation="6dp"
-                android:outlineAmbientShadowColor="#0F000000"
-                android:outlineSpotShadowColor="#1A000000"
+                android:outlineAmbientShadowColor="@color/shadow_ambient"
+                android:outlineSpotShadowColor="@color/shadow_spot"
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp"
                 android:paddingTop="14dp"
@@ -508,7 +508,7 @@
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true"
                     android:text="Number of people needed"
-                    android:textColor="#64748B"
+                    android:textColor="@color/text_subheadline"
                     android:textSize="14sp" />
 
                 <LinearLayout
@@ -524,7 +524,7 @@
                         android:layout_width="32dp"
                         android:layout_height="32dp"
                         android:text="−"
-                        android:textColor="#64748B"
+                        android:textColor="@color/text_subheadline"
                         android:textSize="20sp"
                         android:gravity="center"
                         android:background="@drawable/bg_card_outline"
@@ -536,7 +536,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="1"
-                        android:textColor="#101D33"
+                        android:textColor="@color/text_header"
                         android:textSize="16sp"
                         android:fontFamily="sans-serif-medium"
                         android:layout_marginStart="16dp"
@@ -547,7 +547,7 @@
                         android:layout_width="32dp"
                         android:layout_height="32dp"
                         android:text="+"
-                        android:textColor="#FFFFFF"
+                        android:textColor="@color/white"
                         android:textSize="20sp"
                         android:gravity="center"
                         android:background="@drawable/bg_counter_btn"
@@ -562,7 +562,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:text="PAYMENT METHOD"
-                android:textColor="#94A3B8"
+                android:textColor="@color/text_muted"
                 android:textSize="10sp"
                 android:textStyle="bold"
                 android:letterSpacing="0.05" />
@@ -597,7 +597,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="UPI"
-                        android:textColor="#1D5EF3"
+                        android:textColor="@color/brand_primary"
                         android:textSize="13sp"
                         android:textStyle="bold"
                         android:layout_marginTop="6dp" />
@@ -627,7 +627,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Cash"
-                        android:textColor="#64748B"
+                        android:textColor="@color/text_subheadline"
                         android:textSize="13sp"
                         android:layout_marginTop="6dp" />
                 </LinearLayout>
@@ -655,7 +655,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Both"
-                        android:textColor="#64748B"
+                        android:textColor="@color/text_subheadline"
                         android:textSize="13sp"
                         android:layout_marginTop="6dp" />
                 </LinearLayout>
@@ -676,7 +676,7 @@
                     android:layout_height="20dp"
                     android:text="⚠"
                     android:textSize="14sp"
-                    android:textColor="#D97706"
+                    android:textColor="@color/brand_warning_solid"
                     android:gravity="center"
                     android:layout_marginEnd="10dp" />
 
@@ -685,7 +685,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Your post will be marked Unverified until you complete your KYC or link a verified UPI ID in the next step."
-                    android:textColor="#92400E"
+                    android:textColor="@color/brand_warning_text"
                     android:textSize="13sp"
                     android:lineSpacingMultiplier="1.3" />
             </LinearLayout>
@@ -702,11 +702,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="64dp"
                 android:text="Continue"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white"
                 android:textAllCaps="false"
                 android:textSize="18sp"
                 android:fontFamily="sans-serif-medium"
-                app:backgroundTint="#1D5EF3"
+                app:backgroundTint="@color/brand_primary"
                 app:cornerRadius="16dp"
                 android:elevation="0dp" />
 
@@ -714,3 +714,10 @@
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+

@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FAFAFA"
+    android:background="@color/surface_background"
     android:orientation="vertical"
     android:padding="24dp"
     tools:ignore="HardcodedText,ContentDescription,SpUsage">
@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="Response Confirmation"
-            android:textColor="#101D33"
+            android:textColor="@color/text_header"
             android:textSize="16sp"
             android:textStyle="bold" />
     </RelativeLayout>
@@ -63,7 +63,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
             android:text="Response submitted."
-            android:textColor="#101D33"
+            android:textColor="@color/text_header"
             android:textSize="22sp"
             android:textStyle="bold"
             android:gravity="center" />
@@ -73,7 +73,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:text="The organizer has received your profile and will contact you if selected."
-            android:textColor="#64748B"
+            android:textColor="@color/text_subheadline"
             android:textSize="14sp"
             android:gravity="center"
             android:paddingStart="32dp"
@@ -85,7 +85,7 @@
             android:layout_marginTop="24dp"
             android:background="@drawable/bg_card_spot_pink" 
             android:text="Waiting for organizer to respond."
-            android:textColor="#F43F5E"
+            android:textColor="@color/brand_error_solid"
             android:textSize="13sp"
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
@@ -105,7 +105,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="auto-redirect in 3s"
-                android:textColor="#F43F5E"
+                android:textColor="@color/brand_error_solid"
                 android:textSize="12sp"
                 android:layout_marginBottom="8dp" />
 
@@ -129,11 +129,18 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:text="Back to Feed"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/white"
             android:textAllCaps="false"
             android:textSize="16sp"
-            app:backgroundTint="#F43F5E"
+            app:backgroundTint="@color/brand_error_solid"
             app:cornerRadius="12dp"
             android:elevation="0dp" />
     </LinearLayout>
 </LinearLayout>
+
+
+
+
+
+
+

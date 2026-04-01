@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    android:background="#F7F9FA">
+    android:background="@color/surface_background">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -27,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Rating Confirmation"
-        android:textColor="#000000"
+        android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/iv_close"
@@ -72,7 +72,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:text="Rating submitted."
-        android:textColor="#000000"
+        android:textColor="@color/black"
         android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -87,7 +87,7 @@
         android:layout_marginTop="16dp"
         android:gravity="center"
         android:text="Rahul S.'s Neighbour Score has been\nupdated."
-        android:textColor="#5F6368"
+        android:textColor="@color/text_body_light"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -103,7 +103,7 @@
         android:paddingHorizontal="20dp"
         android:paddingVertical="10dp"
         android:text="Waiting for Rahul S. to rate you."
-        android:textColor="#1A73E8"
+        android:textColor="@color/legacy_material_blue"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -157,7 +157,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="24dp"
         android:text="AUTO-REDIRECTING"
-        android:textColor="#9AA0A6"
+        android:textColor="@color/text_muted"
         android:textSize="11sp"
         android:textStyle="bold"
         android:letterSpacing="0.05"
@@ -171,7 +171,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginTop="24dp"
         android:text="3S"
-        android:textColor="#9AA0A6"
+        android:textColor="@color/text_muted"
         android:textSize="11sp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/card_gig_image"
@@ -212,3 +212,10 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
+
+
+
+
+
+
+

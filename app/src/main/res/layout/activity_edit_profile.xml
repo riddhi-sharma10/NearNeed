@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@color/white"
     android:fitsSystemWindows="true"
     tools:ignore="HardcodedText,ContentDescription,SpUsage">
 
@@ -38,7 +38,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:text="Edit Profile"
-                    android:textColor="#101D33"
+                    android:textColor="@color/text_header"
                     android:textSize="18sp"
                     android:textStyle="bold" />
             </RelativeLayout>
@@ -66,7 +66,7 @@
                         android:layout_gravity="bottom|end"
                         android:background="@drawable/bg_blue_circle"
                         android:src="@drawable/ic_camera_blue"
-                        app:tint="#FFFFFF"
+                        app:tint="@color/white"
                         android:padding="6dp" />
                 </FrameLayout>
                 <TextView
@@ -74,7 +74,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
                     android:text="Change photo"
-                    android:textColor="#1D5EF3"
+                    android:textColor="@color/brand_primary"
                     android:textSize="14sp"
                     android:fontFamily="sans-serif-medium" />
             </LinearLayout>
@@ -84,7 +84,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:text="Full name"
-                android:textColor="#0F172A"
+                android:textColor="@color/text_header"
                 android:textSize="14sp" />
                 
             <EditText
@@ -94,11 +94,11 @@
                 android:layout_marginTop="8dp"
                 android:background="@drawable/bg_district_pill_input_white_stroke"
                 android:elevation="6dp"
-                android:outlineAmbientShadowColor="#0F000000"
-                android:outlineSpotShadowColor="#1A000000"
+                android:outlineAmbientShadowColor="@color/shadow_ambient"
+                android:outlineSpotShadowColor="@color/shadow_spot"
                 android:text="Abhinav Oberoi"
-                android:textColorHint="#94A3B8"
-                android:textColor="#101D33"
+                android:textColorHint="@color/text_muted"
+                android:textColor="@color/text_header"
                 android:textSize="16sp"
                 android:fontFamily="sans-serif-medium"
                 android:paddingStart="24dp"
@@ -110,7 +110,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:text="Short bio"
-                android:textColor="#0F172A"
+                android:textColor="@color/text_header"
                 android:textSize="14sp" />
 
             <EditText
@@ -120,11 +120,11 @@
                 android:layout_marginTop="8dp"
                 android:background="@drawable/bg_district_pill_input_white_stroke"
                 android:elevation="6dp"
-                android:outlineAmbientShadowColor="#0F000000"
-                android:outlineSpotShadowColor="#1A000000"
+                android:outlineAmbientShadowColor="@color/shadow_ambient"
+                android:outlineSpotShadowColor="@color/shadow_spot"
                 android:text="I am a software engineer living in Koramangala. Happy to help with tech issues."
-                android:textColorHint="#94A3B8"
-                android:textColor="#101D33"
+                android:textColorHint="@color/text_muted"
+                android:textColor="@color/text_header"
                 android:textSize="16sp"
                 android:fontFamily="sans-serif-medium"
                 android:padding="20dp"
@@ -138,7 +138,7 @@
                 android:layout_marginTop="4dp"
                 android:gravity="end"
                 android:text="85/150"
-                android:textColor="#94A3B8"
+                android:textColor="@color/text_muted"
                 android:textSize="12sp" />
 
             <Space
@@ -152,14 +152,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="64dp"
                 android:text="Save Changes"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white"
                 android:textAllCaps="false"
                 android:textSize="18sp"
                 android:fontFamily="sans-serif-medium"
-                app:backgroundTint="#1D5EF3"
+                app:backgroundTint="@color/brand_primary"
                 app:cornerRadius="16dp"
                 android:elevation="0dp" />
 
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+

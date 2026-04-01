@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FCFBFF"
+    android:background="@color/surface_background_alt"
     tools:ignore="HardcodedText,ContentDescription,SpUsage">
 
     <LinearLayout
@@ -65,7 +65,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
                 android:text="Your Gig is live."
-                android:textColor="#101D33"
+                android:textColor="@color/text_header"
                 android:textSize="22sp"
                 android:textStyle="bold"
                 android:gravity="center"
@@ -76,7 +76,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:text="People within your radius have been notified."
-                android:textColor="#64748B"
+                android:textColor="@color/text_subheadline"
                 android:textSize="14sp"
                 android:gravity="center"
                 android:layout_gravity="center_horizontal" />
@@ -86,7 +86,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
                 android:text="Broadcasted to 42 neighbours."
-                android:textColor="#1D5EF3"
+                android:textColor="@color/brand_primary"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 android:gravity="center"
@@ -102,10 +102,10 @@
                 android:layout_height="64dp"
                 android:layout_marginTop="40dp"
                 android:text="Back to Feed"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white"
                 android:textAllCaps="false"
                 android:textSize="18sp"
-                app:backgroundTint="#1D5EF3"
+                app:backgroundTint="@color/brand_primary"
                 app:cornerRadius="16dp"
                 android:elevation="0dp" />
 
@@ -115,7 +115,7 @@
                 android:layout_height="64dp"
                 android:layout_marginTop="12dp"
                 android:text="View My Gig"
-                android:textColor="#1D5EF3"
+                android:textColor="@color/brand_primary"
                 android:textAllCaps="false"
                 android:textSize="16sp"
                 android:textStyle="bold"
@@ -127,3 +127,10 @@
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+

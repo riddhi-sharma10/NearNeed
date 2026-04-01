@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@color/white"
     tools:ignore="HardcodedText,ContentDescription,SpUsage">
 
     <ScrollView
@@ -25,7 +25,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp">
                 <ImageButton android:id="@+id/btnBack" android:layout_width="40dp" android:layout_height="40dp" android:layout_centerVertical="true" android:background="?attr/selectableItemBackgroundBorderless" android:src="@drawable/ic_back_arrow" />
-                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:text="ID Verification" android:textColor="#101D33" android:textSize="16sp" android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:text="ID Verification" android:textColor="@color/text_header" android:textSize="16sp" android:textStyle="bold" />
             </RelativeLayout>
 
             <ImageView
@@ -33,14 +33,14 @@
                 android:layout_height="56dp"
                 android:layout_marginTop="48dp"
                 android:src="@drawable/ic_verified_badge" 
-                app:tint="#1D5EF3"/>
+                app:tint="@color/brand_primary"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="Verify your identity"
-                android:textColor="#101D33"
+                android:textColor="@color/text_header"
                 android:textSize="28sp"
                 android:fontFamily="sans-serif-black"
                 android:letterSpacing="-0.02" />
@@ -50,7 +50,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="NearNeed requires ID verification before you can post or apply for gigs."
-                android:textColor="#64748B"
+                android:textColor="@color/text_subheadline"
                 android:textSize="16sp"
                 android:gravity="center"
                 android:paddingHorizontal="16dp"/>
@@ -67,7 +67,7 @@
                     android:layout_width="wrap_content" 
                     android:layout_height="wrap_content" 
                     android:text="WHY SHOULD YOU VERIFY?" 
-                    android:textColor="#1D5EF3" 
+                    android:textColor="@color/brand_primary" 
                     android:textSize="10sp" 
                     android:textStyle="bold" 
                     android:letterSpacing="0.05" />
@@ -77,17 +77,17 @@
                     android:layout_height="wrap_content" 
                     android:layout_marginTop="4dp"
                     android:text="• Build deep trust with neighbors \n• Get a verified badge on your profile \n• Access high-reward Gigs and special tasks"
-                    android:textColor="#101D33" 
+                    android:textColor="@color/text_header" 
                     android:textSize="12sp" 
                     android:lineSpacingExtra="2dp"/>
 
-                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E0E7FF" android:layout_marginVertical="12dp" />
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/brand_info_bg" android:layout_marginVertical="12dp" />
 
                 <TextView 
                     android:layout_width="wrap_content" 
                     android:layout_height="wrap_content" 
                     android:text="ACCEPTED IDS" 
-                    android:textColor="#1D5EF3" 
+                    android:textColor="@color/brand_primary" 
                     android:textSize="10sp" 
                     android:textStyle="bold" 
                     android:letterSpacing="0.05" />
@@ -97,7 +97,7 @@
                     android:layout_height="wrap_content" 
                     android:layout_marginTop="4dp"
                     android:text="Aadhaar, PAN, Driving Licenses, Voter ID, Passport" 
-                    android:textColor="#101D33" 
+                    android:textColor="@color/text_header" 
                     android:textSize="12sp" />
             </LinearLayout>
 
@@ -109,13 +109,13 @@
                 android:layout_marginTop="24dp"
                 android:background="@drawable/bg_dashed_border"
                 android:elevation="4dp"
-                android:outlineAmbientShadowColor="#08000000"
-                android:outlineSpotShadowColor="#08000000"
+                android:outlineAmbientShadowColor="@color/shadow_subtle"
+                android:outlineSpotShadowColor="@color/shadow_subtle"
                 android:gravity="center"
                 android:orientation="vertical">
-                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_id_camera" app:tint="#94A3B8" />
-                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Front of ID" android:textColor="#101D33" android:textSize="14sp" android:textStyle="bold" android:layout_marginTop="4dp"/>
-                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Clear picture, no light reflections." android:textColor="#94A3B8" android:textSize="12sp" />
+                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_id_camera" app:tint="@color/text_muted" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Front of ID" android:textColor="@color/text_header" android:textSize="14sp" android:textStyle="bold" android:layout_marginTop="4dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Clear picture, no light reflections." android:textColor="@color/text_muted" android:textSize="12sp" />
             </LinearLayout>
 
             <!-- Back Side Upload -->
@@ -126,13 +126,13 @@
                 android:layout_marginTop="16dp"
                 android:background="@drawable/bg_dashed_border"
                 android:elevation="4dp"
-                android:outlineAmbientShadowColor="#08000000"
-                android:outlineSpotShadowColor="#08000000"
+                android:outlineAmbientShadowColor="@color/shadow_subtle"
+                android:outlineSpotShadowColor="@color/shadow_subtle"
                 android:gravity="center"
                 android:orientation="vertical">
-                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_id_camera" app:tint="#94A3B8" />
-                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Back of ID" android:textColor="#101D33" android:textSize="14sp" android:textStyle="bold" android:layout_marginTop="4dp"/>
-                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Clear picture, horizontally held." android:textColor="#94A3B8" android:textSize="12sp" />
+                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_id_camera" app:tint="@color/text_muted" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Back of ID" android:textColor="@color/text_header" android:textSize="14sp" android:textStyle="bold" android:layout_marginTop="4dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Clear picture, horizontally held." android:textColor="@color/text_muted" android:textSize="12sp" />
             </LinearLayout>
             
             <LinearLayout
@@ -141,8 +141,8 @@
                 android:orientation="horizontal"
                 android:layout_marginTop="16dp"
                 android:gravity="center_vertical">
-                <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_info_circle" app:tint="#94A3B8" />
-                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:text="I confirm the info on my ID is clear and readable." android:textColor="#64748B" android:textSize="12sp" />
+                <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_info_circle" app:tint="@color/text_muted" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:text="I confirm the info on my ID is clear and readable." android:textColor="@color/text_subheadline" android:textSize="12sp" />
             </LinearLayout>
 
             <Space
@@ -156,11 +156,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="64dp"
                 android:text="Submit for Verification"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white"
                 android:textAllCaps="false"
                 android:textSize="16sp"
                 android:fontFamily="sans-serif-medium"
-                app:backgroundTint="#93C5FD"
+                app:backgroundTint="@color/brand_info_accent_light"
                 app:cornerRadius="16dp"
                 android:elevation="0dp" />
                 
@@ -172,7 +172,7 @@
                 android:layout_marginBottom="16dp"
                 android:gravity="center"
                 android:text="Skip for now"
-                android:textColor="#1D5EF3"
+                android:textColor="@color/brand_primary"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 android:clickable="true"
@@ -181,3 +181,9 @@
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+

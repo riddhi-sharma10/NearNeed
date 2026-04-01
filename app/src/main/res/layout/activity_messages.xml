@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FAFAFA">
+    android:background="@color/surface_background">
 
     <!-- Scrollable content -->
     <androidx.core.widget.NestedScrollView
@@ -22,7 +22,7 @@
             android:orientation="vertical">
 
             <!-- Status bar spacer -->
-            <View android:layout_width="match_parent" android:layout_height="48dp" android:background="#FFFFFF" />
+            <View android:layout_width="match_parent" android:layout_height="48dp" android:background="@color/white" />
 
             <!-- Header -->
             <RelativeLayout
@@ -30,13 +30,13 @@
                 android:layout_height="56dp"
                 android:paddingStart="20dp"
                 android:paddingEnd="16dp"
-                android:background="#FFFFFF">
+                android:background="@color/white">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:text="Messages"
-                    android:textColor="#101D33"
+                    android:textColor="@color/text_header"
                     android:textSize="26sp"
                     android:fontFamily="sans-serif-black"
                     android:textStyle="bold" />
@@ -50,15 +50,15 @@
                 android:paddingEnd="16dp"
                 android:paddingTop="14dp"
                 android:paddingBottom="10dp"
-                android:background="#FFFFFF">
+                android:background="@color/white">
                 <EditText
                     android:id="@+id/etSearch"
                     android:layout_width="match_parent"
                     android:layout_height="46dp"
                     android:hint="Search messages..."
                     android:textSize="14sp"
-                    android:textColor="#0F172A"
-                    android:textColorHint="#94A3B8"
+                    android:textColor="@color/text_header"
+                    android:textColorHint="@color/text_muted"
                     android:drawableStart="@drawable/ic_search_grey"
                     android:drawablePadding="10dp"
                     android:paddingStart="16dp"
@@ -70,14 +70,14 @@
             </RelativeLayout>
 
             <!-- Divider -->
-            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F1F5F9" />
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider_soft" />
 
             <!-- ===== Conversation List ===== -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:background="#FFFFFF">
+                android:background="@color/white">
 
                 <!-- Row helper macro: each row is 74dp tall, name bold + preview -->
 
@@ -88,15 +88,15 @@
                         <View android:layout_width="12dp" android:layout_height="12dp" android:layout_gravity="bottom|end" android:background="@drawable/bg_dot_green"/>
                     </FrameLayout>
                     <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_toEndOf="@id/avRachel" android:layout_toStartOf="@+id/trRachel" android:layout_centerVertical="true" android:layout_marginStart="12dp" android:orientation="vertical">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rachel" android:textColor="#0F172A" android:textSize="15sp" android:textStyle="bold"/>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="I can help with the plumbing! Let me know." android:textColor="#0F172A" android:textSize="13sp" android:textStyle="bold" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rachel" android:textColor="@color/text_header" android:textSize="15sp" android:textStyle="bold"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="I can help with the plumbing! Let me know." android:textColor="@color/text_header" android:textSize="13sp" android:textStyle="bold" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
                     </LinearLayout>
                     <LinearLayout android:id="@+id/trRachel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:orientation="vertical" android:gravity="end">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2 min" android:textColor="#94A3B8" android:textSize="11sp"/>
-                        <View android:layout_width="8dp" android:layout_height="8dp" android:background="@drawable/bg_dot_green" android:layout_gravity="end" android:layout_marginTop="5dp" android:backgroundTint="#1D5EF3"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2 min" android:textColor="@color/text_muted" android:textSize="11sp"/>
+                        <View android:layout_width="8dp" android:layout_height="8dp" android:background="@drawable/bg_dot_green" android:layout_gravity="end" android:layout_marginTop="5dp" android:backgroundTint="@color/brand_primary"/>
                     </LinearLayout>
                 </RelativeLayout>
-                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F1F5F9" android:layout_marginStart="78dp"/>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider_soft" android:layout_marginStart="78dp"/>
 
                 <!-- 2. Manya Awasthi -->
                 <RelativeLayout android:id="@+id/convManya" android:layout_width="match_parent" android:layout_height="74dp" android:paddingStart="16dp" android:paddingEnd="16dp" android:background="?attr/selectableItemBackground" android:gravity="center_vertical">
@@ -105,15 +105,15 @@
                         <View android:layout_width="12dp" android:layout_height="12dp" android:layout_gravity="bottom|end" android:background="@drawable/bg_dot_green"/>
                     </FrameLayout>
                     <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_toEndOf="@id/avManya" android:layout_toStartOf="@+id/trManya" android:layout_centerVertical="true" android:layout_marginStart="12dp" android:orientation="vertical">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Manya Awasthi" android:textColor="#0F172A" android:textSize="15sp" android:textStyle="bold"/>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Is the Pacific Blue color still available?" android:textColor="#0F172A" android:textSize="13sp" android:textStyle="bold" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Manya Awasthi" android:textColor="@color/text_header" android:textSize="15sp" android:textStyle="bold"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Is the Pacific Blue color still available?" android:textColor="@color/text_header" android:textSize="13sp" android:textStyle="bold" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
                     </LinearLayout>
                     <LinearLayout android:id="@+id/trManya" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:orientation="vertical" android:gravity="end">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3 hrs" android:textColor="#94A3B8" android:textSize="11sp"/>
-                        <View android:layout_width="8dp" android:layout_height="8dp" android:background="@drawable/bg_dot_green" android:layout_gravity="end" android:layout_marginTop="5dp" android:backgroundTint="#1D5EF3"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3 hrs" android:textColor="@color/text_muted" android:textSize="11sp"/>
+                        <View android:layout_width="8dp" android:layout_height="8dp" android:background="@drawable/bg_dot_green" android:layout_gravity="end" android:layout_marginTop="5dp" android:backgroundTint="@color/brand_primary"/>
                     </LinearLayout>
                 </RelativeLayout>
-                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F1F5F9" android:layout_marginStart="78dp"/>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider_soft" android:layout_marginStart="78dp"/>
 
                 <!-- 3. Rahul Singh -->
                 <RelativeLayout android:id="@+id/convRahul" android:layout_width="match_parent" android:layout_height="74dp" android:paddingStart="16dp" android:paddingEnd="16dp" android:background="?attr/selectableItemBackground" android:gravity="center_vertical">
@@ -122,12 +122,12 @@
                         <View android:layout_width="12dp" android:layout_height="12dp" android:layout_gravity="bottom|end" android:background="@drawable/bg_circle_grey_solid"/>
                     </FrameLayout>
                     <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_toEndOf="@id/avRahul" android:layout_toStartOf="@+id/trRahul" android:layout_centerVertical="true" android:layout_marginStart="12dp" android:orientation="vertical">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rahul Singh" android:textColor="#0F172A" android:textSize="15sp" android:textStyle="bold"/>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="The lawn looks great, I'll be back Tuesday." android:textColor="#64748B" android:textSize="13sp" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rahul Singh" android:textColor="@color/text_header" android:textSize="15sp" android:textStyle="bold"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="The lawn looks great, I'll be back Tuesday." android:textColor="@color/text_subheadline" android:textSize="13sp" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
                     </LinearLayout>
-                    <TextView android:id="@+id/trRahul" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:text="1 hr" android:textColor="#94A3B8" android:textSize="11sp"/>
+                    <TextView android:id="@+id/trRahul" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:text="1 hr" android:textColor="@color/text_muted" android:textSize="11sp"/>
                 </RelativeLayout>
-                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F1F5F9" android:layout_marginStart="78dp"/>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider_soft" android:layout_marginStart="78dp"/>
 
                 <!-- 4. Riddhi Sharma -->
                 <RelativeLayout android:id="@+id/convRiddhi" android:layout_width="match_parent" android:layout_height="74dp" android:paddingStart="16dp" android:paddingEnd="16dp" android:background="?attr/selectableItemBackground" android:gravity="center_vertical">
@@ -136,12 +136,12 @@
                         <View android:layout_width="12dp" android:layout_height="12dp" android:layout_gravity="bottom|end" android:background="@drawable/bg_dot_green"/>
                     </FrameLayout>
                     <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_toEndOf="@id/avRiddhi" android:layout_toStartOf="@+id/trRiddhi" android:layout_centerVertical="true" android:layout_marginStart="12dp" android:orientation="vertical">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Riddhi Sharma" android:textColor="#0F172A" android:textSize="15sp" android:textStyle="bold"/>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Luna had a great walk today! 🐕" android:textColor="#64748B" android:textSize="13sp" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Riddhi Sharma" android:textColor="@color/text_header" android:textSize="15sp" android:textStyle="bold"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Luna had a great walk today! 🐕" android:textColor="@color/text_subheadline" android:textSize="13sp" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
                     </LinearLayout>
-                    <TextView android:id="@+id/trRiddhi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:text="2 days" android:textColor="#94A3B8" android:textSize="11sp"/>
+                    <TextView android:id="@+id/trRiddhi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:text="2 days" android:textColor="@color/text_muted" android:textSize="11sp"/>
                 </RelativeLayout>
-                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F1F5F9" android:layout_marginStart="78dp"/>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider_soft" android:layout_marginStart="78dp"/>
 
                 <!-- 5. Vishu Singh -->
                 <RelativeLayout android:id="@+id/convVishu" android:layout_width="match_parent" android:layout_height="74dp" android:paddingStart="16dp" android:paddingEnd="16dp" android:background="?attr/selectableItemBackground" android:gravity="center_vertical">
@@ -150,12 +150,12 @@
                         <View android:layout_width="12dp" android:layout_height="12dp" android:layout_gravity="bottom|end" android:background="@drawable/bg_circle_grey_solid"/>
                     </FrameLayout>
                     <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_toEndOf="@id/avVishu" android:layout_toStartOf="@+id/trVishu" android:layout_centerVertical="true" android:layout_marginStart="12dp" android:orientation="vertical">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Vishu Singh" android:textColor="#0F172A" android:textSize="15sp" android:textStyle="bold"/>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="I've reset the router, try the connection." android:textColor="#64748B" android:textSize="13sp" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Vishu Singh" android:textColor="@color/text_header" android:textSize="15sp" android:textStyle="bold"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="I've reset the router, try the connection." android:textColor="@color/text_subheadline" android:textSize="13sp" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
                     </LinearLayout>
-                    <TextView android:id="@+id/trVishu" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:text="Yesterday" android:textColor="#94A3B8" android:textSize="11sp"/>
+                    <TextView android:id="@+id/trVishu" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:text="Yesterday" android:textColor="@color/text_muted" android:textSize="11sp"/>
                 </RelativeLayout>
-                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F1F5F9" android:layout_marginStart="78dp"/>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider_soft" android:layout_marginStart="78dp"/>
 
                 <!-- 6. Ananya Gupta -->
                 <RelativeLayout android:id="@+id/convAnanya" android:layout_width="match_parent" android:layout_height="74dp" android:paddingStart="16dp" android:paddingEnd="16dp" android:background="?attr/selectableItemBackground" android:gravity="center_vertical">
@@ -164,15 +164,15 @@
                         <View android:layout_width="12dp" android:layout_height="12dp" android:layout_gravity="bottom|end" android:background="@drawable/bg_dot_green"/>
                     </FrameLayout>
                     <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_toEndOf="@id/avAnanya" android:layout_toStartOf="@+id/trAnanya" android:layout_centerVertical="true" android:layout_marginStart="12dp" android:orientation="vertical">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ananya Gupta" android:textColor="#0F172A" android:textSize="15sp" android:textStyle="bold"/>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Can you share the recipe you mentioned? 😊" android:textColor="#0F172A" android:textSize="13sp" android:textStyle="bold" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ananya Gupta" android:textColor="@color/text_header" android:textSize="15sp" android:textStyle="bold"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Can you share the recipe you mentioned? 😊" android:textColor="@color/text_header" android:textSize="13sp" android:textStyle="bold" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
                     </LinearLayout>
                     <LinearLayout android:id="@+id/trAnanya" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:orientation="vertical" android:gravity="end">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Yesterday" android:textColor="#94A3B8" android:textSize="11sp"/>
-                        <View android:layout_width="8dp" android:layout_height="8dp" android:background="@drawable/bg_dot_green" android:layout_gravity="end" android:layout_marginTop="5dp" android:backgroundTint="#1D5EF3"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Yesterday" android:textColor="@color/text_muted" android:textSize="11sp"/>
+                        <View android:layout_width="8dp" android:layout_height="8dp" android:background="@drawable/bg_dot_green" android:layout_gravity="end" android:layout_marginTop="5dp" android:backgroundTint="@color/brand_primary"/>
                     </LinearLayout>
                 </RelativeLayout>
-                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F1F5F9" android:layout_marginStart="78dp"/>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider_soft" android:layout_marginStart="78dp"/>
 
                 <!-- 7. Karan Mehta -->
                 <RelativeLayout android:id="@+id/convKaran" android:layout_width="match_parent" android:layout_height="74dp" android:paddingStart="16dp" android:paddingEnd="16dp" android:background="?attr/selectableItemBackground" android:gravity="center_vertical">
@@ -181,12 +181,12 @@
                         <View android:layout_width="12dp" android:layout_height="12dp" android:layout_gravity="bottom|end" android:background="@drawable/bg_circle_grey_solid"/>
                     </FrameLayout>
                     <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_toEndOf="@id/avKaran" android:layout_toStartOf="@+id/trKaran" android:layout_centerVertical="true" android:layout_marginStart="12dp" android:orientation="vertical">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Karan Mehta" android:textColor="#0F172A" android:textSize="15sp" android:textStyle="bold"/>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hey, thanks for the recommendation!" android:textColor="#64748B" android:textSize="13sp" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Karan Mehta" android:textColor="@color/text_header" android:textSize="15sp" android:textStyle="bold"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hey, thanks for the recommendation!" android:textColor="@color/text_subheadline" android:textSize="13sp" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
                     </LinearLayout>
-                    <TextView android:id="@+id/trKaran" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:text="Mon" android:textColor="#94A3B8" android:textSize="11sp"/>
+                    <TextView android:id="@+id/trKaran" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:text="Mon" android:textColor="@color/text_muted" android:textSize="11sp"/>
                 </RelativeLayout>
-                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F1F5F9" android:layout_marginStart="78dp"/>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider_soft" android:layout_marginStart="78dp"/>
 
                 <!-- 8. Priya Nair -->
                 <RelativeLayout android:id="@+id/convPriya" android:layout_width="match_parent" android:layout_height="74dp" android:paddingStart="16dp" android:paddingEnd="16dp" android:background="?attr/selectableItemBackground" android:gravity="center_vertical">
@@ -195,12 +195,12 @@
                         <View android:layout_width="12dp" android:layout_height="12dp" android:layout_gravity="bottom|end" android:background="@drawable/bg_dot_green"/>
                     </FrameLayout>
                     <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_toEndOf="@id/avPriya" android:layout_toStartOf="@+id/trPriya" android:layout_centerVertical="true" android:layout_marginStart="12dp" android:orientation="vertical">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Priya Nair" android:textColor="#0F172A" android:textSize="15sp" android:textStyle="bold"/>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="The event was so much fun, see you next week!" android:textColor="#64748B" android:textSize="13sp" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Priya Nair" android:textColor="@color/text_header" android:textSize="15sp" android:textStyle="bold"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="The event was so much fun, see you next week!" android:textColor="@color/text_subheadline" android:textSize="13sp" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
                     </LinearLayout>
-                    <TextView android:id="@+id/trPriya" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:text="Mon" android:textColor="#94A3B8" android:textSize="11sp"/>
+                    <TextView android:id="@+id/trPriya" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:text="Mon" android:textColor="@color/text_muted" android:textSize="11sp"/>
                 </RelativeLayout>
-                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F1F5F9" android:layout_marginStart="78dp"/>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider_soft" android:layout_marginStart="78dp"/>
 
                 <!-- 9. Deepak Verma -->
                 <RelativeLayout android:id="@+id/convDeepak" android:layout_width="match_parent" android:layout_height="74dp" android:paddingStart="16dp" android:paddingEnd="16dp" android:background="?attr/selectableItemBackground" android:gravity="center_vertical">
@@ -209,12 +209,12 @@
                         <View android:layout_width="12dp" android:layout_height="12dp" android:layout_gravity="bottom|end" android:background="@drawable/bg_circle_grey_solid"/>
                     </FrameLayout>
                     <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_toEndOf="@id/avDeepak" android:layout_toStartOf="@+id/trDeepak" android:layout_centerVertical="true" android:layout_marginStart="12dp" android:orientation="vertical">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Deepak Verma" android:textColor="#0F172A" android:textSize="15sp" android:textStyle="bold"/>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sure, I can drop it off Saturday morning." android:textColor="#64748B" android:textSize="13sp" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Deepak Verma" android:textColor="@color/text_header" android:textSize="15sp" android:textStyle="bold"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sure, I can drop it off Saturday morning." android:textColor="@color/text_subheadline" android:textSize="13sp" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
                     </LinearLayout>
-                    <TextView android:id="@+id/trDeepak" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:text="Sun" android:textColor="#94A3B8" android:textSize="11sp"/>
+                    <TextView android:id="@+id/trDeepak" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:text="Sun" android:textColor="@color/text_muted" android:textSize="11sp"/>
                 </RelativeLayout>
-                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F1F5F9" android:layout_marginStart="78dp"/>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider_soft" android:layout_marginStart="78dp"/>
 
                 <!-- 10. Meera Iyer -->
                 <RelativeLayout android:id="@+id/convMeera" android:layout_width="match_parent" android:layout_height="74dp" android:paddingStart="16dp" android:paddingEnd="16dp" android:background="?attr/selectableItemBackground" android:gravity="center_vertical">
@@ -223,12 +223,12 @@
                         <View android:layout_width="12dp" android:layout_height="12dp" android:layout_gravity="bottom|end" android:background="@drawable/bg_dot_green"/>
                     </FrameLayout>
                     <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_toEndOf="@id/avMeera" android:layout_toStartOf="@+id/trMeera" android:layout_centerVertical="true" android:layout_marginStart="12dp" android:orientation="vertical">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Meera Iyer" android:textColor="#0F172A" android:textSize="15sp" android:textStyle="bold"/>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Borrowing is fine, text me when you're done." android:textColor="#64748B" android:textSize="13sp" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Meera Iyer" android:textColor="@color/text_header" android:textSize="15sp" android:textStyle="bold"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Borrowing is fine, text me when you're done." android:textColor="@color/text_subheadline" android:textSize="13sp" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
                     </LinearLayout>
-                    <TextView android:id="@+id/trMeera" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:text="Sat" android:textColor="#94A3B8" android:textSize="11sp"/>
+                    <TextView android:id="@+id/trMeera" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:text="Sat" android:textColor="@color/text_muted" android:textSize="11sp"/>
                 </RelativeLayout>
-                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F1F5F9" android:layout_marginStart="78dp"/>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider_soft" android:layout_marginStart="78dp"/>
 
                 <!-- 11. Aditya Rao -->
                 <RelativeLayout android:id="@+id/convAditya" android:layout_width="match_parent" android:layout_height="74dp" android:paddingStart="16dp" android:paddingEnd="16dp" android:background="?attr/selectableItemBackground" android:gravity="center_vertical">
@@ -237,12 +237,12 @@
                         <View android:layout_width="12dp" android:layout_height="12dp" android:layout_gravity="bottom|end" android:background="@drawable/bg_circle_grey_solid"/>
                     </FrameLayout>
                     <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_toEndOf="@id/avAditya" android:layout_toStartOf="@+id/trAditya" android:layout_centerVertical="true" android:layout_marginStart="12dp" android:orientation="vertical">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Aditya Rao" android:textColor="#0F172A" android:textSize="15sp" android:textStyle="bold"/>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Confirmed for 5pm at the parking lot." android:textColor="#64748B" android:textSize="13sp" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Aditya Rao" android:textColor="@color/text_header" android:textSize="15sp" android:textStyle="bold"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Confirmed for 5pm at the parking lot." android:textColor="@color/text_subheadline" android:textSize="13sp" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
                     </LinearLayout>
-                    <TextView android:id="@+id/trAditya" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:text="Fri" android:textColor="#94A3B8" android:textSize="11sp"/>
+                    <TextView android:id="@+id/trAditya" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:text="Fri" android:textColor="@color/text_muted" android:textSize="11sp"/>
                 </RelativeLayout>
-                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F1F5F9" android:layout_marginStart="78dp"/>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider_soft" android:layout_marginStart="78dp"/>
 
                 <!-- 12. Sneha Patel -->
                 <RelativeLayout android:id="@+id/convSneha" android:layout_width="match_parent" android:layout_height="74dp" android:paddingStart="16dp" android:paddingEnd="16dp" android:background="?attr/selectableItemBackground" android:gravity="center_vertical">
@@ -251,12 +251,12 @@
                         <View android:layout_width="12dp" android:layout_height="12dp" android:layout_gravity="bottom|end" android:background="@drawable/bg_circle_grey_solid"/>
                     </FrameLayout>
                     <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_toEndOf="@id/avSneha" android:layout_toStartOf="@+id/trSneha" android:layout_centerVertical="true" android:layout_marginStart="12dp" android:orientation="vertical">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sneha Patel" android:textColor="#0F172A" android:textSize="15sp" android:textStyle="bold"/>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="We're organizing a cleanup drive this Sunday!" android:textColor="#64748B" android:textSize="13sp" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sneha Patel" android:textColor="@color/text_header" android:textSize="15sp" android:textStyle="bold"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="We're organizing a cleanup drive this Sunday!" android:textColor="@color/text_subheadline" android:textSize="13sp" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
                     </LinearLayout>
-                    <TextView android:id="@+id/trSneha" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:text="Thu" android:textColor="#94A3B8" android:textSize="11sp"/>
+                    <TextView android:id="@+id/trSneha" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:text="Thu" android:textColor="@color/text_muted" android:textSize="11sp"/>
                 </RelativeLayout>
-                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F1F5F9" android:layout_marginStart="78dp"/>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider_soft" android:layout_marginStart="78dp"/>
 
                 <!-- 13. Arjun Kumar -->
                 <RelativeLayout android:id="@+id/convArjun" android:layout_width="match_parent" android:layout_height="74dp" android:paddingStart="16dp" android:paddingEnd="16dp" android:background="?attr/selectableItemBackground" android:gravity="center_vertical">
@@ -265,10 +265,10 @@
                         <View android:layout_width="12dp" android:layout_height="12dp" android:layout_gravity="bottom|end" android:background="@drawable/bg_circle_grey_solid"/>
                     </FrameLayout>
                     <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_toEndOf="@id/avArjun" android:layout_toStartOf="@+id/trArjun" android:layout_centerVertical="true" android:layout_marginStart="12dp" android:orientation="vertical">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Arjun Kumar" android:textColor="#0F172A" android:textSize="15sp" android:textStyle="bold"/>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="I left the keys under the mat as discussed." android:textColor="#64748B" android:textSize="13sp" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Arjun Kumar" android:textColor="@color/text_header" android:textSize="15sp" android:textStyle="bold"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="I left the keys under the mat as discussed." android:textColor="@color/text_subheadline" android:textSize="13sp" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
                     </LinearLayout>
-                    <TextView android:id="@+id/trArjun" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:text="Wed" android:textColor="#94A3B8" android:textSize="11sp"/>
+                    <TextView android:id="@+id/trArjun" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:text="Wed" android:textColor="@color/text_muted" android:textSize="11sp"/>
                 </RelativeLayout>
 
             </LinearLayout>
@@ -285,7 +285,7 @@
         app:fabCradleMargin="8dp"
         app:fabCradleRoundedCornerRadius="16dp"
         app:hideOnScroll="false"
-        app:backgroundTint="#EBFFFFFF">
+        app:backgroundTint="@color/white">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             style="@style/Widget.MaterialComponents.BottomNavigationView"
@@ -296,7 +296,7 @@
             app:menu="@menu/bottom_nav_menu_messages"
             app:itemIconTint="@color/sel_bottom_nav_color"
             app:itemTextColor="@color/sel_bottom_nav_color"
-            app:itemRippleColor="#E0F2FE"
+            app:itemRippleColor="@color/brand_info_light"
             app:labelVisibilityMode="labeled" />
     </com.google.android.material.bottomappbar.BottomAppBar>
 
@@ -305,14 +305,21 @@
         android:importantForAccessibility="no"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:backgroundTint="#2563EB"
-        app:tint="#FFFFFF"
+        app:backgroundTint="@color/brand_primary"
+        app:tint="@color/white"
         app:srcCompat="@drawable/ic_plus_white"
         app:cornerRadius="28dp"
         app:layout_anchor="@id/bottomAppBar"
         android:layout_marginBottom="16dp"
-        android:outlineAmbientShadowColor="#2563EB"
-        android:outlineSpotShadowColor="#2563EB"
+        android:outlineAmbientShadowColor="@color/brand_primary"
+        android:outlineSpotShadowColor="@color/brand_primary"
         android:elevation="8dp" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+
+
+
+

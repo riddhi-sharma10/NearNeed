@@ -127,7 +127,7 @@
                     android:letterSpacing="0.02"
                     android:text="@string/btn_continue_login"
                     android:textAllCaps="false"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/white"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     app:backgroundTint="@color/brand_primary"
@@ -144,7 +144,7 @@
                     android:textColor="@color/brand_primary"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    app:backgroundTint="#FFFFFF"
+                    app:backgroundTint="@color/white"
                     app:cornerRadius="12dp"
                     app:strokeColor="@color/border_standard"
                     app:strokeWidth="1dp" />
@@ -185,3 +185,9 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+

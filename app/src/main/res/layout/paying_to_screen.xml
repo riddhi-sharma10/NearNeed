@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/apk/res/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#111111"> <!-- Solid dark overlay -->
+    android:background="@color/surface_dark"> <!-- Solid dark overlay -->
 
     <ScrollView
         android:layout_width="match_parent"
@@ -57,7 +57,7 @@
                         android:background="@drawable/bg_logo_blue_rect"
                         android:gravity="center"
                         android:text="NN"
-                        android:textColor="#FFFFFF"
+                        android:textColor="@color/white"
                         android:textSize="12sp"
                         android:textStyle="bold" />
 
@@ -66,7 +66,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
                         android:text="NearNeed"
-                        android:textColor="#1D263B"
+                        android:textColor="@color/text_body_dark"
                         android:textSize="18sp"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -85,7 +85,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#EAECF0" />
+                android:background="@color/border_light" />
 
             <!-- Paying To Info -->
             <LinearLayout
@@ -100,7 +100,7 @@
                     android:layout_height="wrap_content"
                     android:letterSpacing="0.05"
                     android:text="PAYING TO"
-                    android:textColor="#7B8497"
+                    android:textColor="@color/text_body_light"
                     android:textSize="12sp"
                     android:textStyle="bold" />
 
@@ -109,7 +109,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:text="Rahul S."
-                    android:textColor="#1D263B"
+                    android:textColor="@color/text_body_dark"
                     android:textSize="22sp"
                     android:textStyle="bold" />
 
@@ -118,7 +118,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
                     android:text="Gig ID: #GIG-99210"
-                    android:textColor="#A1A7B9"
+                    android:textColor="@color/text_hint"
                     android:textSize="14sp" />
 
                 <!-- Total Amount Box -->
@@ -136,7 +136,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Total Amount"
-                        android:textColor="#1D5EF3"
+                        android:textColor="@color/brand_primary"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
@@ -150,7 +150,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="₹"
-                            android:textColor="#1D5EF3"
+                            android:textColor="@color/brand_primary"
                             android:textSize="36sp"
                             android:textStyle="bold" />
 
@@ -159,7 +159,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="4dp"
                             android:text="250"
-                            android:textColor="#1D5EF3"
+                            android:textColor="@color/brand_primary"
                             android:textSize="36sp"
                             android:textStyle="bold" />
                     </LinearLayout>
@@ -178,7 +178,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="UPI ID"
-                    android:textColor="#475467"
+                    android:textColor="@color/text_subheadline"
                     android:textSize="12sp"
                     android:textStyle="bold" />
 
@@ -196,7 +196,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="rahul.s@okaxis"
-                        android:textColor="#1D263B"
+                        android:textColor="@color/text_body_dark"
                         android:textSize="16sp" />
 
                     <TextView
@@ -206,7 +206,7 @@
                         android:paddingHorizontal="8dp"
                         android:paddingVertical="4dp"
                         android:text="VERIFIED"
-                        android:textColor="#12B76A"
+                        android:textColor="@color/brand_success_solid"
                         android:textSize="10sp"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -223,13 +223,13 @@
                         android:layout_height="12dp"
                         android:layout_marginEnd="6dp"
                         android:src="@drawable/ic_lock_small"
-                        app:tint="#A1A7B9" />
+                        app:tint="@color/text_hint" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Secure payment processed by Razorpay"
-                        android:textColor="#A1A7B9"
+                        android:textColor="@color/text_hint"
                         android:textSize="12sp" />
                 </LinearLayout>
 
@@ -242,7 +242,7 @@
                     android:background="@drawable/bg_btn_solid_blue"
                     android:text="Pay ₹250"
                     android:textAllCaps="false"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/white"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -259,7 +259,7 @@
                         android:layout_height="wrap_content"
                         android:letterSpacing="0.05"
                         android:text="POWERED BY"
-                        android:textColor="#A1A7B9"
+                        android:textColor="@color/text_hint"
                         android:textSize="10sp"
                         android:textStyle="bold" />
 
@@ -274,7 +274,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
                         android:text="Razorpay"
-                        android:textColor="#7B8497"
+                        android:textColor="@color/text_body_light"
                         android:textSize="12sp"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -284,3 +284,10 @@
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+

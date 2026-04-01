@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    android:background="@color/white">
 
     <!-- ── ENRICHED BACKGROUND ICON PATTERN (Light Greyish Hue) ── -->
     <!-- Scattered icons to create an editorial texture -->
@@ -226,3 +226,10 @@
         android:letterSpacing="0.2" />
 
 </RelativeLayout>
+
+
+
+
+
+
+

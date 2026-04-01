@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FCFAFA"
+    android:background="@color/surface_background_clean"
     tools:ignore="HardcodedText,ContentDescription">
 
     <ScrollView
@@ -38,7 +38,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:text="Rate your experience"
-                    android:textColor="#101D33"
+                    android:textColor="@color/text_header"
                     android:textSize="18sp"
                     android:textStyle="bold" />
             </RelativeLayout>
@@ -54,7 +54,7 @@
                     android:layout_width="96dp"
                     android:layout_height="96dp"
                     android:background="@drawable/bg_circle_solid_red"
-                    android:backgroundTint="#CBD5E1"
+                    android:backgroundTint="@color/pagers_indicator_inactive"
                     android:src="@drawable/bg_image_placeholder" />
 
                 <!-- Badge -->
@@ -66,7 +66,7 @@
                     android:layout_marginEnd="-4dp"
                     android:layout_marginBottom="4dp"
                     android:background="@drawable/bg_circle_solid_red"
-                    android:backgroundTint="#F43F5E"
+                    android:backgroundTint="@color/brand_error_solid"
                     android:padding="4dp"
                     android:src="@drawable/ic_check_solid_white" />
                     
@@ -84,7 +84,7 @@
                 android:layout_marginTop="16dp"
                 android:text="Anjali M."
                 android:textAlignment="center"
-                android:textColor="#0F172A"
+                android:textColor="@color/text_header"
                 android:textSize="22sp"
                 android:textStyle="bold" />
 
@@ -94,7 +94,7 @@
                 android:layout_marginTop="4dp"
                 android:text="How was it with Anjali M.?"
                 android:textAlignment="center"
-                android:textColor="#FCA5A5"
+                android:textColor="@color/brand_error_accent_light"
                 android:textSize="14sp" />
 
             <!-- Stars -->
@@ -110,34 +110,34 @@
                     android:layout_height="32dp"
                     android:layout_marginEnd="8dp"
                     android:src="@android:drawable/star_on"
-                    app:tint="#F43F5E" />
+                    app:tint="@color/brand_error_solid" />
 
                 <ImageView
                     android:layout_width="32dp"
                     android:layout_height="32dp"
                     android:layout_marginEnd="8dp"
                     android:src="@android:drawable/star_on"
-                    app:tint="#F43F5E" />
+                    app:tint="@color/brand_error_solid" />
 
                 <ImageView
                     android:layout_width="32dp"
                     android:layout_height="32dp"
                     android:layout_marginEnd="8dp"
                     android:src="@android:drawable/star_on"
-                    app:tint="#F43F5E" />
+                    app:tint="@color/brand_error_solid" />
 
                 <ImageView
                     android:layout_width="32dp"
                     android:layout_height="32dp"
                     android:layout_marginEnd="8dp"
                     android:src="@android:drawable/star_on"
-                    app:tint="#F43F5E" />
+                    app:tint="@color/brand_error_solid" />
 
                 <ImageView
                     android:layout_width="32dp"
                     android:layout_height="32dp"
                     android:src="@android:drawable/star_off"
-                    app:tint="#FECDD3" />
+                    app:tint="@color/brand_error_bg" />
             </LinearLayout>
 
             <!-- Status Text -->
@@ -147,7 +147,7 @@
                 android:layout_marginTop="12dp"
                 android:text="Great (4/5)"
                 android:textAlignment="center"
-                android:textColor="#E11D48"
+                android:textColor="@color/brand_error_vibrant"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -163,13 +163,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bg_pill_pink_transparent"
-                    android:backgroundTint="#FCE7F3"
+                    android:backgroundTint="@color/brand_error_bg_alt"
                     android:paddingStart="16dp"
                     android:paddingTop="8dp"
                     android:paddingEnd="16dp"
                     android:paddingBottom="8dp"
                     android:text="Good work"
-                    android:textColor="#E11D48"
+                    android:textColor="@color/brand_error_vibrant"
                     android:textSize="12sp"
                     android:textStyle="bold" />
 
@@ -178,13 +178,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:background="@drawable/bg_pill_pink_transparent"
-                    android:backgroundTint="#FCE7F3"
+                    android:backgroundTint="@color/brand_error_bg_alt"
                     android:paddingStart="16dp"
                     android:paddingTop="8dp"
                     android:paddingEnd="16dp"
                     android:paddingBottom="8dp"
                     android:text="Minor delays"
-                    android:textColor="#E11D48"
+                    android:textColor="@color/brand_error_vibrant"
                     android:textSize="12sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -200,13 +200,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bg_pill_pink_transparent"
-                    android:backgroundTint="#FCE7F3"
+                    android:backgroundTint="@color/brand_error_bg_alt"
                     android:paddingStart="16dp"
                     android:paddingTop="8dp"
                     android:paddingEnd="16dp"
                     android:paddingBottom="8dp"
                     android:text="Friendly"
-                    android:textColor="#E11D48"
+                    android:textColor="@color/brand_error_vibrant"
                     android:textSize="12sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -224,7 +224,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Leave a comment (optional)"
-                    android:textColor="#0F172A"
+                    android:textColor="@color/text_header"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
@@ -232,10 +232,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="120dp"
                     android:layout_marginTop="12dp"
-                    app:cardBackgroundColor="#FFFFFF"
+                    app:cardBackgroundColor="@color/white"
                     app:cardCornerRadius="12dp"
                     app:cardElevation="0dp"
-                    app:strokeColor="#FFE4E6"
+                    app:strokeColor="@color/brand_error_bg"
                     app:strokeWidth="1dp">
 
                     <EditText
@@ -245,7 +245,7 @@
                         android:gravity="top|start"
                         android:hint="Write your feedback here..."
                         android:padding="16dp"
-                        android:textColorHint="#94A3B8"
+                        android:textColorHint="@color/text_muted"
                         android:textSize="14sp" />
                 </com.google.android.material.card.MaterialCardView>
 
@@ -258,10 +258,10 @@
                     android:elevation="0dp"
                     android:text="Submit Rating"
                     android:textAllCaps="false"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/white"
                     android:textSize="16sp"
                     android:textStyle="bold"
-                    app:backgroundTint="#F43F5E"
+                    app:backgroundTint="@color/brand_error_solid"
                     app:cornerRadius="12dp" />
 
                 <!-- Skip Button -->
@@ -275,10 +275,17 @@
                     android:focusable="true"
                     android:padding="8dp"
                     android:text="Skip for now"
-                    android:textColor="#FCA5A5"
+                    android:textColor="@color/brand_error_accent_light"
                     android:textSize="14sp" />
             </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
