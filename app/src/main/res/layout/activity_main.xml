@@ -1006,8 +1006,7 @@
     <!-- Universal Navigation System -->
     <include layout="@layout/layout_universal_navbar" />
 
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
-    
+
     <!-- Floating Notifications Popup with rounded edges -->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/notificationPopup"
