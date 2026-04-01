@@ -2,6 +2,7 @@ package com.example.nearneed;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,8 +16,8 @@ public class CreatePostActivity extends AppCompatActivity {
         setContentView(R.layout.activity_create_post);
         
         // Handle closing the Create Post activity
-        FloatingActionButton fabAdd = findViewById(R.id.fabAdd);
-        fabAdd.setOnClickListener(v -> finish());
+        View fabAdd = findViewById(R.id.fabAdd);
+        if (fabAdd != null) fabAdd.setOnClickListener(v -> finish());
         
         // Card click listeners
         findViewById(R.id.cardGigPost).setOnClickListener(v -> {

@@ -58,36 +58,7 @@ public class GigApplicantsActivity extends AppCompatActivity {
                 Toast.makeText(this, "View Anika R.'s application", Toast.LENGTH_SHORT).show());
 
         // ── Bottom Navigation ─────────────────────────────────────────────────
-        View navHome = findViewById(R.id.navHome);
-        if (navHome != null) navHome.setOnClickListener(v -> {
-            startActivity(new Intent(this, MainActivity.class));
-            finish();
-        });
-
-        View navMap = findViewById(R.id.navMap);
-        if (navMap != null) navMap.setOnClickListener(v -> {
-            startActivity(new Intent(this, DiscoveryMapActivity.class));
-            finish();
-        });
-
-        View navMessages = findViewById(R.id.navMessages);
-        if (navMessages != null) navMessages.setOnClickListener(v -> {
-            startActivity(new Intent(this, MessagesActivity.class));
-            finish();
-        });
-
-        View navProfile = findViewById(R.id.navProfile);
-        if (navProfile != null) navProfile.setOnClickListener(v -> {
-            startActivity(new Intent(this, UserProfileActivity.class));
-            finish();
-        });
-
-        // ── FAB ───────────────────────────────────────────────────────────────
-        MaterialButton fabAdd = findViewById(R.id.fabAdd);
-        if (fabAdd != null)
-            fabAdd.setOnClickListener(v -> {
-                startActivity(new Intent(this, CreatePostActivity.class));
-                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-            });
+        // Bottom Navigation handled via universal helper
+        NavbarHelper.setup(this, NavbarHelper.TAB_HOME);
     }
 }

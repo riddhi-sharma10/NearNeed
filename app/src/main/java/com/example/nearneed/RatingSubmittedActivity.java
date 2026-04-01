@@ -28,5 +28,8 @@ public class RatingSubmittedActivity extends AppCompatActivity {
                 finish();
             });
         }
+        
+        // Bottom Navigation handled via universal helper
+        NavbarHelper.setup(this, NavbarHelper.TAB_HOME);
     }
 }
