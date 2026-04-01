@@ -92,32 +92,7 @@
                 android:gravity="center"
                 android:layout_gravity="center_horizontal" />
 
-            <!-- Auto redirect block -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:orientation="vertical"
-                android:gravity="center">
 
-                <TextView
-                    android:id="@+id/tvAutoRedirect"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="auto-redirect in 3s"
-                    android:textColor="@color/brand_error_solid"
-                    android:textSize="12sp"
-                    android:layout_marginBottom="8dp" />
-
-                <ProgressBar
-                    android:id="@+id/pbAutoRedirect"
-                    style="?android:attr/progressBarStyleHorizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="4dp"
-                    android:progress="100"
-                    android:max="100"
-                    android:progressDrawable="@drawable/bg_progress_bar_red_flat" />
-            </LinearLayout>
 
             <!-- Bottom CTAs (Now centered with the rest of the flow) -->
             <com.google.android.material.button.MaterialButton
