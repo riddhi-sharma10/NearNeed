@@ -10,13 +10,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.button.MaterialButton;
 
 public class CommunityPreferencesActivity extends AppCompatActivity {
-    
+
     private com.google.android.material.chip.ChipGroup cgSkills;
     private com.google.android.material.chip.Chip chipOther;
     private com.google.android.material.textfield.TextInputLayout tilOtherSkill;
     private android.widget.EditText etOtherSkill;
-    private android.widget.ImageButton btnBack;
-    private com.google.android.material.button.MaterialButton btnEnter;
+    private ImageButton btnBack;
+    private MaterialButton btnEnter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

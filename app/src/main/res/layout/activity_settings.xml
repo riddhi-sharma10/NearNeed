@@ -52,18 +52,22 @@
                 android:layout_marginBottom="32dp">
                 
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/profilePicCard"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     app:cardCornerRadius="32dp"
                     app:cardElevation="0dp"
                     app:strokeColor="@color/border_standard"
-                    app:strokeWidth="1dp">
+                    app:strokeWidth="1dp"
+                    android:clickable="true"
+                    android:focusable="true">
                     <ImageView
+                        android:id="@+id/ivProfilePicture"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@drawable/bg_image_placeholder"
                         android:scaleType="centerCrop"
-                android:contentDescription="@string/txt_profile_image" />
+                        android:contentDescription="@string/txt_profile_image" />
                 </com.google.android.material.card.MaterialCardView>
                     
                 <LinearLayout

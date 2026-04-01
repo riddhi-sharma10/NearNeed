@@ -100,8 +100,12 @@
                 android:gravity="center">
 
                 <FrameLayout
+                    android:id="@+id/profilePicContainer"
                     android:layout_width="100dp"
-                    android:layout_height="100dp">
+                    android:layout_height="100dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground">
                     <ImageView
                         android:id="@+id/ivProfilePicture"
                         android:layout_width="match_parent"

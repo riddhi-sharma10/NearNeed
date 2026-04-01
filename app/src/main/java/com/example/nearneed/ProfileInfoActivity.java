@@ -3,11 +3,17 @@ package com.example.nearneed;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
 import android.widget.EditText;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.PickVisualMediaRequest;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.button.MaterialButton;
@@ -19,6 +25,16 @@ public class ProfileInfoActivity extends AppCompatActivity {
     private TextView tvBioCount;
     private MaterialButton btnContinue;
     private ImageButton btnBack;
+    private ImageView ivProfilePicture;
+    private FrameLayout profilePicContainer;
+
+    private final ActivityResultLauncher<PickVisualMediaRequest> pickMedia =
+            registerForActivityResult(new ActivityResultContracts.PickVisualMedia(), uri -> {
+                if (uri != null) {
+                    ivProfilePicture.setImageURI(uri);
+                    // On a real app, you'd probably upload this to a server or local storage
+                }
+            });
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,10 +51,18 @@ public class ProfileInfoActivity extends AppCompatActivity {
         tvBioCount = findViewById(R.id.tvBioCount);
         btnContinue = findViewById(R.id.btnContinue);
         btnBack = findViewById(R.id.btnBack);
+        ivProfilePicture = findViewById(R.id.ivProfilePicture);
+        profilePicContainer = findViewById(R.id.profilePicContainer);
     }
 
     private void setupListeners() {
         btnBack.setOnClickListener(v -> onBackPressed());
+
+        profilePicContainer.setOnClickListener(v -> {
+            pickMedia.launch(new PickVisualMediaRequest.Builder()
+                    .setMediaType(ActivityResultContracts.PickVisualMedia.ImageOnly.INSTANCE)
+                    .build());
+        });
 
         etBio.addTextChangedListener(new TextWatcher() {
             @Override
