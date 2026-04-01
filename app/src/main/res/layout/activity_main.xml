@@ -1028,7 +1028,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="24dp"
-                android:paddingBottom="16dp"
+                android:paddingBottom="8dp"
                 android:paddingHorizontal="24dp">
                 
                 <TextView
@@ -1050,70 +1050,143 @@
                     android:background="?attr/selectableItemBackgroundBorderless" />
             </RelativeLayout>
 
-            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/border_standard" android:layout_marginHorizontal="20dp"/>
-
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingVertical="12dp">
+                android:paddingHorizontal="24dp"
+                android:paddingBottom="12dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Timeline"
+                    android:textColor="@color/text_muted"
+                    android:textSize="12sp"
+                    android:letterSpacing="0.05" />
+                <TextView
+                    android:id="@+id/btnClearAllNotifications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="Clear all"
+                    android:textColor="@color/brand_primary"
+                    android:textSize="12sp"
+                    style="@style/AppHeading"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"/>
+            </RelativeLayout>
 
-                <!-- UNREAD STATE: Tinted background -->
+            <ScrollView
+                android:id="@+id/scrollNotifications"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxHeight="380dp"
+                android:scrollbars="none">
+
                 <LinearLayout
+                    android:id="@+id/llNotificationsList"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#F0F9FF"
-                    android:paddingHorizontal="24dp"
-                    android:paddingVertical="16dp"
-                    android:orientation="horizontal"
-                    android:gravity="top">
-                    <View android:layout_width="6dp" android:layout_height="6dp" android:background="@drawable/bg_dot_red" android:layout_marginTop="5dp" />
-                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
-                        <TextView style="@style/AppHeading" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Emergency Task" android:textColor="@color/text_header" android:textSize="14sp"/>
-                        <TextView style="@style/AppDescription" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Immediate grocery help needed at Sector 14" android:textColor="@color/brand_error_solid" android:textSize="13sp" android:layout_marginTop="2dp"/>
-                    </LinearLayout>
-                </LinearLayout>
+                    android:orientation="vertical"
+                    android:paddingHorizontal="12dp"
+                    android:paddingBottom="12dp">
 
-                <!-- READ STATE -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/white"
-                    android:paddingHorizontal="24dp"
-                    android:paddingVertical="16dp"
-                    android:orientation="horizontal"
-                    android:gravity="top">
-                    <View android:layout_width="6dp" android:layout_height="6dp" android:visibility="invisible" />
-                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
-                        <TextView style="@style/AppHeading" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Welcome to NearNeed" android:textColor="@color/text_muted" android:textSize="14sp"/>
-                        <TextView style="@style/AppDescription" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Feel free to check out community projects" android:textColor="@color/text_muted" android:textSize="13sp" android:layout_marginTop="2dp"/>
-                    </LinearLayout>
-                </LinearLayout>
+                    <!-- ITEM 1 -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/notif_card_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="0dp"
+                        app:strokeWidth="1dp"
+                        app:strokeColor="#F1F5F9"
+                        app:cardBackgroundColor="#F0F9FF">
+                        
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="16dp">
+                            <View android:id="@+id/dot1" android:layout_width="6dp" android:layout_height="6dp" android:background="@drawable/bg_dot_red" android:layout_marginTop="6dp" />
+                            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="14dp" android:layout_toStartOf="@+id/btnDeleteNotif1">
+                                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                                    <TextView style="@style/AppHeading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Emergency Task" android:textColor="@color/text_header" android:textSize="13sp"/>
+                                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="20:52" android:textColor="@color/text_muted" android:textSize="10sp" />
+                                </RelativeLayout>
+                                <TextView android:id="@+id/notif_desc_1" style="@style/AppDescription" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Immediate grocery help needed at Sector 14. This is an urgent request from elderly neighbor." android:textColor="@color/brand_error_solid" android:textSize="12sp" android:layout_marginTop="2dp" android:maxLines="1" android:ellipsize="end"/>
+                            </LinearLayout>
+                            <ImageView android:id="@+id/btnDeleteNotif1" android:layout_width="20dp" android:layout_height="20dp" android:layout_alignParentEnd="true" android:src="@drawable/ic_close" app:tint="@color/text_muted" android:alpha="0.5" android:background="?attr/selectableItemBackgroundBorderless"/>
+                        </RelativeLayout>
+                    </com.google.android.material.card.MaterialCardView>
 
-            </LinearLayout>
+                    <!-- ITEM 2 -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/notif_card_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="0dp"
+                        app:strokeWidth="1dp"
+                        app:strokeColor="#F1F5F9"
+                        app:cardBackgroundColor="@color/white">
+                        
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="16dp">
+                            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_toStartOf="@+id/btnDeleteNotif2">
+                                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                                    <TextView style="@style/AppHeading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Welcome to NearNeed" android:textColor="@color/text_muted" android:textSize="13sp"/>
+                                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="20:47" android:textColor="@color/text_muted" android:textSize="10sp" />
+                                </RelativeLayout>
+                                <TextView android:id="@+id/notif_desc_2" style="@style/AppDescription" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Feel free to check out community projects. We are happy to have you here!" android:textColor="@color/text_muted" android:textSize="12sp" android:layout_marginTop="2dp" android:maxLines="1" android:ellipsize="end"/>
+                            </LinearLayout>
+                            <ImageView android:id="@+id/btnDeleteNotif2" android:layout_width="20dp" android:layout_height="20dp" android:layout_alignParentEnd="true" android:src="@drawable/ic_close" app:tint="@color/text_muted" android:alpha="0.5" android:background="?attr/selectableItemBackgroundBorderless"/>
+                        </RelativeLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- ITEM 3 -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/notif_card_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="0dp"
+                        app:strokeWidth="1dp"
+                        app:strokeColor="#F1F5F9"
+                        app:cardBackgroundColor="@color/white">
+                        
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="16dp">
+                            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_toStartOf="@+id/btnDeleteNotif3">
+                                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                                    <TextView style="@style/AppHeading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Nearby Service" android:textColor="@color/text_muted" android:textSize="13sp"/>
+                                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="20:40" android:textColor="@color/text_muted" android:textSize="10sp" />
+                                </RelativeLayout>
+                                <TextView android:id="@+id/notif_desc_3" style="@style/AppDescription" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="John is offering house help in your building. Check it out now." android:textColor="@color/text_muted" android:textSize="12sp" android:layout_marginTop="2dp" android:maxLines="1" android:ellipsize="end"/>
+                            </LinearLayout>
+                            <ImageView android:id="@+id/btnDeleteNotif3" android:layout_width="20dp" android:layout_height="20dp" android:layout_alignParentEnd="true" android:src="@drawable/ic_close" app:tint="@color/text_muted" android:alpha="0.5" android:background="?attr/selectableItemBackgroundBorderless"/>
+                        </RelativeLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+            </ScrollView>
 
             <TextView
-                style="@style/AppHeading"
+                android:id="@+id/empty_notif_view"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="View all"
-                android:textColor="@color/brand_primary"
-                android:textSize="12sp"
+                android:layout_height="100dp"
+                android:text="All caught up!"
+                android:textColor="@color/text_muted"
+                android:textSize="13sp"
                 android:gravity="center"
-                android:paddingVertical="12dp"
-                android:background="#F8FAFC"
-                android:clickable="true"
-                android:focusable="true"/>
+                android:visibility="gone"/>
 
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
-
-
-
-
-
-
-

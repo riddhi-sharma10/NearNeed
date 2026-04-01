@@ -36,10 +36,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        View btnClosePopup = findViewById(R.id.btnClosePopup);
-        if (btnClosePopup != null) {
-            btnClosePopup.setOnClickListener(v -> notificationPopup.setVisibility(View.GONE));
-        }
+        setupNotificationInteractions(notificationPopup);
 
         View btnVolC1 = findViewById(R.id.btnVolC1);
         if (btnVolC1 != null) {
@@ -139,5 +136,62 @@ public class MainActivity extends AppCompatActivity {
         cardGig2.setVisibility(View.VISIBLE);
         cardCommunity1.setVisibility(View.VISIBLE);
         cardCommunity2.setVisibility(View.VISIBLE);
+    }
+
+    private void setupNotificationInteractions(View popup) {
+        View btnClose = findViewById(R.id.btnClosePopup);
+        if (btnClose != null) btnClose.setOnClickListener(v -> popup.setVisibility(View.GONE));
+
+        View btnClearAll = findViewById(R.id.btnClearAllNotifications);
+        View scroll = findViewById(R.id.scrollNotifications);
+        View emptyView = findViewById(R.id.empty_notif_view);
+        android.widget.LinearLayout list = findViewById(R.id.llNotificationsList);
+
+        if (btnClearAll != null) {
+            btnClearAll.setOnClickListener(v -> {
+                if (scroll != null) scroll.setVisibility(View.GONE);
+                if (emptyView != null) emptyView.setVisibility(View.VISIBLE);
+            });
+        }
+
+        setupNotifCard(R.id.notif_card_1, R.id.notif_desc_1, R.id.btnDeleteNotif1, list, emptyView, scroll);
+        setupNotifCard(R.id.notif_card_2, R.id.notif_desc_2, R.id.btnDeleteNotif2, list, emptyView, scroll);
+        setupNotifCard(R.id.notif_card_3, R.id.notif_desc_3, R.id.btnDeleteNotif3, list, emptyView, scroll);
+    }
+
+    private void setupNotifCard(int cardId, int descId, int delId, android.widget.LinearLayout list, View empty, View scroll) {
+        View card = findViewById(cardId);
+        android.widget.TextView desc = findViewById(descId);
+        View delete = findViewById(delId);
+
+        if (card != null && desc != null) {
+            card.setOnClickListener(v -> {
+                if (desc.getMaxLines() == 1) {
+                    desc.setMaxLines(10);
+                    desc.setEllipsize(null);
+                } else {
+                    desc.setMaxLines(1);
+                    desc.setEllipsize(android.text.TextUtils.TruncateAt.END);
+                }
+            });
+        }
+
+        if (delete != null && card != null) {
+            delete.setOnClickListener(v -> {
+                card.setVisibility(View.GONE);
+                // Check if all are hidden
+                boolean allHidden = true;
+                for (int i = 0; i < list.getChildCount(); i++) {
+                    if (list.getChildAt(i).getVisibility() == View.VISIBLE) {
+                        allHidden = false;
+                        break;
+                    }
+                }
+                if (allHidden) {
+                    if (scroll != null) scroll.setVisibility(View.GONE);
+                    if (empty != null) empty.setVisibility(View.VISIBLE);
+                }
+            });
+        }
     }
 }
