@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.button.MaterialButton;
 
 public class CommunityPreferencesActivity extends AppCompatActivity {
-
+    
     private com.google.android.material.chip.ChipGroup cgSkills;
     private com.google.android.material.chip.Chip chipOther;
     private com.google.android.material.textfield.TextInputLayout tilOtherSkill;
