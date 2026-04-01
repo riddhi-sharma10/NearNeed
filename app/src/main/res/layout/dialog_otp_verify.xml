@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_sheet_modal"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/bg_drag_handle" />
+
+    <TextView
+        style="@style/AppHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Verify OTP"
+        android:textColor="@color/text_header"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Enter the 4-digit code sent to your email to reset your password."
+        android:textColor="@color/text_subheadline"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <EditText android:id="@+id/otp1" android:layout_width="56dp" android:layout_height="64dp" android:background="@drawable/bg_otp_box_grey" android:gravity="center" android:inputType="number" android:maxLength="1" android:textSize="24sp" android:textColor="@color/text_header" style="@style/AppHeading"/>
+        <EditText android:id="@+id/otp2" android:layout_width="56dp" android:layout_height="64dp" android:layout_marginStart="12dp" android:background="@drawable/bg_otp_box_grey" android:gravity="center" android:inputType="number" android:maxLength="1" android:textSize="24sp" android:textColor="@color/text_header" style="@style/AppHeading"/>
+        <EditText android:id="@+id/otp3" android:layout_width="56dp" android:layout_height="64dp" android:layout_marginStart="12dp" android:background="@drawable/bg_otp_box_grey" android:gravity="center" android:inputType="number" android:maxLength="1" android:textSize="24sp" android:textColor="@color/text_header" style="@style/AppHeading"/>
+        <EditText android:id="@+id/otp4" android:layout_width="56dp" android:layout_height="64dp" android:layout_marginStart="12dp" android:background="@drawable/bg_otp_box_grey" android:gravity="center" android:inputType="number" android:maxLength="1" android:textSize="24sp" android:textColor="@color/text_header" style="@style/AppHeading"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnVerifyOtp"
+        style="@style/AppHeading"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="32dp"
+        android:text="Verify &amp; Continue"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        app:backgroundTint="@color/brand_primary"
+        app:cornerRadius="16dp"
+        android:elevation="0dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Didn't receive code? Resend"
+        android:textColor="@color/brand_primary"
+        android:textSize="13sp"
+        style="@style/AppHeading" />
+
+</LinearLayout>

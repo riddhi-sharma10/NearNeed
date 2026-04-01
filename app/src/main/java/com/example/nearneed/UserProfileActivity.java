@@ -20,9 +20,6 @@ public class UserProfileActivity extends AppCompatActivity {
             startActivity(new Intent(UserProfileActivity.this, EditProfileActivity.class))
         );
 
-        findViewById(R.id.btnShare).setOnClickListener(v -> 
-            Toast.makeText(this, "Share invoked", Toast.LENGTH_SHORT).show()
-        );
 
         findViewById(R.id.btnMyPosts).setOnClickListener(v -> 
             startActivity(new Intent(UserProfileActivity.this, MyPostsActivity.class))

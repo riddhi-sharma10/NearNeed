@@ -46,15 +46,6 @@
                     android:textColor="@color/text_header"
                     android:textSize="18sp" />
 
-                <ImageButton
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:background="@drawable/bg_circle_grey_solid"
-                    android:src="@drawable/ic_dropdown_small"
-                    android:padding="8dp"
-                    app:tint="@color/text_header"/>
             </RelativeLayout>
 
 
@@ -150,43 +141,21 @@
                     android:textColor="@color/text_muted"
                     android:textSize="10sp" />
 
-                <LinearLayout
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnEditProfile"
+                    style="@style/AppHeading"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="48dp"
                     android:layout_marginStart="24dp"
-                    android:layout_marginTop="20dp"
                     android:layout_marginEnd="24dp"
-                    android:orientation="horizontal"
-                    android:weightSum="1">
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btnEditProfile"
-                        style="@style/AppHeading"
-                        android:layout_width="0dp"
-                        android:layout_height="48dp"
-                        android:layout_weight="1"
-                        android:elevation="0dp"
-                        android:text="Edit Profile"
-                        android:textAllCaps="false"
-                        android:textColor="@color/white"
-                        android:textSize="14sp"
-                        app:backgroundTint="@color/brand_primary"
-                        app:cornerRadius="16dp" />
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btnShare"
-                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:layout_marginStart="8dp"
-                        app:cornerRadius="16dp"
-                        app:icon="@drawable/ic_nav_messages"
-                        app:iconGravity="textStart"
-                        app:iconPadding="0dp"
-                        app:iconTint="@color/brand_primary"
-                        app:strokeColor="@color/brand_info_light"
-                        app:strokeWidth="1dp" />
-                </LinearLayout>
+                    android:layout_marginTop="20dp"
+                    android:elevation="0dp"
+                    android:text="Edit Profile"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:backgroundTint="@color/brand_primary"
+                    app:cornerRadius="16dp" />
             </LinearLayout>
 
             <LinearLayout

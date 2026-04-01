@@ -73,9 +73,13 @@
                 <View android:layout_width="4dp" android:layout_height="match_parent" android:background="@drawable/bg_left_border_blue" />
                 <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp" android:layout_marginStart="4dp">
                     <TextView
+                        android:id="@+id/t1_tag"
                         style="@style/AppHeading"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:text="COMPLETED"
+                        android:textColor="@color/brand_success_vibrant"
+                        android:textSize="11sp" />
                     <TextView android:id="@+id/c1_title" style="@style/AppHeading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/t1_tag" android:layout_marginTop="4dp" android:text="@string/txt_plumbing_repair" android:textColor="@color/text_header" android:textSize="18sp" />
                     <TextView android:id="@+id/c1_price" style="@style/AppHeading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/c1_title" android:layout_marginTop="2dp" android:text="@string/txt_price_400" android:textColor="@color/brand_primary" android:textSize="15sp" />
                     <TextView android:id="@+id/c1_desc" style="@style/AppDescription" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/c1_price" android:layout_toStartOf="@+id/card_img_1" android:layout_marginTop="4dp" android:text="Fixed the bathroom pipe burst successfully." android:textColor="@color/text_subheadline" android:textSize="12sp" android:layout_marginEnd="12dp"/>
