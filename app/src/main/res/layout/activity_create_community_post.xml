@@ -95,7 +95,7 @@
                 android:letterSpacing="0.05" />
 
             <EditText
-                android:id="@+id/etTitle"
+                android:id="@+id/etPostTitle"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginTop="8dp"
@@ -124,7 +124,7 @@
                 android:letterSpacing="0.05" />
 
             <EditText
-                android:id="@+id/etDescription"
+                android:id="@+id/etPostDescription"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:layout_marginTop="8dp"

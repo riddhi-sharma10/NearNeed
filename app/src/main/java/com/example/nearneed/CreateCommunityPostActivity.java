@@ -1,7 +1,8 @@
 package com.example.nearneed;
 
-import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.content.Intent;
 
@@ -24,7 +25,25 @@ public class CreateCommunityPostActivity extends AppCompatActivity {
         MaterialButton btnContinue = findViewById(R.id.btnContinueCommunity);
         if (btnContinue != null) {
             btnContinue.setOnClickListener(v -> {
-                startActivity(new Intent(this, CreateCommunityPostStep2Activity.class));
+                EditText etTitle = findViewById(R.id.etPostTitle);
+                EditText etDesc = findViewById(R.id.etPostDescription);
+                android.widget.TextView tvDate = findViewById(R.id.tvValidityDate);
+                android.widget.TextView tvTime = findViewById(R.id.tvValidityTime);
+                com.google.android.material.chip.ChipGroup cg = findViewById(R.id.chipGroupCategory);
+                
+                Intent intent = new Intent(this, CreateCommunityPostStep2Activity.class);
+                intent.putExtra("POST_TITLE", etTitle != null ? etTitle.getText().toString() : "");
+                intent.putExtra("POST_DESC", etDesc != null ? etDesc.getText().toString() : "");
+                intent.putExtra("POST_DATE", tvDate != null ? tvDate.getText().toString() : "");
+                intent.putExtra("POST_TIME", tvTime != null ? tvTime.getText().toString() : "");
+                
+                // Get selected chip text
+                if (cg != null && cg.getCheckedChipId() != View.NO_ID) {
+                    com.google.android.material.chip.Chip chip = findViewById(cg.getCheckedChipId());
+                    intent.putExtra("POST_CATEGORY", chip.getText().toString());
+                }
+                
+                startActivity(intent);
                 overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out);
             });
         }
