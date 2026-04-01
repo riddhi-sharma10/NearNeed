@@ -217,7 +217,7 @@
                 <FrameLayout
                     android:id="@+id/cardMyPost"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="220dp"
                     android:layout_marginBottom="16dp"
                     android:background="@drawable/bg_card_base"
                     android:elevation="2dp"
@@ -383,7 +383,7 @@
                 <FrameLayout
                     android:id="@+id/cardGig1"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="220dp"
                     android:layout_marginBottom="16dp"
                     android:background="@drawable/bg_card_base"
                     android:elevation="2dp"
@@ -510,7 +510,7 @@
                 <FrameLayout
                     android:id="@+id/cardCommunity1"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="220dp"
                     android:layout_marginBottom="16dp"
                     android:background="@drawable/bg_card_base"
                     android:elevation="2dp"
@@ -689,7 +689,7 @@
                 <FrameLayout
                     android:id="@+id/cardCommunity2"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="220dp"
                     android:layout_marginBottom="16dp"
                     android:background="@drawable/bg_card_base"
                     android:elevation="2dp"
@@ -866,7 +866,7 @@
                 <FrameLayout
                     android:id="@+id/cardGig2"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="220dp"
                     android:layout_marginBottom="32dp"
                     android:background="@drawable/bg_card_base"
                     android:elevation="2dp"
