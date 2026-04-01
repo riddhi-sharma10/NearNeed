@@ -138,6 +138,30 @@ public class MainActivity extends AppCompatActivity {
         cardCommunity2.setVisibility(View.VISIBLE);
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        updateMyPostDisplay();
+    }
+
+    private void updateMyPostDisplay() {
+        android.content.SharedPreferences prefs = getSharedPreferences("NearNeedPosts", MODE_PRIVATE);
+        String title = prefs.getString("LATEST_POST_TITLE", null);
+        String desc = prefs.getString("LATEST_POST_DESC", null);
+        String category = prefs.getString("LATEST_POST_CATEGORY", null);
+
+        if (title != null) {
+            findViewById(R.id.cardMyPost).setVisibility(View.VISIBLE);
+            ((android.widget.TextView)findViewById(R.id.c0_title)).setText(title);
+            ((android.widget.TextView)findViewById(R.id.c0_sub)).setText(category != null ? category : "Community Project");
+            ((android.widget.TextView)findViewById(R.id.c0_desc)).setText(desc);
+            ((android.widget.TextView)findViewById(R.id.c0_tag)).setText("● YOUR POST");
+        } else {
+            // Default "Backyard Cleanup" as in XML if no real post created
+            findViewById(R.id.cardMyPost).setVisibility(View.VISIBLE); // Keep visible for demo if you want, or GONE
+        }
+    }
+
     private void setupNotificationInteractions(View popup) {
         View btnClose = findViewById(R.id.btnClosePopup);
         if (btnClose != null) btnClose.setOnClickListener(v -> popup.setVisibility(View.GONE));
