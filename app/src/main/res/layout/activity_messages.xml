@@ -32,14 +32,13 @@
                 android:paddingEnd="16dp"
                 android:background="@color/white">
                 <TextView
+                    style="@style/AppHeading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:text="Messages"
                     android:textColor="@color/text_header"
-                    android:textSize="26sp"
-                    android:fontFamily="sans-serif-black"
-                    android:textStyle="bold" />
+                    android:textSize="26sp" />
             </RelativeLayout>
 
             <!-- Search Bar -->
@@ -88,8 +87,23 @@
                         <View android:layout_width="12dp" android:layout_height="12dp" android:layout_gravity="bottom|end" android:background="@drawable/bg_dot_green"/>
                     </FrameLayout>
                     <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_toEndOf="@id/avRachel" android:layout_toStartOf="@+id/trRachel" android:layout_centerVertical="true" android:layout_marginStart="12dp" android:orientation="vertical">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rachel" android:textColor="@color/text_header" android:textSize="15sp" android:textStyle="bold"/>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="I can help with the plumbing! Let me know." android:textColor="@color/text_header" android:textSize="13sp" android:textStyle="bold" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
+                        <TextView
+                            style="@style/AppHeading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rachel"
+                            android:textColor="@color/text_header"
+                            android:textSize="15sp" />
+                        <TextView
+                            style="@style/AppDescription"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hey, are you coming today?"
+                            android:textColor="@color/text_header"
+                            android:textSize="13sp"
+                            android:layout_marginTop="3dp"
+                            android:maxLines="1"
+                            android:ellipsize="end"/>
                     </LinearLayout>
                     <LinearLayout android:id="@+id/trRachel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:orientation="vertical" android:gravity="end">
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2 min" android:textColor="@color/text_muted" android:textSize="11sp"/>
@@ -105,8 +119,8 @@
                         <View android:layout_width="12dp" android:layout_height="12dp" android:layout_gravity="bottom|end" android:background="@drawable/bg_dot_green"/>
                     </FrameLayout>
                     <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_toEndOf="@id/avManya" android:layout_toStartOf="@+id/trManya" android:layout_centerVertical="true" android:layout_marginStart="12dp" android:orientation="vertical">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Manya Awasthi" android:textColor="@color/text_header" android:textSize="15sp" android:textStyle="bold"/>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Is the Pacific Blue color still available?" android:textColor="@color/text_header" android:textSize="13sp" android:textStyle="bold" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
+                        <TextView style="@style/AppHeading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Manya Awasthi" android:textColor="@color/text_header" android:textSize="15sp" />
+                        <TextView style="@style/AppHeading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Is the Pacific Blue color still available?" android:textColor="@color/text_header" android:textSize="13sp" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
                     </LinearLayout>
                     <LinearLayout android:id="@+id/trManya" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:orientation="vertical" android:gravity="end">
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3 hrs" android:textColor="@color/text_muted" android:textSize="11sp"/>
@@ -122,8 +136,8 @@
                         <View android:layout_width="12dp" android:layout_height="12dp" android:layout_gravity="bottom|end" android:background="@drawable/bg_circle_grey_solid"/>
                     </FrameLayout>
                     <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_toEndOf="@id/avRahul" android:layout_toStartOf="@+id/trRahul" android:layout_centerVertical="true" android:layout_marginStart="12dp" android:orientation="vertical">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rahul Singh" android:textColor="@color/text_header" android:textSize="15sp" android:textStyle="bold"/>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="The lawn looks great, I'll be back Tuesday." android:textColor="@color/text_subheadline" android:textSize="13sp" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
+                        <TextView style="@style/AppHeading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rahul Singh" android:textColor="@color/text_header" android:textSize="15sp" />
+                        <TextView style="@style/AppDescription" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="The lawn looks great, I'll be back Tuesday." android:textColor="@color/text_subheadline" android:textSize="13sp" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
                     </LinearLayout>
                     <TextView android:id="@+id/trRahul" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:text="1 hr" android:textColor="@color/text_muted" android:textSize="11sp"/>
                 </RelativeLayout>
@@ -136,8 +150,8 @@
                         <View android:layout_width="12dp" android:layout_height="12dp" android:layout_gravity="bottom|end" android:background="@drawable/bg_dot_green"/>
                     </FrameLayout>
                     <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_toEndOf="@id/avRiddhi" android:layout_toStartOf="@+id/trRiddhi" android:layout_centerVertical="true" android:layout_marginStart="12dp" android:orientation="vertical">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Riddhi Sharma" android:textColor="@color/text_header" android:textSize="15sp" android:textStyle="bold"/>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Luna had a great walk today! 🐕" android:textColor="@color/text_subheadline" android:textSize="13sp" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
+                        <TextView style="@style/AppHeading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Riddhi Sharma" android:textColor="@color/text_header" android:textSize="15sp" />
+                        <TextView style="@style/AppDescription" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Luna had a great walk today! 🐕" android:textColor="@color/text_subheadline" android:textSize="13sp" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
                     </LinearLayout>
                     <TextView android:id="@+id/trRiddhi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:text="2 days" android:textColor="@color/text_muted" android:textSize="11sp"/>
                 </RelativeLayout>
@@ -150,8 +164,8 @@
                         <View android:layout_width="12dp" android:layout_height="12dp" android:layout_gravity="bottom|end" android:background="@drawable/bg_circle_grey_solid"/>
                     </FrameLayout>
                     <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_toEndOf="@id/avVishu" android:layout_toStartOf="@+id/trVishu" android:layout_centerVertical="true" android:layout_marginStart="12dp" android:orientation="vertical">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Vishu Singh" android:textColor="@color/text_header" android:textSize="15sp" android:textStyle="bold"/>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="I've reset the router, try the connection." android:textColor="@color/text_subheadline" android:textSize="13sp" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
+                        <TextView style="@style/AppHeading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Vishu Singh" android:textColor="@color/text_header" android:textSize="15sp" />
+                        <TextView style="@style/AppDescription" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="I've reset the router, try the connection." android:textColor="@color/text_subheadline" android:textSize="13sp" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
                     </LinearLayout>
                     <TextView android:id="@+id/trVishu" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:text="Yesterday" android:textColor="@color/text_muted" android:textSize="11sp"/>
                 </RelativeLayout>
@@ -164,8 +178,8 @@
                         <View android:layout_width="12dp" android:layout_height="12dp" android:layout_gravity="bottom|end" android:background="@drawable/bg_dot_green"/>
                     </FrameLayout>
                     <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_toEndOf="@id/avAnanya" android:layout_toStartOf="@+id/trAnanya" android:layout_centerVertical="true" android:layout_marginStart="12dp" android:orientation="vertical">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ananya Gupta" android:textColor="@color/text_header" android:textSize="15sp" android:textStyle="bold"/>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Can you share the recipe you mentioned? 😊" android:textColor="@color/text_header" android:textSize="13sp" android:textStyle="bold" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
+                        <TextView style="@style/AppHeading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ananya Gupta" android:textColor="@color/text_header" android:textSize="15sp" />
+                        <TextView style="@style/AppHeading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Can you share the recipe you mentioned? 😊" android:textColor="@color/text_header" android:textSize="13sp" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
                     </LinearLayout>
                     <LinearLayout android:id="@+id/trAnanya" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:orientation="vertical" android:gravity="end">
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Yesterday" android:textColor="@color/text_muted" android:textSize="11sp"/>
@@ -181,8 +195,8 @@
                         <View android:layout_width="12dp" android:layout_height="12dp" android:layout_gravity="bottom|end" android:background="@drawable/bg_circle_grey_solid"/>
                     </FrameLayout>
                     <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_toEndOf="@id/avKaran" android:layout_toStartOf="@+id/trKaran" android:layout_centerVertical="true" android:layout_marginStart="12dp" android:orientation="vertical">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Karan Mehta" android:textColor="@color/text_header" android:textSize="15sp" android:textStyle="bold"/>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hey, thanks for the recommendation!" android:textColor="@color/text_subheadline" android:textSize="13sp" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
+                        <TextView style="@style/AppHeading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Karan Mehta" android:textColor="@color/text_header" android:textSize="15sp" />
+                        <TextView style="@style/AppDescription" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hey, thanks for the recommendation!" android:textColor="@color/text_subheadline" android:textSize="13sp" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
                     </LinearLayout>
                     <TextView android:id="@+id/trKaran" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:text="Mon" android:textColor="@color/text_muted" android:textSize="11sp"/>
                 </RelativeLayout>
@@ -195,8 +209,8 @@
                         <View android:layout_width="12dp" android:layout_height="12dp" android:layout_gravity="bottom|end" android:background="@drawable/bg_dot_green"/>
                     </FrameLayout>
                     <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_toEndOf="@id/avPriya" android:layout_toStartOf="@+id/trPriya" android:layout_centerVertical="true" android:layout_marginStart="12dp" android:orientation="vertical">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Priya Nair" android:textColor="@color/text_header" android:textSize="15sp" android:textStyle="bold"/>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="The event was so much fun, see you next week!" android:textColor="@color/text_subheadline" android:textSize="13sp" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
+                        <TextView style="@style/AppHeading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Priya Nair" android:textColor="@color/text_header" android:textSize="15sp" />
+                        <TextView style="@style/AppDescription" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="The event was so much fun, see you next week!" android:textColor="@color/text_subheadline" android:textSize="13sp" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
                     </LinearLayout>
                     <TextView android:id="@+id/trPriya" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:text="Mon" android:textColor="@color/text_muted" android:textSize="11sp"/>
                 </RelativeLayout>
@@ -209,8 +223,8 @@
                         <View android:layout_width="12dp" android:layout_height="12dp" android:layout_gravity="bottom|end" android:background="@drawable/bg_circle_grey_solid"/>
                     </FrameLayout>
                     <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_toEndOf="@id/avDeepak" android:layout_toStartOf="@+id/trDeepak" android:layout_centerVertical="true" android:layout_marginStart="12dp" android:orientation="vertical">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Deepak Verma" android:textColor="@color/text_header" android:textSize="15sp" android:textStyle="bold"/>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sure, I can drop it off Saturday morning." android:textColor="@color/text_subheadline" android:textSize="13sp" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
+                        <TextView style="@style/AppHeading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Deepak Verma" android:textColor="@color/text_header" android:textSize="15sp" />
+                        <TextView style="@style/AppDescription" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sure, I can drop it off Saturday morning." android:textColor="@color/text_subheadline" android:textSize="13sp" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
                     </LinearLayout>
                     <TextView android:id="@+id/trDeepak" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:text="Sun" android:textColor="@color/text_muted" android:textSize="11sp"/>
                 </RelativeLayout>
@@ -223,8 +237,8 @@
                         <View android:layout_width="12dp" android:layout_height="12dp" android:layout_gravity="bottom|end" android:background="@drawable/bg_dot_green"/>
                     </FrameLayout>
                     <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_toEndOf="@id/avMeera" android:layout_toStartOf="@+id/trMeera" android:layout_centerVertical="true" android:layout_marginStart="12dp" android:orientation="vertical">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Meera Iyer" android:textColor="@color/text_header" android:textSize="15sp" android:textStyle="bold"/>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Borrowing is fine, text me when you're done." android:textColor="@color/text_subheadline" android:textSize="13sp" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
+                        <TextView style="@style/AppHeading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Meera Iyer" android:textColor="@color/text_header" android:textSize="15sp" />
+                        <TextView style="@style/AppDescription" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Borrowing is fine, text me when you're done." android:textColor="@color/text_subheadline" android:textSize="13sp" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
                     </LinearLayout>
                     <TextView android:id="@+id/trMeera" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:text="Sat" android:textColor="@color/text_muted" android:textSize="11sp"/>
                 </RelativeLayout>
@@ -237,8 +251,8 @@
                         <View android:layout_width="12dp" android:layout_height="12dp" android:layout_gravity="bottom|end" android:background="@drawable/bg_circle_grey_solid"/>
                     </FrameLayout>
                     <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_toEndOf="@id/avAditya" android:layout_toStartOf="@+id/trAditya" android:layout_centerVertical="true" android:layout_marginStart="12dp" android:orientation="vertical">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Aditya Rao" android:textColor="@color/text_header" android:textSize="15sp" android:textStyle="bold"/>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Confirmed for 5pm at the parking lot." android:textColor="@color/text_subheadline" android:textSize="13sp" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
+                        <TextView style="@style/AppHeading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Aditya Rao" android:textColor="@color/text_header" android:textSize="15sp" />
+                        <TextView style="@style/AppDescription" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Confirmed for 5pm at the parking lot." android:textColor="@color/text_subheadline" android:textSize="13sp" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
                     </LinearLayout>
                     <TextView android:id="@+id/trAditya" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:text="Fri" android:textColor="@color/text_muted" android:textSize="11sp"/>
                 </RelativeLayout>
@@ -251,8 +265,8 @@
                         <View android:layout_width="12dp" android:layout_height="12dp" android:layout_gravity="bottom|end" android:background="@drawable/bg_circle_grey_solid"/>
                     </FrameLayout>
                     <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_toEndOf="@id/avSneha" android:layout_toStartOf="@+id/trSneha" android:layout_centerVertical="true" android:layout_marginStart="12dp" android:orientation="vertical">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sneha Patel" android:textColor="@color/text_header" android:textSize="15sp" android:textStyle="bold"/>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="We're organizing a cleanup drive this Sunday!" android:textColor="@color/text_subheadline" android:textSize="13sp" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
+                        <TextView style="@style/AppHeading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sneha Patel" android:textColor="@color/text_header" android:textSize="15sp" />
+                        <TextView style="@style/AppDescription" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="We're organizing a cleanup drive this Sunday!" android:textColor="@color/text_subheadline" android:textSize="13sp" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
                     </LinearLayout>
                     <TextView android:id="@+id/trSneha" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:text="Thu" android:textColor="@color/text_muted" android:textSize="11sp"/>
                 </RelativeLayout>
@@ -265,8 +279,8 @@
                         <View android:layout_width="12dp" android:layout_height="12dp" android:layout_gravity="bottom|end" android:background="@drawable/bg_circle_grey_solid"/>
                     </FrameLayout>
                     <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_toEndOf="@id/avArjun" android:layout_toStartOf="@+id/trArjun" android:layout_centerVertical="true" android:layout_marginStart="12dp" android:orientation="vertical">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Arjun Kumar" android:textColor="@color/text_header" android:textSize="15sp" android:textStyle="bold"/>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="I left the keys under the mat as discussed." android:textColor="@color/text_subheadline" android:textSize="13sp" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
+                        <TextView style="@style/AppHeading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Arjun Kumar" android:textColor="@color/text_header" android:textSize="15sp" />
+                        <TextView style="@style/AppDescription" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="I left the keys under the mat as discussed." android:textColor="@color/text_subheadline" android:textSize="13sp" android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end"/>
                     </LinearLayout>
                     <TextView android:id="@+id/trArjun" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:text="Wed" android:textColor="@color/text_muted" android:textSize="11sp"/>
                 </RelativeLayout>

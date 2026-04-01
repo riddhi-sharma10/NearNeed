@@ -31,13 +31,13 @@
             android:padding="12dp" />
 
         <TextView
+            style="@style/AppHeading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:text="@string/txt_identity_verified"
             android:textColor="@color/text_header"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textSize="20sp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -79,12 +79,12 @@
                     android:gravity="center_vertical">
                     
                     <TextView
+                        style="@style/AppHeading"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/txt_abhinav_oberoi"
                         android:textColor="@color/text_header"
-                        android:textSize="15sp"
-                        android:textStyle="bold" />
+                        android:textSize="15sp" />
                         
                     <ImageView
                         android:layout_width="16dp"
@@ -105,6 +105,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnContinue"
+            style="@style/AppHeading"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_marginTop="32dp"
@@ -112,7 +113,6 @@
             android:textColor="@color/white"
             android:textAllCaps="false"
             android:textSize="16sp"
-            android:textStyle="bold"
             app:backgroundTint="@color/brand_primary"
             app:cornerRadius="24dp" />
 

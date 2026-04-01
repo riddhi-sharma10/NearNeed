@@ -25,12 +25,12 @@
 
         <TextView
             android:id="@+id/tv_title"
+            style="@style/AppHeading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Rate your experience"
-            android:textColor="@color/text_body_dark"
+            android:textColor="@color/text_header"
             android:textSize="18sp"
-            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -77,24 +77,22 @@
 
         <TextView
             android:id="@+id/tv_provider_name"
+            style="@style/AppHeading.Large"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:text="Rahul S."
-            android:textColor="@color/text_body_dark"
-            android:textSize="22sp"
-            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cv_avatar" />
 
         <TextView
             android:id="@+id/tv_subtitle"
+            style="@style/AppDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:text="How was it with Rahul S. ?"
-            android:textColor="@color/text_body_light"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -113,30 +111,35 @@
             app:layout_constraintTop_toBottomOf="@+id/tv_subtitle">
 
             <ImageView
+                android:id="@+id/iv_star1"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginEnd="12dp"
                 android:src="@drawable/ic_star_blue_outline" />
 
             <ImageView
+                android:id="@+id/iv_star2"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginEnd="12dp"
                 android:src="@drawable/ic_star_blue_outline" />
 
             <ImageView
+                android:id="@+id/iv_star3"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginEnd="12dp"
                 android:src="@drawable/ic_star_blue_outline" />
 
             <ImageView
+                android:id="@+id/iv_star4"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginEnd="12dp"
                 android:src="@drawable/ic_star_blue_outline" />
 
             <ImageView
+                android:id="@+id/iv_star5"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/ic_star_blue_outline" />
@@ -145,14 +148,12 @@
         <!-- What stood out section -->
         <TextView
             android:id="@+id/tv_tags_title"
+            style="@style/AppHeading.Small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="48dp"
-            android:letterSpacing="0.05"
             android:text="WHAT STOOD OUT?"
             android:textColor="@color/text_body_light"
-            android:textSize="12sp"
-            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ll_stars" />
@@ -170,6 +171,8 @@
             app:layout_constraintTop_toBottomOf="@+id/tv_tags_title">
 
             <TextView
+                android:id="@+id/tv_tag_reliable"
+                style="@style/AppHeading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="12dp"
@@ -178,10 +181,11 @@
                 android:paddingVertical="8dp"
                 android:text="Reliable"
                 android:textColor="@color/white"
-                android:textSize="13sp"
-                android:textStyle="bold" />
+                android:textSize="13sp" />
 
             <TextView
+                android:id="@+id/tv_tag_excellent_work"
+                style="@style/AppHeading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_chip_blue_translucent"
@@ -189,8 +193,7 @@
                 android:paddingVertical="8dp"
                 android:text="Excellent work"
                 android:textColor="@color/brand_primary"
-                android:textSize="13sp"
-                android:textStyle="bold" />
+                android:textSize="13sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -205,6 +208,8 @@
             app:layout_constraintTop_toBottomOf="@+id/ll_tags_row1">
 
             <TextView
+                android:id="@+id/tv_tag_hire_again"
+                style="@style/AppHeading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="12dp"
@@ -213,10 +218,11 @@
                 android:paddingVertical="8dp"
                 android:text="Would hire again"
                 android:textColor="@color/brand_primary"
-                android:textSize="13sp"
-                android:textStyle="bold" />
+                android:textSize="13sp" />
 
             <TextView
+                android:id="@+id/tv_tag_arrived_on_time"
+                style="@style/AppHeading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_chip_blue_translucent"
@@ -224,13 +230,13 @@
                 android:paddingVertical="8dp"
                 android:text="Arrived on time"
                 android:textColor="@color/brand_primary"
-                android:textSize="13sp"
-                android:textStyle="bold" />
+                android:textSize="13sp" />
         </LinearLayout>
 
         <!-- Comment Box -->
         <EditText
             android:id="@+id/et_comment"
+            style="@style/AppFormText"
             android:layout_width="0dp"
             android:layout_height="140dp"
             android:layout_marginTop="32dp"
@@ -248,6 +254,7 @@
         <!-- Submit Button -->
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_submit"
+            style="@style/AppHeading"
             android:layout_width="0dp"
             android:layout_height="52dp"
             android:layout_marginTop="48dp"
@@ -257,7 +264,6 @@
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="16sp"
-            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

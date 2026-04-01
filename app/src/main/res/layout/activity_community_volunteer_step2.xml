@@ -32,12 +32,12 @@
 
         <!-- Title & Subtitle -->
         <TextView
+            style="@style/AppHeading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Offer to Help"
             android:textColor="@color/text_header"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textSize="20sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -62,12 +62,12 @@
                 android:layout_centerVertical="true">
                 
                 <TextView
+                    style="@style/AppHeading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Spot Availability"
                     android:textColor="@color/text_header"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+                    android:textSize="14sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -90,14 +90,10 @@
         </RelativeLayout>
 
         <!-- Introduction -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="Introduction"
-            android:textColor="@color/text_header"
-            android:textSize="14sp"
-            android:textStyle="bold" />
+                            <TextView
+                                style="@style/AppHeading"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
 
         <EditText
             android:layout_width="match_parent"

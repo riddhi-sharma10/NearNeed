@@ -47,12 +47,12 @@
                     android:gravity="center">
                     
                     <TextView
+                        style="@style/AppHeading"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/txt_current_location"
                         android:textColor="@color/text_subheadline"
                         android:textSize="11sp"
-                        android:fontFamily="sans-serif-medium"
                         android:letterSpacing="0.05" />
                         
                     <LinearLayout
@@ -76,13 +76,13 @@
                             android:importantForAccessibility="no" />
                             
                         <TextView
+                            style="@style/AppHeading"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="4dp"
                             android:text="@string/txt_downtown_ny"
                             android:textColor="@color/text_header"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
+                            android:textSize="14sp" />
                             
                         <ImageView
                             android:layout_width="16dp"
@@ -236,15 +236,9 @@
                         
                         <TextView
                             android:id="@+id/c0_tag"
+                            style="@style/AppHeading"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentStart="true"
-                            android:layout_toStartOf="@+id/card_img_0"
-                            android:layout_marginEnd="12dp"
-                            android:text="@string/txt_your_post"
-                            android:textColor="@color/brand_error_text"
-                            android:textSize="12sp"
-                            android:textStyle="bold"
                             android:letterSpacing="0.05"
                             app:drawableStartCompat="@drawable/bg_dot_red"
                             android:drawablePadding="6dp"
@@ -253,6 +247,7 @@
 
                         <TextView
                             android:id="@+id/c0_title"
+                            style="@style/AppHeading"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentStart="true"
@@ -262,11 +257,11 @@
                             android:layout_marginTop="4dp"
                             android:text="@string/txt_backyard_cleanup"
                             android:textColor="@color/text_header"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
+                            android:textSize="18sp" />
 
                         <TextView
                             android:id="@+id/c0_sub"
+                            style="@style/AppHeading"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentStart="true"
@@ -276,8 +271,7 @@
                             android:layout_marginTop="2dp"
                             android:text="@string/txt_community_project"
                             android:textColor="@color/brand_error_text"
-                            android:textSize="15sp"
-                            android:textStyle="bold" />
+                            android:textSize="15sp" />
 
                         <TextView
                             android:id="@+id/c0_desc"
@@ -319,21 +313,21 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="4dp">
                                 <TextView
+                                    style="@style/AppHeading"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="@string/txt_2_of_4_volunteers"
                                     android:textColor="@color/text_subheadline"
-                                    android:textSize="11sp"
-                                    android:textStyle="bold" />
+                                    android:textSize="11sp" />
 
                                 <TextView
+                                    style="@style/AppHeading"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentEnd="true"
                                     android:text="50%"
                                     android:textColor="@color/brand_error_solid"
-                                    android:textSize="11sp"
-                                    android:textStyle="bold" />
+                                    android:textSize="11sp" />
                             </RelativeLayout>
                         </LinearLayout>
 
@@ -356,6 +350,7 @@
 
                         <TextView
                             android:id="@+id/btnViewC0"
+                            style="@style/AppHeading"
                             android:layout_width="wrap_content"
                             android:layout_height="48dp"
                             android:minHeight="48dp"
@@ -364,7 +359,6 @@
                             android:text="@string/txt_view_post"
                             android:textColor="@color/brand_error_text"
                             android:textSize="12sp"
-                            android:textStyle="bold"
                             android:paddingStart="24dp"
                             android:paddingEnd="24dp"
                             android:background="@drawable/bg_btn_light_red"
@@ -408,6 +402,7 @@
                         
                         <TextView
                             android:id="@+id/c1_tag"
+                            style="@style/AppHeading"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentStart="true"
@@ -416,13 +411,13 @@
                             android:text="● YOUR POST"
                             android:textColor="@color/brand_primary"
                             android:textSize="12sp"
-                            android:textStyle="bold"
                             android:letterSpacing="0.05"
                             app:drawableStartCompat="@drawable/bg_dot_red"
                             android:drawablePadding="4dp" />
 
                         <TextView
                             android:id="@+id/c1_title"
+                            style="@style/AppHeading"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentStart="true"
@@ -432,11 +427,11 @@
                             android:layout_marginTop="4dp"
                             android:text="@string/txt_plumbing_repair"
                             android:textColor="@color/text_header"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
+                            android:textSize="18sp" />
 
                         <TextView
                             android:id="@+id/c1_price"
+                            style="@style/AppHeading"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentStart="true"
@@ -446,8 +441,7 @@
                             android:layout_marginTop="2dp"
                             android:text="@string/txt_price_400"
                             android:textColor="@color/brand_primary"
-                            android:textSize="15sp"
-                            android:textStyle="bold" />
+                            android:textSize="15sp" />
 
                         <TextView
                             android:id="@+id/c1_desc"
@@ -483,6 +477,7 @@
 
                         <TextView
                             android:id="@+id/btnApplyGig1"
+                            style="@style/AppHeading"
                             android:layout_width="wrap_content"
                             android:layout_height="48dp"
                             android:minHeight="48dp"
@@ -491,7 +486,6 @@
                             android:text="@string/signup_button"
                             android:textColor="@color/brand_primary_dark"
                             android:textSize="12sp"
-                            android:textStyle="bold"
                             android:paddingStart="24dp"
                             android:paddingEnd="24dp"
                             android:background="@drawable/bg_btn_light_blue"
@@ -535,6 +529,7 @@
                         
                         <TextView
                             android:id="@+id/c2_tag"
+                            style="@style/AppHeading"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentStart="true"
@@ -543,7 +538,6 @@
                             android:text="@string/txt_urgent"
                             android:textColor="@color/brand_error_solid"
                             android:textSize="12sp"
-                            android:textStyle="bold"
                             android:letterSpacing="0.05"
                             app:drawableStartCompat="@drawable/bg_dot_red"
                             android:drawablePadding="6dp"
@@ -551,6 +545,7 @@
 
                         <TextView
                             android:id="@+id/c2_title"
+                            style="@style/AppHeading"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentStart="true"
@@ -560,11 +555,11 @@
                             android:layout_marginTop="4dp"
                             android:text="@string/txt_garden_cleanup"
                             android:textColor="@color/text_header"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
+                            android:textSize="18sp" />
 
                         <TextView
                             android:id="@+id/c2_sub"
+                            style="@style/AppHeading"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentStart="true"
@@ -574,8 +569,7 @@
                             android:layout_marginTop="2dp"
                             android:text="@string/txt_community_project"
                             android:textColor="@color/brand_error_solid"
-                            android:textSize="15sp"
-                            android:textStyle="bold" />
+                            android:textSize="15sp" />
 
                         <TextView
                             android:id="@+id/c2_desc"
@@ -617,21 +611,21 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="4dp">
                                 <TextView
+                                    style="@style/AppHeading"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="@string/txt_7_10_volunteers"
                                     android:textColor="@color/text_subheadline"
-                                    android:textSize="11sp"
-                                    android:textStyle="bold" />
+                                    android:textSize="11sp" />
 
                                 <TextView
+                                    style="@style/AppHeading"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentEnd="true"
                                     android:text="@string/txt_70_percent"
                                     android:textColor="@color/brand_error_solid"
-                                    android:textSize="11sp"
-                                    android:textStyle="bold" />
+                                    android:textSize="11sp" />
                             </RelativeLayout>
                         </LinearLayout>
 
@@ -663,6 +657,7 @@
 
                         <TextView
                             android:id="@+id/btnVolC1"
+                            style="@style/AppHeading"
                             android:layout_width="wrap_content"
                             android:layout_height="48dp"
                             android:minHeight="48dp"
@@ -671,7 +666,6 @@
                             android:text="@string/txt_volunteer"
                             android:textColor="@color/brand_error_text"
                             android:textSize="12sp"
-                            android:textStyle="bold"
                             android:paddingStart="24dp"
                             android:paddingEnd="24dp"
                             android:background="@drawable/bg_btn_light_red"
@@ -714,6 +708,7 @@
                         
                         <TextView
                             android:id="@+id/c4_tag"
+                            style="@style/AppHeading"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentStart="true"
@@ -722,7 +717,6 @@
                             android:text="@string/txt_urgent"
                             android:textColor="@color/brand_error_solid"
                             android:textSize="12sp"
-                            android:textStyle="bold"
                             android:letterSpacing="0.05"
                             app:drawableStartCompat="@drawable/bg_dot_red"
                             android:drawablePadding="6dp"
@@ -730,6 +724,7 @@
 
                         <TextView
                             android:id="@+id/c4_title"
+                            style="@style/AppHeading"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentStart="true"
@@ -739,11 +734,11 @@
                             android:layout_marginTop="4dp"
                             android:text="Emergency food delivery for senior"
                             android:textColor="@color/text_header"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
+                            android:textSize="18sp" />
 
                         <TextView
                             android:id="@+id/c4_sub"
+                            style="@style/AppHeading"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentStart="true"
@@ -753,11 +748,11 @@
                             android:layout_marginTop="2dp"
                             android:text="Food Support"
                             android:textColor="@color/brand_error_solid"
-                            android:textSize="15sp"
-                            android:textStyle="bold" />
+                            android:textSize="15sp" />
 
                         <TextView
                             android:id="@+id/c4_desc"
+                            style="@style/AppDescription"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentStart="true"
@@ -796,21 +791,21 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="4dp">
                                 <TextView
+                                    style="@style/AppHeading"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="@string/txt_2_of_4_volunteers"
                                     android:textColor="@color/text_subheadline"
-                                    android:textSize="11sp"
-                                    android:textStyle="bold" />
+                                    android:textSize="11sp" />
 
                                 <TextView
+                                    style="@style/AppHeading"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentEnd="true"
                                     android:text="50%"
                                     android:textColor="@color/brand_error_solid"
-                                    android:textSize="11sp"
-                                    android:textStyle="bold" />
+                                    android:textSize="11sp" />
                             </RelativeLayout>
                         </LinearLayout>
 
@@ -842,6 +837,7 @@
 
                         <TextView
                             android:id="@+id/btnVolC2"
+                            style="@style/AppHeading"
                             android:layout_width="wrap_content"
                             android:layout_height="32dp"
                             android:layout_below="@id/c4_meta"
@@ -849,7 +845,6 @@
                             android:text="@string/txt_volunteer"
                             android:textColor="@color/brand_error_solid"
                             android:textSize="12sp"
-                            android:textStyle="bold"
                             android:paddingStart="16dp"
                             android:paddingEnd="16dp"
                             android:background="@drawable/bg_btn_light_red"
@@ -890,6 +885,7 @@
                         
                         <TextView
                             android:id="@+id/c3_tag"
+                            style="@style/AppHeading"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentStart="true"
@@ -898,13 +894,13 @@
                             android:text="@string/txt_verified"
                             android:textColor="@color/brand_primary"
                             android:textSize="12sp"
-                            android:textStyle="bold"
                             android:letterSpacing="0.05"
                             app:drawableStartCompat="@drawable/ic_verified_badge"
                             android:drawablePadding="4dp" />
 
                         <TextView
                             android:id="@+id/c3_title"
+                            style="@style/AppHeading"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentStart="true"
@@ -914,11 +910,11 @@
                             android:layout_marginTop="4dp"
                             android:text="@string/txt_groceries_delivery"
                             android:textColor="@color/text_header"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
+                            android:textSize="18sp" />
 
                         <TextView
                             android:id="@+id/c3_price"
+                            style="@style/AppHeading"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentStart="true"
@@ -928,11 +924,11 @@
                             android:layout_marginTop="2dp"
                             android:text="@string/txt_price_100"
                             android:textColor="@color/brand_primary"
-                            android:textSize="15sp"
-                            android:textStyle="bold" />
+                            android:textSize="15sp" />
 
                         <TextView
                             android:id="@+id/c3_desc"
+                            style="@style/AppDescription"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentStart="true"
@@ -974,6 +970,7 @@
 
                         <TextView
                             android:id="@+id/btnApplyGig2"
+                            style="@style/AppHeading"
                             android:layout_width="wrap_content"
                             android:layout_height="32dp"
                             android:layout_below="@id/c3_meta"
@@ -981,7 +978,6 @@
                             android:text="Apply"
                             android:textColor="@color/brand_primary"
                             android:textSize="12sp"
-                            android:textStyle="bold"
                             android:paddingStart="16dp"
                             android:paddingEnd="16dp"
                             android:background="@drawable/bg_btn_light_blue"
@@ -1036,12 +1032,12 @@
                 android:paddingHorizontal="24dp">
                 
                 <TextView
+                    style="@style/AppHeading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Notifications"
                     android:textColor="@color/text_header"
-                    android:textSize="18sp"
-                    android:fontFamily="sans-serif-black" />
+                    android:textSize="18sp" />
                     
                 <ImageView
                     android:id="@+id/btnClosePopup"
@@ -1073,8 +1069,8 @@
                     android:gravity="top">
                     <View android:layout_width="6dp" android:layout_height="6dp" android:background="@drawable/bg_dot_red" android:layout_marginTop="5dp" />
                     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
-                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Emergency Task" android:textColor="@color/text_header" android:textStyle="bold" android:textSize="14sp"/>
-                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Immediate grocery help needed at Sector 14" android:textColor="@color/brand_error_solid" android:textSize="13sp" android:layout_marginTop="2dp"/>
+                        <TextView style="@style/AppHeading" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Emergency Task" android:textColor="@color/text_header" android:textSize="14sp"/>
+                        <TextView style="@style/AppDescription" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Immediate grocery help needed at Sector 14" android:textColor="@color/brand_error_solid" android:textSize="13sp" android:layout_marginTop="2dp"/>
                     </LinearLayout>
                 </LinearLayout>
 
@@ -1089,20 +1085,20 @@
                     android:gravity="top">
                     <View android:layout_width="6dp" android:layout_height="6dp" android:visibility="invisible" />
                     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
-                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Welcome to NearNeed" android:textColor="@color/text_muted" android:textStyle="bold" android:textSize="14sp"/>
-                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Feel free to check out community projects" android:textColor="@color/text_muted" android:textSize="13sp" android:layout_marginTop="2dp"/>
+                        <TextView style="@style/AppHeading" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Welcome to NearNeed" android:textColor="@color/text_muted" android:textSize="14sp"/>
+                        <TextView style="@style/AppDescription" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Feel free to check out community projects" android:textColor="@color/text_muted" android:textSize="13sp" android:layout_marginTop="2dp"/>
                     </LinearLayout>
                 </LinearLayout>
 
             </LinearLayout>
 
             <TextView
+                style="@style/AppHeading"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="View all"
                 android:textColor="@color/brand_primary"
                 android:textSize="12sp"
-                android:textStyle="bold"
                 android:gravity="center"
                 android:paddingVertical="12dp"
                 android:background="#F8FAFC"

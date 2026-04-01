@@ -34,13 +34,13 @@
                     android:src="@drawable/ic_back_arrow" />
 
                 <TextView
+                    style="@style/AppHeading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:text="New Gig Post"
                     android:textColor="@color/text_header"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textSize="16sp" />
             </RelativeLayout>
 
             <!-- ── PROGRESS BAR ── -->
@@ -53,14 +53,15 @@
                 android:gravity="center_vertical"
                 android:baselineAligned="false">
                 <TextView
+                    style="@style/AppHeading"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Gig details"
                     android:textColor="@color/text_header"
-                    android:textSize="14sp"
-                    android:fontFamily="sans-serif-medium" />
+                    android:textSize="14sp" />
                 <TextView
+                    style="@style/AppDescription"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Step 1 of 2"
@@ -78,16 +79,17 @@
 
             <!-- ── EDITORIAL HEADLINE ── -->
             <TextView
+                style="@style/AppHeading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:text="What do you need?"
                 android:textColor="@color/text_header"
                 android:textSize="32sp"
-                android:fontFamily="sans-serif-black"
                 android:letterSpacing="-0.03" />
 
             <TextView
+                style="@style/AppDescription"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -106,6 +108,7 @@
 
             <EditText
                 android:id="@+id/etWhatDoYouNeed"
+                style="@style/AppFormText"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginTop="8dp"
@@ -117,7 +120,6 @@
                 android:textColorHint="@color/text_muted"
                 android:textColor="@color/text_header"
                 android:textSize="16sp"
-                android:fontFamily="sans-serif-medium"
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp"
                 android:inputType="text"
@@ -134,6 +136,7 @@
 
             <EditText
                 android:id="@+id/etDescribeTask"
+                style="@style/AppFormText"
                 android:layout_width="match_parent"
                 android:layout_height="110dp"
                 android:layout_marginTop="8dp"
@@ -145,7 +148,6 @@
                 android:textColorHint="@color/text_muted"
                 android:textColor="@color/text_header"
                 android:textSize="16sp"
-                android:fontFamily="sans-serif-medium"
                 android:padding="20dp"
                 android:gravity="top|start"
                 android:inputType="textMultiLine"
@@ -171,13 +173,13 @@
 
                 <EditText
                     android:id="@+id/etPrice"
+                    style="@style/AppFormText"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:hint="Set your budget"
                     android:textColorHint="@color/text_muted"
                     android:textColor="@color/text_header"
                     android:textSize="16sp"
-                    android:fontFamily="sans-serif-medium"
                     android:paddingStart="20dp"
                     android:paddingEnd="52dp"
                     android:inputType="numberDecimal"
@@ -220,15 +222,15 @@
                     android:baselineAligned="false">
 
                     <TextView
+                        style="@style/AppHeading"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Allow Negotiation"
                         android:textColor="@color/text_header"
-                        android:textSize="15sp"
-                        android:textStyle="bold"
-                        android:fontFamily="sans-serif-medium" />
+                        android:textSize="15sp" />
 
                     <TextView
+                        style="@style/AppDescription"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
@@ -296,12 +298,12 @@
 
                     <TextView
                         android:id="@+id/tvCounterValue"
+                        style="@style/AppHeading"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="500"
                         android:textColor="@color/text_header"
                         android:textSize="16sp"
-                        android:fontFamily="sans-serif-medium"
                         android:layout_marginStart="16dp"
                         android:layout_marginEnd="16dp" />
 
@@ -332,13 +334,13 @@
                 android:gravity="center_vertical" />
 
             <TextView
+                style="@style/AppHeading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:text="DURATION"
                 android:textColor="@color/text_muted"
                 android:textSize="11sp"
-                android:textStyle="bold"
                 android:letterSpacing="0.05" />
 
             <com.google.android.material.chip.ChipGroup
@@ -395,13 +397,13 @@
 
             <!-- ── CATEGORY ── -->
             <TextView
+                style="@style/AppHeading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:text="CATEGORY"
                 android:textColor="@color/text_muted"
                 android:textSize="10sp"
-                android:textStyle="bold"
                 android:letterSpacing="0.05" />
 
             <com.google.android.material.chip.ChipGroup
@@ -480,13 +482,13 @@
 
             <!-- ── HOW MANY PEOPLE ── -->
             <TextView
+                style="@style/AppHeading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:text="HOW MANY PEOPLE?"
                 android:textColor="@color/text_muted"
                 android:textSize="10sp"
-                android:textStyle="bold"
                 android:letterSpacing="0.05" />
 
             <RelativeLayout
@@ -533,12 +535,12 @@
 
                     <TextView
                         android:id="@+id/tvPeopleCount"
+                        style="@style/AppHeading"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="1"
                         android:textColor="@color/text_header"
                         android:textSize="16sp"
-                        android:fontFamily="sans-serif-medium"
                         android:layout_marginStart="16dp"
                         android:layout_marginEnd="16dp" />
 
@@ -558,13 +560,13 @@
 
             <!-- ── PAYMENT METHOD ── -->
             <TextView
+                style="@style/AppHeading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:text="PAYMENT METHOD"
                 android:textColor="@color/text_muted"
                 android:textSize="10sp"
-                android:textStyle="bold"
                 android:letterSpacing="0.05" />
 
             <LinearLayout
@@ -594,12 +596,12 @@
 
                     <TextView
                         android:id="@+id/tvPayUPI"
+                        style="@style/AppHeading"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="UPI"
                         android:textColor="@color/brand_primary"
                         android:textSize="13sp"
-                        android:textStyle="bold"
                         android:layout_marginTop="6dp" />
                 </LinearLayout>
 
@@ -624,6 +626,7 @@
 
                     <TextView
                         android:id="@+id/tvPayCash"
+                        style="@style/AppDescription"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Cash"
@@ -652,6 +655,7 @@
 
                     <TextView
                         android:id="@+id/tvPayBoth"
+                        style="@style/AppDescription"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Both"
@@ -684,6 +688,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    style="@style/AppDescription"
                     android:text="Your post will be marked Unverified until you complete your KYC or link a verified UPI ID in the next step."
                     android:textColor="@color/brand_warning_text"
                     android:textSize="13sp"
@@ -699,13 +704,13 @@
             <!-- ── DISTRICT STYLE CTA ── -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnContinueGig"
+                style="@style/AppHeading"
                 android:layout_width="match_parent"
                 android:layout_height="64dp"
                 android:text="Continue"
                 android:textColor="@color/white"
                 android:textAllCaps="false"
                 android:textSize="18sp"
-                android:fontFamily="sans-serif-medium"
                 app:backgroundTint="@color/brand_primary"
                 app:cornerRadius="16dp"
                 android:elevation="0dp" />

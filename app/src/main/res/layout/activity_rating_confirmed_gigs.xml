@@ -24,70 +24,57 @@
 
     <TextView
         android:id="@+id/tv_title"
+        style="@style/AppHeading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Rating Confirmation"
-        android:textColor="@color/black"
         android:textSize="18sp"
-        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/iv_close"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/iv_close" />
 
-    <!-- Outer yellow glow around the circle -->
-    <View
-        android:layout_width="160dp"
-        android:layout_height="160dp"
-        android:background="@drawable/bg_star_glow"
-        app:layout_constraintBottom_toBottomOf="@+id/card_star"
-        app:layout_constraintEnd_toEndOf="@+id/card_star"
-        app:layout_constraintStart_toStartOf="@+id/card_star"
-        app:layout_constraintTop_toTopOf="@+id/card_star" />
-
     <!-- Center Icon -->
-    <androidx.cardview.widget.CardView
+    <FrameLayout
         android:id="@+id/card_star"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginTop="56dp"
-        app:cardBackgroundColor="@android:color/white"
-        app:cardCornerRadius="60dp"
-        app:cardElevation="12dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/bg_circle_solid_red"
+        android:backgroundTint="@color/brand_warning_bg_alt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_title">
 
         <ImageView
-            android:layout_width="72dp"
-            android:layout_height="72dp"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
             android:layout_gravity="center"
-            android:src="@drawable/ic_star_rating" />
-    </androidx.cardview.widget.CardView>
+            android:src="@android:drawable/star_on"
+            app:tint="@color/brand_warning_vibrant" />
+    </FrameLayout>
 
     <!-- Texts -->
     <TextView
         android:id="@+id/tv_rating_submitted"
+        style="@style/AppHeading.Large"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:text="Rating submitted."
-        android:textColor="@color/black"
-        android:textSize="22sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/card_star" />
 
     <TextView
         android:id="@+id/tv_score_updated"
+        style="@style/AppDescription"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="32dp"
         android:layout_marginTop="16dp"
         android:gravity="center"
         android:text="Rahul S.'s Neighbour Score has been\nupdated."
-        android:textColor="@color/text_body_light"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -96,6 +83,7 @@
     <!-- Pill -->
     <TextView
         android:id="@+id/tv_waiting_rating"
+        style="@style/AppHeading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -105,7 +93,6 @@
         android:text="Waiting for Rahul S. to rate you."
         android:textColor="@color/legacy_material_blue"
         android:textSize="14sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_score_updated" />
@@ -139,6 +126,7 @@
 
         <TextView
             android:id="@+id/tv_gig_completed"
+            style="@style/AppHeading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
@@ -152,28 +140,25 @@
     <!-- Progress section -->
     <TextView
         android:id="@+id/tv_auto_redirect"
+        style="@style/AppHeading.Small"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="24dp"
         android:text="AUTO-REDIRECTING"
         android:textColor="@color/text_muted"
-        android:textSize="11sp"
-        android:textStyle="bold"
-        android:letterSpacing="0.05"
         app:layout_constraintTop_toBottomOf="@+id/card_gig_image"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tv_redirect_seconds"
+        style="@style/AppHeading.Small"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
         android:layout_marginTop="24dp"
         android:text="3S"
         android:textColor="@color/text_muted"
-        android:textSize="11sp"
-        android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/card_gig_image"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -193,6 +178,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_back_feed"
+        style="@style/AppHeading"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginHorizontal="32dp"
@@ -203,7 +189,6 @@
         android:textAllCaps="false"
         android:textColor="@android:color/white"
         android:textSize="16sp"
-        android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/pb_redirect"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_bias="1.0"

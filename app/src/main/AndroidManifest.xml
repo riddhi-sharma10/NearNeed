@@ -161,6 +161,9 @@
             android:exported="false"
             android:screenOrientation="portrait" />
 
+        <activity android:name=".RatingScreenGigActivity" android:exported="false" android:screenOrientation="portrait" />
+        <activity android:name=".RatingConfirmedGigsActivity" android:exported="false" android:screenOrientation="portrait" />
+
         <activity android:name=".UserProfileActivity" android:exported="false" />
         <activity android:name=".EditProfileActivity" android:exported="false" />
         <activity android:name=".SavedTasksActivity" android:exported="false" />

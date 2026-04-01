@@ -156,13 +156,13 @@
         </FrameLayout>
 
         <TextView
+            style="@style/AppHero"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:text="NearNeed"
             android:textColor="@color/text_header"
             android:textSize="28sp"
-            android:fontFamily="sans-serif-black"
             android:letterSpacing="-0.02" />
 
         <TextView

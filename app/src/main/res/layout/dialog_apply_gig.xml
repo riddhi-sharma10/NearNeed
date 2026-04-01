@@ -22,14 +22,15 @@
             android:background="@color/border_standard" />
 
         <TextView
+            style="@style/AppHeading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Apply for this Gig"
             android:textColor="@color/text_header"
-            android:textSize="22sp"
-            android:fontFamily="sans-serif-black" />
+            android:textSize="22sp" />
 
         <TextView
+            style="@style/AppDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
@@ -53,25 +54,26 @@
                 android:src="@drawable/ic_info_circle"
                 app:tint="@color/brand_primary" />
             <TextView
+                style="@style/AppHeading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
                 android:text="You are applying for Spot 2 of 2."
                 android:textColor="@color/brand_primary"
-                android:textSize="12sp"
-                android:textStyle="bold" />
+                android:textSize="12sp" />
         </LinearLayout>
 
         <TextView
+            style="@style/AppHeading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:text="Intro"
             android:textColor="@color/text_header"
-            android:textSize="13sp"
-            android:textStyle="bold" />
+            android:textSize="13sp" />
 
         <EditText
+            style="@style/AppFormText"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_marginTop="12dp"
@@ -85,13 +87,13 @@
             android:inputType="textMultiLine" />
 
         <TextView
+            style="@style/AppHeading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:text="Price Negotiation"
             android:textColor="@color/text_header"
-            android:textSize="13sp"
-            android:textStyle="bold" />
+            android:textSize="13sp" />
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
@@ -123,7 +125,7 @@
                 android:text="Propose a different rate"
                 android:textColor="@color/text_header"
                 android:textSize="14sp"
-                android:textStyle="bold" />
+                style="@style/AppHeading" />
             <ImageView
                 android:layout_width="16dp"
                 android:layout_height="16dp"
@@ -153,13 +155,13 @@
         </LinearLayout>
 
         <TextView
+            style="@style/AppHeading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:text="Payment Preference"
             android:textColor="@color/text_header"
-            android:textSize="13sp"
-            android:textStyle="bold" />
+            android:textSize="13sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -196,7 +198,7 @@
                 android:text="Either"
                 android:textColor="@color/brand_primary"
                 android:textSize="12sp"
-                android:textStyle="bold" />
+                style="@style/AppHeading" />
         </LinearLayout>
 
         <LinearLayout
@@ -227,12 +229,12 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnSendResponse"
+            style="@style/AppHeading"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_marginTop="24dp"
             android:text="Send Response →"
             android:textAllCaps="false"
-            android:textStyle="bold"
             app:cornerRadius="16dp"
             app:backgroundTint="@color/brand_primary" />
 

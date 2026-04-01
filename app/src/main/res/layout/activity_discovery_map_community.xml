@@ -33,12 +33,12 @@
             android:gravity="center_vertical"
             android:paddingHorizontal="10dp">
             <TextView
+                style="@style/AppHeading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="🍎 Food"
                 android:textColor="@color/brand_error_solid"
-                android:textSize="12sp"
-                android:textStyle="bold" />
+                android:textSize="12sp" />
         </LinearLayout>
 
         <!-- Need Pin (Tools) -->
@@ -53,12 +53,12 @@
             android:gravity="center_vertical"
             android:paddingHorizontal="10dp">
             <TextView
+                style="@style/AppHeading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="⚒️ Tools"
                 android:textColor="@color/brand_error_solid"
-                android:textSize="12sp"
-                android:textStyle="bold" />
+                android:textSize="12sp" />
         </LinearLayout>
 
         <!-- User "YOU" Pin (Pink Version) -->
@@ -76,17 +76,10 @@
                 android:padding="2dp"
                 android:scaleType="centerCrop"
                 android:elevation="4dp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:background="@drawable/bg_btn_light_red"
-                android:paddingHorizontal="8dp"
-                android:paddingVertical="1dp"
-                android:text="YOU"
-                android:textColor="@color/brand_error_solid"
-                android:textSize="8sp"
-                android:textStyle="bold" />
+                            <TextView
+                                style="@style/AppHeading"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
         </LinearLayout>
     </FrameLayout>
 
@@ -121,19 +114,19 @@
                 android:layout_marginStart="12dp"
                 android:orientation="vertical">
                 <TextView
+                    style="@style/AppHeading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Koramangala - 2 km"
                     android:textColor="@color/text_header"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+                    android:textSize="14sp" />
                 <TextView
+                    style="@style/AppHeading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="● LIVE LOCATION"
                     android:textColor="@color/brand_success_vibrant_alt"
                     android:textSize="8sp"
-                    android:textStyle="bold"
                     android:letterSpacing="0.05" />
             </LinearLayout>
 
@@ -220,12 +213,12 @@
                     android:layout_marginStart="12dp"
                     android:orientation="vertical">
                     <TextView
+                        style="@style/AppHeading"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Priya M. • VERIFIED"
                         android:textColor="@color/text_header"
                         android:textSize="14sp"
-                        android:textStyle="bold"
                         android:letterSpacing="0.02" />
                     <TextView
                         android:layout_width="wrap_content"
@@ -245,6 +238,7 @@
             </RelativeLayout>
 
             <TextView
+                style="@style/AppHeading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
@@ -254,17 +248,16 @@
                 android:paddingVertical="4dp"
                 android:text="URGENT"
                 android:textColor="@color/brand_warning_solid"
-                android:textSize="11sp"
-                android:textStyle="bold" />
+                android:textSize="11sp" />
 
             <TextView
+                style="@style/AppHeading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="Need spare oxygen cylinder"
                 android:textColor="@color/text_header"
-                android:textSize="20sp"
-                android:fontFamily="sans-serif-black" />
+                android:textSize="20sp" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -272,13 +265,13 @@
                 android:layout_marginTop="16dp">
                 <TextView
                     android:id="@+id/tvPricePreview"
+                    style="@style/AppHeading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:text=""
                     android:textColor="@color/brand_error_solid"
-                    android:textSize="22sp"
-                    android:textStyle="bold" />
+                    android:textSize="22sp" />
                 <TextView
                     android:id="@+id/tvProgressText"
                     android:layout_width="wrap_content"

@@ -20,13 +20,13 @@
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_back_arrow" />
         <TextView
+            style="@style/AppHeading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="Notifications"
             android:textColor="@color/text_header"
-            android:textSize="18sp"
-            android:fontFamily="sans-serif-black" />
+            android:textSize="18sp" />
     </RelativeLayout>
 
     <androidx.core.widget.NestedScrollView
@@ -60,12 +60,13 @@
                     android:layout_weight="1"
                     android:orientation="vertical">
                     <TextView
+                        style="@style/AppHeading"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="System"
-                        android:textColor="@color/text_header"
-                        android:textStyle="bold" />
+                        android:text="Account Update"
+                        android:textColor="@color/text_header" />
                     <TextView
+                        style="@style/AppDescription"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Welcome to NearNeed! Your profile is now set up."
@@ -93,12 +94,13 @@
                     android:layout_weight="1"
                     android:orientation="vertical">
                     <TextView
+                        style="@style/AppHeading"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Emergency Alert"
-                        android:textColor="@color/text_header"
-                        android:textStyle="bold" />
+                        android:textColor="@color/text_header" />
                     <TextView
+                        style="@style/AppDescription"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Nearby assistance needed at Block 4."

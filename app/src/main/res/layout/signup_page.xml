@@ -28,12 +28,12 @@
 
         <TextView
             android:id="@+id/tvHeaderTitle"
+            style="@style/AppHeading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/signup_header"
             android:textColor="@color/text_header"
             android:textSize="16sp"
-            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@id/btnBack"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -41,13 +41,13 @@
 
         <TextView
             android:id="@+id/tvTitle"
+            style="@style/AppHeading"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:text="@string/signup_title"
             android:textColor="@color/text_header"
             android:textSize="28sp"
-            android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@id/btnBack" />
 
         <TextView
@@ -69,13 +69,13 @@
             app:layout_constraintTop_toBottomOf="@id/tvSubtitle">
 
             <TextView
+                style="@style/AppHeading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="6dp"
                 android:text="@string/full_name_label"
                 android:textColor="@color/text_header"
-                android:textSize="13sp"
-                android:textStyle="bold" />
+                android:textSize="13sp" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
@@ -104,13 +104,13 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
+                style="@style/AppHeading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="6dp"
                 android:text="@string/email_label"
                 android:textColor="@color/text_header"
-                android:textSize="13sp"
-                android:textStyle="bold" />
+                android:textSize="13sp" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
@@ -139,13 +139,13 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
+                style="@style/AppHeading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="6dp"
                 android:text="@string/password_label"
                 android:textColor="@color/text_header"
-                android:textSize="13sp"
-                android:textStyle="bold" />
+                android:textSize="13sp" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
@@ -186,13 +186,13 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnSubmit"
+                style="@style/AppHeading"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:text="@string/signup_button"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="16sp"
-                android:textStyle="bold"
                 app:backgroundTint="@color/brand_primary"
                 app:cornerRadius="16dp" />
 
@@ -212,6 +212,7 @@
 
                 <TextView
                     android:id="@+id/tvLogin"
+                    style="@style/AppHeading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
@@ -220,8 +221,7 @@
                     android:focusable="true"
                     android:text="@string/login_text"
                     android:textColor="@color/brand_primary"
-                    android:textSize="13sp"
-                    android:textStyle="bold" />
+                    android:textSize="13sp" />
             </LinearLayout>
         </LinearLayout>
 

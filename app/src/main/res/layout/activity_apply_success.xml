@@ -33,13 +33,13 @@
                 app:tint="@color/brand_success_vibrant_alt"/> <!-- Success Green -->
 
             <TextView
+                style="@style/AppHero"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:text="Applied Successfully!"
                 android:textColor="@color/text_header"
-                android:textSize="24sp"
-                android:fontFamily="sans-serif-black" />
+                android:textSize="24sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -76,13 +76,20 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:layout_marginStart="12dp">
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Plumbing Repair" android:textColor="@color/text_header" android:textSize="15sp" android:textStyle="bold" />
+                    <TextView
+                        style="@style/AppHeading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Plumbing Repair"
+                        android:textColor="@color/text_header"
+                        android:textSize="15sp" />
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Proposal: ₹300" android:textColor="@color/text_muted" android:textSize="12sp" android:layout_marginTop="2dp" />
                 </LinearLayout>
             </LinearLayout>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnDone"
+                style="@style/AppHeading"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginTop="32dp"
@@ -90,7 +97,6 @@
                 android:textColor="@color/white"
                 android:textAllCaps="false"
                 android:textSize="16sp"
-                android:textStyle="bold"
                 app:backgroundTint="@color/brand_primary"
                 app:cornerRadius="16dp" />
 

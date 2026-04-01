@@ -35,13 +35,13 @@
                     android:src="@drawable/ic_back_arrow" />
 
                 <TextView
+                    style="@style/AppHeading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:text="POST DETAIL"
                     android:textColor="@color/text_header"
                     android:textSize="14sp"
-                    android:textStyle="bold"
                     android:letterSpacing="0.1" />
 
                 <ImageButton
@@ -75,17 +75,18 @@
                     app:tint="@color/brand_error_solid" />
 
                 <TextView
+                    style="@style/AppHeading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
                     android:text="Food Support"
                     android:textColor="@color/brand_error_solid"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+                    android:textSize="14sp" />
             </LinearLayout>
 
             <!-- URGENT Banner -->
             <TextView
+                style="@style/AppHeading"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/brand_warning"
@@ -94,7 +95,6 @@
                 android:text="URGENT"
                 android:textColor="@color/white"
                 android:textSize="12sp"
-                android:textStyle="bold"
                 android:letterSpacing="0.1"
                 app:drawableStartCompat="@drawable/ic_info_red"
                 app:drawableTint="@color/white"
@@ -108,12 +108,12 @@
                 android:padding="24dp">
 
                 <TextView
+                    style="@style/AppHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Emergency food delivery for senior"
                     android:textColor="@color/text_header"
-                    android:textSize="22sp"
-                    android:textStyle="bold" />
+                    android:textSize="22sp" />
 
                 <!-- Meta Pills Row -->
                 <LinearLayout
@@ -124,13 +124,13 @@
                     android:gravity="center_vertical">
 
                     <TextView
+                        style="@style/AppHeading"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/bg_pill_pink_transparent"
                         android:text="Food"
                         android:textColor="@color/brand_error_solid"
                         android:textSize="11sp"
-                        android:textStyle="bold"
                         android:paddingStart="8dp"
                         android:paddingEnd="8dp"
                         android:paddingTop="4dp"
@@ -165,6 +165,7 @@
                 </LinearLayout>
 
                 <TextView
+                    style="@style/AppDescription"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
@@ -216,12 +217,12 @@
                     </LinearLayout>
 
                     <TextView
+                        style="@style/AppHeading"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="0:14"
                         android:textColor="@color/brand_error_vibrant"
-                        android:textSize="11sp"
-                        android:textStyle="bold" />
+                        android:textSize="11sp" />
                 </LinearLayout>
 
                 <!-- Volunteers Needed Card -->
@@ -238,16 +239,17 @@
                         android:layout_height="wrap_content">
                         
                         <TextView
+                            style="@style/AppHeading"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
                             android:text="VOLUNTEERS NEEDED"
                             android:textColor="@color/text_subheadline"
                             android:textSize="10sp"
-                            android:textStyle="bold"
                             android:letterSpacing="0.05" />
 
                         <TextView
+                            style="@style/AppHeading"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
@@ -255,8 +257,7 @@
                             android:background="@drawable/bg_pill_pink_transparent"
                             android:text="2 / 4 Filled"
                             android:textColor="@color/brand_error_solid"
-                            android:textSize="10sp"
-                            android:textStyle="bold" />
+                            android:textSize="10sp" />
                     </RelativeLayout>
 
                     <LinearLayout
@@ -305,23 +306,23 @@
                     
                     <TextView
                         android:id="@+id/c4_location"
+                        style="@style/AppHeading"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentStart="true"
                         android:text="LOCATION"
                         android:textColor="@color/text_subheadline"
                         android:textSize="10sp"
-                        android:textStyle="bold"
                         android:letterSpacing="0.05" />
 
                     <TextView
+                        style="@style/AppHeading"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:text="Koramangala 4th Block"
                         android:textColor="@color/text_header"
-                        android:textSize="10sp"
-                        android:textStyle="bold" />
+                        android:textSize="10sp" />
 
                     <ImageView
                         android:layout_width="match_parent"

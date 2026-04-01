@@ -26,13 +26,13 @@
             android:src="@drawable/ic_close_grey" />
 
         <TextView
+            style="@style/AppHeading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="Response Confirmation"
             android:textColor="@color/text_header"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textSize="16sp" />
     </RelativeLayout>
 
     <!-- Center Content -->
@@ -59,13 +59,13 @@
         </FrameLayout>
 
         <TextView
+            style="@style/AppHeading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
             android:text="Response submitted."
             android:textColor="@color/text_header"
             android:textSize="22sp"
-            android:textStyle="bold"
             android:gravity="center" />
 
         <TextView

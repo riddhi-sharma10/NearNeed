@@ -26,13 +26,13 @@
             android:src="@drawable/ic_back_arrow" />
             
         <TextView
+            style="@style/AppHeading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="Help &amp; Support"
             android:textColor="@color/text_header"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textSize="18sp" />
     </RelativeLayout>
 
     <ScrollView
@@ -47,12 +47,12 @@
             android:padding="24dp">
 
             <TextView
+                style="@style/AppHeading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Frequently Asked Questions"
                 android:textColor="@color/text_header"
-                android:textSize="18sp"
-                android:fontFamily="sans-serif-black" />
+                android:textSize="18sp" />
 
             <!-- FAQ Item 1 -->
             <LinearLayout
@@ -75,6 +75,7 @@
                     android:focusable="true">
                     
                     <TextView
+                        style="@style/AppHeading"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentStart="true"
@@ -82,8 +83,7 @@
                         android:layout_marginEnd="12dp"
                         android:text="How do I post a gig?"
                         android:textColor="@color/text_header"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
+                        android:textSize="14sp" />
                         
                     <ImageView
                         android:id="@+id/faq_arrow_1"
@@ -129,6 +129,7 @@
                     android:focusable="true">
                     
                     <TextView
+                        style="@style/AppHeading"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentStart="true"
@@ -136,8 +137,7 @@
                         android:layout_marginEnd="12dp"
                         android:text="How do I get ID Verified?"
                         android:textColor="@color/text_header"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
+                        android:textSize="14sp" />
                         
                     <ImageView
                         android:id="@+id/faq_arrow_2"
@@ -183,6 +183,7 @@
                     android:focusable="true">
                     
                     <TextView
+                        style="@style/AppHeading"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentStart="true"
@@ -190,8 +191,7 @@
                         android:layout_marginEnd="12dp"
                         android:text="Is there a fee for NearNeed?"
                         android:textColor="@color/text_header"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
+                        android:textSize="14sp" />
                         
                     <ImageView
                         android:id="@+id/faq_arrow_3"
@@ -237,6 +237,7 @@
                     android:focusable="true">
                     
                     <TextView
+                        style="@style/AppHeading"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentStart="true"
@@ -244,8 +245,7 @@
                         android:layout_marginEnd="12dp"
                         android:text="How do I change my location?"
                         android:textColor="@color/text_header"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
+                        android:textSize="14sp" />
                         
                     <ImageView
                         android:id="@+id/faq_arrow_4"
@@ -291,6 +291,7 @@
                     android:focusable="true">
                     
                     <TextView
+                        style="@style/AppHeading"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentStart="true"
@@ -298,8 +299,7 @@
                         android:layout_marginEnd="12dp"
                         android:text="What is a 'Neighbour Score'?"
                         android:textColor="@color/text_header"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
+                        android:textSize="14sp" />
                         
                     <ImageView
                         android:id="@+id/faq_arrow_5"
@@ -345,6 +345,7 @@
                     android:focusable="true">
                     
                     <TextView
+                        style="@style/AppHeading"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentStart="true"
@@ -352,8 +353,7 @@
                         android:layout_marginEnd="12dp"
                         android:text="How do I report a user?"
                         android:textColor="@color/text_header"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
+                        android:textSize="14sp" />
                         
                     <ImageView
                         android:id="@+id/faq_arrow_6"
@@ -386,6 +386,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnContactUs"
+                style="@style/AppHeading"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginBottom="24dp"
@@ -393,7 +394,6 @@
                 android:textColor="@color/brand_primary"
                 android:textAllCaps="false"
                 android:textSize="16sp"
-                android:fontFamily="sans-serif-medium"
                 app:backgroundTint="@color/brand_info_light"
                 app:cornerRadius="16dp"
                 android:elevation="0dp" />

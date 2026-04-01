@@ -47,14 +47,15 @@
                     android:gravity="center">
 
                     <TextView
+                        style="@style/AppHeading"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Responses"
                         android:textColor="@color/text_header"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
+                        android:textSize="17sp" />
 
                     <TextView
+                        style="@style/AppDescription"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Plumbing Repair"
@@ -64,6 +65,7 @@
 
                 <!-- Three-dot menu -->
                 <TextView
+                    style="@style/AppHeading"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_alignParentEnd="true"
@@ -71,8 +73,7 @@
                     android:gravity="center"
                     android:text="⋮"
                     android:textColor="@color/text_header"
-                    android:textSize="22sp"
-                    android:textStyle="bold" />
+                    android:textSize="22sp" />
             </RelativeLayout>
 
             <!-- ══════════ HERO IMAGE ══════════ -->
@@ -99,14 +100,14 @@
 
                 <!-- Gig title overlay -->
                 <TextView
+                    style="@style/AppHeading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom|start"
                     android:layout_margin="16dp"
                     android:text="Plumbing Repair"
                     android:textColor="@color/white"
-                    android:textSize="22sp"
-                    android:textStyle="bold" />
+                    android:textSize="22sp" />
             </FrameLayout>
 
             <!-- ══════════ STATS BAR ══════════ -->
@@ -119,14 +120,14 @@
                 android:layout_marginBottom="4dp">
 
                 <TextView
+                    style="@style/AppHeading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true"
                     android:text="3 people responded"
                     android:textColor="@color/text_subheadline"
-                    android:textSize="13sp"
-                    android:textStyle="bold" />
+                    android:textSize="13sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -214,14 +215,15 @@
                                 android:orientation="vertical">
 
                                 <TextView
+                                    style="@style/AppHeading"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Rahul S."
                                     android:textColor="@color/text_header"
-                                    android:textSize="15sp"
-                                    android:textStyle="bold" />
+                                    android:textSize="15sp" />
 
                                 <TextView
+                                    style="@style/AppDescription"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Hi, I live in the same block and have my own tools..."
@@ -248,13 +250,13 @@
                                     android:src="@drawable/ic_star_yellow" />
 
                                 <TextView
+                                    style="@style/AppHeading"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginStart="3dp"
                                     android:text="4.8"
                                     android:textColor="@color/brand_warning_solid"
-                                    android:textSize="12sp"
-                                    android:textStyle="bold" />
+                                    android:textSize="12sp" />
                             </LinearLayout>
                         </RelativeLayout>
 
@@ -276,13 +278,13 @@
                                 app:tint="@color/brand_warning_solid" />
 
                             <TextView
+                                style="@style/AppHeading"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="8dp"
                                 android:text="Proposed ₹250 "
                                 android:textColor="@color/brand_warning_text"
-                                android:textSize="13sp"
-                                android:textStyle="bold" />
+                                android:textSize="13sp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -301,6 +303,7 @@
 
                             <com.google.android.material.button.MaterialButton
                                 android:id="@+id/btnAcceptRahul"
+                                style="@style/AppHeading"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
                                 android:layout_height="44dp"
@@ -309,13 +312,13 @@
                                 android:textColor="@color/white"
                                 android:textAllCaps="false"
                                 android:textSize="13sp"
-                                android:textStyle="bold"
                                 app:backgroundTint="@color/brand_success_alt"
                                 app:cornerRadius="10dp"
                                 android:elevation="0dp" />
 
                             <com.google.android.material.button.MaterialButton
                                 android:id="@+id/btnCounterRahul"
+                                style="@style/AppHeading"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
                                 android:layout_height="44dp"
@@ -323,7 +326,6 @@
                                 android:textColor="@color/white"
                                 android:textAllCaps="false"
                                 android:textSize="13sp"
-                                android:textStyle="bold"
                                 app:backgroundTint="@color/brand_primary"
                                 app:cornerRadius="10dp"
                                 android:elevation="0dp" />
@@ -337,6 +339,7 @@
 
                             <com.google.android.material.button.MaterialButton
                                 android:id="@+id/btnDeclineRahul"
+                                style="@style/AppHeading"
                                 android:layout_width="0dp"
                                 android:layout_height="44dp"
                                 android:layout_alignParentStart="true"
@@ -346,7 +349,6 @@
                                 android:textColor="@color/text_subheadline"
                                 android:textAllCaps="false"
                                 android:textSize="13sp"
-                                android:textStyle="bold"
                                 app:backgroundTint="@color/divider_soft"
                                 app:cornerRadius="10dp"
                                 android:elevation="0dp" />
@@ -408,14 +410,15 @@
                             android:orientation="vertical">
 
                             <TextView
+                                style="@style/AppHeading"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Priya M."
                                 android:textColor="@color/text_header"
-                                android:textSize="15sp"
-                                android:textStyle="bold" />
+                                android:textSize="15sp" />
 
                             <TextView
+                                style="@style/AppDescription"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Available this weekend, I have experience with taps..."
@@ -442,13 +445,13 @@
                                 android:src="@drawable/ic_star_yellow" />
 
                             <TextView
+                                style="@style/AppHeading"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="3dp"
                                 android:text="4.5"
                                 android:textColor="@color/brand_warning_solid"
-                                android:textSize="12sp"
-                                android:textStyle="bold" />
+                                android:textSize="12sp" />
                         </LinearLayout>
 
                     </RelativeLayout>
@@ -490,14 +493,15 @@
                             android:orientation="vertical">
 
                             <TextView
+                                style="@style/AppHeading"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Anika R."
                                 android:textColor="@color/text_header"
-                                android:textSize="15sp"
-                                android:textStyle="bold" />
+                                android:textSize="15sp" />
 
                             <TextView
+                                style="@style/AppDescription"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="I'm a certified plumber, can come within the hour."
@@ -524,13 +528,13 @@
                                 android:src="@drawable/ic_star_yellow" />
 
                             <TextView
+                                style="@style/AppHeading"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="3dp"
                                 android:text="4.9"
                                 android:textColor="@color/brand_warning_solid"
-                                android:textSize="12sp"
-                                android:textStyle="bold" />
+                                android:textSize="12sp" />
                         </LinearLayout>
 
                     </RelativeLayout>

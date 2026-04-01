@@ -44,14 +44,14 @@
                 android:padding="1dp"
                 android:scaleType="centerCrop" />
             <TextView
+                style="@style/AppHeading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
                 android:text="₹300"
                 android:textColor="@color/brand_primary"
-                android:textSize="12sp"
-                android:textStyle="bold" />
+                android:textSize="12sp" />
         </LinearLayout>
 
         <!-- Need Pin (Icon + Text) -->
@@ -69,12 +69,12 @@
             android:clickable="true"
             android:focusable="true">
             <TextView
+                style="@style/AppHeading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="🍎 Food"
                 android:textColor="@color/brand_error_solid"
-                android:textSize="12sp"
-                android:textStyle="bold" />
+                android:textSize="12sp" />
         </LinearLayout>
 
         <!-- Need Pin (Tools) -->
@@ -91,13 +91,10 @@
             android:paddingHorizontal="10dp"
             android:clickable="true"
             android:focusable="true">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="⚒️ Tools"
-                android:textColor="@color/brand_error_solid"
-                android:textSize="12sp"
-                android:textStyle="bold" />
+                            <TextView
+                                style="@style/AppHeading"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
         </LinearLayout>
 
         <!-- User "YOU" Pin -->
@@ -116,6 +113,7 @@
                 android:scaleType="centerCrop"
                 android:elevation="4dp" />
             <TextView
+                style="@style/AppHeading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
@@ -124,8 +122,7 @@
                 android:paddingVertical="1dp"
                 android:text="YOU"
                 android:textColor="@color/white"
-                android:textSize="8sp"
-                android:textStyle="bold" />
+                android:textSize="8sp" />
         </LinearLayout>
     </FrameLayout>
 
@@ -160,19 +157,19 @@
                 android:layout_marginStart="12dp"
                 android:orientation="vertical">
                 <TextView
+                    style="@style/AppHeading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Koramangala - 2 km"
                     android:textColor="@color/text_header"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+                    android:textSize="14sp" />
                 <TextView
+                    style="@style/AppHeading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="● LIVE LOCATION"
                     android:textColor="@color/brand_success_vibrant_alt"
                     android:textSize="8sp"
-                    android:textStyle="bold"
                     android:letterSpacing="0.05" />
             </LinearLayout>
 
@@ -261,20 +258,20 @@
             android:paddingHorizontal="24dp"
             android:layout_marginTop="20dp">
             <TextView
+                style="@style/AppHeading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="18 active opportunities ●"
                 android:textColor="@color/text_header"
-                android:textSize="16sp"
-                android:fontFamily="sans-serif-black" />
+                android:textSize="16sp" />
             <TextView
+                style="@style/AppHeading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:text="See list"
                 android:textColor="@color/brand_primary"
-                android:textSize="13sp"
-                android:textStyle="bold" />
+                android:textSize="13sp" />
         </RelativeLayout>
 
         <HorizontalScrollView
@@ -291,6 +288,7 @@
                 
                 <TextView
                     android:id="@+id/filterGigs"
+                    style="@style/AppHeading"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:background="@drawable/bg_chip_unselected"
@@ -298,11 +296,11 @@
                     android:gravity="center"
                     android:text="Gigs"
                     android:textColor="@color/text_subheadline"
-                    android:textSize="13sp"
-                    android:fontFamily="sans-serif-medium" />
+                    android:textSize="13sp" />
 
                 <TextView
                     android:id="@+id/filterAll"
+                    style="@style/AppHeading"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:layout_marginStart="10dp"
@@ -311,11 +309,11 @@
                     android:gravity="center"
                     android:text="All"
                     android:textColor="@color/white"
-                    android:textSize="13sp"
-                    android:textStyle="bold" />
+                    android:textSize="13sp" />
 
                 <TextView
                     android:id="@+id/filterCommunity"
+                    style="@style/AppHeading"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:layout_marginStart="10dp"
@@ -324,8 +322,7 @@
                     android:gravity="center"
                     android:text="Community"
                     android:textColor="@color/text_subheadline"
-                    android:textSize="13sp"
-                    android:fontFamily="sans-serif-medium" />
+                    android:textSize="13sp" />
 
                 <FrameLayout
                     android:id="@+id/filterEmergency"
@@ -335,13 +332,13 @@
                     android:background="@drawable/bg_btn_solid_red"
                     android:elevation="4dp">
                     <TextView
+                        style="@style/AppHeading"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="!"
                         android:textColor="@color/white"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:textSize="20sp" />
                 </FrameLayout>
             </LinearLayout>
         </HorizontalScrollView>
@@ -384,12 +381,12 @@
                     android:layout_marginStart="12dp"
                     android:orientation="vertical">
                     <TextView
+                        style="@style/AppHeading"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Rahul S. • VERIFIED"
                         android:textColor="@color/text_header"
                         android:textSize="14sp"
-                        android:textStyle="bold"
                         android:letterSpacing="0.02" />
                     <TextView
                         android:layout_width="wrap_content"
@@ -409,6 +406,7 @@
             </RelativeLayout>
 
             <TextView
+                style="@style/AppHeading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
@@ -418,17 +416,16 @@
                 android:paddingVertical="4dp"
                 android:text="Plumbing"
                 android:textColor="@color/brand_primary"
-                android:textSize="11sp"
-                android:textStyle="bold" />
+                android:textSize="11sp" />
 
             <TextView
+                style="@style/AppHeading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="Plumbing Repair"
                 android:textColor="@color/text_header"
-                android:textSize="20sp"
-                android:fontFamily="sans-serif-black" />
+                android:textSize="20sp" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -436,13 +433,13 @@
                 android:layout_marginTop="16dp">
                 <TextView
                     android:id="@+id/tvPricePreview"
+                    style="@style/AppHeading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:text="₹300"
                     android:textColor="@color/brand_primary"
-                    android:textSize="22sp"
-                    android:textStyle="bold" />
+                    android:textSize="22sp" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

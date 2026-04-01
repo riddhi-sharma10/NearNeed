@@ -41,7 +41,7 @@
                     android:text="Responses"
                     android:textColor="@color/text_header"
                     android:textSize="18sp"
-                    android:textStyle="bold" />
+                    style="@style/AppHeading" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -52,7 +52,7 @@
                     android:text="···"
                     android:textColor="@color/text_header"
                     android:textSize="28sp"
-                    android:textStyle="bold" />
+                    style="@style/AppHeading" />
             </RelativeLayout>
 
             <!-- Headline Context -->
@@ -76,7 +76,7 @@
                         android:text="URGENT"
                         android:textColor="@color/brand_warning_solid"
                         android:textSize="10sp"
-                        android:textStyle="bold"
+                        style="@style/AppHeading"
                         android:backgroundTint="@color/brand_warning_bg"
                         android:background="@drawable/bg_pill_pink_transparent"
                         android:paddingStart="8dp"
@@ -100,7 +100,7 @@
                     android:text="Emergency: Oxygen Cylinder Needed"
                     android:textColor="@color/text_header"
                     android:textSize="22sp"
-                    android:textStyle="bold"
+                    style="@style/AppHeading"
                     android:lineSpacingExtra="4dp" />
             </LinearLayout>
 
@@ -135,7 +135,7 @@
                             android:text="Slot progress"
                             android:textColor="@color/text_header"
                             android:textSize="14sp"
-                            android:textStyle="bold" />
+                            style="@style/AppHeading" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -271,7 +271,7 @@
                                         android:text="Anjali M."
                                         android:textColor="@color/text_header"
                                         android:textSize="16sp"
-                                        android:textStyle="bold" />
+                                        style="@style/AppHeading" />
                                     <ImageView
                                         android:layout_width="16dp"
                                         android:layout_height="16dp"
@@ -285,7 +285,7 @@
                                     android:text="★ 5.0 score"
                                     android:textColor="@color/brand_warning_solid"
                                     android:textSize="12sp"
-                                    android:textStyle="bold" />
+                                    style="@style/AppHeading" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -315,7 +315,7 @@
                                 android:textColor="@color/white"
                                 android:textAllCaps="false"
                                 android:textSize="14sp"
-                                android:textStyle="bold"
+                                style="@style/AppHeading"
                                 app:backgroundTint="@color/brand_error_solid"
                                 app:cornerRadius="16dp"
                                 android:elevation="0dp" />
@@ -330,7 +330,7 @@
                                 android:textColor="@color/brand_error_solid"
                                 android:textAllCaps="false"
                                 android:textSize="14sp"
-                                android:textStyle="bold"
+                                style="@style/AppHeading"
                                 app:backgroundTint="@color/white"
                                 app:strokeColor="@color/brand_error_bg"
                                 app:strokeWidth="1dp"
@@ -383,7 +383,7 @@
                                     android:text="Rahul S."
                                     android:textColor="@color/text_header"
                                     android:textSize="16sp"
-                                    android:textStyle="bold" />
+                                    style="@style/AppHeading" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -391,7 +391,7 @@
                                     android:text="★ 4.8 score"
                                     android:textColor="@color/brand_warning_solid"
                                     android:textSize="12sp"
-                                    android:textStyle="bold" />
+                                    style="@style/AppHeading" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -421,7 +421,7 @@
                                 android:textColor="@color/white"
                                 android:textAllCaps="false"
                                 android:textSize="14sp"
-                                android:textStyle="bold"
+                                style="@style/AppHeading"
                                 app:backgroundTint="@color/brand_error_solid"
                                 app:cornerRadius="16dp"
                                 android:elevation="0dp" />
@@ -436,7 +436,7 @@
                                 android:textColor="@color/brand_error_solid"
                                 android:textAllCaps="false"
                                 android:textSize="14sp"
-                                android:textStyle="bold"
+                                style="@style/AppHeading"
                                 app:backgroundTint="@color/white"
                                 app:strokeColor="@color/brand_error_bg"
                                 app:strokeWidth="1dp"
@@ -494,7 +494,7 @@
                                         android:text="Sarah K."
                                         android:textColor="@color/text_header"
                                         android:textSize="16sp"
-                                        android:textStyle="bold" />
+                                        style="@style/AppHeading" />
                                     <ImageView
                                         android:layout_width="16dp"
                                         android:layout_height="16dp"
@@ -508,7 +508,7 @@
                                     android:text="★ 4.9 score"
                                     android:textColor="@color/brand_warning_solid"
                                     android:textSize="12sp"
-                                    android:textStyle="bold" />
+                                    style="@style/AppHeading" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -538,7 +538,7 @@
                                 android:textColor="@color/white"
                                 android:textAllCaps="false"
                                 android:textSize="14sp"
-                                android:textStyle="bold"
+                                style="@style/AppHeading"
                                 app:backgroundTint="@color/brand_error_solid"
                                 app:cornerRadius="16dp"
                                 android:elevation="0dp" />
@@ -553,7 +553,7 @@
                                 android:textColor="@color/brand_error_solid"
                                 android:textAllCaps="false"
                                 android:textSize="14sp"
-                                android:textStyle="bold"
+                                style="@style/AppHeading"
                                 app:backgroundTint="@color/white"
                                 app:strokeColor="@color/brand_error_bg"
                                 app:strokeWidth="1dp"

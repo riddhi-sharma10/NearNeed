@@ -35,13 +35,13 @@
                     android:src="@drawable/ic_back_arrow" />
 
                 <TextView
+                    style="@style/AppHeading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:text="POST DETAIL"
                     android:textColor="@color/text_header"
                     android:textSize="14sp"
-                    android:textStyle="bold"
                     android:letterSpacing="0.1" />
 
                 <ImageButton
@@ -75,30 +75,20 @@
                     app:tint="@color/brand_error_solid" />
 
                 <TextView
+                    style="@style/AppHeading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
                     android:text="Food Support"
                     android:textColor="@color/brand_error_solid"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+                    android:textSize="14sp" />
             </LinearLayout>
 
             <!-- URGENT Banner -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/brand_warning"
-                android:gravity="center"
-                android:padding="8dp"
-                android:text="URGENT"
-                android:textColor="@color/white"
-                android:textSize="12sp"
-                android:textStyle="bold"
-                android:letterSpacing="0.1"
-                app:drawableStartCompat="@drawable/ic_info_red"
-                app:drawableTint="@color/white"
-                android:drawablePadding="8dp" />
+                            <TextView
+                                style="@style/AppHeading"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
 
             <!-- Content Area -->
             <LinearLayout

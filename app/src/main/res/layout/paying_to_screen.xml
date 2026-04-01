@@ -57,13 +57,13 @@
                         android:src="@drawable/ic_logo" />
 
                     <TextView
+                        style="@style/AppHeading"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
                         android:text="NearNeed"
                         android:textColor="@color/text_body_dark"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        android:textSize="18sp" />
                 </LinearLayout>
 
                 <ImageView
@@ -91,24 +91,25 @@
                 android:paddingTop="32dp">
 
                 <TextView
+                    style="@style/AppHeading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:letterSpacing="0.05"
                     android:text="PAYING TO"
                     android:textColor="@color/text_body_light"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
+                    android:textSize="12sp" />
 
                 <TextView
+                    style="@style/AppHeading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:text="Rahul S."
                     android:textColor="@color/text_body_dark"
-                    android:textSize="22sp"
-                    android:textStyle="bold" />
+                    android:textSize="22sp" />
 
                 <TextView
+                    style="@style/AppDescription"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
@@ -128,12 +129,12 @@
                     android:paddingVertical="20dp">
 
                     <TextView
+                        style="@style/AppHeading"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Total Amount"
                         android:textColor="@color/brand_primary"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
+                        android:textSize="14sp" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -142,21 +143,20 @@
                         android:orientation="horizontal">
 
                         <TextView
+                            style="@style/AppHeading"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="₹"
                             android:textColor="@color/brand_primary"
-                            android:textSize="36sp"
-                            android:textStyle="bold" />
+                            android:textSize="36sp" />
 
                         <TextView
+                            style="@style/AppHeading"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="4dp"
                             android:text="250"
                             android:textColor="@color/brand_primary"
-                            android:textSize="36sp"
-                            android:textStyle="bold" />
+                            android:textSize="36sp" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -170,12 +170,12 @@
                 android:paddingTop="32dp">
 
                 <TextView
+                    style="@style/AppHeading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="UPI ID"
                     android:textColor="@color/text_subheadline"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
+                    android:textSize="12sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -187,6 +187,7 @@
                     android:paddingHorizontal="16dp">
 
                     <TextView
+                        style="@style/AppDescription"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -195,6 +196,7 @@
                         android:textSize="16sp" />
 
                     <TextView
+                        style="@style/AppHeading"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/bg_badge_verified_green"
@@ -202,8 +204,7 @@
                         android:paddingVertical="4dp"
                         android:text="VERIFIED"
                         android:textColor="@color/brand_success_solid"
-                        android:textSize="10sp"
-                        android:textStyle="bold" />
+                        android:textSize="10sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -221,6 +222,7 @@
                         app:tint="@color/text_hint" />
 
                     <TextView
+                        style="@style/AppDescription"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Secure payment processed by Razorpay"
@@ -231,6 +233,7 @@
                 <!-- Pay Button -->
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_pay"
+                    style="@style/AppHeading"
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
                     android:layout_marginTop="32dp"
@@ -238,8 +241,7 @@
                     android:text="Pay ₹250"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textSize="16sp" />
 
                 <!-- Footer text -->
                 <LinearLayout
@@ -250,13 +252,13 @@
                     android:orientation="horizontal">
 
                     <TextView
+                        style="@style/AppHeading"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:letterSpacing="0.05"
                         android:text="POWERED BY"
                         android:textColor="@color/text_hint"
-                        android:textSize="10sp"
-                        android:textStyle="bold" />
+                        android:textSize="10sp" />
 
                     <ImageView
                         android:layout_width="16dp"
@@ -265,13 +267,13 @@
                         android:src="@drawable/ic_razorpay_placeholder" />
 
                     <TextView
+                        style="@style/AppHeading"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
                         android:text="Razorpay"
                         android:textColor="@color/text_body_light"
-                        android:textSize="12sp"
-                        android:textStyle="bold" />
+                        android:textSize="12sp" />
                 </LinearLayout>
 
             </LinearLayout>

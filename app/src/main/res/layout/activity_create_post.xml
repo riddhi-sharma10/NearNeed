@@ -52,13 +52,13 @@
         
             <!-- Title -->
             <TextView
+                style="@style/AppHeading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:text="What are you posting?"
                 android:textSize="18sp"
                 android:textColor="@color/text_header"
-                android:textStyle="bold"
                 android:layout_marginBottom="32dp" />
         
             <!-- Card 1: Gig Post -->
@@ -113,12 +113,12 @@
                         android:orientation="vertical">
         
                         <TextView
+                            style="@style/AppHeading"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Gig Post"
                             android:textColor="@color/text_header"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
+                            android:textSize="16sp" />
         
                         <TextView
                             android:layout_width="wrap_content"
@@ -129,6 +129,7 @@
                             android:textSize="13sp" />
         
                         <TextView
+                            style="@style/AppHeading"
                             android:layout_width="wrap_content"
                             android:layout_height="36dp"
                             android:layout_gravity="end"
@@ -136,7 +137,6 @@
                             android:text="Continue →"
                             android:textColor="@color/white"
                             android:textSize="13sp"
-                            android:textStyle="bold"
                             android:gravity="center"
                             android:paddingStart="20dp"
                             android:paddingEnd="20dp"
@@ -197,12 +197,12 @@
                         android:orientation="vertical">
         
                         <TextView
+                            style="@style/AppHeading"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Community Post"
                             android:textColor="@color/text_header"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
+                            android:textSize="16sp" />
         
                         <TextView
                             android:layout_width="wrap_content"
@@ -213,6 +213,7 @@
                             android:textSize="13sp" />
         
                         <TextView
+                            style="@style/AppHeading"
                             android:layout_width="wrap_content"
                             android:layout_height="36dp"
                             android:layout_gravity="end"
@@ -220,7 +221,6 @@
                             android:text="Continue →"
                             android:textColor="@color/white"
                             android:textSize="13sp"
-                            android:textStyle="bold"
                             android:gravity="center"
                             android:paddingStart="20dp"
                             android:paddingEnd="20dp"
@@ -232,13 +232,13 @@
             <!-- Skip for now link -->
             <TextView
                 android:id="@+id/tvSkipForNow"
+                style="@style/AppHeading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:text="Skip for now"
                 android:textColor="@color/text_header"
                 android:textSize="14sp"
-                android:textStyle="bold"
                 android:padding="8dp"
                 android:layout_marginBottom="16dp"
                 android:clickable="true"

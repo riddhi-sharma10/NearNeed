@@ -24,12 +24,12 @@
 
         <TextView
             android:id="@+id/tv_title"
+            style="@style/AppHeading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/txt_pay_status_title"
             android:textColor="@color/text_body_dark"
             android:textSize="18sp"
-            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/iv_close"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -66,13 +66,13 @@
             </FrameLayout>
 
             <TextView
+                style="@style/AppHeading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:text="@string/txt_pay_confirmed"
                 android:textColor="@color/text_body_dark"
-                android:textSize="22sp"
-                android:textStyle="bold" />
+                android:textSize="22sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -83,14 +83,14 @@
                 android:textSize="16sp" />
 
             <TextView
+                style="@style/AppHeading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:letterSpacing="0.1"
                 android:text="@string/txt_pay_txn_id"
                 android:textColor="@color/text_hint"
-                android:textSize="12sp"
-                android:textStyle="bold" />
+                android:textSize="12sp" />
 
             <!-- Save Receipt Pill -->
             <LinearLayout
@@ -111,12 +111,12 @@
                     app:tint="@color/text_body_dark" />
 
                 <TextView
+                    style="@style/AppHeading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/txt_pay_save_receipt"
                     android:textColor="@color/text_body_dark"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+                    android:textSize="14sp" />
             </LinearLayout>
         </LinearLayout>
 
@@ -171,12 +171,12 @@
                         android:background="@drawable/bg_dot_green" />
 
                     <TextView
+                        style="@style/AppHeading"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/txt_pay_success"
                         android:textColor="@color/brand_success_solid"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
+                        android:textSize="14sp" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -196,17 +196,18 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    style="@style/AppHeading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Rahul S."
                     android:textColor="@color/text_body_dark"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+                    android:textSize="14sp" />
             </LinearLayout>
 
             <!-- Rate Button -->
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn_rate"
+                style="@style/AppHeading"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginBottom="24dp"
@@ -214,19 +215,18 @@
                 android:text="@string/txt_pay_rate_button"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textSize="16sp" />
 
             <!-- Rate Later Link -->
             <TextView
                 android:id="@+id/tv_rate_later"
+                style="@style/AppHeading"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="@string/txt_pay_rate_later"
                 android:textColor="@color/text_subheadline"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textSize="16sp" />
 
         </LinearLayout>
 

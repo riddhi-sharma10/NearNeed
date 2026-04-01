@@ -39,13 +39,13 @@
                     android:src="@drawable/ic_back_arrow" />
                     
                 <TextView
+                    style="@style/AppHeading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:text="Profile"
                     android:textColor="@color/text_header"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textSize="18sp" />
 
                 <ImageButton
                     android:layout_width="40dp"
@@ -94,13 +94,13 @@
                 </FrameLayout>
 
                 <TextView
+                    style="@style/AppHeading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
                     android:text="Abhinav Oberoi"
                     android:textColor="@color/text_header"
-                    android:textSize="22sp"
-                    android:fontFamily="sans-serif-black" />
+                    android:textSize="22sp" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -116,6 +116,7 @@
                         app:tint="@color/text_muted" />
 
                     <TextView
+                        style="@style/AppDescription"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
@@ -143,6 +144,7 @@
                     
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/btnEditProfile"
+                        style="@style/AppHeading"
                         android:layout_width="0dp"
                         android:layout_height="48dp"
                         android:layout_weight="1"
@@ -150,7 +152,6 @@
                         android:textColor="@color/white"
                         android:textAllCaps="false"
                         android:textSize="14sp"
-                        android:fontFamily="sans-serif-medium"
                         app:backgroundTint="@color/brand_primary"
                         app:cornerRadius="16dp"
                         android:elevation="0dp" />
@@ -189,14 +190,14 @@
                     android:src="@drawable/ic_check_circle_green" />
                 
                 <TextView
+                    style="@style/AppHeading"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginStart="8dp"
                     android:text="ID Verified"
                     android:textColor="@color/brand_success_alt"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
+                    android:textSize="12sp" />
 
                 <ImageView
                     android:layout_width="16dp"
@@ -223,23 +224,23 @@
                     android:layout_height="wrap_content">
                     
                     <TextView
+                        style="@style/AppHeading"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="NEIGHBOUR SCORE"
                         android:textColor="@color/text_subheadline"
                         android:textSize="10sp"
-                        android:textStyle="bold"
                         android:letterSpacing="0.05" />
                         
                     <TextView
                         android:id="@+id/btnViewReviews"
+                        style="@style/AppHeading"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:text="View Reviews"
                         android:textColor="@color/brand_primary"
-                        android:textSize="11sp"
-                        android:textStyle="bold" />
+                        android:textSize="11sp" />
                 </RelativeLayout>
 
                 <LinearLayout
@@ -250,12 +251,12 @@
                     android:gravity="center_vertical">
                     
                     <TextView
+                        style="@style/AppHeading"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="4.8"
                         android:textColor="@color/text_header"
-                        android:textSize="24sp"
-                        android:fontFamily="sans-serif-black" />
+                        android:textSize="24sp" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -291,12 +292,12 @@
                         android:orientation="vertical"
                         android:gravity="center">
                         <TextView
+                            style="@style/AppHeading"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="12"
                             android:textColor="@color/text_header"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
+                            android:textSize="16sp" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -318,12 +319,12 @@
                         android:orientation="vertical"
                         android:gravity="center">
                         <TextView
+                            style="@style/AppHeading"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="8"
                             android:textColor="@color/text_header"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
+                            android:textSize="16sp" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -345,12 +346,12 @@
                         android:orientation="vertical"
                         android:gravity="center">
                         <TextView
+                            style="@style/AppHeading"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="15"
                             android:textColor="@color/text_header"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
+                            android:textSize="16sp" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -370,22 +371,22 @@
                 android:paddingStart="24dp"
                 android:paddingEnd="24dp">
                 <TextView
+                    style="@style/AppHeading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="RECENT ACTIVITY"
                     android:textColor="@color/text_header"
                     android:textSize="12sp"
-                    android:textStyle="bold"
                     android:letterSpacing="0.05" />
                 <TextView
                     android:id="@+id/btnSeeAllActivity"
+                    style="@style/AppHeading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:text="See All"
                     android:textColor="@color/brand_primary"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
+                    android:textSize="12sp" />
             </RelativeLayout>
 
             <HorizontalScrollView
@@ -419,13 +420,13 @@
                             app:tint="@color/brand_info_vibrant"/>
 
                         <TextView
+                            style="@style/AppHeading"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:text="Watered Plants"
                             android:textColor="@color/text_header"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
+                            android:textSize="14sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -454,13 +455,13 @@
                             app:tint="@color/brand_warning_alt"/>
 
                         <TextView
+                            style="@style/AppHeading"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:text="Grocery Run"
                             android:textColor="@color/text_header"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
+                            android:textSize="14sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -496,7 +497,15 @@
                     android:paddingEnd="16dp"
                     android:background="?attr/selectableItemBackground">
                     <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_bg_house" app:tint="@color/text_subheadline"/>
-                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="16dp" android:text="My Posts" android:textColor="@color/text_secondary_dark" android:textSize="14sp" android:fontFamily="sans-serif-medium" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="16dp"
+                        android:text="My Posts"
+                        android:textColor="@color/text_secondary_dark"
+                        android:textSize="14sp"
+                        style="@style/AppHeading" />
                     <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_forward_arrow" app:tint="@color/pagers_indicator_inactive" />
                 </LinearLayout>
                 
@@ -513,7 +522,15 @@
                     android:paddingEnd="16dp"
                     android:background="?attr/selectableItemBackground">
                     <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_pin_white" app:tint="@color/text_subheadline"/>
-                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="16dp" android:text="Saved Tasks" android:textColor="@color/text_secondary_dark" android:textSize="14sp" android:fontFamily="sans-serif-medium" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="16dp"
+                        android:text="Saved Tasks"
+                        android:textColor="@color/text_secondary_dark"
+                        android:textSize="14sp"
+                        style="@style/AppHeading" />
                     <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_forward_arrow" app:tint="@color/pagers_indicator_inactive" />
                 </LinearLayout>
 
@@ -530,7 +547,15 @@
                     android:paddingEnd="16dp"
                     android:background="?attr/selectableItemBackground">
                     <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_info_circle" app:tint="@color/text_subheadline"/>
-                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="16dp" android:text="Help &amp; Support" android:textColor="@color/text_secondary_dark" android:textSize="14sp" android:fontFamily="sans-serif-medium" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="16dp"
+                        android:text="Help &amp; Support"
+                        android:textColor="@color/text_secondary_dark"
+                        android:textSize="14sp"
+                        style="@style/AppHeading" />
                     <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_forward_arrow" app:tint="@color/pagers_indicator_inactive" />
                 </LinearLayout>
 
@@ -547,7 +572,15 @@
                     android:paddingEnd="16dp"
                     android:background="?attr/selectableItemBackground">
                     <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_solid_wrench" app:tint="@color/text_subheadline"/>
-                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="16dp" android:text="Settings" android:textColor="@color/text_secondary_dark" android:textSize="14sp" android:fontFamily="sans-serif-medium" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="16dp"
+                        android:text="Settings"
+                        android:textColor="@color/text_secondary_dark"
+                        android:textSize="14sp"
+                        style="@style/AppHeading" />
                     <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_forward_arrow" app:tint="@color/pagers_indicator_inactive" />
                 </LinearLayout>
 
@@ -556,6 +589,7 @@
             <!-- Logout Button -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnLogout"
+                style="@style/AppHeading"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginTop="24dp"
@@ -566,7 +600,6 @@
                 android:textColor="@color/brand_error_solid"
                 android:textAllCaps="false"
                 android:textSize="14sp"
-                android:fontFamily="sans-serif-bold"
                 app:backgroundTint="@color/brand_error_bg_light"
                 app:cornerRadius="16dp"
                 android:elevation="0dp" />

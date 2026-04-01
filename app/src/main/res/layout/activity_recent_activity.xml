@@ -32,13 +32,13 @@
             android:src="@drawable/ic_back_arrow" />
             
         <TextView
+            style="@style/AppHeading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="Recent Activity"
             android:textColor="@color/text_header"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textSize="18sp" />
     </RelativeLayout>
 
     <ScrollView
@@ -55,12 +55,12 @@
             android:clipChildren="false">
 
             <TextView
+                style="@style/AppHeading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Your Completed Tasks"
                 android:textColor="@color/text_header"
                 android:textSize="16sp"
-                android:textStyle="bold"
                 android:layout_marginBottom="16dp"/>
 
             <!-- Completed Task 1 -->
@@ -72,13 +72,16 @@
                 android:elevation="2dp">
                 <View android:layout_width="4dp" android:layout_height="match_parent" android:background="@drawable/bg_left_border_blue" />
                 <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp" android:layout_marginStart="4dp">
-                    <TextView android:id="@+id/t1_tag" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="COMPLETED" android:textColor="@color/brand_success_vibrant" android:textSize="11sp" android:textStyle="bold" />
-                    <TextView android:id="@+id/c1_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/t1_tag" android:layout_marginTop="4dp" android:text="@string/txt_plumbing_repair" android:textColor="@color/text_header" android:textSize="18sp" android:textStyle="bold" />
-                    <TextView android:id="@+id/c1_price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/c1_title" android:layout_marginTop="2dp" android:text="@string/txt_price_400" android:textColor="@color/brand_primary" android:textSize="15sp" android:textStyle="bold" />
-                    <TextView android:id="@+id/c1_desc" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/c1_price" android:layout_toStartOf="@+id/card_img_1" android:layout_marginTop="4dp" android:text="Fixed the bathroom pipe burst successfully." android:textColor="@color/text_subheadline" android:textSize="12sp" android:layout_marginEnd="12dp"/>
+                    <TextView
+                        style="@style/AppHeading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView android:id="@+id/c1_title" style="@style/AppHeading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/t1_tag" android:layout_marginTop="4dp" android:text="@string/txt_plumbing_repair" android:textColor="@color/text_header" android:textSize="18sp" />
+                    <TextView android:id="@+id/c1_price" style="@style/AppHeading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/c1_title" android:layout_marginTop="2dp" android:text="@string/txt_price_400" android:textColor="@color/brand_primary" android:textSize="15sp" />
+                    <TextView android:id="@+id/c1_desc" style="@style/AppDescription" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/c1_price" android:layout_toStartOf="@+id/card_img_1" android:layout_marginTop="4dp" android:text="Fixed the bathroom pipe burst successfully." android:textColor="@color/text_subheadline" android:textSize="12sp" android:layout_marginEnd="12dp"/>
                     <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/c1_desc" android:layout_marginTop="12dp" android:background="@color/surface_background" android:padding="8dp">
                         <ImageView android:layout_width="14dp" android:layout_height="14dp" android:src="@drawable/ic_star_yellow" />
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="6dp" android:text="Received 5 star rating" android:textColor="@color/text_subheadline" android:textSize="11sp" android:textStyle="bold" />
+                        <TextView style="@style/AppHeading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="6dp" android:text="Received 5 star rating" android:textColor="@color/text_subheadline" android:textSize="11sp" />
                     </LinearLayout>
                     <ImageView android:id="@+id/card_img_1" android:layout_width="80dp" android:layout_height="80dp" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:background="@drawable/bg_image_placeholder" />
                 </RelativeLayout>
@@ -93,13 +96,13 @@
                 android:elevation="2dp">
                 <View android:layout_width="4dp" android:layout_height="match_parent" android:background="@drawable/bg_left_border_red" />
                 <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp" android:layout_marginStart="4dp">
-                    <TextView android:id="@+id/c2_tag" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="COMPLETED" android:textColor="@color/brand_success_vibrant" android:textSize="11sp" android:textStyle="bold" />
-                    <TextView android:id="@+id/c2_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/c2_tag" android:layout_marginTop="4dp" android:text="@string/txt_garden_cleanup" android:textColor="@color/text_header" android:textSize="18sp" android:textStyle="bold" />
-                    <TextView android:id="@+id/c2_sub" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/c2_title" android:text="@string/txt_community_project" android:textColor="@color/text_subheadline" android:textSize="12sp" />
-                    <TextView android:id="@+id/c2_desc" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/c2_sub" android:layout_toStartOf="@+id/card_img_2" android:layout_marginTop="4dp" android:text="Helped clear up the community park with 9 other volunteers." android:textColor="@color/text_subheadline" android:textSize="12sp" android:layout_marginEnd="12dp"/>
+                    <TextView android:id="@+id/c2_tag" style="@style/AppHeading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="COMPLETED" android:textColor="@color/brand_success_vibrant" android:textSize="11sp" />
+                    <TextView android:id="@+id/c2_title" style="@style/AppHeading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/c2_tag" android:layout_marginTop="4dp" android:text="@string/txt_garden_cleanup" android:textColor="@color/text_header" android:textSize="18sp" />
+                    <TextView android:id="@+id/c2_sub" style="@style/AppDescription" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/c2_title" android:text="@string/txt_community_project" android:textColor="@color/text_subheadline" android:textSize="12sp" />
+                    <TextView android:id="@+id/c2_desc" style="@style/AppDescription" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/c2_sub" android:layout_toStartOf="@+id/card_img_2" android:layout_marginTop="4dp" android:text="Helped clear up the community park with 9 other volunteers." android:textColor="@color/text_subheadline" android:textSize="12sp" android:layout_marginEnd="12dp"/>
                     <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/c2_desc" android:layout_marginTop="12dp" android:background="@color/surface_background" android:padding="8dp">
                         <ImageView android:layout_width="14dp" android:layout_height="14dp" android:src="@drawable/ic_star_yellow" />
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="6dp" android:text="Received 4 star rating" android:textColor="@color/text_subheadline" android:textSize="11sp" android:textStyle="bold" />
+                        <TextView style="@style/AppHeading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="6dp" android:text="Received 4 star rating" android:textColor="@color/text_subheadline" android:textSize="11sp" />
                     </LinearLayout>
                     <ImageView android:id="@+id/card_img_2" android:layout_width="80dp" android:layout_height="80dp" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:background="@drawable/bg_image_placeholder" />
                 </RelativeLayout>
@@ -114,13 +117,13 @@
                 android:elevation="2dp">
                 <View android:layout_width="4dp" android:layout_height="match_parent" android:background="@drawable/bg_left_border_blue" />
                 <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp" android:layout_marginStart="4dp">
-                    <TextView android:id="@+id/t3_tag" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="COMPLETED" android:textColor="@color/brand_success_vibrant" android:textSize="11sp" android:textStyle="bold" />
-                    <TextView android:id="@+id/c3_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/t3_tag" android:layout_marginTop="4dp" android:text="Grocery Delivery" android:textColor="@color/text_header" android:textSize="18sp" android:textStyle="bold" />
-                    <TextView android:id="@+id/c3_price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/c3_title" android:layout_marginTop="2dp" android:text="₹150" android:textColor="@color/brand_primary" android:textSize="15sp" android:textStyle="bold" />
-                    <TextView android:id="@+id/c3_desc" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/c3_price" android:layout_toStartOf="@+id/card_img_3" android:layout_marginTop="4dp" android:text="Delivered milk and eggs to Block C senior residents." android:textColor="@color/text_subheadline" android:textSize="12sp" android:layout_marginEnd="12dp"/>
+                    <TextView android:id="@+id/t3_tag" style="@style/AppHeading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="COMPLETED" android:textColor="@color/brand_success_vibrant" android:textSize="11sp" />
+                    <TextView android:id="@+id/c3_title" style="@style/AppHeading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/t3_tag" android:layout_marginTop="4dp" android:text="Grocery Delivery" android:textColor="@color/text_header" android:textSize="18sp" />
+                    <TextView android:id="@+id/c3_price" style="@style/AppHeading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/c3_title" android:layout_marginTop="2dp" android:text="₹150" android:textColor="@color/brand_primary" android:textSize="15sp" />
+                    <TextView android:id="@+id/c3_desc" style="@style/AppDescription" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/c3_price" android:layout_toStartOf="@+id/card_img_3" android:layout_marginTop="4dp" android:text="Delivered milk and eggs to Block C senior residents." android:textColor="@color/text_subheadline" android:textSize="12sp" android:layout_marginEnd="12dp"/>
                     <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/c3_desc" android:layout_marginTop="12dp" android:background="@color/surface_background" android:padding="8dp">
                         <ImageView android:layout_width="14dp" android:layout_height="14dp" android:src="@drawable/ic_star_yellow" />
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="6dp" android:text="Received 5 star rating" android:textColor="@color/text_subheadline" android:textSize="11sp" android:textStyle="bold" />
+                        <TextView style="@style/AppHeading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="6dp" android:text="Received 5 star rating" android:textColor="@color/text_subheadline" android:textSize="11sp" />
                     </LinearLayout>
                     <ImageView android:id="@+id/card_img_3" android:layout_width="80dp" android:layout_height="80dp" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:background="@drawable/bg_image_placeholder" />
                 </RelativeLayout>
@@ -135,13 +138,13 @@
                 android:elevation="2dp">
                 <View android:layout_width="4dp" android:layout_height="match_parent" android:background="@drawable/bg_left_border_red" />
                 <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp" android:layout_marginStart="4dp">
-                    <TextView android:id="@+id/t4_tag" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="COMPLETED" android:textColor="@color/brand_success_vibrant" android:textSize="11sp" android:textStyle="bold" />
-                    <TextView android:id="@+id/c4_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/t4_tag" android:layout_marginTop="4dp" android:text="Furniture Assembly" android:textColor="@color/text_header" android:textSize="18sp" android:textStyle="bold" />
-                    <TextView android:id="@+id/c4_sub" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/c4_title" android:text="Voluntary Help Act" android:textColor="@color/text_subheadline" android:textSize="12sp" />
-                    <TextView android:id="@+id/c4_desc" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/c4_sub" android:layout_toStartOf="@+id/card_img_4" android:layout_marginTop="4dp" android:text="Helped assemble a study table for a student neighbor." android:textColor="@color/text_subheadline" android:textSize="12sp" android:layout_marginEnd="12dp"/>
+                    <TextView android:id="@+id/t4_tag" style="@style/AppHeading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="COMPLETED" android:textColor="@color/brand_success_vibrant" android:textSize="11sp" />
+                    <TextView android:id="@+id/c4_title" style="@style/AppHeading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/t4_tag" android:layout_marginTop="4dp" android:text="Furniture Assembly" android:textColor="@color/text_header" android:textSize="18sp" />
+                    <TextView android:id="@+id/c4_sub" style="@style/AppDescription" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/c4_title" android:text="Voluntary Help Act" android:textColor="@color/text_subheadline" android:textSize="12sp" />
+                    <TextView android:id="@+id/c4_desc" style="@style/AppDescription" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/c4_sub" android:layout_toStartOf="@+id/card_img_4" android:layout_marginTop="4dp" android:text="Helped assemble a study table for a student neighbor." android:textColor="@color/text_subheadline" android:textSize="12sp" android:layout_marginEnd="12dp"/>
                     <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/c4_desc" android:layout_marginTop="12dp" android:background="@color/surface_background" android:padding="8dp">
                         <ImageView android:layout_width="14dp" android:layout_height="14dp" android:src="@drawable/ic_star_yellow" />
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="6dp" android:text="Received 5 star rating" android:textColor="@color/text_subheadline" android:textSize="11sp" android:textStyle="bold" />
+                        <TextView style="@style/AppHeading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="6dp" android:text="Received 5 star rating" android:textColor="@color/text_subheadline" android:textSize="11sp" />
                     </LinearLayout>
                     <ImageView android:id="@+id/card_img_4" android:layout_width="80dp" android:layout_height="80dp" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:background="@drawable/bg_image_placeholder" />
                 </RelativeLayout>

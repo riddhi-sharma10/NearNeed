@@ -29,7 +29,7 @@
         android:text="@string/txt_emergency_post_title"
         android:textColor="@color/text_header"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        style="@style/AppHeading" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -55,7 +55,7 @@
         android:text="@string/txt_btn_post_now"
         android:textColor="@color/brand_error_solid"
         android:textSize="16sp"
-        android:textStyle="bold"
+        style="@style/AppHeading"
         android:gravity="center"
         android:clickable="true"
         android:focusable="true"
@@ -73,7 +73,7 @@
         android:text="@string/txt_btn_cancel"
         android:textColor="@color/text_subheadline"
         android:textSize="16sp"
-        android:textStyle="bold"
+        style="@style/AppHeading"
         android:gravity="center"
         android:clickable="true"
         android:focusable="true"

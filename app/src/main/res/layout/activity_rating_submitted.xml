@@ -39,13 +39,13 @@
                     android:textSize="24sp" />
 
                 <TextView
+                    style="@style/AppHeading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:text="Rating Confirmation"
                     android:textColor="@color/text_header"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textSize="16sp" />
             </RelativeLayout>
 
             <!-- Star Graphic -->
@@ -67,14 +67,14 @@
 
             <!-- Texts -->
             <TextView
+                style="@style/AppHeading"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:text="Rating submitted."
                 android:textAlignment="center"
                 android:textColor="@color/text_header"
-                android:textSize="22sp"
-                android:textStyle="bold" />
+                android:textSize="22sp" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -111,6 +111,7 @@
             <!-- Back to Feed Button -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnBackToFeed"
+                style="@style/AppHeading"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginStart="24dp"
@@ -121,7 +122,6 @@
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="16sp"
-                android:textStyle="bold"
                 app:backgroundTint="@color/brand_error_solid"
                 app:cornerRadius="16dp" />
 
