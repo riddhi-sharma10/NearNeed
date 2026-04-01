@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/surface_background_clean"
+    android:background="@color/white"
     tools:ignore="HardcodedText,ContentDescription,SpUsage">
 
     <ScrollView
@@ -38,67 +38,51 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text="Community Post"
+                    android:text="New Community Post"
                     android:textColor="@color/text_header"
-                    android:textSize="18sp" />
-                    
-                <TextView
-                    style="@style/AppHeading"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:text="Step 2 of 2"
-                    android:textColor="@color/brand_error_solid"
-                    android:textSize="12sp" />
+                    android:textSize="16sp" />
             </RelativeLayout>
 
             <!-- Progress Bar -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:gravity="center_vertical">
+                <TextView
+                    style="@style/AppHeading"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Step 2 of 2"
+                    android:textColor="@color/text_header"
+                    android:textSize="14sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100%"
+                    android:textColor="@color/brand_error_solid"
+                    android:textSize="12sp"
+                    style="@style/AppHeading" />
+            </LinearLayout>
             <ProgressBar
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="match_parent"
                 android:layout_height="6dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
                 android:progress="100"
                 android:max="100"
                 android:progressDrawable="@drawable/bg_progress_bar_red_flat" />
 
-            <!-- Warning Alert Block -->
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:background="@drawable/bg_alert_dark_red"
-                android:orientation="horizontal"
-                android:padding="20dp">
-                
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/ic_info_red"
-                    app:tint="@color/brand_error_bg"
-                    android:layout_marginEnd="16dp" />
-                    
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-                    
-                            <TextView
-                                style="@style/AppHeading"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" />
-                        
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="SMS will be sent to all nearby neighbours."
-                        android:textColor="@color/brand_error_bg"
-                        android:textSize="13sp" />
-                </LinearLayout>
-            </LinearLayout>
+                android:layout_marginTop="16dp"
+                android:text="Add a photo, voice note, and your location details."
+                android:textColor="@color/text_subheadline"
+                android:textSize="16sp" />
 
             <!-- ── ADD PHOTOS ── -->
             <TextView
@@ -107,9 +91,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:text="ADD PHOTOS"
-                android:textColor="@color/text_subheadline"
+                android:textColor="@color/text_muted"
                 android:textSize="11sp"
-                android:letterSpacing="0.05" />
+                android:letterSpacing="0.1" />
 
             <HorizontalScrollView
                 android:layout_width="match_parent"
@@ -123,31 +107,67 @@
                     android:orientation="horizontal"
                     android:gravity="center_vertical">
 
+                    <!-- Add button -->
+                    <LinearLayout
+                        android:id="@+id/btnAddPhoto"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="@drawable/bg_district_pill_input_white_stroke"
+                        android:elevation="4dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_marginEnd="12dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_camera_blue"
+                            app:tint="@color/brand_error_solid"
+                            android:importantForAccessibility="no" />
+
+                        <TextView
+                            style="@style/AppHeading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ADD"
+                            android:textColor="@color/brand_error_solid"
+                            android:textSize="11sp"
+                            android:layout_marginTop="4dp" />
+                    </LinearLayout>
+
                     <!-- Photo slot 1 -->
                     <ImageView
+                        android:id="@+id/ivPhoto1"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/bg_image_placeholder"
                         android:layout_marginEnd="12dp"
-                        android:background="@drawable/bg_photo_dashed" />
+                        android:background="@drawable/bg_card_base"
+                        android:elevation="4dp" />
 
                     <!-- Photo slot 2 -->
                     <ImageView
+                        android:id="@+id/ivPhoto2"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/bg_image_placeholder"
                         android:layout_marginEnd="12dp"
-                        android:background="@drawable/bg_photo_dashed" />
+                        android:background="@drawable/bg_card_base"
+                        android:elevation="4dp" />
 
                     <!-- Photo slot 3 -->
                     <ImageView
+                        android:id="@+id/ivPhoto3"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/bg_image_placeholder"
-                        android:background="@drawable/bg_photo_dashed" />
+                        android:background="@drawable/bg_card_base"
+                        android:elevation="4dp" />
                 </LinearLayout>
             </HorizontalScrollView>
 
@@ -158,9 +178,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
                 android:text="VOICE NOTE"
-                android:textColor="@color/text_subheadline"
+                android:textColor="@color/text_muted"
                 android:textSize="11sp"
-                android:letterSpacing="0.05" />
+                android:letterSpacing="0.1" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -171,31 +191,33 @@
                 android:padding="16dp">
 
                 <FrameLayout
-                    android:id="@+id/iconVoice"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:id="@+id/iconVoiceContainer"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
                     android:background="@drawable/bg_circle_pink"
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true">
                     <ImageView
+                        android:id="@+id/ivVoiceStatus"
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:layout_gravity="center"
                         android:src="@drawable/ic_mic_blue"
-                        app:tint="@color/brand_error_solid"
-                        android:importantForAccessibility="no" />
+                        app:tint="@color/brand_error_solid" />
                 </FrameLayout>
 
                 <LinearLayout
+                    android:id="@+id/textContainer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_toEndOf="@id/iconVoice"
-                    android:layout_toStartOf="@id/btnStartRecording"
+                    android:layout_toEndOf="@id/iconVoiceContainer"
+                    android:layout_toStartOf="@+id/actionContainer"
                     android:layout_marginStart="14dp"
                     android:layout_centerVertical="true"
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/tvVoiceTitle"
                         style="@style/AppHeading"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -204,27 +226,65 @@
                         android:textSize="14sp" />
 
                     <TextView
-                        style="@style/AppDescription"
+                        android:id="@+id/tvVoiceSub"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
-                        android:text="Record a voice note for better clarity"
+                        android:text="Record a 20-second voice note"
                         android:textColor="@color/text_muted"
                         android:textSize="12sp" />
                 </LinearLayout>
 
-                <TextView
-                    android:id="@+id/btnStartRecording"
-                    style="@style/AppHeading"
+                <LinearLayout
+                    android:id="@+id/actionContainer"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
-                    android:text="Start"
-                    android:textColor="@color/brand_error_solid"
-                    android:textSize="13sp"
-                    android:clickable="true"
-                    android:focusable="true" />
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/btnStartRecording"
+                        style="@style/AppHeading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Start"
+                        android:textColor="@color/brand_error_solid"
+                        android:textSize="13sp"
+                        android:padding="8dp"
+                        android:clickable="true"
+                        android:focusable="true" />
+
+                    <LinearLayout
+                        android:id="@+id/playerControls"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+                        
+                        <ImageView
+                            android:id="@+id/btnPlayAudio"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/ic_check_circle_green"
+                            app:tint="@color/brand_error_solid"
+                            android:padding="4dp"
+                            android:layout_marginEnd="8dp"
+                            android:clickable="true"
+                            android:focusable="true"/>
+
+                        <ImageView
+                            android:id="@+id/btnDeleteAudio"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/ic_close_grey"
+                            app:tint="@color/brand_error_solid"
+                            android:padding="4dp"
+                            android:clickable="true"
+                            android:focusable="true" />
+                    </LinearLayout>
+                </LinearLayout>
             </RelativeLayout>
 
             <!-- ── LOCATION ── -->
@@ -234,9 +294,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
                 android:text="LOCATION"
-                android:textColor="@color/text_subheadline"
+                android:textColor="@color/text_muted"
                 android:textSize="11sp"
-                android:letterSpacing="0.05" />
+                android:letterSpacing="0.1" />
 
             <RelativeLayout
                 android:id="@+id/cardLocation"
@@ -295,12 +355,73 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:layout_marginStart="20dp"
-                        android:text="Tap to adjust pin on map"
-                        android:textColor="@color/text_subheadline"
+                        android:text="Tap to adjust ✎"
+                        android:textColor="@color/brand_error_solid"
                         android:textSize="12sp" />
                 </LinearLayout>
             </RelativeLayout>
 
+            <!-- ── WHEN DO YOU NEED THIS? ── -->
+            <TextView
+                style="@style/AppHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:text="WHEN DO YOU NEED THIS?"
+                android:textColor="@color/text_muted"
+                android:textSize="11sp"
+                android:letterSpacing="0.1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:id="@+id/chipWhenToday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Today"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:background="@drawable/bg_chip_selected_red"
+                    android:layout_marginEnd="10dp"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <TextView
+                    android:id="@+id/chipWhenThisWeek"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="This week"
+                    android:textColor="@color/text_subheadline"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:background="@drawable/bg_chip_unselected"
+                    android:layout_marginEnd="10dp"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <TextView
+                    android:id="@+id/chipWhenFlexible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Flexible"
+                    android:textColor="@color/text_subheadline"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:background="@drawable/bg_chip_unselected"
+                    android:clickable="true"
+                    android:focusable="true" />
+            </LinearLayout>
 
             <Space
                 android:layout_width="match_parent"
@@ -308,18 +429,16 @@
                 android:layout_weight="1"
                 android:layout_marginTop="40dp" />
 
-            <!-- CTA -->
+            <!-- District-Style CTA -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnPostNow"
+                style="@style/AppHeading"
                 android:layout_width="match_parent"
                 android:layout_height="64dp"
                 android:text="Post Now"
                 android:textColor="@color/white"
                 android:textAllCaps="false"
                 android:textSize="18sp"
-                app:icon="@drawable/ic_forward_arrow"
-                app:iconGravity="textEnd"
-                app:iconTint="@color/white"
                 app:backgroundTint="@color/brand_error_solid"
                 app:cornerRadius="16dp"
                 android:elevation="0dp" />
@@ -327,31 +446,4 @@
         </LinearLayout>
     </ScrollView>
 
-    <!-- Emergency Dialog Overlay Wrapper for XML Preview -->
-    <FrameLayout
-        android:id="@+id/overlayEmergency"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/overlay_dark_medium"
-        android:elevation="10dp"
-        android:visibility="gone">
-        <!-- Visibility defaults to gone so the user can interact with the form normally, 
-             they can toggle this to 'visible' in Android Studio to see the popup. 
-             If Java manages it via a real Dialog, this view isn't even necessary but kept for design preview -->
-
-        <include layout="@layout/dialog_emergency_post"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="24dp" />
-    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
-
-
-
-
-

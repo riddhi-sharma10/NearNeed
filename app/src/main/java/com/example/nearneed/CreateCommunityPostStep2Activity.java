@@ -24,37 +24,8 @@ public class CreateCommunityPostStep2Activity extends AppCompatActivity {
         MaterialButton btnPostNow = findViewById(R.id.btnPostNow);
         if (btnPostNow != null) {
             btnPostNow.setOnClickListener(v -> {
-                // Determine if it was an emergency post. Hardcoding true here to show the dialog
-                boolean isEmergency = true;
-                
-                if (isEmergency) {
-                    showEmergencyDialogOverlay();
-                } else {
-                    navigateToSuccess();
-                }
+                navigateToSuccess();
             });
-        }
-    }
-
-    private void showEmergencyDialogOverlay() {
-        View overlay = findViewById(R.id.overlayEmergency);
-        if (overlay != null) {
-            overlay.setVisibility(View.VISIBLE);
-
-            View btnYes = overlay.findViewById(R.id.btnYesPostNow);
-            if (btnYes != null) {
-                btnYes.setOnClickListener(v -> {
-                    overlay.setVisibility(View.GONE);
-                    navigateToSuccess();
-                });
-            }
-
-            View btnCancel = overlay.findViewById(R.id.btnCancel);
-            if (btnCancel != null) {
-                btnCancel.setOnClickListener(v -> {
-                    overlay.setVisibility(View.GONE);
-                });
-            }
         }
     }
 
