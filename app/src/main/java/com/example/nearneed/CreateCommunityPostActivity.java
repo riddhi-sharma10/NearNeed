@@ -28,5 +28,74 @@ public class CreateCommunityPostActivity extends AppCompatActivity {
                 overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out);
             });
         }
+
+        // ── VOLUNTEER SECTION LOGIC ──
+        android.widget.TextView tvVolCount = findViewById(R.id.tvVolCount);
+        android.widget.TextView btnVolMinus = findViewById(R.id.btnVolMinus);
+        android.widget.TextView btnVolPlus = findViewById(R.id.btnVolPlus);
+        androidx.appcompat.widget.SwitchCompat switchMax = findViewById(R.id.switchMaxVolunteers);
+
+        final int[] volCount = {1};
+        if (btnVolMinus != null && tvVolCount != null) {
+            btnVolMinus.setOnClickListener(v -> {
+                if (volCount[0] > 1) {
+                    volCount[0]--;
+                    tvVolCount.setText(String.valueOf(volCount[0]));
+                }
+            });
+        }
+        if (btnVolPlus != null && tvVolCount != null) {
+            btnVolPlus.setOnClickListener(v -> {
+                volCount[0]++;
+                tvVolCount.setText(String.valueOf(volCount[0]));
+            });
+        }
+
+        if (switchMax != null) {
+            switchMax.setOnCheckedChangeListener((buttonView, isChecked) -> {
+                if (isChecked) {
+                    switchMax.setThumbTintList(android.content.res.ColorStateList.valueOf(getResources().getColor(R.color.brand_error_solid)));
+                    switchMax.setTrackTintList(android.content.res.ColorStateList.valueOf(getResources().getColor(R.color.brand_error_track)));
+                } else {
+                    switchMax.setThumbTintList(android.content.res.ColorStateList.valueOf(getResources().getColor(R.color.text_muted)));
+                    switchMax.setTrackTintList(android.content.res.ColorStateList.valueOf(getResources().getColor(R.color.border_standard)));
+                }
+            });
+            // Initial state
+            switchMax.setChecked(true);
+        }
+
+        // ── CATEGORY SECTION LOGIC ──
+        com.google.android.material.chip.ChipGroup cgCategory = findViewById(R.id.chipGroupCategory);
+        com.google.android.material.chip.Chip chipOther = findViewById(R.id.chipOther);
+        android.widget.EditText etOther = findViewById(R.id.etOtherCategory);
+
+        if (cgCategory != null) {
+            cgCategory.setOnCheckedStateChangeListener((group, checkedIds) -> {
+                if (checkedIds.contains(R.id.chipOther)) {
+                    etOther.setVisibility(android.view.View.VISIBLE);
+                    etOther.requestFocus();
+                } else {
+                    etOther.setVisibility(android.view.View.GONE);
+                }
+            });
+        }
+
+        if (etOther != null) {
+            etOther.setOnEditorActionListener((v, actionId, event) -> {
+                if (actionId == android.view.inputmethod.EditorInfo.IME_ACTION_DONE) {
+                    String customCat = etOther.getText().toString().trim();
+                    if (!customCat.isEmpty()) {
+                        chipOther.setText(customCat);
+                        etOther.setVisibility(android.view.View.GONE);
+                        // Hide keyboard
+                        android.view.inputmethod.InputMethodManager imm = (android.view.inputmethod.InputMethodManager) getSystemService(android.content.Context.INPUT_METHOD_SERVICE);
+                        imm.hideSoftInputFromWindow(etOther.getWindowToken(), 0);
+                    }
+                    return true;
+                }
+                return false;
+            });
+        }
     }
 }
