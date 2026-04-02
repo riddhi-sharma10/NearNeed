@@ -1,7 +1,10 @@
 package com.example.nearneed;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.ImageButton;
+import android.widget.PopupMenu;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.nearneed.R;
@@ -17,6 +20,18 @@ public class MyCommunityPostDetailActivity extends AppCompatActivity {
         ImageButton btnBack = findViewById(R.id.btnBack);
         btnBack.setOnClickListener(v -> finish());
 
+        ImageButton btnOptions = findViewById(R.id.btnOptions);
+        if (btnOptions != null) {
+            btnOptions.setOnClickListener(v -> showManagementMenu(v));
+        }
+
+        ImageButton btnShare = findViewById(R.id.btnShare);
+        if (btnShare != null) {
+            btnShare.setOnClickListener(v -> {
+                Toast.makeText(this, "Sharing post...", Toast.LENGTH_SHORT).show();
+            });
+        }
+
         // Bind Dynamic Data
         String title = getIntent().getStringExtra("POST_TITLE");
         String desc = getIntent().getStringExtra("POST_DESC");
@@ -24,78 +39,67 @@ public class MyCommunityPostDetailActivity extends AppCompatActivity {
 
         android.widget.TextView tvHeadline = findViewById(R.id.tvDetailHeadline);
         android.widget.TextView tvDesc = findViewById(R.id.tvDetailDescription);
-        android.widget.TextView tvHeroCat = findViewById(R.id.tvHeroCategory);
         android.widget.TextView tvPillCat = findViewById(R.id.tvDetailPillCategory);
 
         if (title != null && tvHeadline != null) tvHeadline.setText(title);
         if (desc != null && tvDesc != null) tvDesc.setText(desc);
         if (category != null) {
-            if (tvHeroCat != null) tvHeroCat.setText(category);
             if (tvPillCat != null) tvPillCat.setText(category);
         }
 
-        // Restore Management Buttons
-        MaterialButton btnViewVolunteers = findViewById(R.id.btnViewVolunteers);
-        MaterialButton btnViewResponses = findViewById(R.id.btnViewResponses);
-        MaterialButton btnUpdateStatus = findViewById(R.id.btnUpdateStatus);
-
-        if (btnViewVolunteers != null) {
-            btnViewVolunteers.setOnClickListener(v -> {
-                android.content.Intent intent = new android.content.Intent(this, VolunteerManagementActivity.class);
-                startActivity(intent);
-                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+        // Bottom Sticky Button (As seen on Volunteer Page)
+        MaterialButton btnVolunteerSticky = findViewById(R.id.btnVolunteerSticky);
+        if (btnVolunteerSticky != null) {
+            btnVolunteerSticky.setOnClickListener(v -> {
+                Toast.makeText(this, "Edit feature coming soon", Toast.LENGTH_SHORT).show();
             });
         }
+    }
 
-        if (btnViewResponses != null) {
-            btnViewResponses.setOnClickListener(v -> {
-                android.content.Intent intent = new android.content.Intent(this, VolunteerResponsesActivity.class);
+    private void showManagementMenu(android.view.View view) {
+        PopupMenu popup = new PopupMenu(this, view);
+        popup.getMenuInflater().inflate(R.menu.menu_my_post_detail, popup.getMenu());
+
+        popup.setOnMenuItemClickListener(item -> {
+            int id = item.getItemId();
+            if (id == R.id.menu_view_volunteers) {
+                Intent intent = new Intent(this, VolunteerManagementActivity.class);
                 startActivity(intent);
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-            });
-        }
-
-        if (btnUpdateStatus != null) {
-            btnUpdateStatus.setOnClickListener(v -> {
-                android.content.Intent intent = new android.content.Intent(this, PostStatusActivity.class);
+                return true;
+            } else if (id == R.id.menu_view_responses) {
+                Intent intent = new Intent(this, VolunteerResponsesActivity.class);
                 startActivity(intent);
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-            });
-        }
+                return true;
+            } else if (id == R.id.menu_update_status) {
+                Intent intent = new Intent(this, PostStatusActivity.class);
+                startActivity(intent);
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                return true;
+            } else if (id == R.id.menu_save) {
+                Toast.makeText(this, "Post saved", Toast.LENGTH_SHORT).show();
+                return true;
+            } else if (id == R.id.menu_help) {
+                Toast.makeText(this, "Opening Help...", Toast.LENGTH_SHORT).show();
+                return true;
+            } else if (id == R.id.menu_report) {
+                Toast.makeText(this, "Opening Report...", Toast.LENGTH_SHORT).show();
+                return true;
+            } else if (id == R.id.menu_settings) {
+                Toast.makeText(this, "Opening Settings...", Toast.LENGTH_SHORT).show();
+                return true;
+            }
+            return false;
+        });
+
+        popup.show();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        MaterialButton btnUpdateStatus = findViewById(R.id.btnUpdateStatus);
-        MaterialButton btnRateVolunteers = findViewById(R.id.btnRateVolunteers);
-        
-        if (btnUpdateStatus != null) {
-            android.content.SharedPreferences prefs = getSharedPreferences("AppPrefs", MODE_PRIVATE);
-            if (prefs.getBoolean("isPostCompleted", false)) {
-                btnUpdateStatus.setText("Completed");
-                btnUpdateStatus.setBackgroundTintList(android.content.res.ColorStateList.valueOf(android.graphics.Color.parseColor("#10B981")));
-                btnUpdateStatus.setIcon(androidx.core.content.ContextCompat.getDrawable(this, R.drawable.ic_check_solid_white));
-                btnUpdateStatus.setClickable(false);
-                
-                if (btnRateVolunteers != null) {
-                    btnRateVolunteers.setVisibility(android.view.View.VISIBLE);
-                    btnRateVolunteers.setOnClickListener(v -> {
-                        android.content.Intent intent = new android.content.Intent(MyCommunityPostDetailActivity.this, CommunityRatingActivity.class);
-                        startActivity(intent);
-                        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-                    });
-                }
-            } else {
-                btnUpdateStatus.setText("Update Status");
-                btnUpdateStatus.setBackgroundTintList(android.content.res.ColorStateList.valueOf(android.graphics.Color.parseColor("#BE123C")));
-                btnUpdateStatus.setIcon(androidx.core.content.ContextCompat.getDrawable(this, R.drawable.ic_dropdown_small));
-                btnUpdateStatus.setClickable(true);
-                
-                if (btnRateVolunteers != null) {
-                    btnRateVolunteers.setVisibility(android.view.View.GONE);
-                }
-            }
-        }
+        // Since buttons moved to overflow menu, we can still update menu item states here if needed,
+        // but simple linking is preserved.
     }
 }
