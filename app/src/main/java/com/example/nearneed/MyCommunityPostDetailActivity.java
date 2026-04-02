@@ -77,6 +77,11 @@ public class MyCommunityPostDetailActivity extends AppCompatActivity {
                 startActivity(intent);
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 return true;
+            } else if (id == R.id.menu_rate_volunteers) {
+                Intent intent = new Intent(this, CommunityRatingActivity.class);
+                startActivity(intent);
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                return true;
             } else if (id == R.id.menu_save) {
                 Toast.makeText(this, "Post saved", Toast.LENGTH_SHORT).show();
                 return true;

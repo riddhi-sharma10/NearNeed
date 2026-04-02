@@ -9,6 +9,9 @@
     <item
         android:id="@+id/menu_update_status"
         android:title="Update Status" />
+    <item
+        android:id="@+id/menu_rate_volunteers"
+        android:title="Rate Volunteers" />
     <!-- Existing generic options -->
     <item
         android:id="@+id/menu_save"
