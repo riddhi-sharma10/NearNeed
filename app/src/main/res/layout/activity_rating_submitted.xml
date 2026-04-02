@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,34 +9,31 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true">
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnBackToFeed">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingBottom="120dp">
+            android:paddingBottom="32dp">
 
             <!-- App Bar -->
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp">
+                android:paddingHorizontal="16dp">
 
-                <TextView
+                <ImageButton
                     android:id="@+id/btnBack"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_centerVertical="true"
                     android:background="?attr/selectableItemBackgroundBorderless"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:gravity="center"
-                    android:text="✕"
-                    android:textColor="@color/text_header"
-                    android:textSize="24sp" />
+                    android:src="@drawable/ic_close"
+                    app:tint="@color/text_header" />
 
                 <TextView
                     style="@style/AppHeading"
@@ -45,27 +42,26 @@
                     android:layout_centerInParent="true"
                     android:text="Rating Confirmation"
                     android:textColor="@color/text_header"
-                    android:textSize="16sp" />
+                    android:textSize="17sp" />
             </RelativeLayout>
 
             <!-- Star Graphic -->
             <FrameLayout
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="80dp"
-                android:background="@drawable/bg_circle_solid_red"
-                android:backgroundTint="@color/brand_warning_bg_alt">
+                android:layout_marginTop="40dp"
+                android:background="@drawable/bg_circle_peach">
 
                 <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:layout_gravity="center"
-                    android:src="@android:drawable/star_on"
-                    app:tint="@color/brand_warning_vibrant" />
+                    android:src="@drawable/ic_star_rating"
+                    app:tint="@color/brand_warning_solid" />
             </FrameLayout>
 
-            <!-- Texts -->
+            <!-- Success Header -->
             <TextView
                 style="@style/AppHeading"
                 android:layout_width="match_parent"
@@ -74,70 +70,87 @@
                 android:text="Rating submitted."
                 android:textAlignment="center"
                 android:textColor="@color/text_header"
-                android:textSize="22sp" />
+                android:textSize="24sp" />
 
             <TextView
+                android:id="@+id/tvSubtitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:paddingStart="32dp"
-                android:paddingEnd="32dp"
-                android:text="Anjali M.'s Neighbour Score has been updated."
+                android:layout_marginTop="10dp"
+                android:paddingHorizontal="48dp"
+                android:text="Neighbor Score has been updated for this activity."
                 android:textAlignment="center"
                 android:textColor="@color/text_subheadline"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:lineHeight="20dp" />
 
-            <!-- Info Pill -->
-            <LinearLayout
+            <!-- Status Pill (Blue as per screenshot) -->
+            <TextView
+                android:id="@+id/tvStatusPill"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="24dp"
-                android:background="@drawable/bg_pill_pink_transparent"
-                android:backgroundTint="@color/brand_error_bg_alt"
-                android:paddingStart="20dp"
-                android:paddingTop="12dp"
-                android:paddingEnd="20dp"
-                android:paddingBottom="12dp">
+                android:layout_marginTop="32dp"
+                android:background="@drawable/bg_pill_blue_transparent"
+                android:text="Waiting for neighbor to rate you."
+                android:textColor="@color/brand_primary"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:paddingHorizontal="24dp"
+                android:paddingVertical="12dp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Waiting for Anjali M. to rate you."
-                    android:textColor="@color/brand_error_vibrant"
-                    android:textSize="12sp" />
-            </LinearLayout>
-
-            <!-- Back to Feed Button -->
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnBackToFeed"
-                style="@style/AppHeading"
+            <!-- Completion Card (Exactly as Screenshot) -->
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="48dp"
-                android:layout_marginEnd="24dp"
-                android:elevation="8dp"
-                android:text="Back to Feed"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:textSize="16sp"
-                app:backgroundTint="@color/brand_error_solid"
-                app:cornerRadius="16dp" />
+                android:layout_height="180dp"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="32dp"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="2dp">
+                
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_community_service" />
+                        
+                    <TextView
+                        android:id="@+id/tvCardOverlay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|start"
+                        android:layout_margin="16dp"
+                        android:background="@drawable/bg_pill_grey"
+                        android:backgroundTint="#F8FAFC"
+                        android:text="Gig completed with neighbor"
+                        android:textColor="@color/text_header"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:paddingHorizontal="16dp"
+                        android:paddingVertical="8dp" />
+                </FrameLayout>
+            </com.google.android.material.card.MaterialCardView>
 
         </LinearLayout>
     </ScrollView>
 
-    <!-- Universal Navigation System -->
-    <include layout="@layout/layout_universal_navbar" />
+    <!-- Professional CTA (Fixed at Bottom for Accessibility) -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnBackToFeed"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_margin="24dp"
+        android:text="Back to Feed"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/brand_primary"
+        app:cornerRadius="24dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
-
-
-
-
-
-
-
-
-
+</androidx.constraintlayout.widget.ConstraintLayout>
