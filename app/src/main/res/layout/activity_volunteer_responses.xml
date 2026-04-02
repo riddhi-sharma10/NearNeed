@@ -43,16 +43,15 @@
                     android:textSize="18sp"
                     style="@style/AppHeading" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <ImageButton
+                    android:id="@+id/btnOptions"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginEnd="8dp"
-                    android:text="···"
-                    android:textColor="@color/text_header"
-                    android:textSize="28sp"
-                    style="@style/AppHeading" />
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_more_dots"
+                    app:tint="@color/text_header" />
             </RelativeLayout>
 
             <!-- Headline Context -->
@@ -73,21 +72,6 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="URGENT"
-                        android:textColor="@color/brand_warning_solid"
-                        android:textSize="10sp"
-                        style="@style/AppHeading"
-                        android:backgroundTint="@color/brand_warning_bg"
-                        android:background="@drawable/bg_pill_pink_transparent"
-                        android:paddingStart="8dp"
-                        android:paddingEnd="8dp"
-                        android:paddingTop="4dp"
-                        android:paddingBottom="4dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="12dp"
                         android:text="5 people responded"
                         android:textColor="@color/text_subheadline"
                         android:textSize="12sp" />
@@ -190,27 +174,16 @@
                         </FrameLayout>
                     </RelativeLayout>
 
-                    <!-- Custom Progress Bar -->
-                    <LinearLayout
+                    <!-- Normal Progress Bar -->
+                    <ProgressBar
+                        android:id="@+id/pbSlots"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
                         android:layout_width="match_parent"
                         android:layout_height="8dp"
                         android:layout_marginTop="56dp"
-                        android:orientation="horizontal"
-                        android:background="@drawable/bg_circle_grey_solid"
-                        android:backgroundTint="@color/brand_error_bg_alt"
-                        android:clipToOutline="true">
-
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="0.66"
-                            android:background="@color/brand_error_solid" />
-
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="0.34" />
-                    </LinearLayout>
+                        android:progress="66"
+                        android:max="100"
+                        android:progressDrawable="@drawable/bg_progress_bar_red_flat" />
                 </RelativeLayout>
             </com.google.android.material.card.MaterialCardView>
 

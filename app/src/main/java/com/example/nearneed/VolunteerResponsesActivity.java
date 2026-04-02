@@ -1,11 +1,15 @@
 package com.example.nearneed;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageButton;
+import android.widget.PopupMenu;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.nearneed.R;
+import com.example.nearneed.MessagesActivity;
 import com.google.android.material.button.MaterialButton;
 
 public class VolunteerResponsesActivity extends AppCompatActivity {
@@ -18,6 +22,11 @@ public class VolunteerResponsesActivity extends AppCompatActivity {
         ImageButton btnBack = findViewById(R.id.btnBack);
         btnBack.setOnClickListener(v -> finish());
 
+        ImageButton btnOptions = findViewById(R.id.btnOptions);
+        if (btnOptions != null) {
+            btnOptions.setOnClickListener(this::showOptionsMenu);
+        }
+
         // Buttons for Anjali
         MaterialButton btnAcceptAnjali = findViewById(R.id.btnAcceptAnjali);
         MaterialButton btnMsgAnjali = findViewById(R.id.btnMsgAnjali);
@@ -28,9 +37,7 @@ public class VolunteerResponsesActivity extends AppCompatActivity {
             });
         }
         if (btnMsgAnjali != null) {
-            btnMsgAnjali.setOnClickListener(v -> {
-                Toast.makeText(this, "Messaging Anjali...", Toast.LENGTH_SHORT).show();
-            });
+            btnMsgAnjali.setOnClickListener(v -> openMessages("Anjali M."));
         }
 
         // Buttons for Rahul
@@ -43,9 +50,7 @@ public class VolunteerResponsesActivity extends AppCompatActivity {
             });
         }
         if (btnMsgRahul != null) {
-            btnMsgRahul.setOnClickListener(v -> {
-                Toast.makeText(this, "Messaging Rahul...", Toast.LENGTH_SHORT).show();
-            });
+            btnMsgRahul.setOnClickListener(v -> openMessages("Rahul S."));
         }
 
         // Buttons for Sarah
@@ -58,11 +63,26 @@ public class VolunteerResponsesActivity extends AppCompatActivity {
             });
         }
         if (btnMsgSarah != null) {
-            btnMsgSarah.setOnClickListener(v -> {
-                Toast.makeText(this, "Messaging Sarah...", Toast.LENGTH_SHORT).show();
-            });
+            btnMsgSarah.setOnClickListener(v -> openMessages("Sarah K."));
         }
+    }
 
+    private void openMessages(String userName) {
+        Intent intent = new Intent(this, MessagesActivity.class);
+        intent.putExtra("USER_NAME", userName);
+        startActivity(intent);
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+    }
 
+    private void showOptionsMenu(View v) {
+        PopupMenu popup = new PopupMenu(this, v);
+        popup.getMenu().add("View Post Details");
+        popup.getMenu().add("Share Responses Summary");
+        popup.getMenu().add("Report an Issue");
+        popup.setOnMenuItemClickListener(item -> {
+            Toast.makeText(this, item.getTitle() + " feature coming soon", Toast.LENGTH_SHORT).show();
+            return true;
+        });
+        popup.show();
     }
 }
