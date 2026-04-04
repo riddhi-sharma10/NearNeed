@@ -173,6 +173,7 @@
         <activity android:name=".ReviewsActivity" android:exported="false" />
         <activity android:name=".RecentActivityActivity" android:exported="false" />
         <activity android:name=".MessagesActivity" android:exported="false" android:screenOrientation="portrait" />
+        <activity android:name=".ChatActivity" android:exported="false" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize" />
         <activity android:name=".GigApplicantsActivity" android:exported="false" android:screenOrientation="portrait" />
         <activity android:name=".PaymentActivity" android:exported="false" android:screenOrientation="portrait" />
         <activity android:name=".PaymentConfirmedGigsActivity" android:exported="false" android:screenOrientation="portrait" />

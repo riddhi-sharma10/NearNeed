@@ -140,7 +140,7 @@ public class CreateCommunityPostStep2Activity extends AppCompatActivity {
 
     private void showPostingOptionsDialog() {
         View dialogView = LayoutInflater.from(this).inflate(R.layout.dialog_emergency_post, null);
-        AlertDialog dialog = new AlertDialog.Builder(this, R.style.CustomDialogTheme)
+        AlertDialog dialog = new AlertDialog.Builder(this)
                 .setView(dialogView)
                 .setCancelable(true)
                 .create();

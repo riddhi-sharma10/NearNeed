@@ -258,7 +258,7 @@
                             android:textColor="@color/brand_error_solid"
                             android:textSize="10sp"
                             android:textStyle="bold"
-                            app:drawableStartCompat="@drawable/ic_clock_small"
+                            app:drawableStartCompat="@drawable/ic_alarm_orange"
                             android:drawablePadding="4dp"
                             app:tint="@color/brand_error_solid" />
 
@@ -553,7 +553,7 @@
                             android:textColor="@color/brand_error_solid"
                             android:textSize="10sp"
                             android:textStyle="bold"
-                            app:drawableStartCompat="@drawable/ic_clock_small"
+                            app:drawableStartCompat="@drawable/ic_alarm_orange"
                             android:drawablePadding="4dp"
                             app:tint="@color/brand_error_solid" />
 
@@ -722,7 +722,7 @@
                             android:textColor="@color/brand_error_solid"
                             android:textSize="10sp"
                             android:textStyle="bold"
-                            app:drawableStartCompat="@drawable/ic_clock_small"
+                            app:drawableStartCompat="@drawable/ic_alarm_orange"
                             android:drawablePadding="4dp"
                             app:tint="@color/brand_error_solid" />
 
