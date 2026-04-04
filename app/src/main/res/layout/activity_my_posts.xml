@@ -48,17 +48,18 @@
             android:padding="20dp"
             android:clipToPadding="false">
 
-            <!-- Template for My Post Card -->
-            <!-- We'll use a standardized high-fidelity layout for all -->
-
             <!-- POST 1: URGENT COMMUNITY -->
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardPost1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 app:cardCornerRadius="24dp"
                 app:cardElevation="6dp"
-                app:cardBackgroundColor="@color/white">
+                app:cardBackgroundColor="@color/white"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -136,12 +137,16 @@
 
             <!-- POST 2: PAID GIG -->
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardPost2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 app:cardCornerRadius="24dp"
                 app:cardElevation="6dp"
-                app:cardBackgroundColor="@color/white">
+                app:cardBackgroundColor="@color/white"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -199,7 +204,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
-                            android:text="₹400 orçamento"
+                            android:text="₹400 budget"
                             android:textColor="@color/brand_primary"
                             android:textSize="15sp" />
 
@@ -216,12 +221,16 @@
 
             <!-- POST 3: COMMUNITY ACT -->
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardPost3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 app:cardCornerRadius="24dp"
                 app:cardElevation="6dp"
-                app:cardBackgroundColor="@color/white">
+                app:cardBackgroundColor="@color/white"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -290,12 +299,16 @@
 
             <!-- POST 4: DOG WALKING -->
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardPost4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 app:cardCornerRadius="24dp"
                 app:cardElevation="6dp"
-                app:cardBackgroundColor="@color/white">
+                app:cardBackgroundColor="@color/white"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -361,6 +374,7 @@
             </androidx.cardview.widget.CardView>
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCreatePost"
                 android:layout_width="match_parent"
                 android:layout_height="64dp"
                 android:layout_marginTop="16dp"
