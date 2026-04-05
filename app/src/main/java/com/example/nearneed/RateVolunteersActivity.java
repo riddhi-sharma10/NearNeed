@@ -44,9 +44,25 @@ public class RateVolunteersActivity extends AppCompatActivity {
 
         // ── Rating Bar ──────────────────────────────────────────────────────
         ratingBar = findViewById(R.id.ratingBar);
+        TextView tvRatingValue = findViewById(R.id.tvRatingValue);
         if (ratingBar != null) {
             ratingBar.setOnRatingBarChangeListener((bar, rating, fromUser) -> {
-                // You can add logic here if needed when rating changes
+                // Update status text based on rating
+                if (tvRatingValue != null) {
+                    if (rating == 0) {
+                        tvRatingValue.setText("");
+                    } else if (rating < 2) {
+                        tvRatingValue.setText("Poor");
+                    } else if (rating < 3) {
+                        tvRatingValue.setText("Average");
+                    } else if (rating < 4) {
+                        tvRatingValue.setText("Good");
+                    } else if (rating < 5) {
+                        tvRatingValue.setText("Very Good");
+                    } else {
+                        tvRatingValue.setText("Excellent!");
+                    }
+                }
             });
         }
 
