@@ -390,7 +390,7 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
-                <!-- ─── CARD 2: Priya M. (collapsed preview) ─── -->
+                <!-- ─── CARD 2: Priya M. (expanded) ─── -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardPriya"
                     android:layout_width="match_parent"
@@ -400,80 +400,203 @@
                     app:cardElevation="2dp"
                     app:cardBackgroundColor="@color/white">
 
-                    <RelativeLayout
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:orientation="vertical"
                         android:padding="16dp">
 
-                        <!-- Avatar -->
-                        <ImageView
-                            android:id="@+id/avPriya"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_centerVertical="true"
-                            android:background="@drawable/bg_circle_grey_icon"
-                            android:src="@drawable/bg_image_placeholder"
-                            android:scaleType="centerCrop" />
+                        <!-- Avatar + Name + Rating -->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
-                        <!-- Name + preview -->
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_toEndOf="@id/avPriya"
-                            android:layout_toStartOf="@+id/tvRatingPriya"
-                            android:layout_marginStart="12dp"
-                            android:layout_centerVertical="true"
-                            android:orientation="vertical">
+                            <!-- Avatar frame with verified badge -->
+                            <FrameLayout
+                                android:id="@+id/avPriyaFrame"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_centerVertical="true">
 
-                            <TextView
-                                style="@style/AppHeading"
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:background="@drawable/bg_circle_grey_icon"
+                                    android:src="@drawable/bg_image_placeholder"
+                                    android:scaleType="centerCrop" />
+
+                                <!-- Verified badge -->
+                                <ImageView
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    android:layout_gravity="bottom|end"
+                                    android:src="@drawable/ic_verified_blue" />
+                            </FrameLayout>
+
+                            <!-- Name + full message -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/avPriyaFrame"
+                                android:layout_toStartOf="@+id/tvRatingPriya"
+                                android:layout_marginStart="12dp"
+                                android:layout_centerVertical="true"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/AppHeading"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Priya M."
+                                    android:textColor="@color/text_header"
+                                    android:textSize="15sp" />
+
+                                <TextView
+                                    style="@style/AppDescription"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="I'm available this weekend and have 5 years of experience with tap installations and repairs."
+                                    android:textColor="@color/text_subheadline"
+                                    android:textSize="12sp"
+                                    android:layout_marginTop="2dp"
+                                    android:maxLines="3"
+                                    android:ellipsize="end" />
+                            </LinearLayout>
+
+                            <!-- Star rating -->
+                            <LinearLayout
+                                android:id="@+id/tvRatingPriya"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Priya M."
-                                android:textColor="@color/text_header"
-                                android:textSize="15sp" />
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
 
-                            <TextView
-                                style="@style/AppDescription"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Available this weekend, I have experience with taps..."
-                                android:textColor="@color/text_muted"
-                                android:textSize="12sp"
-                                android:layout_marginTop="2dp"
-                                android:maxLines="1"
-                                android:ellipsize="end" />
-                        </LinearLayout>
+                                <ImageView
+                                    android:layout_width="14dp"
+                                    android:layout_height="14dp"
+                                    android:src="@drawable/ic_star_yellow" />
 
-                        <!-- Rating -->
+                                <TextView
+                                    style="@style/AppHeading"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="3dp"
+                                    android:text="4.5"
+                                    android:textColor="@color/brand_warning_solid"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <!-- Proposed price chip -->
                         <LinearLayout
-                            android:id="@+id/tvRatingPriya"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentEnd="true"
-                            android:layout_centerVertical="true"
-                            android:orientation="horizontal"
-                            android:gravity="center_vertical">
+                            android:layout_width="match_parent"
+                            android:layout_height="38dp"
+                            android:layout_marginTop="14dp"
+                            android:background="@drawable/bg_alert_yellow"
+                            android:gravity="center_vertical"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"
+                            android:orientation="horizontal">
 
                             <ImageView
-                                android:layout_width="14dp"
-                                android:layout_height="14dp"
-                                android:src="@drawable/ic_star_yellow" />
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:src="@drawable/ic_cash_icon"
+                                app:tint="@color/brand_warning_solid" />
 
                             <TextView
                                 style="@style/AppHeading"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="3dp"
-                                android:text="4.5"
-                                android:textColor="@color/brand_warning_solid"
+                                android:layout_marginStart="8dp"
+                                android:text="Proposed ₹250 (you posted ₹300)"
+                                android:textColor="@color/brand_warning_text"
                                 android:textSize="12sp" />
                         </LinearLayout>
 
-                    </RelativeLayout>
+                        <!-- Action buttons row 1: Accept + Counter -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnAcceptPriya"
+                                style="@style/AppHeading"
+                                android:layout_width="0dp"
+                                android:layout_height="44dp"
+                                android:layout_weight="1"
+                                android:layout_marginEnd="8dp"
+                                android:text="Accept ₹250"
+                                android:textColor="@color/white"
+                                android:textAllCaps="false"
+                                android:textSize="13sp"
+                                app:backgroundTint="@color/brand_success_alt"
+                                app:cornerRadius="10dp"
+                                android:elevation="0dp" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnCounterPriya"
+                                style="@style/AppHeading"
+                                android:layout_width="0dp"
+                                android:layout_height="44dp"
+                                android:layout_weight="1"
+                                android:text="Counter"
+                                android:textColor="@color/white"
+                                android:textAllCaps="false"
+                                android:textSize="13sp"
+                                app:backgroundTint="@color/brand_primary"
+                                app:cornerRadius="10dp"
+                                android:elevation="0dp" />
+                        </LinearLayout>
+
+                        <!-- Action buttons row 2: Decline + Chat -->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp">
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnDeclinePriya"
+                                style="@style/AppHeading"
+                                android:layout_width="0dp"
+                                android:layout_height="44dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_toStartOf="@+id/btnChatPriya"
+                                android:layout_marginEnd="8dp"
+                                android:text="Decline"
+                                android:textColor="@color/text_subheadline"
+                                android:textAllCaps="false"
+                                android:textSize="13sp"
+                                app:backgroundTint="@color/divider_soft"
+                                app:cornerRadius="10dp"
+                                android:elevation="0dp" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnChatPriya"
+                                android:layout_width="50dp"
+                                android:layout_height="44dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                app:icon="@drawable/ic_chat_outline"
+                                app:iconGravity="textStart"
+                                app:iconTint="@color/brand_primary"
+                                app:backgroundTint="@color/brand_primary_light"
+                                app:strokeColor="@color/brand_info_accent_soft"
+                                app:strokeWidth="1dp"
+                                app:cornerRadius="10dp"
+                                android:elevation="0dp"
+                                android:paddingStart="0dp"
+                                android:paddingEnd="0dp" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
-                <!-- ─── CARD 3: Anika R. (collapsed preview) ─── -->
+                <!-- ─── CARD 3: Anika R. (expanded) ─── -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardAnika"
                     android:layout_width="match_parent"
@@ -483,77 +606,200 @@
                     app:cardElevation="2dp"
                     app:cardBackgroundColor="@color/white">
 
-                    <RelativeLayout
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:orientation="vertical"
                         android:padding="16dp">
 
-                        <!-- Avatar -->
-                        <ImageView
-                            android:id="@+id/avAnika"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_centerVertical="true"
-                            android:background="@drawable/bg_circle_peach"
-                            android:src="@drawable/bg_image_placeholder"
-                            android:scaleType="centerCrop" />
+                        <!-- Avatar + Name + Rating -->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
-                        <!-- Name + preview -->
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_toEndOf="@id/avAnika"
-                            android:layout_toStartOf="@+id/tvRatingAnika"
-                            android:layout_marginStart="12dp"
-                            android:layout_centerVertical="true"
-                            android:orientation="vertical">
+                            <!-- Avatar frame with verified badge -->
+                            <FrameLayout
+                                android:id="@+id/avAnikaFrame"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_centerVertical="true">
 
-                            <TextView
-                                style="@style/AppHeading"
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:background="@drawable/bg_circle_peach"
+                                    android:src="@drawable/bg_image_placeholder"
+                                    android:scaleType="centerCrop" />
+
+                                <!-- Verified badge -->
+                                <ImageView
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    android:layout_gravity="bottom|end"
+                                    android:src="@drawable/ic_verified_blue" />
+                            </FrameLayout>
+
+                            <!-- Name + full message -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/avAnikaFrame"
+                                android:layout_toStartOf="@+id/tvRatingAnika"
+                                android:layout_marginStart="12dp"
+                                android:layout_centerVertical="true"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/AppHeading"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Anika R."
+                                    android:textColor="@color/text_header"
+                                    android:textSize="15sp" />
+
+                                <TextView
+                                    style="@style/AppDescription"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="I'm a certified plumber, can come within the hour for any tap or plumbing repairs."
+                                    android:textColor="@color/text_subheadline"
+                                    android:textSize="12sp"
+                                    android:layout_marginTop="2dp"
+                                    android:maxLines="3"
+                                    android:ellipsize="end" />
+                            </LinearLayout>
+
+                            <!-- Star rating -->
+                            <LinearLayout
+                                android:id="@+id/tvRatingAnika"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Anika R."
-                                android:textColor="@color/text_header"
-                                android:textSize="15sp" />
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
 
-                            <TextView
-                                style="@style/AppDescription"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="I'm a certified plumber, can come within the hour."
-                                android:textColor="@color/text_muted"
-                                android:textSize="12sp"
-                                android:layout_marginTop="2dp"
-                                android:maxLines="1"
-                                android:ellipsize="end" />
-                        </LinearLayout>
+                                <ImageView
+                                    android:layout_width="14dp"
+                                    android:layout_height="14dp"
+                                    android:src="@drawable/ic_star_yellow" />
 
-                        <!-- Rating -->
+                                <TextView
+                                    style="@style/AppHeading"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="3dp"
+                                    android:text="4.9"
+                                    android:textColor="@color/brand_warning_solid"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <!-- Proposed price chip -->
                         <LinearLayout
-                            android:id="@+id/tvRatingAnika"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentEnd="true"
-                            android:layout_centerVertical="true"
-                            android:orientation="horizontal"
-                            android:gravity="center_vertical">
+                            android:layout_width="match_parent"
+                            android:layout_height="38dp"
+                            android:layout_marginTop="14dp"
+                            android:background="@drawable/bg_alert_yellow"
+                            android:gravity="center_vertical"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"
+                            android:orientation="horizontal">
 
                             <ImageView
-                                android:layout_width="14dp"
-                                android:layout_height="14dp"
-                                android:src="@drawable/ic_star_yellow" />
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:src="@drawable/ic_cash_icon"
+                                app:tint="@color/brand_warning_solid" />
 
                             <TextView
                                 style="@style/AppHeading"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="3dp"
-                                android:text="4.9"
-                                android:textColor="@color/brand_warning_solid"
+                                android:layout_marginStart="8dp"
+                                android:text="Proposed ₹250 (you posted ₹300)"
+                                android:textColor="@color/brand_warning_text"
                                 android:textSize="12sp" />
                         </LinearLayout>
 
-                    </RelativeLayout>
+                        <!-- Action buttons row 1: Accept + Counter -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnAcceptAnika"
+                                style="@style/AppHeading"
+                                android:layout_width="0dp"
+                                android:layout_height="44dp"
+                                android:layout_weight="1"
+                                android:layout_marginEnd="8dp"
+                                android:text="Accept ₹250"
+                                android:textColor="@color/white"
+                                android:textAllCaps="false"
+                                android:textSize="13sp"
+                                app:backgroundTint="@color/brand_success_alt"
+                                app:cornerRadius="10dp"
+                                android:elevation="0dp" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnCounterAnika"
+                                style="@style/AppHeading"
+                                android:layout_width="0dp"
+                                android:layout_height="44dp"
+                                android:layout_weight="1"
+                                android:text="Counter"
+                                android:textColor="@color/white"
+                                android:textAllCaps="false"
+                                android:textSize="13sp"
+                                app:backgroundTint="@color/brand_primary"
+                                app:cornerRadius="10dp"
+                                android:elevation="0dp" />
+                        </LinearLayout>
+
+                        <!-- Action buttons row 2: Decline + Chat -->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp">
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnDeclineAnika"
+                                style="@style/AppHeading"
+                                android:layout_width="0dp"
+                                android:layout_height="44dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_toStartOf="@+id/btnChatAnika"
+                                android:layout_marginEnd="8dp"
+                                android:text="Decline"
+                                android:textColor="@color/text_subheadline"
+                                android:textAllCaps="false"
+                                android:textSize="13sp"
+                                app:backgroundTint="@color/divider_soft"
+                                app:cornerRadius="10dp"
+                                android:elevation="0dp" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnChatAnika"
+                                android:layout_width="50dp"
+                                android:layout_height="44dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                app:icon="@drawable/ic_chat_outline"
+                                app:iconGravity="textStart"
+                                app:iconTint="@color/brand_primary"
+                                app:backgroundTint="@color/brand_primary_light"
+                                app:strokeColor="@color/brand_info_accent_soft"
+                                app:strokeWidth="1dp"
+                                app:cornerRadius="10dp"
+                                android:elevation="0dp"
+                                android:paddingStart="0dp"
+                                android:paddingEnd="0dp" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
             </LinearLayout>

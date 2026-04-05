@@ -55,23 +55,55 @@ public class GigApplicantsActivity extends AppCompatActivity {
         if (btnChatRahul != null)
             btnChatRahul.setOnClickListener(v -> openChat("Rahul S.", "rahul_id", "+919876543210"));
 
-        // ── Priya M. Card (COLLAPSED PREVIEW) ────────────────────────────────
+        // ── Priya M. Card (EXPANDED) ──────────────────────────────────────────
+        MaterialButton btnAcceptPriya = findViewById(R.id.btnAcceptPriya);
+        MaterialButton btnCounterPriya = findViewById(R.id.btnCounterPriya);
+        MaterialButton btnDeclinePriya = findViewById(R.id.btnDeclinePriya);
+        MaterialButton btnChatPriya = findViewById(R.id.btnChatPriya);
         CardView cardPriya = findViewById(R.id.cardPriya);
-        if (cardPriya != null) {
-            cardPriya.setOnClickListener(v -> expandApplicantCard(
-                    cardPriya, "Priya M.", 4.5, "priya_id", "+919876543211", 250,
-                    "I'm available this weekend and have 5 years of experience with tap installations and repairs."
-            ));
-        }
 
-        // ── Anika R. Card (COLLAPSED PREVIEW) ────────────────────────────────
+        if (btnAcceptPriya != null)
+            btnAcceptPriya.setOnClickListener(v -> {
+                Toast.makeText(this, "Accepted Priya's offer of ₹250", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, PaymentActivity.class));
+            });
+
+        if (btnCounterPriya != null)
+            btnCounterPriya.setOnClickListener(v -> showCounterOfferDialog("Priya M.", 250));
+
+        if (btnDeclinePriya != null)
+            btnDeclinePriya.setOnClickListener(v -> {
+                if (cardPriya != null) cardPriya.setVisibility(View.GONE);
+                Toast.makeText(this, "Declined Priya's application.", Toast.LENGTH_SHORT).show();
+            });
+
+        if (btnChatPriya != null)
+            btnChatPriya.setOnClickListener(v -> openChat("Priya M.", "priya_id", "+919876543211"));
+
+        // ── Anika R. Card (EXPANDED) ───────────────────────────────────────────
+        MaterialButton btnAcceptAnika = findViewById(R.id.btnAcceptAnika);
+        MaterialButton btnCounterAnika = findViewById(R.id.btnCounterAnika);
+        MaterialButton btnDeclineAnika = findViewById(R.id.btnDeclineAnika);
+        MaterialButton btnChatAnika = findViewById(R.id.btnChatAnika);
         CardView cardAnika = findViewById(R.id.cardAnika);
-        if (cardAnika != null) {
-            cardAnika.setOnClickListener(v -> expandApplicantCard(
-                    cardAnika, "Anika R.", 4.9, "anika_id", "+919876543212", 280,
-                    "I'm a certified plumber with 10 years of experience. I can come within the hour and have all necessary equipment."
-            ));
-        }
+
+        if (btnAcceptAnika != null)
+            btnAcceptAnika.setOnClickListener(v -> {
+                Toast.makeText(this, "Accepted Anika's offer of ₹250", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, PaymentActivity.class));
+            });
+
+        if (btnCounterAnika != null)
+            btnCounterAnika.setOnClickListener(v -> showCounterOfferDialog("Anika R.", 250));
+
+        if (btnDeclineAnika != null)
+            btnDeclineAnika.setOnClickListener(v -> {
+                if (cardAnika != null) cardAnika.setVisibility(View.GONE);
+                Toast.makeText(this, "Declined Anika's application.", Toast.LENGTH_SHORT).show();
+            });
+
+        if (btnChatAnika != null)
+            btnChatAnika.setOnClickListener(v -> openChat("Anika R.", "anika_id", "+919876543212"));
 
         // ── Bottom Navigation ─────────────────────────────────────────────────
         NavbarHelper.setup(this, NavbarHelper.TAB_HOME);
@@ -272,11 +304,7 @@ public class GigApplicantsActivity extends AppCompatActivity {
         View dialogView = LayoutInflater.from(this).inflate(R.layout.dialog_counter_offer, null);
         dialog.setContentView(dialogView);
 
-        TextView titleView = dialogView.findViewById(R.id.tvCounterTitle);
-        if (titleView != null) {
-            titleView.setText("Counter Offer for " + applicantName);
-        }
-
+        // Update title dynamically
         TextView originalPriceView = dialogView.findViewById(R.id.tvOriginalPrice);
         if (originalPriceView != null) {
             originalPriceView.setText("Original offer: ₹" + originalPrice);
