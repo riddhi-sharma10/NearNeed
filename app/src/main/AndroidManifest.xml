@@ -152,6 +152,16 @@
             android:screenOrientation="portrait" />
 
         <activity
+            android:name=".UpdateStatusActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".RateVolunteersActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
             android:name=".CommunityRatingActivity"
             android:exported="false"
             android:screenOrientation="portrait" />

@@ -229,21 +229,18 @@ public class GigDetailActivity extends AppCompatActivity {
 
         popup.setOnMenuItemClickListener(item -> {
             int id = item.getItemId();
-            if (id == R.id.menu_view_volunteers) {
-                // Owner only option
-                Intent intent = new Intent(this, GigApplicantsActivity.class);
-                startActivity(intent);
-                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-                return true;
-            } else if (id == R.id.menu_view_responses) {
+            if (id == R.id.menu_view_responses) {
                 // Owner only option
                 Intent intent = new Intent(this, GigApplicantsActivity.class);
                 startActivity(intent);
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 return true;
             } else if (id == R.id.menu_update_status) {
-                // Owner only option
-                Intent intent = new Intent(this, PostStatusActivity.class);
+                // Owner only option - Update work status
+                Intent intent = new Intent(this, UpdateStatusActivity.class);
+                intent.putExtra("gigId", getIntent().getStringExtra("gigId"));
+                // You would need to get the selected applicant from your selection logic
+                intent.putExtra("applicantName", "Rahul S.");
                 startActivity(intent);
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 return true;
