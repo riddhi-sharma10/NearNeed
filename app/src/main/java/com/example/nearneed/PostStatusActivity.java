@@ -13,8 +13,8 @@ import com.google.android.material.button.MaterialButton;
 public class PostStatusActivity extends AppCompatActivity {
 
     private boolean isMichaelChecked = false;
-    private boolean isElenaChecked = true;  // Default exactly to screenshot
-    private boolean isDavidChecked = false;
+    private boolean isElenaChecked = true;  // Default checked
+    private boolean isSofiaChecked = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,22 +25,22 @@ public class PostStatusActivity extends AppCompatActivity {
         ImageButton btnBack = findViewById(R.id.btnBack);
         btnBack.setOnClickListener(v -> finish());
 
-        // Hero Buttons
+        // Completion Status Buttons
         MaterialButton btnYesHelped = findViewById(R.id.btnYesHelped);
         MaterialButton btnNotYet = findViewById(R.id.btnNotYet);
 
         if (btnYesHelped != null) {
             btnYesHelped.setOnClickListener(v -> {
-                Toast.makeText(this, "Confirmed!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Great! Task marked as completed.", Toast.LENGTH_SHORT).show();
             });
         }
         if (btnNotYet != null) {
             btnNotYet.setOnClickListener(v -> {
-                Toast.makeText(this, "Marked as not yet.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Marked as in progress.", Toast.LENGTH_SHORT).show();
             });
         }
 
-        // Volunteer Checkbox Logic
+        // Volunteer Selection
         LinearLayout rowMichael = findViewById(R.id.rowMichael);
         ImageView cbMichael = findViewById(R.id.cbMichael);
         if (rowMichael != null) {
@@ -53,53 +53,38 @@ public class PostStatusActivity extends AppCompatActivity {
         LinearLayout rowElena = findViewById(R.id.rowElena);
         ImageView cbElena = findViewById(R.id.cbElena);
         if (rowElena != null) {
+            // Elena is pre-checked by default
+            updateCheckbox(cbElena, isElenaChecked);
             rowElena.setOnClickListener(v -> {
                 isElenaChecked = !isElenaChecked;
                 updateCheckbox(cbElena, isElenaChecked);
             });
         }
 
-        LinearLayout rowDavid = findViewById(R.id.rowDavid);
-        ImageView cbDavid = findViewById(R.id.cbDavid);
-        if (rowDavid != null) {
-            rowDavid.setOnClickListener(v -> {
-                isDavidChecked = !isDavidChecked;
-                updateCheckbox(cbDavid, isDavidChecked);
+        LinearLayout rowSofia = findViewById(R.id.rowSofia);
+        ImageView cbSofia = findViewById(R.id.cbSofia);
+        if (rowSofia != null) {
+            rowSofia.setOnClickListener(v -> {
+                isSofiaChecked = !isSofiaChecked;
+                updateCheckbox(cbSofia, isSofiaChecked);
             });
         }
 
-        // Final Button
-        MaterialButton btnFinalUpdateStatus = findViewById(R.id.btnFinalUpdateStatus);
-        if (btnFinalUpdateStatus != null) {
-            android.content.SharedPreferences prefs = getSharedPreferences("AppPrefs", MODE_PRIVATE);
-            if (prefs.getBoolean("isPostCompleted", false)) {
-                btnFinalUpdateStatus.setText("Completed");
-                btnFinalUpdateStatus.setBackgroundTintList(android.content.res.ColorStateList.valueOf(android.graphics.Color.parseColor("#10B981")));
-            }
-
-            btnFinalUpdateStatus.setOnClickListener(v -> {
-                btnFinalUpdateStatus.setText("Completed");
-                btnFinalUpdateStatus.setBackgroundTintList(android.content.res.ColorStateList.valueOf(android.graphics.Color.parseColor("#10B981")));
-                
-                prefs.edit().putBoolean("isPostCompleted", true).apply();
-
-                Toast.makeText(this, "Status successfully updated!", Toast.LENGTH_SHORT).show();
-                new android.os.Handler().postDelayed(() -> finish(), 800);
-            });
-        }
+        // Bottom Navigation
+        NavbarHelper.setup(this, NavbarHelper.TAB_HOME);
     }
 
     private void updateCheckbox(ImageView checkbox, boolean isChecked) {
         if (isChecked) {
-            checkbox.setBackgroundResource(R.drawable.bg_circle_solid_red);
-            checkbox.setBackgroundTintList(android.content.res.ColorStateList.valueOf(android.graphics.Color.parseColor("#F43F5E")));
             checkbox.setImageResource(R.drawable.ic_check_solid_white);
-            checkbox.setPadding(8, 8, 8, 8);
+            checkbox.setImageTintList(android.content.res.ColorStateList.valueOf(android.graphics.Color.parseColor("#2563EB")));
+            checkbox.setBackgroundResource(R.drawable.bg_circle_solid_red);
+            checkbox.setBackgroundTintList(android.content.res.ColorStateList.valueOf(android.graphics.Color.parseColor("#2563EB")));
+            checkbox.setPadding(4, 4, 4, 4);
         } else {
+            checkbox.setImageDrawable(null);
             checkbox.setBackgroundResource(R.drawable.bg_card_outline);
             checkbox.setBackgroundTintList(null);
-            checkbox.setImageDrawable(null);
-            checkbox.setPadding(0, 0, 0, 0);
         }
     }
 }
