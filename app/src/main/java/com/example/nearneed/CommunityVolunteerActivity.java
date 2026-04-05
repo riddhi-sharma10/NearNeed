@@ -16,7 +16,6 @@ import java.util.Locale;
 
 public class CommunityVolunteerActivity extends AppCompatActivity {
 
-    private MediaPlayer mediaPlayer;
     private boolean isPlaying = false;
     private Handler updateHandler;
     private long postTimestamp;
@@ -157,30 +156,17 @@ public class CommunityVolunteerActivity extends AppCompatActivity {
     private void toggleAudioPlayPause() {
         ImageView ivPlayPauseButton = findViewById(R.id.ivPlayPauseButton);
         if (!isPlaying) {
-            try {
-                if (mediaPlayer == null) {
-                    mediaPlayer = new MediaPlayer();
-                }
-                // Load audio from assets (place audio file in res/raw/)
-                mediaPlayer = MediaPlayer.create(this, R.raw.sample_audio);
-                if (mediaPlayer != null) {
-                    mediaPlayer.start();
-                    isPlaying = true;
-                    if (ivPlayPauseButton != null) {
-                        ivPlayPauseButton.setImageDrawable(android.content.res.Resources.getSystem().getDrawable(android.R.drawable.ic_media_pause));
-                    }
-                }
-            } catch (Exception e) {
-                Toast.makeText(this, "Error playing audio", Toast.LENGTH_SHORT).show();
+            isPlaying = true;
+            if (ivPlayPauseButton != null) {
+                ivPlayPauseButton.setImageDrawable(android.content.res.Resources.getSystem().getDrawable(android.R.drawable.ic_media_pause));
             }
+            Toast.makeText(this, "Playing audio...", Toast.LENGTH_SHORT).show();
         } else {
-            if (mediaPlayer != null) {
-                mediaPlayer.pause();
-                isPlaying = false;
-                if (ivPlayPauseButton != null) {
-                    ivPlayPauseButton.setImageDrawable(android.content.res.Resources.getSystem().getDrawable(android.R.drawable.ic_media_play));
-                }
+            isPlaying = false;
+            if (ivPlayPauseButton != null) {
+                ivPlayPauseButton.setImageDrawable(android.content.res.Resources.getSystem().getDrawable(android.R.drawable.ic_media_play));
             }
+            Toast.makeText(this, "Audio paused", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -204,19 +190,17 @@ public class CommunityVolunteerActivity extends AppCompatActivity {
     }
 
     private void messageUser() {
-        Intent intent = new Intent(Intent.ACTION_SENDTO);
-        intent.setData(android.net.Uri.parse("smsto:+919876543210")); // Replace with actual phone
-        intent.putExtra("sms_body", "Hi, I'm interested in this volunteer opportunity.");
+        // Open in-app messaging
+        Intent intent = new Intent(this, ChatActivity.class);
+        intent.putExtra("recipientName", "Volunteer Organizer");
+        intent.putExtra("recipientId", "organizer_456");
+        intent.putExtra("recipientPhone", "9876543210");
         startActivity(intent);
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (mediaPlayer != null) {
-            mediaPlayer.release();
-            mediaPlayer = null;
-        }
         if (updateHandler != null) {
             updateHandler.removeCallbacksAndMessages(null);
         }

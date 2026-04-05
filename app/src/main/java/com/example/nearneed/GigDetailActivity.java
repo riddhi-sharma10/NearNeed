@@ -27,7 +27,6 @@ public class GigDetailActivity extends AppCompatActivity {
     public static final String EXTRA_DISTANCE = "extra_distance";
     public static final String EXTRA_IS_OWNER = "extra_is_owner";
 
-    private MediaPlayer mediaPlayer;
     private boolean isPlaying = false;
     private Handler updateHandler;
     private long gigPostTimestamp;
@@ -44,17 +43,10 @@ public class GigDetailActivity extends AppCompatActivity {
         ImageButton btnBack = findViewById(R.id.btnBack);
         btnBack.setOnClickListener(v -> finish());
 
-        ImageButton btnOptions = findViewById(R.id.btnOptions);
         boolean isOwner = getIntent().getBooleanExtra(EXTRA_IS_OWNER, false);
-        
+        ImageButton btnOptions = findViewById(R.id.btnOptions);
         if (btnOptions != null) {
-            btnOptions.setOnClickListener(v -> {
-                if (isOwner) {
-                    showManagementMenu(v);
-                } else {
-                    Toast.makeText(this, "More options coming soon", Toast.LENGTH_SHORT).show();
-                }
-            });
+            btnOptions.setOnClickListener(v -> showGigMenu(v, isOwner));
         }
 
         ImageButton btnShare = findViewById(R.id.btnShare);
@@ -200,43 +192,18 @@ public class GigDetailActivity extends AppCompatActivity {
 
     private void toggleAudioPlayPause() {
         ImageView ivPlayPauseButton = findViewById(R.id.ivPlayPauseButton);
-        
         if (!isPlaying) {
-            // Start playing
-            if (mediaPlayer == null) {
-                mediaPlayer = new MediaPlayer();
-                // Load audio file - using a raw resource or URL
-                try {
-                    // Example: mediaPlayer.setDataSource(this, Uri.parse("android.resource://" + getPackageName() + "/raw/gig_audio"));
-                    // For now, using a simple placeholder that you can replace with actual audio
-                    mediaPlayer.setOnCompletionListener(mp -> {
-                        isPlaying = false;
-                        if (ivPlayPauseButton != null) {
-                            ivPlayPauseButton.setImageResource(android.R.drawable.ic_media_play);
-                        }
-                    });
-                    mediaPlayer.prepare();
-                } catch (IOException e) {
-                    Toast.makeText(this, "Error loading audio", Toast.LENGTH_SHORT).show();
-                    mediaPlayer.release();
-                    mediaPlayer = null;
-                    return;
-                }
-            }
-            mediaPlayer.start();
             isPlaying = true;
             if (ivPlayPauseButton != null) {
-                ivPlayPauseButton.setImageResource(android.R.drawable.ic_media_pause);
+                ivPlayPauseButton.setImageDrawable(android.content.res.Resources.getSystem().getDrawable(android.R.drawable.ic_media_pause));
             }
+            Toast.makeText(this, "Playing audio...", Toast.LENGTH_SHORT).show();
         } else {
-            // Pause playing
-            if (mediaPlayer != null && mediaPlayer.isPlaying()) {
-                mediaPlayer.pause();
-            }
             isPlaying = false;
             if (ivPlayPauseButton != null) {
-                ivPlayPauseButton.setImageResource(android.R.drawable.ic_media_play);
+                ivPlayPauseButton.setImageDrawable(android.content.res.Resources.getSystem().getDrawable(android.R.drawable.ic_media_play));
             }
+            Toast.makeText(this, "Audio paused", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -248,40 +215,44 @@ public class GigDetailActivity extends AppCompatActivity {
         if (updateHandler != null) {
             updateHandler.removeCallbacksAndMessages(null);
         }
-        
-        // Stop audio playback
-        if (mediaPlayer != null) {
-            if (mediaPlayer.isPlaying()) {
-                mediaPlayer.stop();
-            }
-            mediaPlayer.release();
-            mediaPlayer = null;
-        }
     }
 
-    private void showManagementMenu(View view) {
+    private void showGigMenu(View view, boolean isOwner) {
         PopupMenu popup = new PopupMenu(this, view);
-        popup.getMenuInflater().inflate(R.menu.menu_gig_detail_owner, popup.getMenu());
+        
+        // Inflate appropriate menu based on ownership
+        if (isOwner) {
+            popup.getMenuInflater().inflate(R.menu.menu_gig_detail_owner, popup.getMenu());
+        } else {
+            popup.getMenuInflater().inflate(R.menu.menu_gig_detail_viewer, popup.getMenu());
+        }
 
         popup.setOnMenuItemClickListener(item -> {
             int id = item.getItemId();
             if (id == R.id.menu_view_volunteers) {
+                // Owner only option
                 Intent intent = new Intent(this, GigApplicantsActivity.class);
                 startActivity(intent);
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 return true;
             } else if (id == R.id.menu_view_responses) {
+                // Owner only option
                 Intent intent = new Intent(this, GigApplicantsActivity.class);
                 startActivity(intent);
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 return true;
             } else if (id == R.id.menu_update_status) {
+                // Owner only option
                 Intent intent = new Intent(this, PostStatusActivity.class);
                 startActivity(intent);
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 return true;
             } else if (id == R.id.menu_rate_volunteers) {
-                Toast.makeText(this, "Opening Rating Interface...", Toast.LENGTH_SHORT).show();
+                // Owner only option
+                Intent intent = new Intent(this, RateVolunteersActivity.class);
+                intent.putExtra("gigId", getIntent().getStringExtra("gigId"));
+                startActivity(intent);
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 return true;
             } else if (id == R.id.menu_save) {
                 Toast.makeText(this, "Post saved successfully", Toast.LENGTH_SHORT).show();
@@ -292,7 +263,11 @@ public class GigDetailActivity extends AppCompatActivity {
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 return true;
             } else if (id == R.id.menu_report) {
-                Toast.makeText(this, "Opening Report Interface...", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(this, ReportPostActivity.class);
+                intent.putExtra("postType", "gig");
+                intent.putExtra("postId", getIntent().getStringExtra("gigId"));
+                startActivity(intent);
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 return true;
             } else if (id == R.id.menu_settings) {
                 Intent intent = new Intent(this, SettingsActivity.class);
@@ -339,15 +314,19 @@ public class GigDetailActivity extends AppCompatActivity {
     }
 
     private void messageAuthor() {
-        // TODO: Replace with actual chat implementation or SMS
-        String phoneNumber = "9876543210"; // Placeholder
-        Intent smsIntent = new Intent(Intent.ACTION_SENDTO);
-        smsIntent.setData(android.net.Uri.parse("smsto:" + phoneNumber));
-        smsIntent.putExtra("sms_body", "Hi! I'm interested in your gig.");
+        // Open in-app messaging
+        Intent intent = new Intent(this, ChatActivity.class);
+        intent.putExtra("recipientName", "Gig Author");
+        intent.putExtra("recipientId", "author_123");
+        intent.putExtra("recipientPhone", "9876543210");
+        startActivity(intent);
+    }
+
+    private int parsePrice(String priceStr) {
         try {
-            startActivity(smsIntent);
+            return Integer.parseInt(priceStr.replaceAll("[^0-9]", ""));
         } catch (Exception e) {
-            Toast.makeText(this, "Unable to send message", Toast.LENGTH_SHORT).show();
+            return 350; // fallback
         }
     }
 
@@ -364,10 +343,7 @@ public class GigDetailActivity extends AppCompatActivity {
         tvAcceptLabel.setText("Accept posted price (" + postedPriceStr + ")");
 
         // Parse numerical value (e.g. ₹350 -> 350)
-        int initialPrice = 350;
-        try {
-            initialPrice = Integer.parseInt(postedPriceStr.replaceAll("[^0-9]", ""));
-        } catch (Exception e) { /* fallback */ }
+        final int initialPrice = parsePrice(postedPriceStr);
 
         final int[] proposedPrice = {initialPrice + 50};
         TextView tvProposedPrice = sheetView.findViewById(R.id.tvProposedPrice);
