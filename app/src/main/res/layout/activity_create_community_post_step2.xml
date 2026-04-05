@@ -365,66 +365,12 @@
             </RelativeLayout>
 
             <!-- ── WHEN DO YOU NEED THIS? ── -->
-            <TextView
-                style="@style/AppHeading"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
-                android:text="WHEN DO YOU NEED THIS?"
-                android:textColor="@color/text_muted"
-                android:textSize="11sp"
-                android:letterSpacing="0.1" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="12dp">
-
-                <TextView
-                    android:id="@+id/chipWhenToday"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="Today"
-                    android:textColor="@color/white"
-                    android:textSize="14sp"
-                    android:gravity="center"
-                    android:paddingStart="20dp"
-                    android:paddingEnd="20dp"
-                    android:background="@drawable/bg_chip_selected_red"
-                    android:layout_marginEnd="10dp"
-                    android:clickable="true"
-                    android:focusable="true" />
-
-                <TextView
-                    android:id="@+id/chipWhenThisWeek"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="This week"
-                    android:textColor="@color/text_subheadline"
-                    android:textSize="14sp"
-                    android:gravity="center"
-                    android:paddingStart="20dp"
-                    android:paddingEnd="20dp"
-                    android:background="@drawable/bg_chip_unselected"
-                    android:layout_marginEnd="10dp"
-                    android:clickable="true"
-                    android:focusable="true" />
-
-                <TextView
-                    android:id="@+id/chipWhenFlexible"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="Flexible"
-                    android:textColor="@color/text_subheadline"
-                    android:textSize="14sp"
-                    android:gravity="center"
-                    android:paddingStart="20dp"
-                    android:paddingEnd="20dp"
-                    android:background="@drawable/bg_chip_unselected"
-                    android:clickable="true"
-                    android:focusable="true" />
-            </LinearLayout>
+                android:layout_marginTop="12dp"/>
 
             <Space
                 android:layout_width="match_parent"

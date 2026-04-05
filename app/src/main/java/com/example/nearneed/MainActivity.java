@@ -107,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra(GigDetailActivity.EXTRA_PRICE, getString(R.string.txt_price_400));
                 intent.putExtra(GigDetailActivity.EXTRA_DESC, "Bathroom pipe burst, need experienced plumber ASAP.");
                 intent.putExtra(GigDetailActivity.EXTRA_DISTANCE, "0.3 km  ·  2 min ago");
+                intent.putExtra(GigDetailActivity.EXTRA_IS_OWNER, true);  // This post belongs to current user
                 startActivity(intent);
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
             });
