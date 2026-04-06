@@ -16,8 +16,8 @@ public class CreateAccountActivity extends AppCompatActivity {
 
     private ImageButton btnBack;
     private MaterialButton btnSubmit;
-    private TextInputEditText etFullName, etEmail, etPhone, etPassword;
-    private TextInputLayout tilFullName, tilEmail, tilPhone, tilPassword;
+    private TextInputEditText etFullName, etEmail, etPassword;
+    private TextInputLayout tilFullName, tilEmail, tilPassword;
     private TextView tvLogin;
 
     @Override
@@ -34,11 +34,9 @@ public class CreateAccountActivity extends AppCompatActivity {
         btnSubmit = findViewById(R.id.btnSubmit);
         etFullName = findViewById(R.id.etFullName);
         etEmail = findViewById(R.id.etEmail);
-        etPhone = findViewById(R.id.etPhone);
         etPassword = findViewById(R.id.etPassword);
         tilFullName = findViewById(R.id.tilFullName);
         tilEmail = findViewById(R.id.tilEmail);
-        tilPhone = findViewById(R.id.tilPhone);
         tilPassword = findViewById(R.id.tilPassword);
         tvLogin = findViewById(R.id.tvLogin);
     }
@@ -49,14 +47,12 @@ public class CreateAccountActivity extends AppCompatActivity {
         btnSubmit.setOnClickListener(v -> {
             String name = etFullName.getText().toString().trim();
             String email = etEmail.getText().toString().trim();
-            String phone = etPhone.getText().toString().trim();
             String password = etPassword.getText().toString().trim();
 
             boolean isValid = true;
 
             tilFullName.setError(null);
             tilEmail.setError(null);
-            tilPhone.setError(null);
             tilPassword.setError(null);
 
             if (name.isEmpty()) {
@@ -69,14 +65,6 @@ public class CreateAccountActivity extends AppCompatActivity {
                 isValid = false;
             } else if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
                 tilEmail.setError("Please enter a valid email");
-                isValid = false;
-            }
-
-            if (phone.isEmpty()) {
-                tilPhone.setError("Please enter your phone number");
-                isValid = false;
-            } else if (!phone.matches("^\\d{10}$")) {
-                tilPhone.setError("Please enter a valid 10-digit Indian phone number");
                 isValid = false;
             }
 
