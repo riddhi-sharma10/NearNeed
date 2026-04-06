@@ -19,6 +19,19 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        int hour = java.util.Calendar.getInstance().get(java.util.Calendar.HOUR_OF_DAY);
+        String greeting = "Good Evening";
+        if (hour >= 0 && hour < 12) {
+            greeting = "Good Morning";
+        } else if (hour >= 12 && hour < 17) {
+            greeting = "Good Afternoon";
+        }
+
+        TextView tvGreeting = findViewById(R.id.tvGreeting);
+        if (tvGreeting != null) {
+            tvGreeting.setText(greeting + ", Abhinav");
+        }
         
         FrameLayout cardMyPost = findViewById(R.id.cardMyPost);
         FrameLayout cardGig1 = findViewById(R.id.cardGig1);

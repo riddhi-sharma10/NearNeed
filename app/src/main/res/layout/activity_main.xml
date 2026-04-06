@@ -22,75 +22,52 @@
             android:paddingBottom="160dp">
 
             <!-- Top Header -->
-            <RelativeLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/headerLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingStart="24dp"
                 android:paddingEnd="24dp">
                 
-                <ImageView
-                    android:id="@+id/ivLogo"
-                    android:importantForAccessibility="no"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/ic_logo" />
-
+                <TextView
+                    android:id="@+id/tvGreeting"
+                    style="@style/AppHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Good Morning, Abhinav"
+                    android:textColor="@color/text_header"
+                    android:textSize="23sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+                    
                 <LinearLayout
                     android:id="@+id/llLocationSelector"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:orientation="vertical"
-                    android:gravity="center">
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:layout_constraintTop_toBottomOf="@id/tvGreeting"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
                     
                     <TextView
-                        style="@style/AppHeading"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="CURRENT LOCATION"
+                        android:text="Downtown, NY"
                         android:textColor="@color/text_subheadline"
-                        android:textSize="11sp"
-                        android:letterSpacing="0.05" />
+                        android:textSize="13sp" />
                         
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="48dp"
-                        android:minHeight="48dp"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical"
-                        android:layout_marginTop="2dp"
-                        android:background="?attr/selectableItemBackground"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:paddingStart="8dp"
-                        android:paddingEnd="8dp">
-                        
-                        <ImageView
-                            android:layout_width="14dp"
-                            android:layout_height="14dp"
-                            android:src="@drawable/ic_loc_pin_small"
-                            app:tint="@color/brand_error_solid"
-                            android:importantForAccessibility="no" />
-                            
-                        <TextView
-                            style="@style/AppHeading"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="4dp"
-                            android:text="Downtown, NY"
-                            android:textColor="@color/text_header"
-                            android:textSize="14sp" />
-                            
-                        <ImageView
-                            android:layout_width="16dp"
-                            android:layout_height="16dp"
-                            android:layout_marginStart="4dp"
-                            android:src="@drawable/ic_dropdown_small"
-                            android:importantForAccessibility="no" />
-                    </LinearLayout>
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_marginStart="4dp"
+                        android:src="@drawable/ic_dropdown_small"
+                        app:tint="@color/text_subheadline"
+                        android:importantForAccessibility="no" />
                 </LinearLayout>
 
                 <ImageView
@@ -98,15 +75,16 @@
                     android:importantForAccessibility="no"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
                     android:src="@drawable/ic_bell_dot"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:scaleType="center"
                     android:padding="6dp"
                     android:clickable="true"
-                    android:focusable="true" />
-            </RelativeLayout>
+                    android:focusable="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tvGreeting"
+                    app:layout_constraintBottom_toBottomOf="@id/tvGreeting" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <!-- Filter Chips -->
             <HorizontalScrollView
