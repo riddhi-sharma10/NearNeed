@@ -10,12 +10,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 
 public class CreateAccountActivity extends AppCompatActivity {
 
     private ImageButton btnBack;
     private MaterialButton btnSubmit;
     private TextInputEditText etFullName, etEmail, etPhone, etPassword;
+    private TextInputLayout tilFullName, tilEmail, tilPhone, tilPassword;
     private TextView tvLogin;
 
     @Override
@@ -34,6 +36,10 @@ public class CreateAccountActivity extends AppCompatActivity {
         etEmail = findViewById(R.id.etEmail);
         etPhone = findViewById(R.id.etPhone);
         etPassword = findViewById(R.id.etPassword);
+        tilFullName = findViewById(R.id.tilFullName);
+        tilEmail = findViewById(R.id.tilEmail);
+        tilPhone = findViewById(R.id.tilPhone);
+        tilPassword = findViewById(R.id.tilPassword);
         tvLogin = findViewById(R.id.tvLogin);
     }
 
@@ -46,23 +52,43 @@ public class CreateAccountActivity extends AppCompatActivity {
             String phone = etPhone.getText().toString().trim();
             String password = etPassword.getText().toString().trim();
 
-            if (name.isEmpty() || email.isEmpty() || phone.isEmpty() || password.isEmpty()) {
-                Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show();
-                return;
+            boolean isValid = true;
+
+            tilFullName.setError(null);
+            tilEmail.setError(null);
+            tilPhone.setError(null);
+            tilPassword.setError(null);
+
+            if (name.isEmpty()) {
+                tilFullName.setError("Please enter your name");
+                isValid = false;
             }
 
-            if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-                Toast.makeText(this, "Please enter a valid email", Toast.LENGTH_SHORT).show();
-                return;
+            if (email.isEmpty()) {
+                tilEmail.setError("Please enter your email");
+                isValid = false;
+            } else if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                tilEmail.setError("Please enter a valid email");
+                isValid = false;
             }
 
-            if (!phone.matches("^\\d{10}$")) {
-                Toast.makeText(this, "Please enter a valid 10-digit Indian phone number", Toast.LENGTH_SHORT).show();
-                return;
+            if (phone.isEmpty()) {
+                tilPhone.setError("Please enter your phone number");
+                isValid = false;
+            } else if (!phone.matches("^\\d{10}$")) {
+                tilPhone.setError("Please enter a valid 10-digit Indian phone number");
+                isValid = false;
             }
 
-            if (!password.matches("^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9]).+$")) {
-                Toast.makeText(this, "Password must be alphanumeric and include at least one special character", Toast.LENGTH_LONG).show();
+            if (password.isEmpty()) {
+                tilPassword.setError("Please create a password");
+                isValid = false;
+            } else if (!password.matches("^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9]).+$")) {
+                tilPassword.setError("Password must be alphanumeric and include at least one special character");
+                isValid = false;
+            }
+
+            if (!isValid) {
                 return;
             }
 
