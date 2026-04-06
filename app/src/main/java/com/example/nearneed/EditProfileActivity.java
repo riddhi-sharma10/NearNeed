@@ -27,6 +27,8 @@ import java.util.Set;
 public class EditProfileActivity extends AppCompatActivity {
 
     private ImageView ivProfilePicture;
+    private EditText etFullName, etPhone, etEmail, etPassword, etBio;
+    private com.google.android.material.textfield.TextInputLayout tilFullName, tilEmail, tilBio;
     private ActivityResultLauncher<String> galleryLauncher;
 
     @Override
@@ -58,6 +60,7 @@ public class EditProfileActivity extends AppCompatActivity {
         ChipGroup cgServices = findViewById(R.id.cgServices);
         
         // Initial load from SharedPreferences
+        loadUserData();
         loadSavedServices(cgServices);
         
         // Setup existing static chips and newly loaded ones
@@ -79,29 +82,48 @@ public class EditProfileActivity extends AppCompatActivity {
             btnForgotPassword.setOnClickListener(v -> showEmailPromptPopup());
         }
 
-        EditText etBio = findViewById(R.id.etBio);
-        TextView tvBioCount = findViewById(R.id.tvBioCount);
-
-        if (etBio != null && tvBioCount != null) {
-            etBio.addTextChangedListener(new TextWatcher() {
-                @Override
-                public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
-                @Override
-                public void onTextChanged(CharSequence s, int start, int before, int count) {
-                    tvBioCount.setText((s != null ? s.length() : 0) + "/150");
-                }
-                @Override
-                public void afterTextChanged(Editable s) {}
-            });
-            // Initial count
-            tvBioCount.setText(etBio.getText().length() + "/150");
+        if (etBio != null) {
+            // Already handled by TextInputLayout counter in XML, 
+            // but keeping listener if needed for manual count display
         }
 
         findViewById(R.id.btnSave).setOnClickListener(v -> {
+            saveUserData();
             saveServices(cgServices);
             Toast.makeText(this, "Profile changes saved successfully", Toast.LENGTH_SHORT).show();
             finish();
         });
+    }
+
+    private void loadUserData() {
+        etFullName = findViewById(R.id.etFullName);
+        etPhone = findViewById(R.id.etPhone);
+        etEmail = findViewById(R.id.etEmail);
+        etPassword = findViewById(R.id.etPassword);
+        etBio = findViewById(R.id.etBio);
+
+        android.content.SharedPreferences prefs = getSharedPreferences("NearNeedPrefs", MODE_PRIVATE);
+        
+        String name = prefs.getString("user_full_name", "Abhinav Oberoi");
+        String phone = prefs.getString("user_phone", "+91 98765 43210");
+        String email = prefs.getString("user_email", "abhinav.oberoi@example.com");
+        String bio = prefs.getString("user_bio", "I am a software engineer living in Koramangala. Happy to help with tech issues.");
+
+        if (etFullName != null) etFullName.setText(name);
+        if (etPhone != null) etPhone.setText(phone);
+        if (etEmail != null) etEmail.setText(email);
+        if (etBio != null) etBio.setText(bio);
+    }
+
+    private void saveUserData() {
+        android.content.SharedPreferences prefs = getSharedPreferences("NearNeedPrefs", MODE_PRIVATE);
+        android.content.SharedPreferences.Editor editor = prefs.edit();
+
+        if (etFullName != null) editor.putString("user_full_name", etFullName.getText().toString());
+        if (etEmail != null) editor.putString("user_email", etEmail.getText().toString());
+        if (etBio != null) editor.putString("user_bio", etBio.getText().toString());
+
+        editor.apply();
     }
 
     private void loadSavedServices(ChipGroup group) {
@@ -225,8 +247,8 @@ public class EditProfileActivity extends AppCompatActivity {
         chip.setClickable(true);
         
         float density = getResources().getDisplayMetrics().density;
-        chip.setChipMinHeight(48 * density);
-        chip.setChipCornerRadius(24 * density);
+        chip.setChipMinHeight(40 * density);
+        chip.setChipCornerRadius(8 * density);
         
         chip.setChipBackgroundColor(ContextCompat.getColorStateList(this, R.color.sel_chip_bg_blue));
         chip.setChipStrokeColor(ContextCompat.getColorStateList(this, R.color.sel_chip_stroke_blue));
@@ -267,8 +289,9 @@ public class EditProfileActivity extends AppCompatActivity {
         chip.setCloseIconTintResource(R.color.brand_primary);
 
         float density = getResources().getDisplayMetrics().density;
-        chip.setChipMinHeight(48 * density);
-        chip.setChipCornerRadius(24 * density);
+        chip.setChipMinHeight(40 * density);
+        chip.setChipCornerRadius(8 * density);
+        chip.setChipStrokeWidth(density * 1.2f);
         chip.setTextSize(android.util.TypedValue.COMPLEX_UNIT_SP, 14);
         
         chip.setChipStartPadding(12 * density);

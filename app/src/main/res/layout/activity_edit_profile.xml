@@ -101,14 +101,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
-                android:text="ACCOUNT INFORMATION"
+                android:text="PERSONAL INFORMATION"
                 android:textColor="@color/text_muted"
                 android:textSize="11sp"
                 android:letterSpacing="0.05" />
 
-            <!-- Email Input -->
+            <!-- Full Name Input -->
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tilEmail"
+                android:id="@+id/tilFullName"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -117,6 +117,58 @@
                 app:boxCornerRadiusBottomStart="16dp"
                 app:boxCornerRadiusTopEnd="16dp"
                 app:boxCornerRadiusTopStart="16dp"
+                app:boxStrokeColor="@color/brand_primary"
+                android:hint="Full Name"
+                app:counterEnabled="true"
+                app:counterMaxLength="25"
+                app:startIconDrawable="@drawable/ic_phone_outline">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etFullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:maxLength="25"
+                    android:text="Abhinav Oberoi"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Phone Number (Fixed) -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilPhone"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:boxCornerRadiusBottomEnd="16dp"
+                app:boxCornerRadiusBottomStart="16dp"
+                app:boxCornerRadiusTopEnd="16dp"
+                app:boxCornerRadiusTopStart="16dp"
+                android:hint="Phone Number"
+                app:startIconDrawable="@drawable/ic_call_outline">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:inputType="phone"
+                    android:text="+91 98765 43210"
+                    android:textColor="#80000000"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Email Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilEmail"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:boxCornerRadiusBottomEnd="16dp"
+                app:boxCornerRadiusBottomStart="16dp"
+                app:boxCornerRadiusTopEnd="16dp"
+                app:boxCornerRadiusTopStart="16dp"
+                app:boxStrokeColor="@color/brand_primary"
                 android:hint="Email Address"
                 app:startIconDrawable="@drawable/ic_email">
                 <com.google.android.material.textfield.TextInputEditText
@@ -167,6 +219,42 @@
                 android:clickable="true"
                 android:focusable="true"/>
 
+            <!-- Bio Group -->
+            <TextView
+                style="@style/AppHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="ABOUT YOU"
+                android:textColor="@color/text_muted"
+                android:textSize="11sp"
+                android:letterSpacing="0.05" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilBio"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:boxCornerRadiusBottomEnd="16dp"
+                app:boxCornerRadiusBottomStart="16dp"
+                app:boxCornerRadiusTopEnd="16dp"
+                app:boxCornerRadiusTopStart="16dp"
+                app:boxStrokeColor="@color/brand_primary"
+                app:counterEnabled="true"
+                app:counterMaxLength="150"
+                android:hint="Short Bio">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etBio"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:gravity="top|start"
+                    android:inputType="textMultiLine"
+                    android:maxLength="150"
+                    android:text="I am a software engineer living in Koramangala. Happy to help with tech issues."
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
             <!-- Services Group -->
             <TextView
                 style="@style/AppHeading"
@@ -191,78 +279,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                app:chipSpacingVertical="8dp">
+                android:paddingBottom="12dp"
+                android:clipToPadding="false"
+                app:chipSpacingVertical="12dp">
 
-                <!-- Static Test Chips -->
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/mock_househelp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="48dp"
-                    android:text="House Help"
-                    app:chipBackgroundColor="@color/white"
-                    app:chipStrokeColor="@color/brand_primary"
-                    app:chipStrokeWidth="1dp"
-                    android:textColor="@color/brand_primary"
-                    app:closeIconVisible="true"
-                    app:closeIconTint="@color/brand_primary" />
-
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/mock_plumbing"
-                    android:layout_width="wrap_content"
-                    android:layout_height="48dp"
-                    android:text="Plumbing"
-                    app:chipBackgroundColor="@color/white"
-                    app:chipStrokeColor="@color/brand_primary"
-                    app:chipStrokeWidth="1dp"
-                    android:textColor="@color/brand_primary"
-                    app:closeIconVisible="true"
-                    app:closeIconTint="@color/brand_primary" />
-                
+                <!-- Services will be dynamically added here -->
                 <com.google.android.material.chip.Chip
                     android:id="@+id/btnAddService"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="+ Add More"
+                    app:chipMinHeight="40dp"
+                    android:text="+ Add Other"
                     app:chipBackgroundColor="@color/brand_primary_light"
                     app:chipStrokeWidth="0dp"
-                    android:textColor="@color/brand_primary" />
+                    android:textColor="@color/brand_primary"
+                    app:chipCornerRadius="8dp" />
             </com.google.android.material.chip.ChipGroup>
-
-            <!-- Bio Group -->
-            <TextView
-                style="@style/AppHeading"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:text="ABOUT YOU"
-                android:textColor="@color/text_muted"
-                android:textSize="11sp"
-                android:letterSpacing="0.05" />
-
-            <EditText
-                android:id="@+id/etBio"
-                style="@style/AppDescription"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_marginTop="12dp"
-                android:background="@drawable/bg_otp_box_grey"
-                android:text="I am a software engineer living in Koramangala. Happy to help with tech issues."
-                android:textColor="@color/text_header"
-                android:textSize="15sp"
-                android:padding="16dp"
-                android:gravity="top|start"
-                android:maxLength="150"
-                android:inputType="textMultiLine" />
-
-            <TextView
-                android:id="@+id/tvBioCount"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:gravity="end"
-                android:text="0/150"
-                android:textColor="@color/text_muted"
-                android:textSize="12sp" />
 
             <View
                 android:layout_width="match_parent"
