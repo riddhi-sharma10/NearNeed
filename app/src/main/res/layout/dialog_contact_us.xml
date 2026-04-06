@@ -84,12 +84,15 @@
             android:id="@+id/btnCancelContact"
             style="@style/AppHeading"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_height="56dp"
             android:layout_marginTop="16dp"
             android:text="Cancel"
-            android:textColor="@color/text_muted"
+            android:textColor="@color/brand_primary"
             android:textAllCaps="false"
-            android:textSize="14sp" />
+            android:textSize="16sp"
+            app:backgroundTint="@color/brand_primary_light"
+            app:cornerRadius="16dp"
+            android:elevation="0dp" />
     </LinearLayout>
 
 </LinearLayout>
