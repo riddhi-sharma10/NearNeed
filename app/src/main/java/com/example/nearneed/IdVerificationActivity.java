@@ -52,8 +52,20 @@ public class IdVerificationActivity extends AppCompatActivity {
         cardUploadBack.setOnClickListener(v  -> openImagePicker(REQUEST_PICK_BACK));
 
         btnSubmit.setOnClickListener(v -> {
-            Intent intent = new Intent(this, IdVerifiedActivity.class);
-            startActivity(intent);
+            btnSubmit.setEnabled(false);
+            btnSubmit.setText("Verifying Authenticity...");
+            btnSubmit.setBackgroundTintList(android.content.res.ColorStateList.valueOf(0xFF4F46E5)); // Deep blue
+            
+            // Final verification simulation
+            new android.os.Handler().postDelayed(() -> {
+                btnSubmit.setText("ID Verified Successfully");
+                btnSubmit.setBackgroundTintList(android.content.res.ColorStateList.valueOf(0xFF10B981)); // Success green
+                
+                new android.os.Handler().postDelayed(() -> {
+                    Intent intent = new Intent(this, IdVerifiedActivity.class);
+                    startActivity(intent);
+                }, 1000);
+            }, 2500);
         });
 
         btnSkip.setOnClickListener(v -> {
@@ -73,35 +85,58 @@ public class IdVerificationActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_OK && data != null && data.getData() != null) {
             if (requestCode == REQUEST_PICK_FRONT) {
-                frontUploaded = true;
-                setCardUploadedState(cardUploadFront, "Front side uploaded");
+                setCardUploadedState(cardUploadFront, "Front of ID");
             } else if (requestCode == REQUEST_PICK_BACK) {
-                backUploaded = true;
-                setCardUploadedState(cardUploadBack, "Back side uploaded");
+                setCardUploadedState(cardUploadBack, "Back of ID");
             }
-            checkReadyToSubmit();
         }
     }
 
-    private void setCardUploadedState(android.view.View card, String message) {
-        // Change background to blue field
-        card.setBackgroundResource(R.drawable.bg_id_uploaded);
-        
-        // Find icon and text to change color to deeper blue
+    private void setCardUploadedState(android.view.View card, String side) {
+        // Find views in the card
+        android.widget.ImageView icon = null;
+        TextView title = null;
+        TextView desc = null;
+
         if (card instanceof android.view.ViewGroup) {
             android.view.ViewGroup group = (android.view.ViewGroup) card;
             for (int i = 0; i < group.getChildCount(); i++) {
                 android.view.View child = group.getChildAt(i);
-                if (child instanceof android.widget.ImageView) {
-                    ((android.widget.ImageView) child).setColorFilter(0xFF4F46E5); // Indigo/Blue icon
-                    ((android.widget.ImageView) child).setImageResource(R.drawable.ic_check_circle_green); // Show checkmark
-                }
+                if (child instanceof android.widget.ImageView) icon = (android.widget.ImageView) child;
                 if (child instanceof android.widget.TextView) {
-                    ((android.widget.TextView) child).setTextColor(0xFF4F46E5); // Deep blue text
+                    if (title == null) title = (android.widget.TextView) child;
+                    else desc = (android.widget.TextView) child;
                 }
             }
         }
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+
+        if (icon != null && title != null && desc != null) {
+            final android.widget.ImageView fIcon = icon;
+            final TextView fTitle = title;
+            final TextView fDesc = desc;
+
+            // Step 1: Processing
+            fTitle.setText("Scanning ID...");
+            fDesc.setText("Extracting security features...");
+            fIcon.setImageResource(R.drawable.ic_search_grey);
+            fIcon.setColorFilter(0xFF2563EB); // Blue
+
+            // Step 2: Final State after simulation
+            new android.os.Handler().postDelayed(() -> {
+                card.setBackgroundResource(R.drawable.bg_id_uploaded);
+                fIcon.setImageResource(R.drawable.ic_check_circle_green);
+                fIcon.setColorFilter(null); // Clear tint
+                fTitle.setText(side + " verified");
+                fTitle.setTextColor(0xFF059669); // Green
+                fDesc.setText("Data extracted successfully");
+                fDesc.setTextColor(0xFF059669);
+
+                if (side.contains("Front")) frontUploaded = true;
+                else backUploaded = true;
+                
+                checkReadyToSubmit();
+            }, 2000);
+        }
     }
 
     private void checkReadyToSubmit() {
