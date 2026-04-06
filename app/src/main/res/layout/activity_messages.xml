@@ -84,7 +84,7 @@
                 <RelativeLayout android:id="@+id/convRachel" android:layout_width="match_parent" android:layout_height="74dp" android:paddingStart="16dp" android:paddingEnd="16dp" android:background="?attr/selectableItemBackground" android:gravity="center_vertical">
                     <FrameLayout android:id="@+id/avRachel" android:layout_width="50dp" android:layout_height="50dp" android:layout_centerVertical="true">
                         <ImageView android:layout_width="50dp" android:layout_height="50dp" android:src="@drawable/bg_image_placeholder" android:background="@drawable/bg_circle_light_blue" android:scaleType="centerCrop"/>
-                        <View android:layout_width="12dp" android:layout_height="12dp" android:layout_gravity="bottom|end" android:background="@drawable/bg_dot_green"/>
+
                     </FrameLayout>
                     <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_toEndOf="@id/avRachel" android:layout_toStartOf="@+id/trRachel" android:layout_centerVertical="true" android:layout_marginStart="12dp" android:orientation="vertical">
                         <TextView
@@ -116,7 +116,7 @@
                 <RelativeLayout android:id="@+id/convManya" android:layout_width="match_parent" android:layout_height="74dp" android:paddingStart="16dp" android:paddingEnd="16dp" android:background="?attr/selectableItemBackground" android:gravity="center_vertical">
                     <FrameLayout android:id="@+id/avManya" android:layout_width="50dp" android:layout_height="50dp" android:layout_centerVertical="true">
                         <ImageView android:layout_width="50dp" android:layout_height="50dp" android:src="@drawable/bg_image_placeholder" android:background="@drawable/bg_circle_light_blue" android:scaleType="centerCrop"/>
-                        <View android:layout_width="12dp" android:layout_height="12dp" android:layout_gravity="bottom|end" android:background="@drawable/bg_dot_green"/>
+
                     </FrameLayout>
                     <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_toEndOf="@id/avManya" android:layout_toStartOf="@+id/trManya" android:layout_centerVertical="true" android:layout_marginStart="12dp" android:orientation="vertical">
                         <TextView style="@style/AppHeading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Manya Awasthi" android:textColor="@color/text_header" android:textSize="15sp" />
@@ -133,7 +133,7 @@
                 <RelativeLayout android:id="@+id/convRahul" android:layout_width="match_parent" android:layout_height="74dp" android:paddingStart="16dp" android:paddingEnd="16dp" android:background="?attr/selectableItemBackground" android:gravity="center_vertical">
                     <FrameLayout android:id="@+id/avRahul" android:layout_width="50dp" android:layout_height="50dp" android:layout_centerVertical="true">
                         <ImageView android:layout_width="50dp" android:layout_height="50dp" android:src="@drawable/bg_image_placeholder" android:background="@drawable/bg_circle_light_blue" android:scaleType="centerCrop"/>
-                        <View android:layout_width="12dp" android:layout_height="12dp" android:layout_gravity="bottom|end" android:background="@drawable/bg_circle_grey_solid"/>
+
                     </FrameLayout>
                     <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_toEndOf="@id/avRahul" android:layout_toStartOf="@+id/trRahul" android:layout_centerVertical="true" android:layout_marginStart="12dp" android:orientation="vertical">
                         <TextView style="@style/AppHeading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rahul Singh" android:textColor="@color/text_header" android:textSize="15sp" />
@@ -147,7 +147,7 @@
                 <RelativeLayout android:id="@+id/convRiddhi" android:layout_width="match_parent" android:layout_height="74dp" android:paddingStart="16dp" android:paddingEnd="16dp" android:background="?attr/selectableItemBackground" android:gravity="center_vertical">
                     <FrameLayout android:id="@+id/avRiddhi" android:layout_width="50dp" android:layout_height="50dp" android:layout_centerVertical="true">
                         <ImageView android:layout_width="50dp" android:layout_height="50dp" android:src="@drawable/bg_image_placeholder" android:background="@drawable/bg_circle_light_blue" android:scaleType="centerCrop"/>
-                        <View android:layout_width="12dp" android:layout_height="12dp" android:layout_gravity="bottom|end" android:background="@drawable/bg_dot_green"/>
+
                     </FrameLayout>
                     <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_toEndOf="@id/avRiddhi" android:layout_toStartOf="@+id/trRiddhi" android:layout_centerVertical="true" android:layout_marginStart="12dp" android:orientation="vertical">
                         <TextView style="@style/AppHeading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Riddhi Sharma" android:textColor="@color/text_header" android:textSize="15sp" />
@@ -175,7 +175,7 @@
                 <RelativeLayout android:id="@+id/convAnanya" android:layout_width="match_parent" android:layout_height="74dp" android:paddingStart="16dp" android:paddingEnd="16dp" android:background="?attr/selectableItemBackground" android:gravity="center_vertical">
                     <FrameLayout android:id="@+id/avAnanya" android:layout_width="50dp" android:layout_height="50dp" android:layout_centerVertical="true">
                         <ImageView android:layout_width="50dp" android:layout_height="50dp" android:src="@drawable/bg_image_placeholder" android:background="@drawable/bg_circle_light_blue" android:scaleType="centerCrop"/>
-                        <View android:layout_width="12dp" android:layout_height="12dp" android:layout_gravity="bottom|end" android:background="@drawable/bg_dot_green"/>
+
                     </FrameLayout>
                     <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_toEndOf="@id/avAnanya" android:layout_toStartOf="@+id/trAnanya" android:layout_centerVertical="true" android:layout_marginStart="12dp" android:orientation="vertical">
                         <TextView style="@style/AppHeading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ananya Gupta" android:textColor="@color/text_header" android:textSize="15sp" />
@@ -206,7 +206,7 @@
                 <RelativeLayout android:id="@+id/convPriya" android:layout_width="match_parent" android:layout_height="74dp" android:paddingStart="16dp" android:paddingEnd="16dp" android:background="?attr/selectableItemBackground" android:gravity="center_vertical">
                     <FrameLayout android:id="@+id/avPriya" android:layout_width="50dp" android:layout_height="50dp" android:layout_centerVertical="true">
                         <ImageView android:layout_width="50dp" android:layout_height="50dp" android:src="@drawable/bg_image_placeholder" android:background="@drawable/bg_circle_light_blue" android:scaleType="centerCrop"/>
-                        <View android:layout_width="12dp" android:layout_height="12dp" android:layout_gravity="bottom|end" android:background="@drawable/bg_dot_green"/>
+
                     </FrameLayout>
                     <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_toEndOf="@id/avPriya" android:layout_toStartOf="@+id/trPriya" android:layout_centerVertical="true" android:layout_marginStart="12dp" android:orientation="vertical">
                         <TextView style="@style/AppHeading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Priya Nair" android:textColor="@color/text_header" android:textSize="15sp" />
@@ -234,7 +234,7 @@
                 <RelativeLayout android:id="@+id/convMeera" android:layout_width="match_parent" android:layout_height="74dp" android:paddingStart="16dp" android:paddingEnd="16dp" android:background="?attr/selectableItemBackground" android:gravity="center_vertical">
                     <FrameLayout android:id="@+id/avMeera" android:layout_width="50dp" android:layout_height="50dp" android:layout_centerVertical="true">
                         <ImageView android:layout_width="50dp" android:layout_height="50dp" android:src="@drawable/bg_image_placeholder" android:background="@drawable/bg_circle_light_blue" android:scaleType="centerCrop"/>
-                        <View android:layout_width="12dp" android:layout_height="12dp" android:layout_gravity="bottom|end" android:background="@drawable/bg_dot_green"/>
+
                     </FrameLayout>
                     <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_toEndOf="@id/avMeera" android:layout_toStartOf="@+id/trMeera" android:layout_centerVertical="true" android:layout_marginStart="12dp" android:orientation="vertical">
                         <TextView style="@style/AppHeading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Meera Iyer" android:textColor="@color/text_header" android:textSize="15sp" />

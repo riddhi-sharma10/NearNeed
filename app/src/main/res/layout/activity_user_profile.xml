@@ -79,13 +79,7 @@
                         android:src="@drawable/bg_image_placeholder" />
 
                     <!-- Green Dot Status -->
-                    <View
-                        android:layout_width="18dp"
-                        android:layout_height="18dp"
-                        android:layout_gravity="bottom|end"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:background="@drawable/bg_dot_green" />
+
                 </FrameLayout>
 
                 <LinearLayout
