@@ -1,12 +1,172 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
     android:padding="24dp">
 
     <!-- Top Branding Section (Re-aligned to Top-Left) -->
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:alpha="0.15"
+        android:rotation="30"
+        android:src="@drawable/ic_solid_plug"
+        app:tint="@color/decorative_tint_faint_blue"
+        tools:layout_editor_absoluteX="336dp"
+        tools:layout_editor_absoluteY="7dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:alpha="0.18"
+        android:rotation="-15"
+        android:src="@drawable/ic_solid_broom"
+        app:tint="@color/decorative_tint_faint_blue"
+        tools:layout_editor_absoluteX="336dp"
+        tools:layout_editor_absoluteY="7dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:alpha="0.15"
+        android:rotation="10"
+        android:src="@drawable/ic_solid_medical"
+        app:tint="@color/decorative_tint_faint_blue"
+        tools:layout_editor_absoluteX="336dp"
+        tools:layout_editor_absoluteY="7dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:alpha="0.15"
+        android:rotation="45"
+        android:src="@drawable/ic_solid_laptop"
+        app:tint="@color/decorative_tint_faint_blue"
+        tools:layout_editor_absoluteX="336dp"
+        tools:layout_editor_absoluteY="7dp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_alignParentEnd="true"
+        android:alpha="0.20"
+        android:rotation="20"
+        android:src="@drawable/ic_solid_wrench"
+        app:tint="@color/decorative_tint_faint_blue"
+        tools:layout_editor_absoluteX="336dp"
+        tools:layout_editor_absoluteY="7dp" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentEnd="true"
+        android:alpha="0.18"
+        android:rotation="-10"
+        android:src="@drawable/ic_solid_sms"
+        app:tint="@color/decorative_tint_faint_blue"
+        tools:layout_editor_absoluteX="336dp"
+        tools:layout_editor_absoluteY="7dp" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:alpha="0.15"
+        android:rotation="25"
+        android:src="@drawable/ic_solid_plant"
+        app:tint="@color/decorative_tint_faint_blue"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="526dp" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_alignParentBottom="true"
+        android:alpha="0.18"
+        android:rotation="-10"
+        android:src="@drawable/ic_solid_oven"
+        app:tint="@color/decorative_tint_faint_blue"
+        tools:layout_editor_absoluteX="264dp"
+        tools:layout_editor_absoluteY="-18dp" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_alignParentBottom="true"
+        android:alpha="0.15"
+        android:rotation="10"
+        android:src="@drawable/ic_solid_paw"
+        app:tint="@color/decorative_tint_faint_blue"
+        tools:layout_editor_absoluteX="327dp"
+        tools:layout_editor_absoluteY="509dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:letterSpacing="0.2"
+        android:text="• • •"
+        android:textColor="@color/pagers_indicator_inactive"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="-18dp"
+        tools:layout_editor_absoluteY="197dp" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:alpha="0.12"
+        android:rotation="-40"
+        android:src="@drawable/ic_solid_firstaid"
+        app:tint="@color/decorative_tint_faint_blue"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="7dp" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:alpha="0.15"
+        android:rotation="15"
+        android:src="@drawable/ic_solid_wrench"
+        app:tint="@color/decorative_tint_faint_blue"
+        tools:layout_editor_absoluteX="313dp"
+        tools:layout_editor_absoluteY="161dp" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:alpha="0.15"
+        android:rotation="-20"
+        android:src="@drawable/ic_solid_supplies"
+        app:tint="@color/decorative_tint_faint_blue"
+        tools:layout_editor_absoluteX="227dp"
+        tools:layout_editor_absoluteY="31dp" />
+
     <LinearLayout
         android:id="@+id/llTopBranding"
         android:layout_width="wrap_content"
@@ -14,24 +174,7 @@
         android:orientation="horizontal"
         android:gravity="center_vertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:layout_width="44dp"
-            android:layout_height="44dp"
-            android:src="@drawable/ic_logo" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:text="NearNeed"
-            android:textColor="@color/brand_primary"
-            android:textSize="22sp"
-            android:fontFamily="sans-serif-black"
-            android:letterSpacing="-0.03" />
-
-    </LinearLayout>
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <!-- Header Section -->
     <TextView
@@ -42,7 +185,7 @@
         android:fontFamily="sans-serif-black"
         android:text="Great things\nhappen locally."
         android:textColor="@color/text_header"
-        android:textSize="28sp"
+        android:textSize="36sp"
         android:lineHeight="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,7 +198,7 @@
         android:layout_marginTop="8dp"
         android:text="Your neighbor is here to help.\nJoin a safe &amp; verified community."
         android:textColor="@color/text_subheadline"
-        android:textSize="13sp"
+        android:textSize="16sp"
         android:alpha="0.8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -65,7 +208,7 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cvSlideshow"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="315dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         app:cardCornerRadius="24dp"
@@ -93,7 +236,7 @@
                 android:background="@drawable/bg_pill_pink_transparent"
                 android:paddingHorizontal="10dp"
                 android:paddingVertical="4dp"
-                android:text="Community Gallery"
+                android:text="Gallery"
                 android:textColor="@color/brand_primary"
                 android:textSize="8sp"
                 android:textStyle="bold" />
@@ -114,44 +257,7 @@
         app:strokeWidth="1dp"
         app:layout_constraintBottom_toTopOf="@id/btnSignUp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="20dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_pill_blue_transparent"
-                android:text="● COMMUNITY STATUS"
-                android:textColor="@color/brand_primary"
-                android:textSize="9sp"
-                android:letterSpacing="0.05"
-                android:paddingHorizontal="10dp"
-                android:paddingVertical="4dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Find helpers nearby"
-                android:textColor="@color/text_header"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:text="Join 10,000+ local helpers today"
-                android:textColor="@color/text_subheadline"
-                android:textSize="11sp" />
-
-        </LinearLayout>
-    </com.google.android.material.card.MaterialCardView>
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <!-- Buttons -->
     <com.google.android.material.button.MaterialButton
