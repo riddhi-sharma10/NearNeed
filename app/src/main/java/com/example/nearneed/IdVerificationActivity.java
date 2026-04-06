@@ -22,6 +22,7 @@ public class IdVerificationActivity extends AppCompatActivity {
     private android.view.View cardUploadFront, cardUploadBack;
     private boolean frontUploaded = false;
     private boolean backUploaded = false;
+    private boolean isFullyVerified = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,12 +59,15 @@ public class IdVerificationActivity extends AppCompatActivity {
             
             // Final verification simulation
             new android.os.Handler().postDelayed(() -> {
+                isFullyVerified = true;
                 btnSubmit.setText("ID Verified Successfully");
-                btnSubmit.setBackgroundTintList(android.content.res.ColorStateList.valueOf(0xFF10B981)); // Success green
+                btnSubmit.setBackgroundTintList(android.content.res.ColorStateList.valueOf(0xFF1D5EF3)); // Brand blue
                 
                 new android.os.Handler().postDelayed(() -> {
-                    Intent intent = new Intent(this, IdVerifiedActivity.class);
-                    startActivity(intent);
+                    if (isFullyVerified) {
+                        Intent intent = new Intent(this, IdVerifiedActivity.class);
+                        startActivity(intent);
+                    }
                 }, 1000);
             }, 2500);
         });
@@ -124,12 +128,12 @@ public class IdVerificationActivity extends AppCompatActivity {
             // Step 2: Final State after simulation
             new android.os.Handler().postDelayed(() -> {
                 card.setBackgroundResource(R.drawable.bg_id_uploaded);
-                fIcon.setImageResource(R.drawable.ic_check_circle_green);
-                fIcon.setColorFilter(null); // Clear tint
+                fIcon.setImageResource(R.drawable.ic_checked_blue);
+                fIcon.setColorFilter(null); // Use resource color
                 fTitle.setText(side + " verified");
-                fTitle.setTextColor(0xFF059669); // Green
+                fTitle.setTextColor(0xFF1D5EF3); // Blue
                 fDesc.setText("Data extracted successfully");
-                fDesc.setTextColor(0xFF059669);
+                fDesc.setTextColor(0xFF1D5EF3);
 
                 if (side.contains("Front")) frontUploaded = true;
                 else backUploaded = true;

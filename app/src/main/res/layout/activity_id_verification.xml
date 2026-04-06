@@ -123,7 +123,7 @@
                 android:outlineSpotShadowColor="@color/shadow_subtle"
                 android:gravity="center"
                 android:orientation="vertical">
-                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_id_camera" app:tint="@color/text_muted" />
+                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_id_camera" app:tint="@color/brand_primary" />
                 <TextView 
                     style="@style/AppHeading"
                     android:layout_width="wrap_content" 
@@ -147,7 +147,7 @@
                 android:outlineSpotShadowColor="@color/shadow_subtle"
                 android:gravity="center"
                 android:orientation="vertical">
-                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_id_camera" app:tint="@color/text_muted" />
+                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_id_camera" app:tint="@color/brand_primary" />
                 <TextView 
                     style="@style/AppHeading"
                     android:layout_width="wrap_content" 
@@ -165,7 +165,7 @@
                 android:orientation="horizontal"
                 android:layout_marginTop="16dp"
                 android:gravity="center_vertical">
-                <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_info_circle" app:tint="@color/text_muted" />
+                <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_info_circle" app:tint="@color/brand_primary" />
                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:text="I confirm the info on my ID is clear and readable." android:textColor="@color/text_subheadline" android:textSize="12sp" />
             </LinearLayout>
 
